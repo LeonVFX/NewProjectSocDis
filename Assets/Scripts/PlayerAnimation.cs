@@ -9,7 +9,7 @@ public class PlayerAnimation : MonoBehaviour
     private PhotonView playerView;
     private Player player;
     private PlayerMovement pMovement;
-    private Animator anim;
+    private Animator[] animList;
 
     [SerializeField] private Type[] playerTypes;
 
@@ -22,8 +22,9 @@ public class PlayerAnimation : MonoBehaviour
         pMovement.OnStop += Idle;
         pMovement.OnMove += Move;
 
-        anim = GetComponentInChildren<Animator>();
-        anim.speed *= GetComponent<Player>().speedMultiplier;
+        animList = GetComponentsInChildren<Animator>();
+        foreach (Animator anim in animList)
+            anim.speed *= GetComponent<Player>().speedMultiplier;
     }
 
     private void Update()
@@ -49,7 +50,8 @@ public class PlayerAnimation : MonoBehaviour
     [PunRPC]
     private void RPC_Idle()
     {
-        anim.SetTrigger("Idle");
+        foreach (Animator anim in animList)
+            anim.SetTrigger("Idle");
     }
 
     private void Move()
@@ -60,13 +62,15 @@ public class PlayerAnimation : MonoBehaviour
     [PunRPC]
     private void RPC_Move()
     {
-        anim.SetTrigger("Run");
+        foreach (Animator anim in animList)
+            anim.SetTrigger("Run");
     }
 
     [PunRPC]
     private void RPC_Flip(bool flip)
     {
-        if (anim != null)
-            anim.GetComponent<SpriteRenderer>().flipX = flip;
+        foreach (Animator anim in animList)
+            if (anim != null)
+                anim.GetComponent<SpriteRenderer>().flipX = flip;
     }
 }

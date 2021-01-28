@@ -5,22 +5,23 @@ public class CameraFollow : MonoBehaviour
     public Transform playerTransform;
 
     [SerializeField]
-    private int depth = -10;
+    private Vector3 offset;
 
-    [SerializeField]
-    private float camSize = 3.0f;
+    private void Start()
+    {
+        offset = new Vector3(-2, 4, -2);
+    }
 
     private void Update()
     {
         if (playerTransform != null)
         {
-            transform.position = playerTransform.position + new Vector3(0, 0, depth);
+            transform.position = playerTransform.position + offset;
         }
     }
 
     public void setTarget(Transform target)
     {
-        GetComponent<Camera>().orthographicSize = camSize;
         playerTransform = target;
     }
 }

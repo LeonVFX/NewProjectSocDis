@@ -52,18 +52,7 @@ public class Player : MonoBehaviour
         if (!playerView.IsMine || !isAlive)
             return;
 
-        if (Input.GetMouseButton(0))
-        {
-            Vector2 ray = cam.ScreenToWorldPoint(Input.mousePosition);
-            pMovement.Hit = Physics2D.Raycast(ray, Vector2.zero);
-
-            if (pMovement.Hit)
-                pMovement.Move();
-        }
-        if (Input.GetMouseButtonUp(0))
-        {
-            pMovement.Stop();
-        }
+        pMovement.Move();
     }
 
     protected void PreventMovement()

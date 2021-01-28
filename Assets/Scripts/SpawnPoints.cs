@@ -4,18 +4,18 @@ using UnityEngine;
 
 public class SpawnPoints : MonoBehaviour
 {
-    public Vector2 pos1;
-    public Vector2 pos2;
-    public Vector2 pos3;
-    public Vector2 pos4;
-    public Vector2 pos5;
-    public Vector2 pos6;
-    public Vector2 pos7;
-    public Vector2 pos8;
+    public Vector3 pos1;
+    public Vector3 pos2;
+    public Vector3 pos3;
+    public Vector3 pos4;
+    public Vector3 pos5;
+    public Vector3 pos6;
+    public Vector3 pos7;
+    public Vector3 pos8;
 
         public Vector2 GetPosition(int playerNumber)
     {
-        Vector2 tempPos = transform.position;
+        Vector3 tempPos = transform.position;
 
         switch (playerNumber)
         {
