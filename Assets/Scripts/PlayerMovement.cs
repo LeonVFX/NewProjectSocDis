@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
 {
     public event System.Action OnStop;
     public event System.Action OnMove;
+    private PhotonView playerView;
 
     // Mouse hit
     private RaycastHit hit;
@@ -34,14 +35,13 @@ public class PlayerMovement : MonoBehaviour
 
     private Rigidbody rb = null;
 
-    [SerializeField] private float forceAmount;
-
     public float playerSpeed = 30.0f;
     LayerMask layer;
 
     private void Awake()
     {
         layer = LayerMask.GetMask("Ground");
+        playerView = GetComponent<PhotonView>();
     }
 
     // Start is called before the first frame update
@@ -55,16 +55,27 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!playerView.IsMine)
+            return;
+    }
+
+    public void Move()
+    {
         // Movement
         if (Input.GetMouseButton(0))
         {
             RaycastHit[] hits = Physics.RaycastAll(Camera.main.ScreenPointToRay(Input.mousePosition), Mathf.Infinity, layer).OrderBy(h => h.distance).ToArray();
             foreach (var hit in hits)
             {
-                if (hit.transform.gameObject.layer == 8)
+                if (hit.transform.gameObject.layer == LayerMask.NameToLayer("Ground"))
                 {
                     this.hit = hit;
-                    Move();
+                    if (canMove)
+                    {
+                        // Moving
+                        Vector3 dir = (hit.point - transform.position).normalized;
+                        rb.AddForce(playerSpeed * dir, ForceMode.Force);
+                    }
                     break;
                 }
             }
@@ -78,23 +89,6 @@ public class PlayerMovement : MonoBehaviour
         {
             OnStop?.Invoke();
             isMoving = false;
-        }
-    }
-
-    public void Move()
-    {
-        if (canMove)
-        {
-            // Moving
-            rb.AddForce(forceAmount * (hit.point - transform.position), ForceMode.Force);
-
-            if (rb.velocity.magnitude > playerSpeed)
-                rb.velocity = rb.velocity.normalized * playerSpeed;
-
-            // Rotating
-            //Quaternion targetRotation = Quaternion.LookRotation(hit.point - transform.position);
-            //targetRotation = new Quaternion(transform.rotation.x, targetRotation.y, transform.rotation.z, targetRotation.w);
-            //transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, playerSpeed * Time.deltaTime);
         }
     }
 }

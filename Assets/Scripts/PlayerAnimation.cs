@@ -10,6 +10,18 @@ public class PlayerAnimation : MonoBehaviour
     private Player player;
     private PlayerMovement pMovement;
     private Animator[] animList;
+    private bool flip = false;
+    private float screenWidth;
+
+    public bool Flip
+    {
+        get { return flip; }
+        set
+        {
+            playerView.RPC("RPC_Flip", RpcTarget.All, new object[] { value });
+            flip = value;
+        }
+    }
 
     [SerializeField] private Type[] playerTypes;
 
@@ -22,23 +34,27 @@ public class PlayerAnimation : MonoBehaviour
         pMovement.OnStop += Idle;
         pMovement.OnMove += Move;
 
+        screenWidth = (float)Screen.width;
+
         animList = GetComponentsInChildren<Animator>();
         foreach (Animator anim in animList)
             anim.speed *= GetComponent<Player>().speedMultiplier;
     }
 
-    private void Update()
+    private void LateUpdate()
     {
         if (!playerView.IsMine || !player.isAlive)
             return;
 
-        if (Input.mousePosition.x > (Screen.width * 0.5f))
+        if (Input.mousePosition.x > (screenWidth * 0.5f))
         {
-            playerView.RPC("RPC_Flip", RpcTarget.All, new object[] { true });
+            if (flip == false)
+                Flip = true;
         }
         else
         {
-            playerView.RPC("RPC_Flip", RpcTarget.All, new object[] { false });
+            if (flip == true)
+                Flip = false;
         }
     }
 
@@ -69,8 +85,9 @@ public class PlayerAnimation : MonoBehaviour
     [PunRPC]
     private void RPC_Flip(bool flip)
     {
-        foreach (Animator anim in animList)
-            if (anim != null)
-                anim.GetComponent<SpriteRenderer>().flipX = flip;
+        if (animList.Length > 0)
+            foreach (Animator anim in animList)
+                if (anim != null)
+                    anim.GetComponent<SpriteRenderer>().flipX = flip;
     }
 }

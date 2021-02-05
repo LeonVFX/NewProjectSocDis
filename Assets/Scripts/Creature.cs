@@ -42,7 +42,6 @@ public class Creature : Player
                 int index = targetNum[Random.Range(0, targetNum.Count)];
                 if (targetPlayers[index] != null && canKill)
                     KillObject(targetPlayers[index].GetComponent<PhotonView>().ViewID);
-                    // Killing object by RPC for all players
             }
         }
     }
@@ -51,7 +50,7 @@ public class Creature : Player
     {
         playerView.RPC("RPC_KillPlayer", RpcTarget.All, new object[] { objPhotonViewId });
         OnKill?.Invoke();
-        pMovement.CanMove = false;
+        PreventMovement();
 
         if (playerView.IsMine)
             StartCoroutine(KillTimer());
@@ -65,22 +64,7 @@ public class Creature : Player
         targetPlayer.GetComponentInChildren<Animator>().SetTrigger("Death");
     }
 
-    //private void CmdDestroyObject(GameObject obj)
-    //{
-    //    // It is very unlikely but due to the network delay
-    //    // possisble that the other player also tries to
-    //    // destroy exactly the same object beofre the server
-    //    // can tell him that this object was already destroyed.
-    //    // So in that case just do nothing.
-    //    if (!obj) return;
-
-    //    OnKill?.Invoke();
-    //    obj.GetComponent<PhotonView>().TransferOwnership(phoView.ViewID);
-    //    Destroy(obj);
-    //    // NetworkServer.Destroy(obj);
-    //}
-
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerEnter(Collider other)
     {
         if (playerView != null)
             if (!playerView.IsMine)
@@ -94,7 +78,7 @@ public class Creature : Player
         }
     }
 
-    private void OnTriggerExit2D(Collider2D other)
+    private void OnTriggerExit(Collider other)
     {
         if (playerView != null)
             if (!playerView.IsMine)
@@ -112,7 +96,7 @@ public class Creature : Player
     {
         canKill = false;
         yield return new WaitForSeconds(killStunTime);
-        pMovement.CanMove = true;
+        AllowMovement();
         canKill = true;
     }
 }

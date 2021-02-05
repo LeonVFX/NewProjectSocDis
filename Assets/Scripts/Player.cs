@@ -31,6 +31,8 @@ public class Player : MonoBehaviour
 
     protected virtual void Start()
     {
+        isAlive = true;
+
         playerView = GetComponent<PhotonView>();
 
         GameManager.gm.OnVoteStage += PreventMovement;
@@ -40,7 +42,7 @@ public class Player : MonoBehaviour
 
         pMovement = GetComponent<PlayerMovement>();
         pMovement.playerSpeed = baseSpeed;
-        isAlive = true;
+        
         cam = Camera.main.GetComponent<Camera>();
 
         if (playerView.IsMine)
@@ -67,12 +69,6 @@ public class Player : MonoBehaviour
 
     public void Die()
     {
-        playerView.RPC("RPC_Die", RpcTarget.All);
-    }
-
-    [PunRPC]
-    protected void RPC_Die()
-    {
-        Destroy(playerView.gameObject);
+        PhotonNetwork.Destroy(gameObject);
     }
 }

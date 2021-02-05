@@ -12,7 +12,7 @@ public class CameraFollow : MonoBehaviour
         offset = new Vector3(-2, 4, -2);
     }
 
-    private void Update()
+    private void LateUpdate()
     {
         if (playerTransform != null)
         {
