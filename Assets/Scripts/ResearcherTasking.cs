@@ -26,9 +26,7 @@ public class ResearcherTasking : MonoBehaviour
         if (isValidTask)
         {
             if (Input.GetButtonDown("Interact"))
-            {
                 DoTask();
-            }
         }
     }
 

@@ -43,11 +43,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f42701872566784f904b453a3893185, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pos1: {x: 0, y: 0, z: 1}
-  pos2: {x: 1, y: 0, z: 1}
-  pos3: {x: 1, y: 0, z: 0}
-  pos4: {x: 1, y: 0, z: -1}
-  pos5: {x: 0, y: 0, z: -1}
-  pos6: {x: -1, y: 0, z: -1}
-  pos7: {x: -1, y: 0, z: 0}
-  pos8: {x: -1, y: 0, z: 1}
+  pos1: {x: 0, y: 0.5, z: 1}
+  pos2: {x: 1, y: 0.5, z: 1}
+  pos3: {x: 1, y: 0.5, z: 0}
+  pos4: {x: 1, y: 0.5, z: -1}
+  pos5: {x: 0, y: 0.5, z: -1}
+  pos6: {x: -1, y: 0.5, z: -1}
+  pos7: {x: -1, y: 0.5, z: 0}
+  pos8: {x: -1, y: 0.5, z: 1}

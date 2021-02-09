@@ -7,6 +7,8 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    public event System.Action OnDeath;
+
     protected PlayerMovement pMovement;
 
     [SerializeField]
@@ -69,6 +71,7 @@ public class Player : MonoBehaviour
 
     public void Die()
     {
-        PhotonNetwork.Destroy(gameObject);
+        isAlive = false;
+        OnDeath?.Invoke();
     }
 }

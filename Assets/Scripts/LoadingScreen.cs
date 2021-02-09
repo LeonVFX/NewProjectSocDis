@@ -17,7 +17,7 @@ public class LoadingScreen : MonoBehaviour
     {
         AsyncOperation gameLevel = SceneManager.LoadSceneAsync(MultiplayerSettings.multiplayerSettings.multiplayerScene);
 
-        while (gameLevel.progress < 1)
+        while (gameLevel.progress < 1.0f)
         {
             progressBar.value = gameLevel.progress;
             yield return new WaitForEndOfFrame();

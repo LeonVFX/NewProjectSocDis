@@ -11,7 +11,7 @@ public class PlayerAnimation : MonoBehaviour
     private PlayerMovement pMovement;
     private Animator[] animList;
     private bool flip = false;
-    private float screenWidth;
+    private float halfScreenWidth;
 
     public bool Flip
     {
@@ -28,13 +28,15 @@ public class PlayerAnimation : MonoBehaviour
     private void Start()
     {
         playerView = GetComponentInParent<PhotonView>();
+
         player = GetComponentInParent<Player>();
+        player.OnDeath += Death;
 
         pMovement = GetComponent<PlayerMovement>();
         pMovement.OnStop += Idle;
         pMovement.OnMove += Move;
 
-        screenWidth = (float)Screen.width;
+        halfScreenWidth = Screen.width * 0.5f;
 
         animList = GetComponentsInChildren<Animator>();
         foreach (Animator anim in animList)
@@ -46,7 +48,7 @@ public class PlayerAnimation : MonoBehaviour
         if (!playerView.IsMine || !player.isAlive)
             return;
 
-        if (Input.mousePosition.x > (screenWidth * 0.5f))
+        if (Input.mousePosition.x > halfScreenWidth)
         {
             if (flip == false)
                 Flip = true;
@@ -89,5 +91,17 @@ public class PlayerAnimation : MonoBehaviour
             foreach (Animator anim in animList)
                 if (anim != null)
                     anim.GetComponent<SpriteRenderer>().flipX = flip;
+    }
+
+    private void Death()
+    {
+        playerView.RPC("RPC_Death", RpcTarget.All);
+    }
+
+    [PunRPC]
+    private void RPC_Death()
+    {
+        foreach (Animator anim in animList)
+            anim.SetTrigger("Death");
     }
 }

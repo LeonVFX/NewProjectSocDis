@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 934536409}
   - component: {fileID: 7154919146236622417}
   - component: {fileID: 934536410}
-  - component: {fileID: 3329371419513144108}
   m_Layer: 0
   m_Name: Sprite
   m_TagString: Untagged
@@ -103,30 +102,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &3329371419513144108
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 934536408}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b8c4a61274f60b4ea5fb4299cfdbf14, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ShowLayerWeightsInspector: 1
-  ShowParameterInspector: 1
-  m_SynchronizeParameters:
-  - Type: 9
-    SynchronizeType: 0
-    Name: Idle
-  - Type: 9
-    SynchronizeType: 0
-    Name: Run
-  m_SynchronizeLayers:
-  - SynchronizeType: 2
-    LayerIndex: 0
 --- !u!1 &2418182609166173806
 GameObject:
   m_ObjectHideFlags: 0
@@ -182,7 +157,6 @@ GameObject:
   - component: {fileID: 5895255812221108607}
   - component: {fileID: 2194780594541398073}
   - component: {fileID: 5850238220545011466}
-  - component: {fileID: 6869468249686725993}
   m_Layer: 0
   m_Name: Outline
   m_TagString: Untagged
@@ -274,30 +248,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6869468249686725993
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4074837858932536102}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b8c4a61274f60b4ea5fb4299cfdbf14, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ShowLayerWeightsInspector: 1
-  ShowParameterInspector: 1
-  m_SynchronizeParameters:
-  - Type: 9
-    SynchronizeType: 0
-    Name: Idle
-  - Type: 9
-    SynchronizeType: 0
-    Name: Run
-  m_SynchronizeLayers:
-  - SynchronizeType: 2
-    LayerIndex: 0
 --- !u!1 &4549701790167422974
 GameObject:
   m_ObjectHideFlags: 0
@@ -358,7 +308,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!136 &5246830671637676126
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -381,7 +331,7 @@ SortingGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4549701790167422974}
   m_Enabled: 1
-  m_SortingLayerID: -1716515263
+  m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
 --- !u!114 &7444288150573823315
@@ -472,8 +422,8 @@ MonoBehaviour:
   OwnershipTransfer: 0
   ObservedComponents:
   - {fileID: 3646500280940306664}
-  - {fileID: 3329371419513144108}
-  - {fileID: 6869468249686725993}
+  - {fileID: 0}
+  - {fileID: 0}
   viewIdField: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -682,6 +632,10 @@ PrefabInstance:
     - target: {fileID: 4745784436821889012, guid: 9159023b79cb32d48b5f229f5f7bbe68, type: 3}
       propertyPath: m_Name
       value: PlayerUI
+      objectReference: {fileID: 0}
+    - target: {fileID: 4745784436821889012, guid: 9159023b79cb32d48b5f229f5f7bbe68, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6563889773525510941, guid: 9159023b79cb32d48b5f229f5f7bbe68, type: 3}
       propertyPath: m_AnchorMin.y

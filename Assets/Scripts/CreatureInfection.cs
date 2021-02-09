@@ -31,7 +31,7 @@ public class CreatureInfection : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D task)
+    private void OnTriggerEnter(Collider task)
     {
         if (task.tag == "Task")
         {
@@ -40,7 +40,7 @@ public class CreatureInfection : MonoBehaviour
         }
     }
 
-    private void OnTriggerExit2D(Collider2D task)
+    private void OnTriggerExit(Collider task)
     {
         if (task.tag == "Task")
         {
