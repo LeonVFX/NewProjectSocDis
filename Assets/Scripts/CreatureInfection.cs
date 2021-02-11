@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CreatureInfection : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class CreatureInfection : MonoBehaviour
     
     private bool canInfect = false;
     private Task targetTask;
+    public bool visualUpdate;
+    public Text infectText;
 
     private void Start()
     {
@@ -27,6 +30,10 @@ public class CreatureInfection : MonoBehaviour
                 playerView.RPC("RPC_InfectTask", RpcTarget.All);
                 TaskManager.tm.tasksInfected = TaskManager.tm.tasksInfected + 1;
                 Debug.Log("Task Infected");
+                if(visualUpdate == true)
+                {
+                    infectText.text = "Task Infected!";
+                }
             }
         }
     }
@@ -34,7 +41,8 @@ public class CreatureInfection : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D task)
     {
         if (task.tag == "Task")
-        {
+        {            
+            visualUpdate = true;
             targetTask = task.GetComponent<Task>();
             canInfect = true;
         }
@@ -44,6 +52,7 @@ public class CreatureInfection : MonoBehaviour
     {
         if (task.tag == "Task")
         {
+            visualUpdate = false;
             targetTask = null;
             canInfect = false;
         }

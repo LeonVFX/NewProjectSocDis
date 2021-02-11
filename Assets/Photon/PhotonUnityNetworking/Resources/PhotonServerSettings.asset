@@ -17,17 +17,17 @@ MonoBehaviour:
     AppIdChat: 
     AppIdVoice: 
     AppVersion: 0.1
-    UseNameServer: 0
+    UseNameServer: 1
     FixedRegion: 
-    Server: ec2-18-222-187-29.us-east-2.compute.amazonaws.com
-    Port: 5055
+    Server: 
+    Port: 0
     ProxyServer: 
     Protocol: 0
     EnableProtocolFallback: 1
     AuthMode: 0
     EnableLobbyStatistics: 0
     NetworkLogging: 1
-  DevRegion: 
+  DevRegion: eu
   PunLogging: 0
   EnableSupportLogger: 0
   RunInBackground: 1
@@ -59,4 +59,4 @@ MonoBehaviour:
   - RPC_Move
   DisableAutoOpenWizard: 1
   ShowSettings: 1
-  DevRegionSetOnce: 0
+  DevRegionSetOnce: 1
