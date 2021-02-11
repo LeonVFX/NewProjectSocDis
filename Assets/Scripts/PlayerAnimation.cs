@@ -87,7 +87,7 @@ public class PlayerAnimation : MonoBehaviour
     [PunRPC]
     private void RPC_Flip(bool flip)
     {
-        if (animList.Length > 0)
+        if (animList.Length != null)
             foreach (Animator anim in animList)
                 if (anim != null)
                     anim.GetComponent<SpriteRenderer>().flipX = flip;

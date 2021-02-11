@@ -261,20 +261,20 @@ public class RoomMatchMaking : MonoBehaviourPunCallbacks, IInRoomCallbacks
     private void RPC_CreateGameManager()
     {
         // creates a Game Manager at the host
-        PhotonNetwork.InstantiateRoomObject(System.IO.Path.Combine("GamePrefabs", "GameManager"), Vector2.zero, Quaternion.identity);
+        PhotonNetwork.InstantiateRoomObject(System.IO.Path.Combine("GamePrefabs", "GameManager"), Vector3.zero, Quaternion.identity);
     }
 
     [PunRPC]
     private void RPC_CreateLevel()
     {
         // creates level network controller but not player character
-        PhotonNetwork.InstantiateRoomObject(System.IO.Path.Combine("LevelPrefabs", "Level"), Vector2.zero, Quaternion.identity);
+        PhotonNetwork.InstantiateRoomObject(System.IO.Path.Combine("LevelPrefabs", "Level"), Vector3.zero, Quaternion.identity);
     }
 
     [PunRPC]
     private void RPC_CreateTasks()
     {
-        PhotonNetwork.InstantiateRoomObject(System.IO.Path.Combine("GamePrefabs", "TaskManager"), Vector2.zero, Quaternion.identity);
+        PhotonNetwork.InstantiateRoomObject(System.IO.Path.Combine("GamePrefabs", "TaskManager"), Vector3.zero, Quaternion.identity);
     }
 
     [PunRPC]
