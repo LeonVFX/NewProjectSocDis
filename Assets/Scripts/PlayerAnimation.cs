@@ -87,10 +87,49 @@ public class PlayerAnimation : MonoBehaviour
     [PunRPC]
     private void RPC_Flip(bool flip)
     {
-        if (animList.Length != null)
-            foreach (Animator anim in animList)
-                if (anim != null)
-                    anim.GetComponent<SpriteRenderer>().flipX = flip;
+        // Regular Flip
+        //if (animList != null)
+        //    foreach (Animator anim in animList)
+        //        if (anim != null)
+        //            anim.GetComponent<SpriteRenderer>().flipX = flip;
+
+        // Flip like Paper Mario
+        if (flip == true)
+        {
+            if (animList != null)
+                foreach (Animator anim in animList)
+                {
+                    IEnumerator flipRoutine = FlipRoutine(anim, anim.transform.localScale, new Vector3(-1, 1, 1));
+                    StartCoroutine(flipRoutine);
+                }
+                //anim.transform.localScale = new Vector3(-1, 1, 1);
+        }
+        else
+        {
+            if (animList != null)
+            {
+                foreach (Animator anim in animList)
+                {
+                    IEnumerator flipRoutine = FlipRoutine(anim, anim.transform.localScale, new Vector3(1, 1, 1));
+                    StartCoroutine(flipRoutine);
+                }
+            }
+            //anim.transform.localScale = new Vector3(1, 1, 1);
+        }
+    }
+
+    private IEnumerator FlipRoutine(Animator anim, Vector3 originalTransform, Vector3 targetTransform)
+    {
+        float elapsedTime = 0f;
+        float totalTime = 0.2f;
+        while (elapsedTime < totalTime)
+        {
+            anim.transform.localScale = Vector3.Lerp(originalTransform, targetTransform, elapsedTime / totalTime);
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+        anim.transform.localScale = targetTransform;
+        yield return null;
     }
 
     private void Death()

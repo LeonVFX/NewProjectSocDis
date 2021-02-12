@@ -5,20 +5,34 @@ using UnityEngine;
 
 public class VoteButton : MonoBehaviour
 {
+    private Player[] players;
     private bool isInRange = false;
+    private bool isButtonPressed = false;
+    private bool votePassed = false;
+
+    private void Start()
+    {
+        players = FindObjectsOfType<Player>();
+        foreach (Player player in players)
+        {
+            player.PHUD.OnInteraction += PressButton;
+        }
+    }
 
     private void Update()
     {
-        if (isInRange)
+        if (isInRange && !votePassed)
         {
-            if (Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKeyDown(KeyCode.E) || isButtonPressed)
             {
+                Debug.Log("Button Pressed");
+                votePassed = true;
                 GameManager.gm.NextStage();
             }
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Creature" || other.tag == "Researcher")
         {
@@ -31,7 +45,7 @@ public class VoteButton : MonoBehaviour
         }
     }
 
-    private void OnTriggerExit2D(Collider2D other)
+    private void OnTriggerExit(Collider other)
     {
         if (other.tag == "Creature" || other.tag == "Researcher")
         {
@@ -42,5 +56,18 @@ public class VoteButton : MonoBehaviour
 
             isInRange = false;
         }
+    }
+
+    private void PressButton()
+    {
+        IEnumerator pressedButton = ButtonPressed();
+        isButtonPressed = true;
+        StartCoroutine(pressedButton);
+    }
+
+    private IEnumerator ButtonPressed()
+    {
+        yield return new WaitForSeconds(1);
+        isButtonPressed = false;
     }
 }

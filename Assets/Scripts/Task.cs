@@ -21,9 +21,9 @@ public class Task : MonoBehaviour
     private void Update()
     {
         if (taskinfected)
-            GetComponent<SpriteRenderer>().color = Color.green;
+            GetComponent<Renderer>().material.color = Color.green;
         else
-            GetComponent<SpriteRenderer>().color = Color.white;
+            GetComponent<Renderer>().material.color = Color.white;
     }
 
     public void SetInfected(bool isInfected)

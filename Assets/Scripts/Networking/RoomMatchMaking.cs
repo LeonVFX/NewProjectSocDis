@@ -251,9 +251,9 @@ public class RoomMatchMaking : MonoBehaviourPunCallbacks, IInRoomCallbacks
         if (playersInGame == PhotonNetwork.PlayerList.Length)
         {
             phoView.RPC("RPC_CreateGameManager", RpcTarget.MasterClient);
+            phoView.RPC("RPC_CreatePlayer", RpcTarget.All);
             phoView.RPC("RPC_CreateLevel", RpcTarget.MasterClient);
             phoView.RPC("RPC_CreateTasks", RpcTarget.MasterClient);
-            phoView.RPC("RPC_CreatePlayer", RpcTarget.All);
         }
     }
 

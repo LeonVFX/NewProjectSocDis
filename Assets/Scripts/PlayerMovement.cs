@@ -13,15 +13,6 @@ public class PlayerMovement : MonoBehaviour
     public event System.Action OnMove;
     private PhotonView playerView;
 
-    // Mouse hit
-    private RaycastHit hit;
-
-    public RaycastHit Hit
-    {
-        get { return hit; }
-        set { hit = value; }
-    }
-
     // Decides when player is able to move
     private bool canMove;
 
@@ -65,11 +56,12 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetMouseButton(0))
         {
             RaycastHit[] hits = Physics.RaycastAll(Camera.main.ScreenPointToRay(Input.mousePosition), Mathf.Infinity, layer).OrderBy(h => h.distance).ToArray();
+
             foreach (var hit in hits)
             {
+                // If not hitting UI
                 if (hit.transform.gameObject.layer == LayerMask.NameToLayer("Ground"))
                 {
-                    this.hit = hit;
                     if (canMove)
                     {
                         // Moving

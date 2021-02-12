@@ -28,13 +28,17 @@ public class RoomUI : MonoBehaviour
         if (playerNameInput.text != string.Empty && PhotonNetwork.IsConnectedAndReady)
         {
             findRooms.interactable = true;
+
             if (roomNameInput.text != string.Empty)
                 createRoom.interactable = true;
             else
                 createRoom.interactable = false;
         }
         else
+        {
             findRooms.interactable = false;
+            createRoom.interactable = false;
+        }
 
         // Start Game Button Activation
         // TODO: Only available if more than 4 players in room

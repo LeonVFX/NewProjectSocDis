@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 [RequireComponent(typeof(PlayerMovement))]
 
@@ -10,6 +11,12 @@ public class Player : MonoBehaviour
     public event System.Action OnDeath;
 
     protected PlayerMovement pMovement;
+    protected PlayerHUD pHUD;
+
+    public PlayerHUD PHUD
+    {
+        get { return pHUD; }
+    }
 
     [SerializeField]
     protected int playerNumber;
@@ -31,6 +38,12 @@ public class Player : MonoBehaviour
 
     protected Camera cam;
 
+    protected virtual void Awake()
+    {
+        pMovement = GetComponent<PlayerMovement>();
+        pHUD = GetComponentInChildren<PlayerHUD>();
+    }
+
     protected virtual void Start()
     {
         isAlive = true;
@@ -41,8 +54,7 @@ public class Player : MonoBehaviour
         GameManager.gm.OnStage2 += AllowMovement;
 
         PlayerManager.pm.playerViews.Add(playerView);
-
-        pMovement = GetComponent<PlayerMovement>();
+        
         pMovement.playerSpeed = baseSpeed;
         
         cam = Camera.main.GetComponent<Camera>();
@@ -54,6 +66,9 @@ public class Player : MonoBehaviour
     protected virtual void Update()
     {
         if (!playerView.IsMine || !isAlive)
+            return;
+
+        if (IsPointerOverUIObject())
             return;
 
         pMovement.Move();
@@ -73,5 +88,15 @@ public class Player : MonoBehaviour
     {
         isAlive = false;
         OnDeath?.Invoke();
+    }
+
+    //When Touching UI
+    private bool IsPointerOverUIObject()
+    {
+        PointerEventData eventDataCurrentPosition = new PointerEventData(EventSystem.current);
+        eventDataCurrentPosition.position = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
+        List<RaycastResult> results = new List<RaycastResult>();
+        EventSystem.current.RaycastAll(eventDataCurrentPosition, results);
+        return results.Count > 0;
     }
 }
