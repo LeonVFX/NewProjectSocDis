@@ -9,12 +9,7 @@ public class TaskManager : MonoBehaviour
 
     public int tasksInfected = 0;
     public int maxTasksInfected = 1;
-
-    private int maxNumberOfTasksPerPlayer = 1;
-    public int MaxNumberOfTasksPerPlayer
-    {
-        get { return maxNumberOfTasksPerPlayer; }
-    }
+    public int maxNumberOfTasksPerPlayer = 1;
 
     private List<Task> taskList;
 

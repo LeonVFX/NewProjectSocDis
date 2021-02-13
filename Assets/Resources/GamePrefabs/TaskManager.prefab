@@ -48,6 +48,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tasksInfected: 0
   maxTasksInfected: 1
+  maxNumberOfTasksPerPlayer: 1
 --- !u!114 &2393729822280559458
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -85,7 +86,7 @@ GameObject:
   - component: {fileID: 4039601922929145938}
   m_Layer: 0
   m_Name: Task1
-  m_TagString: Untagged
+  m_TagString: Task
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -193,7 +194,7 @@ GameObject:
   - component: {fileID: 603155424859372535}
   m_Layer: 0
   m_Name: Task2
-  m_TagString: Untagged
+  m_TagString: Task
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

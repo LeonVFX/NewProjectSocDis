@@ -2591,8 +2591,6 @@ MonoBehaviour:
   playerNameInput: {fileID: 198064748}
   roomNameInput: {fileID: 1886130486}
   roomSizeInput: {fileID: 1829058798}
-  reduceSize: {fileID: 1719082450}
-  increaseSize: {fileID: 1340761599}
   createRoom: {fileID: 1725507972}
   findRooms: {fileID: 1528520763}
   minRoomSize: 4

@@ -23,9 +23,8 @@ public class VoteButton : MonoBehaviour
     {
         if (isInRange && !votePassed)
         {
-            if (Input.GetKeyDown(KeyCode.E) || isButtonPressed)
+            if (Input.GetButtonDown("Interact") || isButtonPressed)
             {
-                Debug.Log("Button Pressed");
                 votePassed = true;
                 GameManager.gm.NextStage();
             }

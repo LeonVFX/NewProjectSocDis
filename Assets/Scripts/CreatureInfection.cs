@@ -9,10 +9,12 @@ public class CreatureInfection : MonoBehaviour
     
     private bool canInfect = false;
     private Task targetTask;
+    private bool isInteract = false;
 
     private void Start()
     {
         playerView = GetComponent<PhotonView>();
+        GetComponent<Player>().PHUD.OnInteraction += PressInteract;
     }
 
     void Update()
@@ -22,7 +24,7 @@ public class CreatureInfection : MonoBehaviour
 
         if (canInfect == true && TaskManager.tm.tasksInfected < TaskManager.tm.maxTasksInfected)
         {
-            if (Input.GetButtonDown("Interact"))
+            if (Input.GetButtonDown("Interact") || isInteract)
             {
                 playerView.RPC("RPC_InfectTask", RpcTarget.All);
                 TaskManager.tm.tasksInfected = TaskManager.tm.tasksInfected + 1;
@@ -53,5 +55,18 @@ public class CreatureInfection : MonoBehaviour
     private void RPC_InfectTask()
     {
         targetTask.SetInfected(true);
+    }
+
+    private void PressInteract()
+    {
+        IEnumerator pressedInteract = InteractPressed();
+        isInteract = true;
+        StartCoroutine(pressedInteract);
+    }
+
+    private IEnumerator InteractPressed()
+    {
+        yield return new WaitForSeconds(1);
+        isInteract = false;
     }
 }

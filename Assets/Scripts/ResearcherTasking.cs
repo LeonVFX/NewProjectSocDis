@@ -6,8 +6,6 @@ using UnityEngine;
 public class ResearcherTasking : MonoBehaviour
 {
     private PhotonView playerView;
-
-    // private PhotonView playerView;
     private List<Task> taskList;
     private Task targetTask;
     private bool isValidTask;
