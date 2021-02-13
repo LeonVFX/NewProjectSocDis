@@ -66,7 +66,7 @@ public class CreatureInfection : MonoBehaviour
 
     private IEnumerator InteractPressed()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForEndOfFrame();
         isInteract = false;
     }
 }
