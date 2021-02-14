@@ -9,11 +9,13 @@ public class ResearcherTasking : MonoBehaviour
     private List<Task> taskList;
     private Task targetTask;
     private bool isValidTask;
+    private bool isInteract = false;
 
     private void Start()
     {
         playerView = GetComponent<PhotonView>();
         taskList = TaskManager.tm.RandomizeTasks();
+        GetComponent<Player>().PHUD.OnInteraction += PressInteract;
     }
 
     void Update()
@@ -23,7 +25,7 @@ public class ResearcherTasking : MonoBehaviour
 
         if (isValidTask)
         {
-            if (Input.GetButtonDown("Interact"))
+            if (Input.GetButtonDown("Interact") || isInteract)
                 DoTask();
         }
     }
@@ -57,12 +59,10 @@ public class ResearcherTasking : MonoBehaviour
 
     private void DoTask()
     {
-        // Do the task. Implement Drew's Task Button
         if (targetTask.TaskInfected)
         {
             GetComponent<Researcher>().SetInfected(true);
             playerView.RPC("RPC_DisinfectTask", RpcTarget.All);
-            // TODO: Debug Color
             GetComponentInChildren<SpriteRenderer>().color = Color.green;
         }
         Debug.Log("Task Completed!");
@@ -73,5 +73,18 @@ public class ResearcherTasking : MonoBehaviour
     {
         targetTask.SetInfected(false);
         TaskManager.tm.tasksInfected--;
+    }
+
+    private void PressInteract()
+    {
+        IEnumerator pressedInteract = InteractPressed();
+        isInteract = true;
+        StartCoroutine(pressedInteract);
+    }
+
+    private IEnumerator InteractPressed()
+    {
+        yield return new WaitForEndOfFrame();
+        isInteract = false;
     }
 }

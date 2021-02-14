@@ -161,6 +161,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6247913949336928552}
     m_Modifications:
+    - target: {fileID: 1286408616152777271, guid: a14e1c0103eb3d14db315bdad3bc51be, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -26.29
+      objectReference: {fileID: 0}
+    - target: {fileID: 1286408616152777271, guid: a14e1c0103eb3d14db315bdad3bc51be, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1848968814875938507, guid: a14e1c0103eb3d14db315bdad3bc51be, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 11.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 1848968814875938507, guid: a14e1c0103eb3d14db315bdad3bc51be, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 9.92
+      objectReference: {fileID: 0}
+    - target: {fileID: 1848968814875938507, guid: a14e1c0103eb3d14db315bdad3bc51be, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2592541638771408863, guid: a14e1c0103eb3d14db315bdad3bc51be, type: 3}
       propertyPath: m_Name
       value: TaskManager

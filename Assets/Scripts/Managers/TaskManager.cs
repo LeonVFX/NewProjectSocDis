@@ -11,7 +11,7 @@ public class TaskManager : MonoBehaviour
     public int maxTasksInfected = 1;
     public int maxNumberOfTasksPerPlayer = 1;
 
-    private List<Task> taskList;
+    private Task[] taskList;
 
     private void Awake()
     {
@@ -29,7 +29,7 @@ public class TaskManager : MonoBehaviour
 
     private void Start()
     {
-        taskList = GetComponentsInChildren<Task>().ToList();
+        taskList = GetComponentsInChildren<Task>();
         int id = 1;
         foreach (Task task in taskList)
         {
