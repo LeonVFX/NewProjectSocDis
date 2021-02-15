@@ -10,11 +10,15 @@ public class Researcher : Player
     protected override void Start()
     {
         base.Start();
+
         pMovement.playerSpeed *= speedMultiplier;
     }
 
     protected override void Update()
     {
+        if (!playerView.IsMine || !isAlive)
+            return;
+
         base.Update();
     }
 

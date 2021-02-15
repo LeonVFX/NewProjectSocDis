@@ -26,7 +26,7 @@ public class Player : MonoBehaviour
 
     public float speedMultiplier = 1.0f;
 
-    public bool isAlive = true;
+    public bool isAlive;
 
     public PhotonView playerView = null;
 
@@ -68,6 +68,7 @@ public class Player : MonoBehaviour
         if (!playerView.IsMine || !isAlive)
             return;
 
+        // Mouse over UI
         if (IsPointerOverUIObject())
             return;
 
@@ -84,10 +85,24 @@ public class Player : MonoBehaviour
         pMovement.CanMove = true;
     }
 
+    //public void Die()
+    //{
+    //    Debug.Log($"Player { this.name } Died");
+    //    OnDeath?.Invoke();
+    //    isAlive = false;
+    //}
+
     public void Die()
     {
-        isAlive = false;
+        playerView.RPC("RPC_Die", RpcTarget.All);
+    }
+
+    [PunRPC]
+    public void RPC_Die()
+    {
+        Debug.Log($"Player { this.name } Died");
         OnDeath?.Invoke();
+        isAlive = false;
     }
 
     //When Touching UI

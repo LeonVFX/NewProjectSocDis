@@ -20,6 +20,7 @@ public class Creature : Player
     protected override void Start()
     {
         base.Start();
+
         pMovement.playerSpeed *= speedMultiplier;
 
         targetNum = new List<int>();
@@ -29,7 +30,7 @@ public class Creature : Player
 
     protected override void Update()
     {
-        if (!playerView.IsMine)
+        if (!playerView.IsMine || !isAlive)
             return;
 
         base.Update();

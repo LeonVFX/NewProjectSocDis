@@ -43,12 +43,12 @@ public class PlayerMovement : MonoBehaviour
         canMove = true;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (!playerView.IsMine)
-            return;
-    }
+    //// Update is called once per frame
+    //void Update()
+    //{
+    //    if (!playerView.IsMine)
+    //        return;
+    //}
 
     public void Move()
     {
