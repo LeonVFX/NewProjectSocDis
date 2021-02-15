@@ -11,7 +11,7 @@ public class CreatureInfection : MonoBehaviour
     private bool canInfect = false;
     private Task targetTask;
     public bool visualUpdate;
-    public Text infectText;
+    [SerializeField] private Text infectText;
 
     private void Start()
     {
@@ -55,6 +55,7 @@ public class CreatureInfection : MonoBehaviour
             visualUpdate = false;
             targetTask = null;
             canInfect = false;
+            infectText.text = "Interact";
         }
     }
 
