@@ -55,6 +55,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1505207883107620973}
   - component: {fileID: 7506143010319644124}
+  - component: {fileID: 2749119038880395931}
   m_Layer: 0
   m_Name: Sprite
   m_TagString: Untagged
@@ -127,6 +128,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!65 &2749119038880395931
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6250979063694411586}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.0000001, y: 1, z: 0.20000006}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &6652799097540094080
 GameObject:
   m_ObjectHideFlags: 0
@@ -137,7 +151,9 @@ GameObject:
   m_Component:
   - component: {fileID: 3906076217259038339}
   - component: {fileID: 5257369655015823550}
-  - component: {fileID: 7391734562285323738}
+  - component: {fileID: 3359368079626472728}
+  - component: {fileID: 1448673612334063477}
+  - component: {fileID: 2040378879665574269}
   m_Layer: 0
   m_Name: Gas
   m_TagString: Untagged
@@ -176,19 +192,55 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &7391734562285323738
-BoxCollider:
+--- !u!135 &3359368079626472728
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6652799097540094080}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Radius: 2
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1448673612334063477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6652799097540094080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82ac8dfaef182c243ae155f83a02f51f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemType: 1
+  itemSprite: {fileID: 0}
+--- !u!114 &2040378879665574269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6652799097540094080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  observableSearch: 2
+  Synchronization: 3
+  OwnershipTransfer: 0
+  ObservedComponents: []
+  viewIdField: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &7825194544344521429
 GameObject:
   m_ObjectHideFlags: 0

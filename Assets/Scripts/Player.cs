@@ -33,8 +33,8 @@ public class Player : MonoBehaviour
     public bool isAlive;
 
     // Other
-    private Item heldItem = null;
-    public Item HeldItem
+    private GameObject heldItem = null;
+    public GameObject HeldItem
     {
         get { return heldItem; }
         set { heldItem = value; }
@@ -55,6 +55,8 @@ public class Player : MonoBehaviour
 
         GameManager.gm.OnVoteStage += PreventMovement;
         GameManager.gm.OnStage2 += AllowMovement;
+
+        ItemManager.im.OnGotItem += HoldItem;
 
         PlayerManager.pm.playerViews.Add(playerView);
         
@@ -116,5 +118,11 @@ public class Player : MonoBehaviour
         List<RaycastResult> results = new List<RaycastResult>();
         EventSystem.current.RaycastAll(eventDataCurrentPosition, results);
         return results.Count > 0;
+    }
+
+    private void HoldItem(Item item)
+    {
+        heldItem = item.gameObject;
+        Debug.Log("Got Gas");
     }
 }

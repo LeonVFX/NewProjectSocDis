@@ -22,6 +22,8 @@ public class PlayerHUD : MonoBehaviour
     [SerializeField] private Button itemBtn = null;
     [SerializeField] private Button killBtn = null;
 
+    private Item heldItem = null;
+
     // Other
     private bool toggleMap = false;
 
