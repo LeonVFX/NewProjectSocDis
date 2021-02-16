@@ -8,35 +8,38 @@ using UnityEngine.EventSystems;
 
 public class Player : MonoBehaviour
 {
+    // Events
     public event System.Action OnDeath;
 
+    // Basic Player Components
+    public PhotonView playerView = null;
     protected PlayerMovement pMovement;
+    protected Camera cam;
     protected PlayerHUD pHUD;
-
     public PlayerHUD PHUD
     {
         get { return pHUD; }
     }
 
-    [SerializeField]
-    protected int playerNumber;
-
-    [SerializeField]
-    protected float baseSpeed = 30.0f;
-
-    public float speedMultiplier = 1.0f;
-
-    public bool isAlive;
-
-    public PhotonView playerView = null;
-
+    // Player Stats
+    [SerializeField] protected int playerNumber;
     public int PlayerNumber
     {
         get { return playerNumber; }
         set { playerNumber = value; }
     }
+    [SerializeField] protected float baseSpeed = 30.0f;
+    public float speedMultiplier = 1.0f;
+    public bool isAlive;
 
-    protected Camera cam;
+    // Other
+    private Item heldItem = null;
+    public Item HeldItem
+    {
+        get { return heldItem; }
+        set { heldItem = value; }
+    }
+
 
     protected virtual void Awake()
     {

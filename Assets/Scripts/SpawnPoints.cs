@@ -13,7 +13,7 @@ public class SpawnPoints : MonoBehaviour
     public Vector3 pos7;
     public Vector3 pos8;
 
-        public Vector2 GetPosition(int playerNumber)
+        public Vector3 GetPosition(int playerNumber)
     {
         Vector3 tempPos = transform.position;
 

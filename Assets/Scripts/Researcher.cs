@@ -12,6 +12,9 @@ public class Researcher : Player
         base.Start();
 
         pMovement.playerSpeed *= speedMultiplier;
+
+        // Deactivate Kill Button
+        PHUD.ToggleKillButtonActive();
     }
 
     protected override void Update()
