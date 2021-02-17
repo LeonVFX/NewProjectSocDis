@@ -75,7 +75,7 @@ public class ResearcherTasking : MonoBehaviour
         TaskManager.tm.tasksInfected--;
     }
 
-    private void PressInteract()
+    private void PressInteract(PhotonView playerView)
     {
         IEnumerator pressedInteract = InteractPressed();
         isInteract = true;

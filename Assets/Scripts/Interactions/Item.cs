@@ -22,6 +22,7 @@ public class Item : MonoBehaviour
     // Player
     private bool isInRange = false;
     private bool getItem = false;
+    private bool gotItem = false;
 
     private void Start()
     {
@@ -33,9 +34,12 @@ public class Item : MonoBehaviour
     {
         if (isInRange)
         {
-            if (Input.GetButtonDown("Interact") || getItem)
+            if ((Input.GetButtonDown("Interact") && !gotItem) || (getItem && !gotItem))
             {
                 ItemManager.im.GetItem(this);
+                gotItem = true;
+
+                // Disable item for everyone
                 itemView.RPC("RPC_DisableItem", RpcTarget.All);
             }
         }
@@ -67,8 +71,11 @@ public class Item : MonoBehaviour
         }
     }
 
-    public void GetItem()
+    public void GetItem(PhotonView playerView)
     {
+        if (!playerView.IsMine)
+            return;
+
         IEnumerator gotItem = GotItem();
         getItem = true;
         StartCoroutine(gotItem);

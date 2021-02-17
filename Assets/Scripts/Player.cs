@@ -44,14 +44,17 @@ public class Player : MonoBehaviour
     protected virtual void Awake()
     {
         pMovement = GetComponent<PlayerMovement>();
+
+        // Setting HUD
         pHUD = GetComponentInChildren<PlayerHUD>();
+        playerView = GetComponent<PhotonView>();
+        pHUD.playerView = playerView;
+
     }
 
     protected virtual void Start()
     {
         isAlive = true;
-
-        playerView = GetComponent<PhotonView>();
 
         GameManager.gm.OnVoteStage += PreventMovement;
         GameManager.gm.OnStage2 += AllowMovement;
@@ -122,7 +125,11 @@ public class Player : MonoBehaviour
 
     private void HoldItem(Item item)
     {
+        if (!playerView.IsMine || !isAlive)
+            return;
+
         heldItem = item;
+        pHUD.HoldItem(heldItem.GetComponentInChildren<SpriteRenderer>().sprite.texture);
         Debug.Log("Got Gas");
     }
 }

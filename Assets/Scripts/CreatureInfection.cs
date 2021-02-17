@@ -57,7 +57,7 @@ public class CreatureInfection : MonoBehaviour
         targetTask.SetInfected(true);
     }
 
-    private void PressInteract()
+    private void PressInteract(PhotonView playerView)
     {
         IEnumerator pressedInteract = InteractPressed();
         isInteract = true;

@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Photon.Pun;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -6,9 +7,11 @@ using UnityEngine.UI;
 public class PlayerHUD : MonoBehaviour
 {
     // Events
-    public event System.Action OnInteraction;
-    public event System.Action OnItemInteraction;
+    public event System.Action<PhotonView> OnInteraction;
+    public event System.Action<PhotonView> OnItemInteraction;
     public event System.Action OnKill;
+
+    public PhotonView playerView = null;
 
     // HUD Components
     [SerializeField] private GameObject background;
@@ -29,8 +32,6 @@ public class PlayerHUD : MonoBehaviour
 
     private void Start()
     {
-        ItemManager.im.OnGotItem += HoldItem;
-
         background.SetActive(false);
         level = FindObjectOfType<Level>();
 
@@ -47,14 +48,17 @@ public class PlayerHUD : MonoBehaviour
         killBtn.interactable = false;
     }
 
-    private void HoldItem(Item item)
+    public void HoldItem(Texture itemTex)
     {
-        heldItem.texture = item.GetComponentInChildren<SpriteRenderer>().sprite.texture;
+        if (!playerView.IsMine)
+            return;
+
+        heldItem.texture = itemTex;
     }
 
     private void InteractionOnClick()
     {
-        OnInteraction?.Invoke();
+        OnInteraction?.Invoke(playerView);
     }
 
     private void MapOnClick()
@@ -78,7 +82,7 @@ public class PlayerHUD : MonoBehaviour
 
     private void ItemInteractionOnClick()
     {
-        OnItemInteraction?.Invoke();
+        OnItemInteraction?.Invoke(playerView);
     }
 
     private void KillOnClick()

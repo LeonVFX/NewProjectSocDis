@@ -57,7 +57,7 @@ public class VoteButton : MonoBehaviour
         }
     }
 
-    private void PressButton()
+    private void PressButton(PhotonView playerView)
     {
         IEnumerator pressedButton = ButtonPressed();
         isButtonPressed = true;
