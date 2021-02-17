@@ -8,7 +8,8 @@ public class PlayerHUD : MonoBehaviour
 {
     // Events
     public event System.Action<PhotonView> OnInteraction;
-    public event System.Action<PhotonView> OnItemInteraction;
+    // Item bool = holding an item or not
+    public event System.Action<PhotonView, bool> OnItemInteraction;
     public event System.Action OnKill;
 
     public PhotonView playerView = null;
@@ -26,6 +27,10 @@ public class PlayerHUD : MonoBehaviour
     [SerializeField] private Button killBtn = null;
     [Header("Item")]
     [SerializeField] private RawImage heldItem = null;
+    public bool hasHeldItem = false;
+    [Header("Tasks")]
+    [SerializeField] private TaskList taskList = null;
+    [SerializeField] private GameObject taskPrefab = null;
 
     // Other
     private bool toggleMap = false;
@@ -56,6 +61,31 @@ public class PlayerHUD : MonoBehaviour
         heldItem.texture = itemTex;
     }
 
+    public void UpdateTaskList(List<Task> newTaskList)
+    {
+        if (!playerView.IsMine)
+            return;
+
+        ClearTaskList();
+        foreach (Task task in newTaskList)
+        {
+            GameObject newTask = Instantiate(taskPrefab, taskList.transform);
+            newTask.GetComponent<Text>().text = task.taskDescription;
+        }
+    }
+
+    public void ClearTaskList()
+    {
+        if (!playerView.IsMine)
+            return;
+
+        foreach (Transform child in taskList.transform)
+        {
+            GameObject.Destroy(child.gameObject);
+        }
+    }
+
+    #region OnClickEvents
     private void InteractionOnClick()
     {
         OnInteraction?.Invoke(playerView);
@@ -82,14 +112,14 @@ public class PlayerHUD : MonoBehaviour
 
     private void ItemInteractionOnClick()
     {
-        OnItemInteraction?.Invoke(playerView);
+        OnItemInteraction?.Invoke(playerView, hasHeldItem);
     }
 
     private void KillOnClick()
     {
         OnKill?.Invoke();
     }
-
+    #endregion
 
     #region ButtonToggles
     public void ToggleInteractButtonInteractable()
@@ -143,6 +173,20 @@ public class PlayerHUD : MonoBehaviour
                 break;
             case false:
                 killBtn.gameObject.SetActive(true);
+                break;
+            default:
+                break;
+        }
+    }
+    public void ToggleTaskListActive()
+    {
+        switch (taskList.gameObject.activeSelf)
+        {
+            case true:
+                taskList.gameObject.SetActive(false);
+                break;
+            case false:
+                taskList.gameObject.SetActive(true);
                 break;
             default:
                 break;

@@ -16,13 +16,12 @@ public class Item : MonoBehaviour
 
     // HUD
     [Header("Item Settings")]
-    [SerializeField] private ItemType itemType = ItemType.Default;
+    public ItemType itemType = ItemType.Default;
     [SerializeField] private Sprite itemSprite = null;
 
     // Player
     private bool isInRange = false;
     private bool getItem = false;
-    private bool gotItem = false;
 
     private void Start()
     {
@@ -34,10 +33,9 @@ public class Item : MonoBehaviour
     {
         if (isInRange)
         {
-            if ((Input.GetButtonDown("Interact") && !gotItem) || (getItem && !gotItem))
+            if (Input.GetButtonDown("Interact") || getItem)
             {
                 ItemManager.im.GetItem(this);
-                gotItem = true;
 
                 // Disable item for everyone
                 itemView.RPC("RPC_DisableItem", RpcTarget.All);
@@ -71,13 +69,14 @@ public class Item : MonoBehaviour
         }
     }
 
-    public void GetItem(PhotonView playerView)
+    public void GetItem(PhotonView playerView, bool hasHeldItem)
     {
-        if (!playerView.IsMine)
+        if (!playerView.IsMine || hasHeldItem)
             return;
 
         IEnumerator gotItem = GotItem();
         getItem = true;
+        playerView.GetComponent<Player>().PHUD.hasHeldItem = true;
         StartCoroutine(gotItem);
     }
 

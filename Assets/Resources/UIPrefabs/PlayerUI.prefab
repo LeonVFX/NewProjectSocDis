@@ -817,6 +817,8 @@ MonoBehaviour:
   itemBtn: {fileID: 7209628865182000642}
   killBtn: {fileID: 8303022111386088353}
   heldItem: {fileID: 3998965024739588273}
+  taskList: {fileID: 1913254820304976366}
+  taskPrefab: {fileID: 1302683853140177344, guid: 72ad2dee3a0cd1a4a85f715415bb0345, type: 3}
 --- !u!1 &4228398074058964326
 GameObject:
   m_ObjectHideFlags: 0
@@ -1449,7 +1451,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 20, y: -20}
-  m_SizeDelta: {x: 300, y: 50}
+  m_SizeDelta: {x: 300, y: 16}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1372601832071893113
 MonoBehaviour:

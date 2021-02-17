@@ -4,15 +4,28 @@ using UnityEngine;
 
 public class TaskList : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private RectTransform rec = null;
+    private float width = 0f;
+    private float height = 0f;
+    private int childNum = 0;
+
+    private void Start()
     {
-        
+        rec = GetComponent<RectTransform>();
+        width = rec.rect.width;
+        height = rec.rect.height;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        // Adjust Size of TaskList
+        childNum = 0;
+
+        foreach (Transform item in GetComponentsInChildren<Transform>())
+        {
+            childNum++;
+        }
+
+        rec.sizeDelta = new Vector2(width, height * childNum);
     }
 }

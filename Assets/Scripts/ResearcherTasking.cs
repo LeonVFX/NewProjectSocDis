@@ -14,8 +14,13 @@ public class ResearcherTasking : MonoBehaviour
     private void Start()
     {
         playerView = GetComponent<PhotonView>();
+
+        if (!playerView.IsMine)
+            return;
+
         taskList = TaskManager.tm.RandomizeTasks();
         GetComponent<Player>().PHUD.OnInteraction += PressInteract;
+        GetComponent<Player>().PHUD.UpdateTaskList(taskList);
     }
 
     void Update()
@@ -30,10 +35,14 @@ public class ResearcherTasking : MonoBehaviour
         }
     }
 
+    #region Triggers
     private void OnTriggerEnter(Collider task)
     {
         if (task.tag == "Task")
         {
+            if (!playerView.IsMine)
+                return;
+
             targetTask = task.GetComponent<Task>();
             foreach (Task checkTask in taskList)
             {
@@ -52,20 +61,49 @@ public class ResearcherTasking : MonoBehaviour
     {
         if (task.tag == "Task")
         {
+            if (!playerView.IsMine)
+                return;
+
             targetTask = null;
             isValidTask = false;
         }
     }
+    #endregion
 
     private void DoTask()
     {
-        if (targetTask.TaskInfected)
+        if (!playerView.IsMine)
+            return;
+
+        // If holding item
+        if (GetComponent<Player>().HeldItem != null)
         {
-            GetComponent<Researcher>().SetInfected(true);
-            playerView.RPC("RPC_DisinfectTask", RpcTarget.All);
-            GetComponentInChildren<SpriteRenderer>().color = Color.green;
+            if (GetComponent<Player>().HeldItem.itemType == targetTask.taskRequiredItemType)
+            {
+                if (targetTask.TaskInfected)
+                {
+                    GetComponent<Researcher>().SetInfected(true);
+                    playerView.RPC("RPC_DisinfectTask", RpcTarget.All);
+                    GetComponentInChildren<SpriteRenderer>().color = Color.green;
+                }
+                CompleteTask();
+                Debug.Log("Task Completed!");
+            }
+            else
+            {
+                Debug.Log($"You need a { targetTask.taskRequiredItemType }.");
+            }
         }
-        Debug.Log("Task Completed!");
+    }
+
+    private void CompleteTask()
+    {
+        if (!playerView.IsMine)
+            return;
+
+        targetTask.isComplete = true;
+        taskList.Remove(targetTask);
+        GetComponent<Player>().PHUD.UpdateTaskList(taskList);
     }
 
     [PunRPC]
@@ -75,6 +113,7 @@ public class ResearcherTasking : MonoBehaviour
         TaskManager.tm.tasksInfected--;
     }
 
+    #region Base Interactions
     private void PressInteract(PhotonView playerView)
     {
         IEnumerator pressedInteract = InteractPressed();
@@ -87,4 +126,5 @@ public class ResearcherTasking : MonoBehaviour
         yield return new WaitForEndOfFrame();
         isInteract = false;
     }
+    #endregion
 }

@@ -28,6 +28,9 @@ public class Creature : Player
         isKill = false;
 
         PHUD.OnKill += PressKill;
+
+        // Deactivate Task List
+        PHUD.ToggleTaskListActive();
     }
 
     protected override void Update()

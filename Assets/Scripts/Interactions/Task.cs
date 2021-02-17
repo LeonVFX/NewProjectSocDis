@@ -13,11 +13,12 @@ public class Task : MonoBehaviour
         set { taskID = value; }
     }
 
-    [Header ("Task Details")]
-    [SerializeField] private string taskName;
-    [SerializeField] private string taskDescription;
-    [SerializeField] private Item.ItemType taskRequiredItemType;
-    [SerializeField] private GameObject taskDestination;
+    [Header("Task Details")]
+    public bool isComplete = false;
+    public string taskName;
+    public string taskDescription;
+    public Item.ItemType taskRequiredItemType;
+    public GameObject taskDestination;
 
     private bool taskinfected = false;
     public bool TaskInfected
