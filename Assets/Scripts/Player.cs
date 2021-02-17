@@ -2,56 +2,69 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 [RequireComponent(typeof(PlayerMovement))]
 
-
 public class Player : MonoBehaviour
 {
-     enum endState
-    {
-        SuccessEscape,
-        UnsuccessEscape,
-        CreatureElim,
-        AllResearchElim,
-        SuccessInfil,
-        UnsuccessInfil
+    // Events
+    public event System.Action OnDeath;
 
-    }
-    protected PlayerMovement pMovement;
-
-    [SerializeField]
-    protected int playerNumber;
-
-    [SerializeField]
-    protected float baseSpeed = 30.0f;
-
-    public float speedMultiplier = 1.0f;
-
-    public bool isAlive = true;
-
+    // Basic Player Components
     public PhotonView playerView = null;
+    protected PlayerMovement pMovement;
+    protected Camera cam;
+    protected PlayerHUD pHUD;
+    public PlayerHUD PHUD
+    {
+        get { return pHUD; }
+    }
 
+    // Player Stats
+    [SerializeField] protected int playerNumber;
     public int PlayerNumber
     {
         get { return playerNumber; }
         set { playerNumber = value; }
     }
+    [SerializeField] protected float baseSpeed = 30.0f;
+    public float speedMultiplier = 1.0f;
+    public bool isAlive;
 
-    protected Camera cam;
+    // Other
+    private Item heldItem = null;
+    public Item HeldItem
+    {
+        get { return heldItem; }
+        set { heldItem = value; }
+    }
+
+
+    protected virtual void Awake()
+    {
+        pMovement = GetComponent<PlayerMovement>();
+
+        // Setting HUD
+        pHUD = GetComponentInChildren<PlayerHUD>();
+        playerView = GetComponent<PhotonView>();
+        pHUD.playerView = playerView;
+
+    }
 
     protected virtual void Start()
     {
-        playerView = GetComponent<PhotonView>();
+        isAlive = true;
 
         GameManager.gm.OnVoteStage += PreventMovement;
         GameManager.gm.OnStage2 += AllowMovement;
 
-        PlayerManager.pm.playerViews.Add(playerView);
+        ItemManager.im.OnGotItem += HoldItem;
 
-        pMovement = GetComponent<PlayerMovement>();
+        PlayerManager.pm.playerViews.Add(playerView);
+        
         pMovement.playerSpeed = baseSpeed;
-        isAlive = true;
+        
         cam = Camera.main.GetComponent<Camera>();
 
         if (playerView.IsMine)
@@ -61,6 +74,10 @@ public class Player : MonoBehaviour
     protected virtual void Update()
     {
         if (!playerView.IsMine || !isAlive)
+            return;
+
+        // Mouse over UI
+        if (IsPointerOverUIObject())
             return;
 
         pMovement.Move();
@@ -76,14 +93,43 @@ public class Player : MonoBehaviour
         pMovement.CanMove = true;
     }
 
+    //public void Die()
+    //{
+    //    Debug.Log($"Player { this.name } Died");
+    //    OnDeath?.Invoke();
+    //    isAlive = false;
+    //}
+
     public void Die()
     {
         playerView.RPC("RPC_Die", RpcTarget.All);
     }
 
     [PunRPC]
-    protected void RPC_Die()
+    public void RPC_Die()
     {
-        Destroy(playerView.gameObject);
+        Debug.Log($"Player { this.name } Died");
+        OnDeath?.Invoke();
+        isAlive = false;
+    }
+
+    //When Touching UI
+    private bool IsPointerOverUIObject()
+    {
+        PointerEventData eventDataCurrentPosition = new PointerEventData(EventSystem.current);
+        eventDataCurrentPosition.position = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
+        List<RaycastResult> results = new List<RaycastResult>();
+        EventSystem.current.RaycastAll(eventDataCurrentPosition, results);
+        return results.Count > 0;
+    }
+
+    private void HoldItem(Item item)
+    {
+        if (!playerView.IsMine || !isAlive)
+            return;
+
+        heldItem = item;
+        pHUD.HoldItem(heldItem.GetComponentInChildren<SpriteRenderer>().sprite.texture);
+        Debug.Log("Got Gas");
     }
 }

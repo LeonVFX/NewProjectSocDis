@@ -23,13 +23,14 @@ public class PlayerUI : MonoBehaviourPunCallbacks
     {
         playerView = GetComponentInParent<PhotonView>();
         localPlayer = playerView.GetComponentInParent<Player>();
-        this.transform.SetParent(GameObject.Find("Canvas").GetComponent<Transform>(), false);
     }
 
     private void Start()
     {
         if (!playerView.IsMine)
             return;
+
+        this.transform.SetParent(GameObject.Find("Canvas").GetComponent<Transform>(), false);
 
         GameManager.gm.OnVoteStage += EnableVotingUI;
         GameManager.gm.OnStage2 += DisableVotingUI;

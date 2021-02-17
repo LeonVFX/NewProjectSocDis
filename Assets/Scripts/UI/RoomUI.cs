@@ -9,8 +9,6 @@ public class RoomUI : MonoBehaviour
     [SerializeField] private InputField playerNameInput = null;
     [SerializeField] private InputField roomNameInput = null;
     [SerializeField] private InputField roomSizeInput = null;
-    [SerializeField] private Button reduceSize = null;
-    [SerializeField] private Button increaseSize = null;
     [SerializeField] private Button createRoom = null;
     [SerializeField] private Button findRooms = null;
 
@@ -27,16 +25,20 @@ public class RoomUI : MonoBehaviour
     private void Update()
     {
         // Main Menu Activation
-        if (playerNameInput.text != string.Empty)
+        if (playerNameInput.text != string.Empty && PhotonNetwork.IsConnectedAndReady)
         {
             findRooms.interactable = true;
+
             if (roomNameInput.text != string.Empty)
                 createRoom.interactable = true;
             else
                 createRoom.interactable = false;
         }
         else
+        {
             findRooms.interactable = false;
+            createRoom.interactable = false;
+        }
 
         // Start Game Button Activation
         // TODO: Only available if more than 4 players in room

@@ -8,18 +8,16 @@ public class OpenDoor : MonoBehaviour
     GameObject Door;
     GameObject Door2;
     bool open = false;
-    bool broke = false;
+    //bool broke = false;
     int change = 0;
     float currentposx = 4.39f;
     float currentposy = 0.92f;
     float closedposx =  1000f;
     float closedposy = 1000f;
-    float timer = 0;
-
-
+    float timer = 0.0f;
 
     //the door
-    [SerializeField] GameObject Dooropen;
+    [SerializeField] GameObject DoorOpen = null;
 
     void Update()
     {
@@ -30,21 +28,19 @@ public class OpenDoor : MonoBehaviour
             //After Interact used moves door away
             if (Input.GetButtonDown("Interact"))
             {
-                timer = 0;
+                timer = 0f;
                // Debug.Log("Move");
-                Dooropen.transform.position = new Vector2(closedposx, closedposy);
+                DoorOpen.transform.position = new Vector2(closedposx, closedposy);
                 change = change + 1;
                 //timer += Time.deltaTime;
-
-
             }
          
         }
         //resets door
-        if (timer >= 5)
+        if (timer >= 5f)
         {
-            Dooropen.transform.position = new Vector2(currentposx, currentposy);
-            timer = 0;
+            DoorOpen.transform.position = new Vector2(currentposx, currentposy);
+            timer = 0f;
             //   timer = 0;
             //    Debug.Log("has changed");
             // timer += Time.deltaTime;
@@ -60,7 +56,7 @@ public class OpenDoor : MonoBehaviour
             GameObject.Destroy(Dooropen);
         }*/
     
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Researcher")
         {
@@ -68,7 +64,7 @@ public class OpenDoor : MonoBehaviour
         }
     }
 
-    private void OnTriggerExit2D(Collider2D other)
+    private void OnTriggerExit(Collider other)
     {
         if (other.tag == "Researcher")
         {

@@ -251,9 +251,8 @@ public class RoomMatchMaking : MonoBehaviourPunCallbacks, IInRoomCallbacks
         if (playersInGame == PhotonNetwork.PlayerList.Length)
         {
             phoView.RPC("RPC_CreateGameManager", RpcTarget.MasterClient);
-            phoView.RPC("RPC_CreateTasks", RpcTarget.MasterClient);
-            phoView.RPC("RPC_CreatePlayer", RpcTarget.All);
             phoView.RPC("RPC_CreateLevel", RpcTarget.MasterClient);
+            phoView.RPC("RPC_CreatePlayer", RpcTarget.All);
         }
     }
 
@@ -261,7 +260,14 @@ public class RoomMatchMaking : MonoBehaviourPunCallbacks, IInRoomCallbacks
     private void RPC_CreateGameManager()
     {
         // creates a Game Manager at the host
-        PhotonNetwork.InstantiateRoomObject(System.IO.Path.Combine("GamePrefabs", "GameManager"), Vector2.zero, Quaternion.identity);
+        PhotonNetwork.InstantiateRoomObject(System.IO.Path.Combine("GamePrefabs", "GameManager"), Vector3.zero, Quaternion.identity);
+    }
+
+    [PunRPC]
+    private void RPC_CreateLevel()
+    {
+        // creates level network controller but not player character
+        PhotonNetwork.InstantiateRoomObject(System.IO.Path.Combine("LevelPrefabs", "Level"), Vector3.zero, Quaternion.identity);
     }
 
     [PunRPC]
@@ -279,19 +285,6 @@ public class RoomMatchMaking : MonoBehaviourPunCallbacks, IInRoomCallbacks
             researcher.GetComponent<Researcher>().PlayerNumber = myNumberInRoom;
         }
         // TODO: Properly set player's numbers for everybody
-    }
-
-    [PunRPC]
-    private void RPC_CreateLevel()
-    {
-        // creates level network controller but not player character
-        PhotonNetwork.InstantiateRoomObject(System.IO.Path.Combine("LevelPrefabs", "Level"), Vector2.zero, Quaternion.identity);
-    }
-
-    [PunRPC]
-    private void RPC_CreateTasks()
-    {
-        PhotonNetwork.InstantiateRoomObject(System.IO.Path.Combine("GamePrefabs", "TaskManager"), Vector2.zero, Quaternion.identity);
     }
 
     public override void OnPlayerLeftRoom(Photon.Realtime.Player otherPlayer)

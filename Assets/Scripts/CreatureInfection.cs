@@ -2,7 +2,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class CreatureInfection : MonoBehaviour
 {
@@ -10,12 +9,12 @@ public class CreatureInfection : MonoBehaviour
     
     private bool canInfect = false;
     private Task targetTask;
-    public bool visualUpdate;
-    [SerializeField] private Text infectText;
+    private bool isInteract = false;
 
     private void Start()
     {
         playerView = GetComponent<PhotonView>();
+        GetComponent<Player>().PHUD.OnInteraction += PressInteract;
     }
 
     void Update()
@@ -25,37 +24,30 @@ public class CreatureInfection : MonoBehaviour
 
         if (canInfect == true && TaskManager.tm.tasksInfected < TaskManager.tm.maxTasksInfected)
         {
-            if (Input.GetButtonDown("Interact"))
+            if (Input.GetButtonDown("Interact") || isInteract)
             {
                 playerView.RPC("RPC_InfectTask", RpcTarget.All);
                 TaskManager.tm.tasksInfected = TaskManager.tm.tasksInfected + 1;
                 Debug.Log("Task Infected");
-                if(visualUpdate == true)
-                {
-                    infectText.text = "Task Infected!";
-                }
             }
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D task)
+    private void OnTriggerEnter(Collider task)
     {
         if (task.tag == "Task")
-        {            
-            visualUpdate = true;
+        {
             targetTask = task.GetComponent<Task>();
             canInfect = true;
         }
     }
 
-    private void OnTriggerExit2D(Collider2D task)
+    private void OnTriggerExit(Collider task)
     {
         if (task.tag == "Task")
         {
-            visualUpdate = false;
             targetTask = null;
             canInfect = false;
-            infectText.text = "Interact";
         }
     }
 
@@ -63,5 +55,18 @@ public class CreatureInfection : MonoBehaviour
     private void RPC_InfectTask()
     {
         targetTask.SetInfected(true);
+    }
+
+    private void PressInteract(PhotonView playerView)
+    {
+        IEnumerator pressedInteract = InteractPressed();
+        isInteract = true;
+        StartCoroutine(pressedInteract);
+    }
+
+    private IEnumerator InteractPressed()
+    {
+        yield return new WaitForEndOfFrame();
+        isInteract = false;
     }
 }

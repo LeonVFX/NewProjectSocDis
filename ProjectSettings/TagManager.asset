@@ -17,12 +17,12 @@ TagManager:
   - 
   - 
   - Ground
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Creature
+  - Researcher
+  - KillTrigger
+  - VisibleMap
+  - VisibleCam
+  - VisibleBoth
   - 
   - 
   - 
@@ -43,4 +43,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: UI
+    uniqueID: 3099588777
     locked: 0

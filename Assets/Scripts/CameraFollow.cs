@@ -9,10 +9,10 @@ public class CameraFollow : MonoBehaviour
 
     private void Start()
     {
-        offset = new Vector3(-2, 4, -2);
+        offset = new Vector3(-2.0f, 4.0f, -2.0f);
     }
 
-    private void Update()
+    private void LateUpdate()
     {
         if (playerTransform != null)
         {

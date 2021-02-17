@@ -13,45 +13,46 @@ public class Creature : Player
     private int killStunTime = 3;
 
     private bool canKill;
+    private bool isKill;
 
-    private List<int> targetNum;
-    private Player[] targetPlayers;
+    private List<Player> targetPlayers;
 
     protected override void Start()
     {
         base.Start();
+
         pMovement.playerSpeed *= speedMultiplier;
 
-        targetNum = new List<int>();
-        targetPlayers = new Player[8];
+        targetPlayers = new List<Player>();
         canKill = true;
+        isKill = false;
+
+        PHUD.OnKill += PressKill;
     }
 
     protected override void Update()
     {
-        if (!playerView.IsMine)
+        if (!playerView.IsMine || !isAlive)
             return;
 
         base.Update();
-        
+
         // Call Killing
-        if (Input.GetKeyDown(KeyCode.Alpha1))
+        if (isKill && canKill)
         {
-            if (targetNum.Count > 0)
-            {
-                int index = targetNum[Random.Range(0, targetNum.Count)];
-                if (targetPlayers[index] != null && canKill)
-                    KillObject(targetPlayers[index].GetComponent<PhotonView>().ViewID);
-                    // Killing object by RPC for all players
-            }
+            if (targetPlayers.Count > 0)
+                KillObject(targetPlayers[0].GetComponent<PhotonView>().ViewID);
         }
     }
 
     public void KillObject(int objPhotonViewId)
     {
+        // Basic Kill Effects
         playerView.RPC("RPC_KillPlayer", RpcTarget.All, new object[] { objPhotonViewId });
         OnKill?.Invoke();
-        pMovement.CanMove = false;
+
+        // Kill Timer
+        PreventMovement();
 
         if (playerView.IsMine)
             StartCoroutine(KillTimer());
@@ -61,26 +62,10 @@ public class Creature : Player
     private void RPC_KillPlayer(int targetObjPhotonViewId)
     {
         GameObject targetPlayer = PhotonView.Find(targetObjPhotonViewId).gameObject;
-        targetPlayer.GetComponent<Player>().isAlive = false;
-        targetPlayer.GetComponentInChildren<Animator>().SetTrigger("Death");
+        targetPlayer.GetComponent<Player>().Die();
     }
 
-    //private void CmdDestroyObject(GameObject obj)
-    //{
-    //    // It is very unlikely but due to the network delay
-    //    // possisble that the other player also tries to
-    //    // destroy exactly the same object beofre the server
-    //    // can tell him that this object was already destroyed.
-    //    // So in that case just do nothing.
-    //    if (!obj) return;
-
-    //    OnKill?.Invoke();
-    //    obj.GetComponent<PhotonView>().TransferOwnership(phoView.ViewID);
-    //    Destroy(obj);
-    //    // NetworkServer.Destroy(obj);
-    //}
-
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerEnter(Collider other)
     {
         if (playerView != null)
             if (!playerView.IsMine)
@@ -89,12 +74,21 @@ public class Creature : Player
         if (other.tag == "Researcher")
         {
             Player target = other.GetComponent<Player>();
-            targetPlayers[target.PlayerNumber] = target;
-            targetNum.Add(target.PlayerNumber);
+            if (target.isAlive)
+            {
+                targetPlayers.Add(target);
+
+                // TODO: TOGGLE KILL
+                if (targetPlayers.Count > 0)
+                {
+                    Debug.Log(targetPlayers.Count);
+                    pHUD.ToggleKillButtonInteractle();
+                }
+            }
         }
     }
 
-    private void OnTriggerExit2D(Collider2D other)
+    private void OnTriggerExit(Collider other)
     {
         if (playerView != null)
             if (!playerView.IsMine)
@@ -103,8 +97,17 @@ public class Creature : Player
         if (other.tag == "Researcher")
         {
             Player target = other.GetComponent<Player>();
-            targetPlayers[target.PlayerNumber] = null;
-            targetNum.Remove(target.PlayerNumber);
+            if (target.isAlive || targetPlayers.Contains(target))
+            {
+                targetPlayers.Remove(target);
+
+                // TODO: TOGGLE KILL
+                if (targetPlayers.Count == 0)
+                {
+                    Debug.Log(targetPlayers.Count);
+                    pHUD.ToggleKillButtonInteractle();
+                }
+            }
         }
     }
 
@@ -112,7 +115,20 @@ public class Creature : Player
     {
         canKill = false;
         yield return new WaitForSeconds(killStunTime);
-        pMovement.CanMove = true;
+        AllowMovement();
         canKill = true;
+    }
+
+    private void PressKill()
+    {
+        IEnumerator pressedKill = KillPressed();
+        isKill = true;
+        StartCoroutine(pressedKill);
+    }
+
+    private IEnumerator KillPressed()
+    {
+        yield return new WaitForEndOfFrame();
+        isKill = false;
     }
 }

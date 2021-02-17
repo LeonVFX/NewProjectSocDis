@@ -24,16 +24,15 @@ public class Timer : MonoBehaviour
         GameManager.gm.OnStage2 += NextStage;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
         // CurrentTime will be running in seconds, will attempt to change to minutes and seconds
-        gameTime -= 1 * Time.deltaTime;
+        gameTime -= Time.deltaTime;
 
-        if (gameTime <= 0)
+        if (gameTime <= 0.0f)
         {
-            minute = minute - 1;
-            if (minute < 0)
+            minute = minute - 1.0f;
+            if (minute < 0.0f)
                 timeOver = true;
             
             gameTime = 59f;
@@ -67,6 +66,4 @@ public class Timer : MonoBehaviour
     //  float startingTime2 = 0f;
     //  float gameTime = 0f;
     //  float minutes = 5f;
-
-
 }

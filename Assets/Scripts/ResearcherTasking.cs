@@ -6,16 +6,16 @@ using UnityEngine;
 public class ResearcherTasking : MonoBehaviour
 {
     private PhotonView playerView;
-
-    // private PhotonView playerView;
     private List<Task> taskList;
     private Task targetTask;
     private bool isValidTask;
+    private bool isInteract = false;
 
     private void Start()
     {
         playerView = GetComponent<PhotonView>();
         taskList = TaskManager.tm.RandomizeTasks();
+        GetComponent<Player>().PHUD.OnInteraction += PressInteract;
     }
 
     void Update()
@@ -25,14 +25,12 @@ public class ResearcherTasking : MonoBehaviour
 
         if (isValidTask)
         {
-            if (Input.GetButtonDown("Interact"))
-            {
+            if (Input.GetButtonDown("Interact") || isInteract)
                 DoTask();
-            }
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D task)
+    private void OnTriggerEnter(Collider task)
     {
         if (task.tag == "Task")
         {
@@ -50,7 +48,7 @@ public class ResearcherTasking : MonoBehaviour
         }
     }
 
-    private void OnTriggerExit2D(Collider2D task)
+    private void OnTriggerExit(Collider task)
     {
         if (task.tag == "Task")
         {
@@ -61,12 +59,10 @@ public class ResearcherTasking : MonoBehaviour
 
     private void DoTask()
     {
-        // Do the task. Implement Drew's Task Button
         if (targetTask.TaskInfected)
         {
             GetComponent<Researcher>().SetInfected(true);
             playerView.RPC("RPC_DisinfectTask", RpcTarget.All);
-            // TODO: Debug Color
             GetComponentInChildren<SpriteRenderer>().color = Color.green;
         }
         Debug.Log("Task Completed!");
@@ -77,5 +73,18 @@ public class ResearcherTasking : MonoBehaviour
     {
         targetTask.SetInfected(false);
         TaskManager.tm.tasksInfected--;
+    }
+
+    private void PressInteract(PhotonView playerView)
+    {
+        IEnumerator pressedInteract = InteractPressed();
+        isInteract = true;
+        StartCoroutine(pressedInteract);
+    }
+
+    private IEnumerator InteractPressed()
+    {
+        yield return new WaitForEndOfFrame();
+        isInteract = false;
     }
 }

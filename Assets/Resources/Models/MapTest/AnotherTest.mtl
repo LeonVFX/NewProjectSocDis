@@ -1,0 +1,25 @@
+# Created by Kenney (www.kenney.nl)
+
+newmtl _defaultMat(Clone)
+Kd 0.939 0.953 1
+
+newmtl Material(Clone)
+Kd 0.382 0.382 0.382
+map_Kd Textures/Material(Clone).png
+
+newmtl stone(Clone)
+Kd 0.571 0.559 0.736
+
+newmtl stoneDark(Clone)
+Kd 0.403 0.39 0.594
+
+newmtl Grey_metal_1(Clone)
+Kd 0.769 0.769 0.769
+map_Kd Textures/Grey_metal_1(Clone).png
+
+newmtl grass(Clone)
+Kd 0.173 0.847 0.722
+
+newmtl initialShadingGroup(Clone)
+Kd 1 1 1
+

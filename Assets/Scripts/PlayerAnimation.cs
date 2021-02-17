@@ -10,35 +10,53 @@ public class PlayerAnimation : MonoBehaviour
     private Player player;
     private PlayerMovement pMovement;
     private Animator[] animList;
+    private bool flip = false;
+    private float halfScreenWidth;
+
+    public bool Flip
+    {
+        get { return flip; }
+        set
+        {
+            playerView.RPC("RPC_Flip", RpcTarget.All, new object[] { value });
+            flip = value;
+        }
+    }
 
     [SerializeField] private Type[] playerTypes;
 
     private void Start()
     {
         playerView = GetComponentInParent<PhotonView>();
+
         player = GetComponentInParent<Player>();
+        player.OnDeath += Death;
 
         pMovement = GetComponent<PlayerMovement>();
         pMovement.OnStop += Idle;
         pMovement.OnMove += Move;
+
+        halfScreenWidth = Screen.width * 0.5f;
 
         animList = GetComponentsInChildren<Animator>();
         foreach (Animator anim in animList)
             anim.speed *= GetComponent<Player>().speedMultiplier;
     }
 
-    private void Update()
+    private void LateUpdate()
     {
         if (!playerView.IsMine || !player.isAlive)
             return;
 
-        if (Input.mousePosition.x > (Screen.width * 0.5f))
+        if (Input.mousePosition.x > halfScreenWidth)
         {
-            playerView.RPC("RPC_Flip", RpcTarget.All, new object[] { true });
+            if (flip == false)
+                Flip = true;
         }
         else
         {
-            playerView.RPC("RPC_Flip", RpcTarget.All, new object[] { false });
+            if (flip == true)
+                Flip = false;
         }
     }
 
@@ -69,8 +87,60 @@ public class PlayerAnimation : MonoBehaviour
     [PunRPC]
     private void RPC_Flip(bool flip)
     {
+        // Regular Flip
+        //if (animList != null)
+        //    foreach (Animator anim in animList)
+        //        if (anim != null)
+        //            anim.GetComponent<SpriteRenderer>().flipX = flip;
+
+        // Flip like Paper Mario
+        if (flip == true)
+        {
+            if (animList != null)
+                foreach (Animator anim in animList)
+                {
+                    IEnumerator flipRoutine = FlipRoutine(anim, anim.transform.localScale, new Vector3(-1, 1, 1));
+                    StartCoroutine(flipRoutine);
+                }
+                //anim.transform.localScale = new Vector3(-1, 1, 1);
+        }
+        else
+        {
+            if (animList != null)
+            {
+                foreach (Animator anim in animList)
+                {
+                    IEnumerator flipRoutine = FlipRoutine(anim, anim.transform.localScale, new Vector3(1, 1, 1));
+                    StartCoroutine(flipRoutine);
+                }
+            }
+            //anim.transform.localScale = new Vector3(1, 1, 1);
+        }
+    }
+
+    private IEnumerator FlipRoutine(Animator anim, Vector3 originalTransform, Vector3 targetTransform)
+    {
+        float elapsedTime = 0f;
+        float totalTime = 0.2f;
+        while (elapsedTime < totalTime)
+        {
+            anim.transform.localScale = Vector3.Lerp(originalTransform, targetTransform, elapsedTime / totalTime);
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+        anim.transform.localScale = targetTransform;
+        yield return null;
+    }
+
+    private void Death()
+    {
+        playerView.RPC("RPC_Death", RpcTarget.All);
+    }
+
+    [PunRPC]
+    private void RPC_Death()
+    {
         foreach (Animator anim in animList)
-            if (anim != null)
-                anim.GetComponent<SpriteRenderer>().flipX = flip;
+            anim.SetTrigger("Death");
     }
 }

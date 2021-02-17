@@ -10,11 +10,18 @@ public class Researcher : Player
     protected override void Start()
     {
         base.Start();
+
         pMovement.playerSpeed *= speedMultiplier;
+
+        // Deactivate Kill Button
+        PHUD.ToggleKillButtonActive();
     }
 
     protected override void Update()
     {
+        if (!playerView.IsMine || !isAlive)
+            return;
+
         base.Update();
     }
 
