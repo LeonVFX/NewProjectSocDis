@@ -6,7 +6,7 @@ public class DoorButton : MonoBehaviour
 {
     bool open = false;
     bool disable = false;
-    bool broke = false;
+    //bool broke = false;
     int change = 0;
     //float timer = 0;
     int stage = 0;
@@ -38,7 +38,7 @@ public class DoorButton : MonoBehaviour
                     Door.SetActive(true);
                 }
             }
-            if(broke == true)
+            if(disable == true)
             {
                 Door.SetActive(false);
             }

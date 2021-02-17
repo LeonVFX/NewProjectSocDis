@@ -5,8 +5,19 @@ using UnityEngine;
 
 [RequireComponent(typeof(PlayerMovement))]
 
+
 public class Player : MonoBehaviour
 {
+     enum endState
+    {
+        SuccessEscape,
+        UnsuccessEscape,
+        CreatureElim,
+        AllResearchElim,
+        SuccessInfil,
+        UnsuccessInfil
+
+    }
     protected PlayerMovement pMovement;
 
     [SerializeField]
