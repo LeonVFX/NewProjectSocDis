@@ -5,8 +5,10 @@ using UnityEngine;
 
 public class Item : MonoBehaviour
 {
+    private PhotonView itemView;
+
     // Item Type
-    enum ItemType
+    public enum ItemType
     {
         Default,
         Gas
@@ -23,6 +25,7 @@ public class Item : MonoBehaviour
 
     private void Start()
     {
+        itemView = GetComponent<PhotonView>();
         itemSprite = GetComponentInChildren<SpriteRenderer>().sprite;
     }
 
@@ -33,7 +36,7 @@ public class Item : MonoBehaviour
             if (Input.GetButtonDown("Interact") || getItem)
             {
                 ItemManager.im.GetItem(this);
-                gameObject.SetActive(false);
+                itemView.RPC("RPC_DisableItem", RpcTarget.All);
             }
         }
     }
@@ -75,5 +78,11 @@ public class Item : MonoBehaviour
     {
         yield return new WaitForEndOfFrame();
         getItem = false;
+    }
+
+    [PunRPC]
+    private void RPC_DisableItem()
+    {
+        gameObject.SetActive(false);
     }
 }

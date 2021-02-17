@@ -33,8 +33,8 @@ public class Player : MonoBehaviour
     public bool isAlive;
 
     // Other
-    private GameObject heldItem = null;
-    public GameObject HeldItem
+    private Item heldItem = null;
+    public Item HeldItem
     {
         get { return heldItem; }
         set { heldItem = value; }
@@ -122,7 +122,7 @@ public class Player : MonoBehaviour
 
     private void HoldItem(Item item)
     {
-        heldItem = item.gameObject;
+        heldItem = item;
         Debug.Log("Got Gas");
     }
 }

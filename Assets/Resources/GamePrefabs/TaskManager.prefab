@@ -179,9 +179,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 005146fa78757c847b04849fba50142f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  taskName: 
-  taskDescription: 
-  taskRequiredItem: {fileID: 0}
+  taskName: Fill Tank
+  taskDescription: Take the gas can to the fuel tank
+  taskRequiredItemType: 1
 --- !u!1 &5018733393464060271
 GameObject:
   m_ObjectHideFlags: 0
@@ -292,4 +292,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   taskName: 
   taskDescription: 
-  taskRequiredItem: {fileID: 0}
+  taskRequiredItemType: 0

@@ -21,16 +21,17 @@ public class PlayerHUD : MonoBehaviour
     [SerializeField] private Button interactionBtn = null;
     [SerializeField] private Button itemBtn = null;
     [SerializeField] private Button killBtn = null;
-
-    private Item heldItem = null;
+    [Header("Item")]
+    [SerializeField] private RawImage heldItem = null;
 
     // Other
     private bool toggleMap = false;
 
     private void Start()
     {
-        background.SetActive(false);
+        ItemManager.im.OnGotItem += HoldItem;
 
+        background.SetActive(false);
         level = FindObjectOfType<Level>();
 
         mapCam.transform.position = level.transform.position + offset;
@@ -44,6 +45,11 @@ public class PlayerHUD : MonoBehaviour
 
         // Set Starting Point For Buttons
         killBtn.interactable = false;
+    }
+
+    private void HoldItem(Item item)
+    {
+        heldItem.texture = item.GetComponentInChildren<SpriteRenderer>().sprite.texture;
     }
 
     private void InteractionOnClick()
