@@ -27,8 +27,10 @@ public class PlayerHUD : MonoBehaviour
     [SerializeField] private Button killBtn = null;
     [Header("Item")]
     [SerializeField] private RawImage heldItem = null;
+    [SerializeField] private Texture noItemTex = null;
     public bool hasHeldItem = false;
     [Header("Tasks")]
+    [SerializeField] private Slider taskCompletionSlider = null;
     [SerializeField] private TaskList taskList = null;
     [SerializeField] private GameObject taskPrefab = null;
 
@@ -43,6 +45,8 @@ public class PlayerHUD : MonoBehaviour
         mapCam.transform.position = level.transform.position + offset;
         map.SetActive(false);
 
+        taskCompletionSlider.maxValue = TaskManager.tm.maxNumberOfTasks;
+
         // Set Button Functionalities
         interactionBtn.onClick.AddListener(InteractionOnClick);
         mapBtn.onClick.AddListener(MapOnClick);
@@ -53,12 +57,25 @@ public class PlayerHUD : MonoBehaviour
         killBtn.interactable = false;
     }
 
+    private void Update()
+    {
+        taskCompletionSlider.value = TaskManager.tm.numberOfCompletedTasks;
+    }
+
     public void HoldItem(Texture itemTex)
     {
         if (!playerView.IsMine)
             return;
 
         heldItem.texture = itemTex;
+    }
+
+    public void DropItem()
+    {
+        if (!playerView.IsMine)
+            return;
+
+        heldItem.texture = noItemTex;
     }
 
     public void UpdateTaskList(List<Task> newTaskList)
@@ -150,18 +167,18 @@ public class PlayerHUD : MonoBehaviour
                 break;
         }
     }
-    public void ToggleKillButtonInteractle()
+    public void ToggleKillButtonInteractableActive()
     {
-        switch (killBtn.interactable)
+        if (!killBtn.IsInteractable())
         {
-            case true:
-                killBtn.interactable = false;
-                break;
-            case false:
-                killBtn.interactable = true;
-                break;
-            default:
-                break;
+            killBtn.interactable = true;
+        }
+    }
+    public void ToggleKillButtonInteractableInactive()
+    {
+        if (killBtn.IsInteractable())
+        {
+            killBtn.interactable = false;
         }
     }
     public void ToggleKillButtonActive()

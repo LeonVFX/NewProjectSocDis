@@ -60,6 +60,7 @@ public class Player : MonoBehaviour
         GameManager.gm.OnStage2 += AllowMovement;
 
         ItemManager.im.OnGotItem += HoldItem;
+        ItemManager.im.OnDropItem += DropItem;
 
         PlayerManager.pm.playerViews.Add(playerView);
         
@@ -131,5 +132,15 @@ public class Player : MonoBehaviour
         heldItem = item;
         pHUD.HoldItem(heldItem.GetComponentInChildren<SpriteRenderer>().sprite.texture);
         Debug.Log("Got Gas");
+    }
+
+    private void DropItem()
+    {
+        if (!playerView.IsMine || !isAlive)
+            return;
+
+        heldItem = null;
+        pHUD.DropItem();
+        Debug.Log("Dropped Gas");
     }
 }

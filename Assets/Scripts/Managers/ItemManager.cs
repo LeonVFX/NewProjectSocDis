@@ -7,6 +7,7 @@ public class ItemManager : MonoBehaviour
 {
     // Event
     public event System.Action<Item> OnGotItem;
+    public event System.Action OnDropItem;
 
     public static ItemManager im;
 
@@ -43,5 +44,10 @@ public class ItemManager : MonoBehaviour
     public void GetItem(Item item)
     {
         OnGotItem?.Invoke(item);
+    }
+
+    public void DropItem()
+    {
+        OnDropItem?.Invoke();
     }
 }

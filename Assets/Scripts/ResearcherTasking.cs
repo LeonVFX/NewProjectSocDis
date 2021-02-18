@@ -101,9 +101,17 @@ public class ResearcherTasking : MonoBehaviour
         if (!playerView.IsMine)
             return;
 
+        isValidTask = false;
+        playerView.RPC("RPC_GroupTaskComplete", RpcTarget.All);
         targetTask.isComplete = true;
         taskList.Remove(targetTask);
         GetComponent<Player>().PHUD.UpdateTaskList(taskList);
+    }
+
+    [PunRPC]
+    private void RPC_GroupTaskComplete()
+    {
+        TaskManager.tm.CompleteTask();
     }
 
     [PunRPC]

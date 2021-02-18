@@ -18,10 +18,12 @@ public class Item : MonoBehaviour
     [Header("Item Settings")]
     public ItemType itemType = ItemType.Default;
     [SerializeField] private Sprite itemSprite = null;
+    [SerializeField] private Vector3 itemDropOffset = Vector3.zero;
 
     // Player
     private bool isInRange = false;
-    private bool getItem = false;
+    private bool itemBuffer = false;
+    private bool isHeld = false;
 
     private void Start()
     {
@@ -33,7 +35,7 @@ public class Item : MonoBehaviour
     {
         if (isInRange)
         {
-            if (Input.GetButtonDown("Interact") || getItem)
+            if (Input.GetButtonDown("Interact") && !isHeld || itemBuffer && !isHeld)
             {
                 ItemManager.im.GetItem(this);
 
@@ -71,24 +73,52 @@ public class Item : MonoBehaviour
 
     public void GetItem(PhotonView playerView, bool hasHeldItem)
     {
-        if (!playerView.IsMine || hasHeldItem)
+        if (!playerView.IsMine)
             return;
 
-        IEnumerator gotItem = GotItem();
-        getItem = true;
+        IEnumerator bufferTimer = ItemBuffer();
+
+        if (hasHeldItem)
+        {
+            DropItem(playerView.transform);
+            itemBuffer = true;
+            playerView.GetComponent<Player>().PHUD.hasHeldItem = false;
+            StartCoroutine(bufferTimer);
+            return;
+        }
+
+        if (isHeld)
+            return;
+
+        itemBuffer = true;
         playerView.GetComponent<Player>().PHUD.hasHeldItem = true;
-        StartCoroutine(gotItem);
+        StartCoroutine(bufferTimer);
     }
 
-    private IEnumerator GotItem()
+    private void DropItem(Transform playerPos)
+    {
+        ItemManager.im.DropItem();
+        itemView.RPC("RPC_EnableItem", RpcTarget.All, new object[] { playerPos.position });
+    }
+
+    private IEnumerator ItemBuffer()
     {
         yield return new WaitForEndOfFrame();
-        getItem = false;
+        itemBuffer = false;
     }
 
     [PunRPC]
     private void RPC_DisableItem()
     {
+        isHeld = true;
         gameObject.SetActive(false);
+    }
+
+    [PunRPC]
+    private void RPC_EnableItem(Vector3 playerPos)
+    {
+        transform.position = playerPos + itemDropOffset;
+        isHeld = false;
+        gameObject.SetActive(true);
     }
 }

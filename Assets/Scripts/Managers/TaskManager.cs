@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Photon.Pun;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -10,6 +11,8 @@ public class TaskManager : MonoBehaviour
     public int tasksInfected = 0;
     public int maxTasksInfected = 1;
     public int maxNumberOfTasksPerPlayer = 1;
+    public int numberOfCompletedTasks = 0;
+    public int maxNumberOfTasks = 1;
 
     private Task[] taskList;
 
@@ -35,6 +38,12 @@ public class TaskManager : MonoBehaviour
         {
             task.TaskID = id++;
         }
+        maxNumberOfTasks = maxNumberOfTasksPerPlayer * (PhotonNetwork.PlayerList.Length - 1);
+    }
+
+    public void CompleteTask()
+    {
+        numberOfCompletedTasks++;
     }
 
     public List<Task> RandomizeTasks()

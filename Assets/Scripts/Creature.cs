@@ -85,7 +85,7 @@ public class Creature : Player
                 if (targetPlayers.Count > 0)
                 {
                     Debug.Log(targetPlayers.Count);
-                    pHUD.ToggleKillButtonInteractle();
+                    pHUD.ToggleKillButtonInteractableActive();
                 }
             }
         }
@@ -108,7 +108,7 @@ public class Creature : Player
                 if (targetPlayers.Count == 0)
                 {
                     Debug.Log(targetPlayers.Count);
-                    pHUD.ToggleKillButtonInteractle();
+                    pHUD.ToggleKillButtonInteractableInactive();
                 }
             }
         }
