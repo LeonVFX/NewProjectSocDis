@@ -7,28 +7,50 @@ public class EscapePod : MonoBehaviour
 {
     [SerializeField] GameObject EscapePod1;
     private int spaceleft = 2;
-    private int countdown = 5;
+    //private int countdown = 5;
     private bool enterEscapePod = false;
     private bool canEnter = false;
     private bool canEscape = false;
     private bool infectedEscaped = false;
     private bool launchPod = false;
 
-
-   /* private void PlayerEscape()
+    private enum endStates
     {
-        This Player Position set to Escape Pod Position
-         if(spaceleft == 0)
-            pop up for players to either leave now or wait for a 3 player to enter then auto launch
-            countdown will decrease - countdown -= Time.deltaTime
-        if(Key.GetButtonDown("Interact")
-            Launch escape pod with players and will win as long as not infected
-        if(countdown == 0)
-           escape will wait for another player
-        if(player is infected)
-           Everyone in escape pod will lose
-    }*/
+        begin,
+        successEscape,
+        unsuccessEscape,
+        researcherElim,
+        creatureElim,
+        successInfil,
+        unsuccessInfil
+    }
 
+    private endStates Condition;
+
+  /*  private void EndGame()
+    {
+        GetComponent<Researcher>();
+        GetComponent<Creature>();
+        
+        
+    }*/
+    /* private void PlayerEscape()
+     {
+         This Player Position set to Escape Pod Position
+          if(spaceleft == 0)
+             pop up for players to either leave now or wait for a 3 player to enter then auto launch
+             countdown will decrease - countdown -= Time.deltaTime
+         if(Key.GetButtonDown("Interact")
+             Launch escape pod with players and will win as long as not infected
+        // if(countdown == 0)
+           // escape will wait for another player
+         if(player is infected)
+            Everyone in escape pod will lose
+     }*/
+    /*private void Start()
+    {
+        Condition = endStates.begin;
+    }*/
     void Update()
     {
         //If a researcher is near an escape and has space then the can enter
@@ -37,7 +59,29 @@ public class EscapePod : MonoBehaviour
             Debug.Log("Player has reached escape pod");
             //PlayerEscape();
             spaceleft = spaceleft - 1;
-            //this.GetComponent<Player>(Player);
+            if(spaceleft <= 0)
+            {
+                Debug.Log("Escape Pod is full!");
+            }
+            /*switch(Condition)
+            {
+                case endStates.begin:
+                    break;
+                case endStates.successEscape:
+                    break;
+                case endStates.unsuccessEscape:
+                    break;
+                case endStates.successInfil:
+                    break;
+                case endStates.unsuccessInfil:
+                    break;
+                case endStates.researcherElim:
+                    break;
+                case endStates.creatureElim:
+                    break;
+            }*/
+
+
         }
     }
     //Will recognise the player as either a researcher or monster

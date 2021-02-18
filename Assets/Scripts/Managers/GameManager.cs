@@ -16,7 +16,16 @@ public class GameManager : MonoBehaviour
         Voting,
         Stage2
     }
-
+    private enum endStates
+    {
+        begin,
+        successEscape,
+        unsuccessEscape,
+        researcherElim,
+        creatureElim,
+        successInfil,
+        unsuccessInfil
+    }
     private PhotonView gameView;
     public GameStage currentStage;
 

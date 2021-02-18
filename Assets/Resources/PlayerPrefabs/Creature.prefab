@@ -397,8 +397,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5ed27b0866e71f4b8d289988b819bd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  visualUpdate: 0
-  infectText: {fileID: 1852325870472291501, guid: 5af309c8a1748bd45b7bd628635eda8d, type: 3}
 --- !u!114 &1368967992125497992
 MonoBehaviour:
   m_ObjectHideFlags: 0
