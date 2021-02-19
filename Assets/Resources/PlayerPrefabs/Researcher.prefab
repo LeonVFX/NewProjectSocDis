@@ -224,7 +224,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerView: {fileID: 0}
   playerNumber: 0
-  baseSpeed: 30
+  baseSpeed: 20
   speedMultiplier: 1
   isAlive: 1
   isInfected: 0
@@ -408,7 +408,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -944006512102576538, guid: 76f4eba5f430192449b74799828104e4, type: 3}
+  m_Sprite: {fileID: -5573310386426923890, guid: 0b049c76e143ba44f965f24955554ab4, type: 3}
   m_Color: {r: 0.034759354, g: 0.027100407, b: 0.8207547, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -592,7 +592,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -944006512102576538, guid: 76f4eba5f430192449b74799828104e4, type: 3}
+  m_Sprite: {fileID: -5573310386426923890, guid: 0b049c76e143ba44f965f24955554ab4, type: 3}
   m_Color: {r: 0.027450966, g: 0.81960785, b: 0.0659728, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -629,7 +629,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9017398711940181808}
   m_LocalRotation: {x: 0.35355338, y: 0.35355338, z: -0.1464466, w: 0.8535535}
-  m_LocalPosition: {x: 0.28, y: 0.4, z: 0.28}
+  m_LocalPosition: {x: 0.5, y: 0.7, z: 0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6201378316869537633}

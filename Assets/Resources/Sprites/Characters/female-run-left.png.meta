@@ -1,0 +1,1498 @@
+fileFormatVersion: 2
+guid: 0b049c76e143ba44f965f24955554ab4
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5573310386426923890
+    second: female-run-left_0
+  - first:
+      213: 7062997376340406031
+    second: female-run-left_1
+  - first:
+      213: -9063886584694432909
+    second: female-run-left_2
+  - first:
+      213: 5262289200499139628
+    second: female-run-left_3
+  - first:
+      213: 7709318951549504722
+    second: female-run-left_4
+  - first:
+      213: -6638515518144253698
+    second: female-run-left_5
+  - first:
+      213: 787529805902219424
+    second: female-run-left_6
+  - first:
+      213: 9009382878553449887
+    second: female-run-left_7
+  - first:
+      213: 4687407690977521305
+    second: female-run-left_8
+  - first:
+      213: 5809876018037434358
+    second: female-run-left_9
+  - first:
+      213: -5754101529644745966
+    second: female-run-left_10
+  - first:
+      213: -6974845206166921124
+    second: female-run-left_11
+  - first:
+      213: 4507081056301236727
+    second: female-run-left_12
+  - first:
+      213: 6623823620788112468
+    second: female-run-left_13
+  - first:
+      213: 7210316705213624161
+    second: female-run-left_14
+  - first:
+      213: 2177040360296338562
+    second: female-run-left_15
+  - first:
+      213: -6727312560328946883
+    second: female-run-left_16
+  - first:
+      213: 5086079067407490367
+    second: female-run-left_17
+  - first:
+      213: -1194796936421991806
+    second: female-run-left_18
+  - first:
+      213: -3581898183328348466
+    second: female-run-left_19
+  - first:
+      213: 4085863787745764715
+    second: female-run-left_20
+  - first:
+      213: -276743760705149114
+    second: female-run-left_21
+  - first:
+      213: 9169679136730862960
+    second: female-run-left_22
+  - first:
+      213: -2687325683910873454
+    second: female-run-left_23
+  - first:
+      213: 1461596182755231243
+    second: female-run-left_24
+  - first:
+      213: -2310522634038336646
+    second: female-run-left_25
+  - first:
+      213: -4294412515689011358
+    second: female-run-left_26
+  - first:
+      213: 1793073714630961523
+    second: female-run-left_27
+  - first:
+      213: 2278916123693108706
+    second: female-run-left_28
+  - first:
+      213: 7184485806658589230
+    second: female-run-left_29
+  - first:
+      213: -1746837915964430930
+    second: female-run-left_30
+  - first:
+      213: 1333101530317202958
+    second: female-run-left_31
+  - first:
+      213: 1347503199692796766
+    second: female-run-left_32
+  - first:
+      213: 5848200009528695597
+    second: female-run-left_33
+  - first:
+      213: 5570258788291753941
+    second: female-run-left_34
+  - first:
+      213: -7630021059842044328
+    second: female-run-left_35
+  - first:
+      213: 6061743171881969522
+    second: female-run-left_36
+  - first:
+      213: 5401597425245205519
+    second: female-run-left_37
+  - first:
+      213: 3514081684978636994
+    second: female-run-left_38
+  - first:
+      213: -3137815801931389687
+    second: female-run-left_39
+  - first:
+      213: -1376042574768926242
+    second: female-run-left_40
+  - first:
+      213: 4026442137231741328
+    second: female-run-left_41
+  - first:
+      213: -6374874369003122247
+    second: female-run-left_42
+  - first:
+      213: -3793063521208682081
+    second: female-run-left_43
+  - first:
+      213: 8628300310314222500
+    second: female-run-left_44
+  - first:
+      213: -801843201608637002
+    second: female-run-left_45
+  - first:
+      213: -4337610349153824646
+    second: female-run-left_46
+  - first:
+      213: -8471988836479970075
+    second: female-run-left_47
+  - first:
+      213: -6616774865739733726
+    second: female-run-left_48
+  - first:
+      213: -5368071276994346524
+    second: female-run-left_49
+  - first:
+      213: -566697298056453670
+    second: female-run-left_50
+  - first:
+      213: 8670783662968023463
+    second: female-run-left_51
+  - first:
+      213: 1798638940437566698
+    second: female-run-left_52
+  - first:
+      213: -1509552589442950470
+    second: female-run-left_53
+  - first:
+      213: -4859536449630305145
+    second: female-run-left_54
+  - first:
+      213: -63543001136238404
+    second: female-run-left_55
+  - first:
+      213: 5244903234780033789
+    second: female-run-left_56
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 500
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: female-run-left_0
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 5953
+        width: 149
+        height: 471
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8437027bbf97a2b0800000000000000
+      internalID: -5573310386426923890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-run-left_1
+      rect:
+        serializedVersion: 2
+        x: 1334
+        y: 5953
+        width: 151
+        height: 471
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0f294241bec40260800000000000000
+      internalID: 7062997376340406031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-run-left_2
+      rect:
+        serializedVersion: 2
+        x: 2296
+        y: 5953
+        width: 148
+        height: 471
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37b1cda7c2b963280800000000000000
+      internalID: -9063886584694432909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-run-left_3
+      rect:
+        serializedVersion: 2
+        x: 3093
+        y: 5975
+        width: 418
+        height: 421
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c242025a528670940800000000000000
+      internalID: 5262289200499139628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-run-left_4
+      rect:
+        serializedVersion: 2
+        x: 4058
+        y: 5972
+        width: 418
+        height: 424
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2dc8b4f9db00dfa60800000000000000
+      internalID: 7709318951549504722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-run-left_5
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 5434
+        width: 420
+        height: 421
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef0f7110f414fd3a0800000000000000
+      internalID: -6638515518144253698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-run-left_6
+      rect:
+        serializedVersion: 2
+        x: 1179
+        y: 5434
+        width: 417
+        height: 421
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a885da9f2eddea00800000000000000
+      internalID: 787529805902219424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-run-left_7
+      rect:
+        serializedVersion: 2
+        x: 2137
+        y: 5434
+        width: 418
+        height: 421
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f952aa98ef1c70d70800000000000000
+      internalID: 9009382878553449887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-run-left_8
+      rect:
+        serializedVersion: 2
+        x: 3099
+        y: 5434
+        width: 418
+        height: 421
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99e2622c5740d0140800000000000000
+      internalID: 4687407690977521305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-run-left_9
+      rect:
+        serializedVersion: 2
+        x: 4150
+        y: 5428
+        width: 221
+        height: 440
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f7ae24d473d0a050800000000000000
+      internalID: 5809876018037434358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-run-left_10
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 4890
+        width: 224
+        height: 433
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21b3ef335235520b0800000000000000
+      internalID: -5754101529644745966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-run-left_11
+      rect:
+        serializedVersion: 2
+        x: 1267
+        y: 4890
+        width: 225
+        height: 424
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c50a5134d3f543f90800000000000000
+      internalID: -6974845206166921124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-run-left_12
+      rect:
+        serializedVersion: 2
+        x: 2166
+        y: 4898
+        width: 351
+        height: 413
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f14ab6575e5c8e30800000000000000
+      internalID: 4507081056301236727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-run-left_13
+      rect:
+        serializedVersion: 2
+        x: 3128
+        y: 4890
+        width: 351
+        height: 414
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45ccae31d7c8ceb50800000000000000
+      internalID: 6623823620788112468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-run-left_14
+      rect:
+        serializedVersion: 2
+        x: 4087
+        y: 4890
+        width: 351
+        height: 415
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16fa25c67d0301460800000000000000
+      internalID: 7210316705213624161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-run-left_15
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 4352
+        width: 353
+        height: 411
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 284d6295ca6663e10800000000000000
+      internalID: 2177040360296338562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-run-left_16
+      rect:
+        serializedVersion: 2
+        x: 1207
+        y: 4352
+        width: 351
+        height: 411
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3bc1948ed8c3a2a0800000000000000
+      internalID: -6727312560328946883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-run-left_17
+      rect:
+        serializedVersion: 2
+        x: 2166
+        y: 4352
+        width: 354
+        height: 411
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3d9f50f6f1659640800000000000000
+      internalID: 5086079067407490367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-run-left_18
+      rect:
+        serializedVersion: 2
+        x: 3201
+        y: 4333
+        width: 218
+        height: 456
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28a97d1448a3b6fe0800000000000000
+      internalID: -1194796936421991806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-run-left_19
+      rect:
+        serializedVersion: 2
+        x: 4162
+        y: 4333
+        width: 216
+        height: 449
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec6c819749a8a4ec0800000000000000
+      internalID: -3581898183328348466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-run-left_20
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 3793
+        width: 218
+        height: 442
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b65e7359777e3b830800000000000000
+      internalID: 4085863787745764715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-run-left_21
+      rect:
+        serializedVersion: 2
+        x: 1179
+        y: 3817
+        width: 411
+        height: 418
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6472d51140fc82cf0800000000000000
+      internalID: -276743760705149114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-run-left_22
+      rect:
+        serializedVersion: 2
+        x: 2141
+        y: 3814
+        width: 408
+        height: 418
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0755721879e314f70800000000000000
+      internalID: 9169679136730862960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-run-left_23
+      rect:
+        serializedVersion: 2
+        x: 3101
+        y: 3814
+        width: 410
+        height: 418
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29e65be4783b4bad0800000000000000
+      internalID: -2687325683910873454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-run-left_24
+      rect:
+        serializedVersion: 2
+        x: 4061
+        y: 3814
+        width: 408
+        height: 418
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b06413efbf1a84410800000000000000
+      internalID: 1461596182755231243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-run-left_25
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 3273
+        width: 411
+        height: 418
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7325a0f7ef5fefd0800000000000000
+      internalID: -2310522634038336646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-run-left_26
+      rect:
+        serializedVersion: 2
+        x: 1182
+        y: 3273
+        width: 408
+        height: 418
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2676d5bd19e2764c0800000000000000
+      internalID: -4294412515689011358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-run-left_27
+      rect:
+        serializedVersion: 2
+        x: 2242
+        y: 3270
+        width: 209
+        height: 440
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3792ba81b0742e810800000000000000
+      internalID: 1793073714630961523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-run-left_28
+      rect:
+        serializedVersion: 2
+        x: 3204
+        y: 3270
+        width: 205
+        height: 430
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ed43a9e32650af10800000000000000
+      internalID: 2278916123693108706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-run-left_29
+      rect:
+        serializedVersion: 2
+        x: 4163
+        y: 3270
+        width: 208
+        height: 421
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2298bfa6cb64b360800000000000000
+      internalID: 7184485806658589230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-run-left_30
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 2736
+        width: 348
+        height: 411
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea5a1caab2cf1c7e0800000000000000
+      internalID: -1746837915964430930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-run-left_31
+      rect:
+        serializedVersion: 2
+        x: 1207
+        y: 2732
+        width: 348
+        height: 408
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e06261c57c0208210800000000000000
+      internalID: 1333101530317202958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-run-left_32
+      rect:
+        serializedVersion: 2
+        x: 2169
+        y: 2732
+        width: 348
+        height: 408
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e53346f450b43b210800000000000000
+      internalID: 1347503199692796766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-run-left_33
+      rect:
+        serializedVersion: 2
+        x: 3128
+        y: 2732
+        width: 348
+        height: 408
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2bd46f6ceaf82150800000000000000
+      internalID: 5848200009528695597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-run-left_34
+      rect:
+        serializedVersion: 2
+        x: 4087
+        y: 2732
+        width: 350
+        height: 408
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d7b02ffad88d4d40800000000000000
+      internalID: 5570258788291753941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-run-left_35
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 2191
+        width: 348
+        height: 411
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85e8d5b8548bc1690800000000000000
+      internalID: -7630021059842044328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-run-left_36
+      rect:
+        serializedVersion: 2
+        x: 1286
+        y: 2172
+        width: 215
+        height: 459
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 277acaf5c43af1450800000000000000
+      internalID: 6061743171881969522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-run-left_37
+      rect:
+        serializedVersion: 2
+        x: 2248
+        y: 2172
+        width: 212
+        height: 449
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f04b7674d3456fa40800000000000000
+      internalID: 5401597425245205519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-run-left_38
+      rect:
+        serializedVersion: 2
+        x: 3207
+        y: 2172
+        width: 212
+        height: 443
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c89bd09ca684c030800000000000000
+      internalID: 3514081684978636994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-run-left_39
+      rect:
+        serializedVersion: 2
+        x: 4055
+        y: 2197
+        width: 414
+        height: 421
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 905a54b272d3474d0800000000000000
+      internalID: -3137815801931389687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-run-left_40
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 1653
+        width: 414
+        height: 421
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed1951f919057ece0800000000000000
+      internalID: -1376042574768926242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-run-left_41
+      rect:
+        serializedVersion: 2
+        x: 1179
+        y: 1653
+        width: 411
+        height: 421
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 091dc527acbc0e730800000000000000
+      internalID: 4026442137231741328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-run-left_42
+      rect:
+        serializedVersion: 2
+        x: 2137
+        y: 1653
+        width: 415
+        height: 421
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b193d37985e787a0800000000000000
+      internalID: -6374874369003122247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-run-left_43
+      rect:
+        serializedVersion: 2
+        x: 3099
+        y: 1653
+        width: 412
+        height: 421
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f993ddfe2d45c5bc0800000000000000
+      internalID: -3793063521208682081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-run-left_44
+      rect:
+        serializedVersion: 2
+        x: 4058
+        y: 1653
+        width: 414
+        height: 421
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a30ca3ea61edb770800000000000000
+      internalID: 8628300310314222500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-run-left_45
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 1112
+        width: 206
+        height: 437
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b52e824bd74fd4f0800000000000000
+      internalID: -801843201608637002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-run-left_46
+      rect:
+        serializedVersion: 2
+        x: 1286
+        y: 1112
+        width: 206
+        height: 430
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a70d0ac7e56bdc3c0800000000000000
+      internalID: -4337610349153824646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-run-left_47
+      rect:
+        serializedVersion: 2
+        x: 2245
+        y: 1109
+        width: 206
+        height: 427
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e4598c2a037d6a80800000000000000
+      internalID: -8471988836479970075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-run-left_48
+      rect:
+        serializedVersion: 2
+        x: 3120
+        y: 1115
+        width: 353
+        height: 415
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 225a9d8115e7c24a0800000000000000
+      internalID: -6616774865739733726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-run-left_49
+      rect:
+        serializedVersion: 2
+        x: 4084
+        y: 1112
+        width: 354
+        height: 415
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e146c56d97c085b0800000000000000
+      internalID: -5368071276994346524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-run-left_50
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 571
+        width: 355
+        height: 416
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad1eb265fcfa228f0800000000000000
+      internalID: -566697298056453670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-run-left_51
+      rect:
+        serializedVersion: 2
+        x: 1204
+        y: 571
+        width: 354
+        height: 416
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a9287b3dcfc45870800000000000000
+      internalID: 8670783662968023463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-run-left_52
+      rect:
+        serializedVersion: 2
+        x: 2166
+        y: 571
+        width: 354
+        height: 416
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae457f3369c06f810800000000000000
+      internalID: 1798638940437566698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-run-left_53
+      rect:
+        serializedVersion: 2
+        x: 3125
+        y: 571
+        width: 354
+        height: 416
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aba5b78faedfc0be0800000000000000
+      internalID: -1509552589442950470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-run-left_54
+      rect:
+        serializedVersion: 2
+        x: 4162
+        y: 552
+        width: 216
+        height: 456
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78409b298557f8cb0800000000000000
+      internalID: -4859536449630305145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-run-left_55
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 11
+        width: 215
+        height: 449
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb0ff452aff3e1ff0800000000000000
+      internalID: -63543001136238404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-run-left_56
+      rect:
+        serializedVersion: 2
+        x: 1283
+        y: 11
+        width: 215
+        height: 446
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df27c5e04b3a9c840800000000000000
+      internalID: 5244903234780033789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: c0a2b950de8a4d945ab2e56e8fceac8b
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

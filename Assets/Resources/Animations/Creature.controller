@@ -8,7 +8,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Creature_Idle
-  m_Speed: 0.5
+  m_Speed: 2
   m_CycleOffset: 0
   m_Transitions: []
   m_StateMachineBehaviours: []
@@ -20,7 +20,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: f0f506559871a7e4e80d004aa29ab67a, type: 2}
+  m_Motion: {fileID: 7400000, guid: e8cd68394c05a1042987ca9508980db4, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -65,13 +65,13 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: Run
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -118,7 +118,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Creature_Run
-  m_Speed: 0.5
+  m_Speed: 2
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 40522545128836454}
@@ -131,7 +131,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: cb7b48cf1176d2b4599a95ce31809da9, type: 2}
+  m_Motion: {fileID: 7400000, guid: 0ffd4df4f03224747872a27ee09332d7, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 

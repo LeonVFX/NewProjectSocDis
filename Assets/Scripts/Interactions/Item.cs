@@ -17,8 +17,6 @@ public class Item : MonoBehaviour
     // HUD
     [Header("Item Settings")]
     public ItemType itemType = ItemType.Default;
-    [SerializeField] private Sprite itemSprite = null;
-    [SerializeField] private Vector3 itemDropOffset = Vector3.zero;
 
     // Player
     private bool isInRange = false;
@@ -28,7 +26,6 @@ public class Item : MonoBehaviour
     private void Start()
     {
         itemView = GetComponent<PhotonView>();
-        itemSprite = GetComponentInChildren<SpriteRenderer>().sprite;
     }
 
     private void Update()
@@ -98,7 +95,10 @@ public class Item : MonoBehaviour
     private void DropItem(Transform playerPos)
     {
         ItemManager.im.DropItem();
-        itemView.RPC("RPC_EnableItem", RpcTarget.All, new object[] { playerPos.position });
+        float[] randItemOffset = { -0.35f, 0.35f };
+        Vector3 itemDropOffset = new Vector3(randItemOffset[Random.Range(0, randItemOffset.Length)], 0.3f, randItemOffset[Random.Range(0, randItemOffset.Length)]);
+        //Debug.Log(itemDropOffset);
+        itemView.RPC("RPC_EnableItem", RpcTarget.All, new object[] { playerPos.position, itemDropOffset });
     }
 
     private IEnumerator ItemBuffer()
@@ -115,7 +115,7 @@ public class Item : MonoBehaviour
     }
 
     [PunRPC]
-    private void RPC_EnableItem(Vector3 playerPos)
+    private void RPC_EnableItem(Vector3 playerPos, Vector3 itemDropOffset)
     {
         transform.position = playerPos + itemDropOffset;
         isHeld = false;

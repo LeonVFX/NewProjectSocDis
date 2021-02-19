@@ -218,8 +218,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemType: 1
-  itemSprite: {fileID: 0}
-  itemDropOffset: {x: 0.5, y: 0.3, z: 0.2}
 --- !u!114 &2040378879665574269
 MonoBehaviour:
   m_ObjectHideFlags: 0
