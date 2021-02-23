@@ -64,7 +64,7 @@ public class Player : MonoBehaviour
 
         PlayerManager.pm.playerViews.Add(playerView);
         
-        pMovement.playerSpeed = baseSpeed;
+        pMovement.PlayerSpeed = baseSpeed;
         
         cam = Camera.main.GetComponent<Camera>();
 

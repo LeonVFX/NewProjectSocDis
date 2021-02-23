@@ -33,6 +33,12 @@ public class PlayerHUD : MonoBehaviour
     [SerializeField] private Slider taskCompletionSlider = null;
     [SerializeField] private TaskList taskList = null;
     [SerializeField] private GameObject taskPrefab = null;
+    [Header("Creature")]
+    [SerializeField] private GameObject goopTimer = null;
+    public float GoopValue
+    {
+        set { goopTimer.GetComponent<Image>().fillAmount = value; }
+    }
 
     // Other
     private bool toggleMap = false;
@@ -204,6 +210,20 @@ public class PlayerHUD : MonoBehaviour
                 break;
             case false:
                 taskList.gameObject.SetActive(true);
+                break;
+            default:
+                break;
+        }
+    }
+    public void ToggleGoopAmountActive()
+    {
+        switch (goopTimer.gameObject.activeSelf)
+        {
+            case true:
+                goopTimer.gameObject.SetActive(false);
+                break;
+            case false:
+                goopTimer.gameObject.SetActive(true);
                 break;
             default:
                 break;

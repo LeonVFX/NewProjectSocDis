@@ -26,7 +26,14 @@ public class PlayerMovement : MonoBehaviour
 
     private Rigidbody rb = null;
 
-    public float playerSpeed = 30.0f;
+    private float playerSpeed = 0f;
+
+    public float PlayerSpeed
+    {
+        get { return playerSpeed; }
+        set { playerSpeed = value; }
+    }
+
     LayerMask layer;
 
     private void Awake()
@@ -42,13 +49,6 @@ public class PlayerMovement : MonoBehaviour
         rb.constraints = RigidbodyConstraints.FreezeRotation;
         canMove = true;
     }
-
-    //// Update is called once per frame
-    //void Update()
-    //{
-    //    if (!playerView.IsMine)
-    //        return;
-    //}
 
     public void Move()
     {

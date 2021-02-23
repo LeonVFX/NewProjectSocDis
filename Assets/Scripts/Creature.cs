@@ -21,7 +21,7 @@ public class Creature : Player
     {
         base.Start();
 
-        pMovement.playerSpeed *= speedMultiplier;
+        pMovement.PlayerSpeed *= speedMultiplier;
 
         targetPlayers = new List<Player>();
         canKill = true;

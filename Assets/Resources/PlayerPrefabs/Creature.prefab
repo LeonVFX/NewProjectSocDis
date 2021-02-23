@@ -293,6 +293,8 @@ GameObject:
   - component: {fileID: 3084323916096303373}
   - component: {fileID: 7444288150573823315}
   - component: {fileID: 7318705552166132760}
+  - component: {fileID: 7442127186423124864}
+  - component: {fileID: 1894138374154240685}
   - component: {fileID: 1368967992125497992}
   - component: {fileID: 8678327172916088230}
   - component: {fileID: 3997691251017626713}
@@ -397,6 +399,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5ed27b0866e71f4b8d289988b819bd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7442127186423124864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4549701790167422974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc320fd91a3b83a49a69e778c098c7b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trackInterval: 2
+  speedDifference: 10
+  footprintPrefab: {fileID: 9104673859528969927, guid: 6dd4033c6f17ea147924d5224a865e7c, type: 3}
+--- !u!114 &1894138374154240685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4549701790167422974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77bbc82022708a34b87af99ca982f868, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  goopInterval: 1
+  goopPrefab: {fileID: 0}
+  goopStartTime: 5
+  goopBufferTime: 3
 --- !u!114 &1368967992125497992
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -409,7 +442,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a64c8325d9b3f2342857f3b39665be7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerSpeed: 30
 --- !u!114 &8678327172916088230
 MonoBehaviour:
   m_ObjectHideFlags: 0

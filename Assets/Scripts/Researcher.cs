@@ -11,10 +11,11 @@ public class Researcher : Player
     {
         base.Start();
 
-        pMovement.playerSpeed *= speedMultiplier;
+        pMovement.PlayerSpeed *= speedMultiplier;
 
-        // Deactivate Kill Button
+        // Deactivate Creature UI
         PHUD.ToggleKillButtonActive();
+        pHUD.ToggleGoopAmountActive();
     }
 
     protected override void Update()
