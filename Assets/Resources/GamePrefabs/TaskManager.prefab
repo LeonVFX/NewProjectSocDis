@@ -51,6 +51,8 @@ MonoBehaviour:
   tasksInfected: 0
   maxTasksInfected: 1
   maxNumberOfTasksPerPlayer: 3
+  numberOfCompletedTasks: 0
+  maxNumberOfTasks: 1
 --- !u!114 &2393729822280559458
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -181,10 +183,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 005146fa78757c847b04849fba50142f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  taskName: Correct Navigation
-  taskDescription: Correct the ship destination with the card.
-  taskRequiredItemType: 0
-  taskDestination: {fileID: 4432957359667741692}
+  taskObject: {fileID: 11400000, guid: 77d2213449984aa439f24c1af91ab3b1, type: 2}
+  isComplete: 0
 --- !u!1 &4769846762456128115
 GameObject:
   m_ObjectHideFlags: 0
@@ -293,10 +293,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 005146fa78757c847b04849fba50142f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  taskName: Fill Tank
-  taskDescription: Take the gas can to the fuel tank.
-  taskRequiredItemType: 1
-  taskDestination: {fileID: 4769846762456128115}
+  taskObject: {fileID: 11400000, guid: 64e8dd8ddc97bcc4a9f6286d91f10724, type: 2}
+  isComplete: 0
 --- !u!1 &4903515865978548572
 GameObject:
   m_ObjectHideFlags: 0
@@ -405,10 +403,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 005146fa78757c847b04849fba50142f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  taskName: Repair Engine
-  taskDescription: Take the tools to repair the engine.
-  taskRequiredItemType: 0
-  taskDestination: {fileID: 4903515865978548572}
+  taskObject: {fileID: 11400000, guid: e99a9bf7f95f54242909d023a83937c4, type: 2}
+  isComplete: 0
 --- !u!1 &5018733393464060271
 GameObject:
   m_ObjectHideFlags: 0
@@ -517,7 +513,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 005146fa78757c847b04849fba50142f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  taskName: Gather Herbs
-  taskDescription: Take the herbs to the biochamber.
-  taskRequiredItemType: 0
-  taskDestination: {fileID: 5018733393464060271}
+  taskObject: {fileID: 11400000, guid: 098c058ce45b9fa469e89d7d18e01e50, type: 2}
+  isComplete: 0

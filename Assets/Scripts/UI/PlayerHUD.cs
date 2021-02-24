@@ -93,7 +93,7 @@ public class PlayerHUD : MonoBehaviour
         foreach (Task task in newTaskList)
         {
             GameObject newTask = Instantiate(taskPrefab, taskList.transform);
-            newTask.GetComponent<Text>().text = task.taskDescription;
+            newTask.GetComponent<Text>().text = task.TaskDescription;
         }
     }
 

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Task : MonoBehaviour
 {
+    public TaskObject taskObject;
+
     // Task Information
     private int taskID;
 
@@ -15,15 +17,29 @@ public class Task : MonoBehaviour
 
     [Header("Task Details")]
     public bool isComplete = false;
-    public string taskName;
-    public string taskDescription;
-    public Item.ItemType taskRequiredItemType;
-    public GameObject taskDestination;
+    private string taskName;
+    private string taskDescription;
+    public string TaskDescription
+    {
+        get { return taskDescription; }
+    }
+    private Item.ItemType taskRequiredItemType;
+    public Item.ItemType TaskRequiredItemType
+    {
+        get { return taskRequiredItemType; }
+    }
 
     private bool taskinfected = false;
     public bool TaskInfected
     {
         get { return taskinfected; }
+    }
+
+    private void Start()
+    {
+        taskName = taskObject.taskName;
+        taskDescription = taskObject.taskDescription;
+        taskRequiredItemType = taskObject.taskRequiredItemType;
     }
 
     private void Update()

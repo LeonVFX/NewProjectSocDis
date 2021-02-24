@@ -78,7 +78,7 @@ public class ResearcherTasking : MonoBehaviour
         // If holding item
         if (GetComponent<Player>().HeldItem != null)
         {
-            if (GetComponent<Player>().HeldItem.itemType == targetTask.taskRequiredItemType)
+            if (GetComponent<Player>().HeldItem.itemType == targetTask.TaskRequiredItemType)
             {
                 if (targetTask.TaskInfected)
                 {
@@ -91,7 +91,7 @@ public class ResearcherTasking : MonoBehaviour
             }
             else
             {
-                Debug.Log($"You need a { targetTask.taskRequiredItemType }.");
+                Debug.Log($"You need a { targetTask.TaskRequiredItemType }.");
             }
         }
     }
