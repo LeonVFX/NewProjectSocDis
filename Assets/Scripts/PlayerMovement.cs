@@ -67,13 +67,13 @@ public class PlayerMovement : MonoBehaviour
                         // Moving
                         Vector3 dir = (hit.point - transform.position).normalized;
                         rb.AddForce(playerSpeed * dir, ForceMode.Force);
+                        OnMove?.Invoke();
                     }
                     break;
                 }
             }
             if (!isMoving)
             {
-                OnMove?.Invoke();
                 isMoving = true;
             }
         }
