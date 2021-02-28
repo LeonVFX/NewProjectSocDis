@@ -6,6 +6,8 @@ using UnityEngine;
 public class Researcher : Player
 {
     public bool isInfected = false;
+    public bool inEscapePod = false;
+    public bool inPod = false;
 
     protected override void Start()
     {
@@ -22,11 +24,21 @@ public class Researcher : Player
         if (!playerView.IsMine || !isAlive)
             return;
 
+        if(inPod == true)
+        {
+
+        }
+
         base.Update();
     }
 
     public void SetInfected(bool isInfected)
     {
         this.isInfected = isInfected;
+    }
+
+    public void InPod(bool inEscapePod)
+    {
+        this.inEscapePod = inEscapePod;
     }
 }

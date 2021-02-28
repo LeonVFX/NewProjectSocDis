@@ -31,6 +31,7 @@ public class Player : MonoBehaviour
     [SerializeField] protected float baseSpeed = 30.0f;
     public float speedMultiplier = 1.0f;
     public bool isAlive;
+    public bool inPod;
 
     // Other
     private Item heldItem = null;
@@ -142,5 +143,15 @@ public class Player : MonoBehaviour
         heldItem = null;
         pHUD.DropItem();
         Debug.Log("Dropped Gas");
+    }
+
+    public void InEscapePod()
+    {
+        playerView.RPC("RPC_Pod", RpcTarget.All);
+    }
+    public void RPC_Pod()
+    {
+        Debug.Log($"Player { this.name } is in a escape pod.");
+        inPod = true;
     }
 }

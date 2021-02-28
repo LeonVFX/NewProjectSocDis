@@ -384,6 +384,7 @@ MonoBehaviour:
   baseSpeed: 30
   speedMultiplier: 1.5
   isAlive: 1
+  inPod: 0
   killStunTime: 3
 --- !u!114 &7318705552166132760
 MonoBehaviour:
