@@ -15,7 +15,6 @@ public class PlayerMovement : MonoBehaviour
 
     // Decides when player is able to move
     private bool canMove;
-
     public bool CanMove
     {
         get { return canMove; }
@@ -27,7 +26,6 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody rb = null;
 
     private float playerSpeed = 0f;
-
     public float PlayerSpeed
     {
         get { return playerSpeed; }
@@ -35,6 +33,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
     LayerMask layer;
+    float timeElapsed = 0f;
 
     private void Awake()
     {
@@ -52,35 +51,49 @@ public class PlayerMovement : MonoBehaviour
 
     public void Move()
     {
-        // Movement
-        if (Input.GetMouseButton(0))
+        // Movement Animation
+        if (Input.GetMouseButtonDown(0))
         {
-            RaycastHit[] hits = Physics.RaycastAll(Camera.main.ScreenPointToRay(Input.mousePosition), Mathf.Infinity, layer).OrderBy(h => h.distance).ToArray();
-
-            foreach (var hit in hits)
-            {
-                // If not hitting UI
-                if (hit.transform.gameObject.layer == LayerMask.NameToLayer("Ground"))
-                {
-                    if (canMove)
-                    {
-                        // Moving
-                        Vector3 dir = (hit.point - transform.position).normalized;
-                        rb.AddForce(playerSpeed * dir, ForceMode.Force);
-                        OnMove?.Invoke();
-                    }
-                    break;
-                }
-            }
             if (!isMoving)
             {
                 isMoving = true;
+                OnMove?.Invoke();
             }
         }
+        // Stop Animation
         if (Input.GetMouseButtonUp(0))
         {
-            OnStop?.Invoke();
-            isMoving = false;
+            if (isMoving)
+            {
+                isMoving = false;
+                OnStop?.Invoke();
+            }
+        }
+        // Movement
+        if (Input.GetMouseButton(0))
+        {
+            IEnumerator move = ContinueMove();
+            StartCoroutine(move);
+        }
+    }
+
+    private IEnumerator ContinueMove()
+    {
+        RaycastHit[] hits = Physics.RaycastAll(Camera.main.ScreenPointToRay(Input.mousePosition), Mathf.Infinity, layer).OrderBy(h => h.distance).ToArray();
+
+        foreach (var hit in hits)
+        {
+            // If not hitting UI
+            if (hit.transform.gameObject.layer == LayerMask.NameToLayer("Ground"))
+            {
+                if (canMove)
+                {
+                    // Moving
+                    Vector3 dir = (hit.point - transform.position).normalized;
+                    rb.AddForce(playerSpeed * dir, ForceMode.Force);
+                }
+                yield break;
+            }
         }
     }
 }

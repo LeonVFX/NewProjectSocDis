@@ -35,10 +35,10 @@ public class Creature : Player
 
     protected override void Update()
     {
+        base.Update();
+
         if (!playerView.IsMine || !isAlive)
             return;
-
-        base.Update();
 
         // Call Killing
         if (isKill && canKill)

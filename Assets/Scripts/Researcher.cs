@@ -20,10 +20,10 @@ public class Researcher : Player
 
     protected override void Update()
     {
+        base.Update();
+
         if (!playerView.IsMine || !isAlive)
             return;
-
-        base.Update();
     }
 
     public void SetInfected(bool isInfected)
