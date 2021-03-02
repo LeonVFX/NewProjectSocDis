@@ -24,7 +24,7 @@ public class CreatureInfection : MonoBehaviour
 
         if (canInfect == true && TaskManager.tm.tasksInfected < TaskManager.tm.maxTasksInfected)
         {
-            if (Input.GetButtonDown("Interact") || isInteract)
+            if (isInteract)
             {
                 playerView.RPC("RPC_InfectTask", RpcTarget.All);
                 TaskManager.tm.tasksInfected = TaskManager.tm.tasksInfected + 1;
