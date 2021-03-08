@@ -56,7 +56,7 @@ MonoBehaviour:
   m_ChildAlignment: 1
   m_StartCorner: 0
   m_StartAxis: 0
-  m_CellSize: {x: 350, y: 100}
+  m_CellSize: {x: 285, y: 80}
   m_Spacing: {x: 20, y: 20}
   m_Constraint: 1
   m_ConstraintCount: 2
@@ -887,7 +887,7 @@ MonoBehaviour:
   background: {fileID: 4315912707108503533}
   mapCam: {fileID: 1769416339959316731}
   map: {fileID: 7025174686546734886}
-  offset: {x: -30, y: 1, z: 20}
+  offset: {x: 0, y: 1, z: -40}
   mapBtn: {fileID: 2876001495011551204}
   interactionBtn: {fileID: 6828193956298777583}
   itemBtn: {fileID: 7209628865182000642}
@@ -1820,7 +1820,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7025174686546734886}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -1.68}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3894608496470244376}
@@ -1828,7 +1828,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 12}
+  m_AnchoredPosition: {x: -5.8, y: 12.92}
   m_SizeDelta: {x: 600, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6806571589121216059
@@ -2240,7 +2240,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 100
+  orthographic size: 70
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2

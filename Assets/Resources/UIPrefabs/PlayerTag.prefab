@@ -37,7 +37,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 30}
+  m_SizeDelta: {x: 80, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &9218060335451350797
 CanvasRenderer:
@@ -167,7 +167,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 420, y: 50}
+  m_SizeDelta: {x: 420, y: 35}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!222 &2958896717613615349
 CanvasRenderer:
@@ -199,7 +199,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 30
+    m_FontSize: 25
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 3
@@ -372,6 +372,8 @@ MonoBehaviour:
   playerName: {fileID: 8084199297970409810}
   voteButton: {fileID: 6723706853360974121}
   playerNumber: 0
+  playerTagNumber: 0
+  debugPlayer: {fileID: 0}
 --- !u!222 &6406506456051758886
 CanvasRenderer:
   m_ObjectHideFlags: 0

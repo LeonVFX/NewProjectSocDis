@@ -212,7 +212,7 @@ public class RoomMatchMaking : MonoBehaviourPunCallbacks, IInRoomCallbacks
             return;
         if (MultiplayerSettings.multiplayerSettings.delayStart)
             PhotonNetwork.CurrentRoom.IsOpen = false;
-        PhotonNetwork.LoadLevel(MultiplayerSettings.multiplayerSettings.loadingScene);
+        PhotonNetwork.LoadLevel(MultiplayerSettings.multiplayerSettings.multiplayerScene);
 
         // Randomize player settings
         playerSettings.RandomizePlayers(playersInRoom);
@@ -267,7 +267,7 @@ public class RoomMatchMaking : MonoBehaviourPunCallbacks, IInRoomCallbacks
     private void RPC_CreateLevel()
     {
         // creates level network controller but not player character
-        PhotonNetwork.InstantiateRoomObject(System.IO.Path.Combine("LevelPrefabs", "Level"), Vector3.zero, Quaternion.identity);
+        PhotonNetwork.InstantiateRoomObject(System.IO.Path.Combine("LevelPrefabs", "Level"), Vector3.zero, Quaternion.Euler(0f, 225f, 0f));
     }
 
     [PunRPC]
@@ -276,7 +276,7 @@ public class RoomMatchMaking : MonoBehaviourPunCallbacks, IInRoomCallbacks
         // creates player network controller but not player character
         if (playerSettings.roleList.ElementAt(myNumberInRoom - 1) == PlayerStgs.PlayerRole.Creature)
         {
-            GameObject creature = PhotonNetwork.Instantiate(System.IO.Path.Combine("PlayerPrefabs", "Creature"), creatureSpawnPoint.position, Quaternion.identity);
+            GameObject creature = PhotonNetwork.Instantiate(System.IO.Path.Combine("PlayerPrefabs", "Creature"), spawnPoints.GetPosition(myNumberInRoom), Quaternion.identity);
             creature.GetComponent<Creature>().PlayerNumber = myNumberInRoom;
         }
         else

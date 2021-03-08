@@ -26,6 +26,7 @@ public class Item : MonoBehaviour
     private void Start()
     {
         itemView = GetComponent<PhotonView>();
+        transform.rotation = Quaternion.Euler(45f, 45f, 0f);
     }
 
     private void Update()
@@ -68,18 +69,17 @@ public class Item : MonoBehaviour
         }
     }
 
-    public void GetItem(PhotonView playerView, bool hasHeldItem)
+    public void GetItem(PhotonView playerView)
     {
         if (!playerView.IsMine)
             return;
 
         IEnumerator bufferTimer = ItemBuffer();
 
-        if (hasHeldItem)
+        if (playerView.GetComponent<Player>().HeldItem != null)
         {
             DropItem(playerView.transform);
             itemBuffer = true;
-            playerView.GetComponent<Player>().PHUD.hasHeldItem = false;
             StartCoroutine(bufferTimer);
             return;
         }
@@ -88,7 +88,6 @@ public class Item : MonoBehaviour
             return;
 
         itemBuffer = true;
-        playerView.GetComponent<Player>().PHUD.hasHeldItem = true;
         StartCoroutine(bufferTimer);
     }
 

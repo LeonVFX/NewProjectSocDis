@@ -10,6 +10,7 @@ public class CreatureHinting : MonoBehaviour
 
     [SerializeField] int goopInterval = 1;
     [SerializeField] private GameObject goopPrefab;
+    [SerializeField] private ParticleSystem goopParticle;
 
     private bool goopTimeout = false;
 
@@ -76,6 +77,7 @@ public class CreatureHinting : MonoBehaviour
     [PunRPC]
     private void RPC_Goop()
     {
-        PhotonNetwork.InstantiateRoomObject(System.IO.Path.Combine("GamePrefabs", "Goop"), transform.position + new Vector3(0f, 0.01f, 0f), Quaternion.Euler(90f, transform.rotation.y, transform.rotation.z));
+        //PhotonNetwork.InstantiateRoomObject(System.IO.Path.Combine("GamePrefabs", "Goop"), transform.position + new Vector3(0f, 0.01f, 0f), Quaternion.Euler(90f, transform.rotation.y, transform.rotation.z));
+        goopParticle.Play();
     }
 }

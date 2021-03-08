@@ -37,7 +37,6 @@ public class Player : MonoBehaviour
     public Item HeldItem
     {
         get { return heldItem; }
-        set { heldItem = value; }
     }
 
 
@@ -80,8 +79,6 @@ public class Player : MonoBehaviour
         // Mouse over UI
         if (IsPointerOverUIObject())
             return;
-
-        pMovement.Move();
     }
 
     protected void PreventMovement()
@@ -115,7 +112,7 @@ public class Player : MonoBehaviour
     }
 
     //When Touching UI
-    private bool IsPointerOverUIObject()
+    public bool IsPointerOverUIObject()
     {
         PointerEventData eventDataCurrentPosition = new PointerEventData(EventSystem.current);
         eventDataCurrentPosition.position = new Vector2(Input.mousePosition.x, Input.mousePosition.y);

@@ -9,7 +9,7 @@ public class PlayerHUD : MonoBehaviour
     // Events
     public event System.Action<PhotonView> OnInteraction;
     // Item bool = holding an item or not
-    public event System.Action<PhotonView, bool> OnItemInteraction;
+    public event System.Action<PhotonView> OnItemInteraction;
     public event System.Action OnKill;
 
     public PhotonView playerView = null;
@@ -28,7 +28,6 @@ public class PlayerHUD : MonoBehaviour
     [Header("Item")]
     [SerializeField] private RawImage heldItem = null;
     [SerializeField] private Texture noItemTex = null;
-    public bool hasHeldItem = false;
     [Header("Tasks")]
     [SerializeField] private Slider taskCompletionSlider = null;
     [SerializeField] private TaskList taskList = null;
@@ -135,7 +134,7 @@ public class PlayerHUD : MonoBehaviour
 
     private void ItemInteractionOnClick()
     {
-        OnItemInteraction?.Invoke(playerView, hasHeldItem);
+        OnItemInteraction?.Invoke(playerView);
     }
 
     private void KillOnClick()
