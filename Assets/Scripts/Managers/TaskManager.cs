@@ -12,7 +12,7 @@ public class TaskManager : MonoBehaviour
     public int maxTasksInfected = 1;
     public int maxNumberOfTasksPerPlayer = 1;
     public int numberOfCompletedTasks = 0;
-    public int maxNumberOfTasks = 1;
+    public int maxNumberOfTasks = 0;
 
     private Task[] taskList;
 
@@ -44,6 +44,12 @@ public class TaskManager : MonoBehaviour
     public void CompleteTask()
     {
         numberOfCompletedTasks++;
+    }
+
+    public void AllTasksCompleted()
+    {
+        if (numberOfCompletedTasks == maxNumberOfTasks)
+            GameManager.gm.NextStage();
     }
 
     public List<Task> RandomizeTasks()

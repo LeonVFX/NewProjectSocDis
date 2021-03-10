@@ -103,6 +103,7 @@ public class ResearcherTasking : MonoBehaviour
 
         isValidTask = false;
         playerView.RPC("RPC_GroupTaskComplete", RpcTarget.All);
+        playerView.RPC("RPC_CompletedAllTasks", RpcTarget.MasterClient);
         targetTask.isComplete = true;
         taskList.Remove(targetTask);
         GetComponent<Player>().PHUD.UpdateTaskList(taskList);
@@ -112,6 +113,12 @@ public class ResearcherTasking : MonoBehaviour
     private void RPC_GroupTaskComplete()
     {
         TaskManager.tm.CompleteTask();
+    }
+
+    [PunRPC]
+    private void RPC_CompletedAllTasks()
+    {
+        TaskManager.tm.AllTasksCompleted();
     }
 
     [PunRPC]

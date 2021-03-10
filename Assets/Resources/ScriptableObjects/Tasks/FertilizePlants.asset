@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: df63916350ee3bc42846cb947dcfed80, type: 3}
-  m_Name: CorrectDestination
+  m_Name: FertilizePlants
   m_EditorClassIdentifier: 
-  taskName: Correct Destination
-  taskDescription: Correct the ship destination with the Card
-  taskRequiredItemType: 0
+  taskName: Fertilize Plants
+  taskDescription: Take care of the aquatic plants with the fertilizer
+  taskRequiredItemType: 5

@@ -77,6 +77,10 @@ public class Creature : Player
         if (other.tag == "Researcher")
         {
             Player target = other.GetComponent<Player>();
+
+            if (targetPlayers == null)
+                return;
+
             if (target.isAlive)
             {
                 targetPlayers.Add(target);

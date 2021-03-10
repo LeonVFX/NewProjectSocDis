@@ -11,7 +11,14 @@ public class Item : MonoBehaviour
     public enum ItemType
     {
         Default,
-        Gas
+        Gas,
+        PenDrive,
+        Crate,
+        CreatureMaterial,
+        Fertilizer,
+        ResearcherFiles,
+        Food,
+        Belongings
     }
 
     // HUD
@@ -33,7 +40,7 @@ public class Item : MonoBehaviour
     {
         if (isInRange)
         {
-            if (Input.GetButtonDown("Interact") && !isHeld || itemBuffer && !isHeld)
+            if (itemBuffer && !isHeld)
             {
                 ItemManager.im.GetItem(this);
 
@@ -75,8 +82,9 @@ public class Item : MonoBehaviour
             return;
 
         IEnumerator bufferTimer = ItemBuffer();
+        Item heldItem = playerView.GetComponent<Player>().HeldItem;
 
-        if (playerView.GetComponent<Player>().HeldItem != null)
+        if (heldItem == this)
         {
             DropItem(playerView.transform);
             itemBuffer = true;

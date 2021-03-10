@@ -128,7 +128,6 @@ public class Player : MonoBehaviour
 
         heldItem = item;
         pHUD.HoldItem(heldItem.GetComponentInChildren<SpriteRenderer>().sprite.texture);
-        Debug.Log("Got Gas");
     }
 
     private void DropItem()
@@ -138,6 +137,5 @@ public class Player : MonoBehaviour
 
         heldItem = null;
         pHUD.DropItem();
-        Debug.Log("Dropped Gas");
     }
 }
