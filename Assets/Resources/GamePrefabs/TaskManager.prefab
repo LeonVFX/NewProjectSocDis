@@ -166,7 +166,7 @@ MonoBehaviour:
   maxTasksInfected: 1
   maxNumberOfTasksPerPlayer: 1
   numberOfCompletedTasks: 0
-  maxNumberOfTasks: 1
+  maxNumberOfTasks: 0
 --- !u!114 &2393729822280559458
 MonoBehaviour:
   m_ObjectHideFlags: 0
