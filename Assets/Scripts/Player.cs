@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
 {
     // Events
     public event System.Action OnDeath;
+    public event System.Action InExPod;
 
     // Basic Player Components
     public PhotonView playerView = null;
@@ -115,6 +116,16 @@ public class Player : MonoBehaviour
         isAlive = false;
     }
 
+    public void InThePod()
+    {
+        playerView.RPC("RPC_InThePod", RpcTarget.All);
+    }
+    public void RPC_InThePod()
+    {
+        Debug.Log($"Player { this.name } is in the escape Pod");
+        InExPod?.Invoke();
+        inPod = true;
+    }
     //When Touching UI
     private bool IsPointerOverUIObject()
     {
@@ -145,13 +156,14 @@ public class Player : MonoBehaviour
         Debug.Log("Dropped Gas");
     }
 
-    public void InEscapePod()
+   /* public void InEscapePod()
     {
         playerView.RPC("RPC_Pod", RpcTarget.All);
     }
     public void RPC_Pod()
     {
-        Debug.Log($"Player { this.name } is in a escape pod.");
+        Debug.Log($"Player { this.playerView } is in a escape pod.");
         inPod = true;
-    }
+
+    }*/
 }

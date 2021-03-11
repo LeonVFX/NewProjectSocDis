@@ -6,6 +6,7 @@ public class Timer : MonoBehaviour
     [SerializeField] float stage1TotalTime;
     [SerializeField] float voteStageTotalTime;
     [SerializeField] float stage2TotalTime;
+    [SerializeField] float endstageTotalTime;
 
     // Will be used for seconds
     public float gameTime = 0f;
@@ -22,6 +23,7 @@ public class Timer : MonoBehaviour
 
         GameManager.gm.OnVoteStage += NextStage;
         GameManager.gm.OnStage2 += NextStage;
+        GameManager.gm.OnEndStage += NextStage;
     }
 
     private void Update()
@@ -53,6 +55,11 @@ public class Timer : MonoBehaviour
                 break;
             case GameManager.GameStage.Stage2:
                 minute = stage2TotalTime;
+                gameTime = 0.0f;
+                timeOver = false;
+                break;
+            case GameManager.GameStage.EndStage:
+                minute = endstageTotalTime;
                 gameTime = 0.0f;
                 timeOver = false;
                 break;

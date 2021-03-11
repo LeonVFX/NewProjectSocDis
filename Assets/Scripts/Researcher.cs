@@ -7,7 +7,6 @@ public class Researcher : Player
 {
     public bool isInfected = false;
     public bool inEscapePod = false;
-    public bool inPod = false;
 
     protected override void Start()
     {
@@ -26,7 +25,7 @@ public class Researcher : Player
 
         if(inPod == true)
         {
-
+            playerView.gameObject.SetActive(false);
         }
 
         base.Update();
