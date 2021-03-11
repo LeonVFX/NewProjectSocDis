@@ -120,12 +120,15 @@ public class Player : MonoBehaviour
     {
         playerView.RPC("RPC_InThePod", RpcTarget.All);
     }
+
+    [PunRPC]
     public void RPC_InThePod()
     {
         Debug.Log($"Player { this.name } is in the escape Pod");
         InExPod?.Invoke();
         inPod = true;
     }
+
     //When Touching UI
     private bool IsPointerOverUIObject()
     {

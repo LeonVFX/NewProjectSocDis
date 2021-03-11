@@ -54,8 +54,8 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         gameView = GetComponent<PhotonView>();
-        currentStage = GameStage.Stage2;
-        currentState = PlayerState.Begin;
+        //currentStage = GameStage.Stage2;
+        //currentState = PlayerState.Begin;
     }
 
     private void Update()
@@ -65,7 +65,7 @@ public class GameManager : MonoBehaviour
         //{
         //    gameView.RPC("RPC_NextStage", RpcTarget.All);
         //}
-        Debug.Log($"State {currentStage}");
+        //Debug.Log($"State {currentStage}");
     }
 
   /*  public void EndStage()
