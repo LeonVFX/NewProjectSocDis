@@ -894,7 +894,6 @@ MonoBehaviour:
   killBtn: {fileID: 8303022111386088353}
   heldItem: {fileID: 3998965024739588273}
   noItemTex: {fileID: 10916, guid: 0000000000000000f000000000000000, type: 0}
-  hasHeldItem: 0
   taskCompletionSlider: {fileID: 3406130676178287809}
   taskList: {fileID: 1913254820304976366}
   taskPrefab: {fileID: 1302683853140177344, guid: 72ad2dee3a0cd1a4a85f715415bb0345, type: 3}
@@ -1582,6 +1581,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4952718746444734005}
+  - component: {fileID: 3091041158785203379}
   m_Layer: 0
   m_Name: TaskSlider
   m_TagString: Untagged
@@ -1609,6 +1609,18 @@ RectTransform:
   m_AnchoredPosition: {x: 20, y: -20}
   m_SizeDelta: {x: 300, y: 20}
   m_Pivot: {x: 0, y: 1}
+--- !u!225 &3091041158785203379
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5941635714806174020}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
+  m_IgnoreParentGroups: 0
 --- !u!1 &6430233151110848434
 GameObject:
   m_ObjectHideFlags: 0
@@ -1693,6 +1705,7 @@ GameObject:
   - component: {fileID: 1372601832071893113}
   - component: {fileID: 196224062779982547}
   - component: {fileID: 4803672215734490187}
+  - component: {fileID: 4714573171410894333}
   - component: {fileID: 1913254820304976366}
   m_Layer: 0
   m_Name: TaskList
@@ -1781,6 +1794,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6659448492886544143}
   m_CullTransparentMesh: 0
+--- !u!225 &4714573171410894333
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6659448492886544143}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
+  m_IgnoreParentGroups: 0
 --- !u!114 &1913254820304976366
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1805,6 +1830,7 @@ GameObject:
   - component: {fileID: 6806571589121216059}
   - component: {fileID: 6646205502889739300}
   - component: {fileID: 8366860521982927510}
+  - component: {fileID: 7047568188228756517}
   m_Layer: 5
   m_Name: MapUI
   m_TagString: Untagged
@@ -1887,6 +1913,18 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 1
   m_TargetDisplay: 0
+--- !u!225 &7047568188228756517
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7025174686546734886}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
+  m_IgnoreParentGroups: 0
 --- !u!1 &7083038902864913953
 GameObject:
   m_ObjectHideFlags: 0

@@ -30,8 +30,11 @@ public class Item : MonoBehaviour
     private bool itemBuffer = false;
     private bool isHeld = false;
 
+    private Rigidbody rb;
+
     private void Start()
     {
+        rb = GetComponent<Rigidbody>();
         itemView = GetComponent<PhotonView>();
         transform.rotation = Quaternion.Euler(45f, 45f, 0f);
     }
@@ -102,7 +105,7 @@ public class Item : MonoBehaviour
     private void DropItem(Transform playerPos)
     {
         ItemManager.im.DropItem();
-        float[] randItemOffset = { -0.35f, 0.35f };
+        float[] randItemOffset = { -1f, 1f };
         Vector3 itemDropOffset = new Vector3(randItemOffset[Random.Range(0, randItemOffset.Length)], 0.3f, randItemOffset[Random.Range(0, randItemOffset.Length)]);
         //Debug.Log(itemDropOffset);
         itemView.RPC("RPC_EnableItem", RpcTarget.All, new object[] { playerPos.position, itemDropOffset });
@@ -124,8 +127,9 @@ public class Item : MonoBehaviour
     [PunRPC]
     private void RPC_EnableItem(Vector3 playerPos, Vector3 itemDropOffset)
     {
-        transform.position = playerPos + itemDropOffset;
+        transform.position = playerPos + new Vector3(0.0f, itemDropOffset.y, 0.0f);
         isHeld = false;
         gameObject.SetActive(true);
+        rb.AddForce(100 * itemDropOffset, ForceMode.Force);
     }
 }

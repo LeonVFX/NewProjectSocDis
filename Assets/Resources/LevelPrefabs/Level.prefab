@@ -75,12 +75,12 @@ Rigidbody:
   m_GameObject: {fileID: 1203366482764227028}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 0
+  m_Drag: 3
   m_AngularDrag: 0.05
   m_UseGravity: 0
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!135 &2754284260885233221
 SphereCollider:
@@ -247,7 +247,7 @@ GameObject:
   - component: {fileID: 3586300852734743394}
   - component: {fileID: 848947538045467126}
   - component: {fileID: 3437521179120416155}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -476,12 +476,12 @@ Rigidbody:
   m_GameObject: {fileID: 4192835046585512784}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 0
+  m_Drag: 3
   m_AngularDrag: 0.05
   m_UseGravity: 0
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!135 &2137728406559958826
 SphereCollider:
@@ -575,12 +575,12 @@ Rigidbody:
   m_GameObject: {fileID: 4349822197968928086}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 0
+  m_Drag: 3
   m_AngularDrag: 0.05
   m_UseGravity: 0
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!135 &2534237930912100761
 SphereCollider:
@@ -735,12 +735,12 @@ Rigidbody:
   m_GameObject: {fileID: 4689637500021489336}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 0
+  m_Drag: 3
   m_AngularDrag: 0.05
   m_UseGravity: 0
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!135 &2655217708734246045
 SphereCollider:
@@ -801,7 +801,7 @@ GameObject:
   - component: {fileID: 2779807887308868471}
   - component: {fileID: 5003572749248819685}
   - component: {fileID: 9080130080639542007}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -897,7 +897,7 @@ GameObject:
   - component: {fileID: 5688656556982009608}
   - component: {fileID: 3298916644926512891}
   - component: {fileID: 1372947355510369934}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1026,12 +1026,12 @@ Rigidbody:
   m_GameObject: {fileID: 5244711020504946275}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 0
+  m_Drag: 3
   m_AngularDrag: 0.05
   m_UseGravity: 0
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!135 &5662513175854261053
 SphereCollider:
@@ -1092,7 +1092,7 @@ GameObject:
   - component: {fileID: 5789527541211063991}
   - component: {fileID: 5805856918505669545}
   - component: {fileID: 6399094790114406206}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1188,7 +1188,7 @@ GameObject:
   - component: {fileID: 2689693155184639634}
   - component: {fileID: 8431011691199016718}
   - component: {fileID: 1140275564525751571}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1284,7 +1284,7 @@ GameObject:
   - component: {fileID: 1505207883107620973}
   - component: {fileID: 7506143010319644124}
   - component: {fileID: 2749119038880395931}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1413,12 +1413,12 @@ Rigidbody:
   m_GameObject: {fileID: 6289017039734777942}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 0
+  m_Drag: 3
   m_AngularDrag: 0.05
   m_UseGravity: 0
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!135 &2931390649268788057
 SphereCollider:
@@ -1512,12 +1512,12 @@ Rigidbody:
   m_GameObject: {fileID: 6652799097540094080}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 0
+  m_Drag: 3
   m_AngularDrag: 0.05
   m_UseGravity: 0
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!135 &3359368079626472728
 SphereCollider:
@@ -1578,7 +1578,7 @@ GameObject:
   - component: {fileID: 878485622004042572}
   - component: {fileID: 6252091520666534176}
   - component: {fileID: 8370674480252433781}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1707,12 +1707,12 @@ Rigidbody:
   m_GameObject: {fileID: 6974517696483002066}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 0
+  m_Drag: 3
   m_AngularDrag: 0.05
   m_UseGravity: 0
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!135 &5312518667066967096
 SphereCollider:
@@ -1773,7 +1773,7 @@ GameObject:
   - component: {fileID: 230028552302942902}
   - component: {fileID: 8182729669581103912}
   - component: {fileID: 6528042819790690004}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
