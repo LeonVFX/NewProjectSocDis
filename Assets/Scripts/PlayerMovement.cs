@@ -106,8 +106,6 @@ public class PlayerMovement : MonoBehaviour
         {
             ChangeState(MoveState.Idle);
         }
-
-        Debug.Log(rb.velocity.magnitude);
     }
 
     void ChangeState(MoveState state)

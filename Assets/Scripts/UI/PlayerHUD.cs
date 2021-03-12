@@ -177,6 +177,7 @@ public class PlayerHUD : MonoBehaviour
     {
         if (toggleMap == true)
         {
+            background.SetActive(false);
             map.SetActive(false);
             toggleMap = false;
         }

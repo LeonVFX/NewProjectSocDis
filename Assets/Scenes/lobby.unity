@@ -2263,6 +2263,7 @@ MonoBehaviour:
   menuScene: 0
   loadingScene: 1
   multiplayerScene: 2
+  endSecene: 3
 --- !u!4 &1407713493
 Transform:
   m_ObjectHideFlags: 0
