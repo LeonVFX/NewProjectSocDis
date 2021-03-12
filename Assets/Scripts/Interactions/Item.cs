@@ -61,7 +61,6 @@ public class Item : MonoBehaviour
         if (other.transform.parent.tag == "Creature" || other.transform.parent.tag == "Researcher")
         {
             GameObject otherParent = other.transform.parent.gameObject;
-
             PhotonView playerView = otherParent.GetComponent<PhotonView>();
 
             if (!playerView.IsMine)
@@ -77,7 +76,6 @@ public class Item : MonoBehaviour
         if (other.transform.parent.tag == "Creature" || other.transform.parent.tag == "Researcher")
         {
             GameObject otherParent = other.transform.parent.gameObject;
-
             PhotonView playerView = otherParent.GetComponent<PhotonView>();
 
             if (!playerView.IsMine)
