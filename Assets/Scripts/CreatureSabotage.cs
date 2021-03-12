@@ -16,7 +16,7 @@ public class CreatureSabotage : MonoBehaviour
     {
         playerView = GetComponent<PhotonView>();
         player = GetComponent<Player>();
-        GetComponent<Player>().PHUD.OnInteraction += PressInteract;
+        player.PHUD.OnInteraction += PressInteract;
     }
 
     private void Update()
@@ -33,6 +33,7 @@ public class CreatureSabotage : MonoBehaviour
                     if (player.HeldItem.itemType == targetRoom.requiredSabotageItem)
                     {
                         playerView.RPC("RPC_SabotageRoom", RpcTarget.All);
+                        player.PHUD.UpdateMessageLog($"Room Sabotaged!", Color.red);
                         Debug.Log("Room Sabotaged");
                     }
             }

@@ -19,6 +19,10 @@ public class PlayerHUD : MonoBehaviour
     [SerializeField] private Camera mapCam;
     [SerializeField] private GameObject map;
     [SerializeField] private Vector3 offset;
+    [SerializeField] private GameObject messagePrefab;
+    private Text messageLog;
+    [SerializeField] private float messageDuration = 3.0f;
+
     private Level level = null;
     [Header("Buttons")]
     [SerializeField] private Button mapBtn = null;
@@ -49,6 +53,10 @@ public class PlayerHUD : MonoBehaviour
 
         mapCam.transform.position = level.transform.position + offset;
         map.SetActive(false);
+        GameManager.gm.OnVoteStage += CloseMap;
+
+        messageLog = messagePrefab.GetComponentInChildren<Text>();
+        messagePrefab.SetActive(false);
 
         taskCompletionSlider.maxValue = TaskManager.tm.maxNumberOfTasks;
 
@@ -65,6 +73,39 @@ public class PlayerHUD : MonoBehaviour
     private void Update()
     {
         taskCompletionSlider.value = TaskManager.tm.numberOfCompletedTasks;
+    }
+
+    public void UpdateMessageLog(string messageText, Color messageColor)
+    {
+        messageLog.text = messageText;
+        messageLog.color = new Color(messageColor.r, messageColor.g, messageColor.b, 0.0f);
+        messagePrefab.SetActive(true);
+        IEnumerator messageDisplay = MessageLogFade();
+        StartCoroutine(messageDisplay);
+    }
+
+    private IEnumerator MessageLogFade()
+    {
+        float elapsedTime = 0.0f;
+        Color alphaZeroColor = messageLog.color;
+        Color alphaOneColor = new Color(messageLog.color.r, messageLog.color.g, messageLog.color.b, 1.0f);
+
+        while (elapsedTime < 1.0f)
+        {
+            messageLog.color = Color.Lerp(alphaZeroColor, alphaOneColor, elapsedTime / 1.0f);
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+        yield return new WaitForSeconds(messageDuration);
+        elapsedTime = 0.0f;
+        while (elapsedTime < 1.0f)
+        {
+            messageLog.color = Color.Lerp(alphaOneColor, alphaZeroColor, elapsedTime / 1.0f);
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+        messagePrefab.SetActive(false);
+        yield return null;
     }
 
     public void HoldItem(Texture itemTex)
@@ -129,6 +170,15 @@ public class PlayerHUD : MonoBehaviour
                 break;
             default:
                 break;
+        }
+    }
+
+    private void CloseMap()
+    {
+        if (toggleMap == true)
+        {
+            map.SetActive(false);
+            toggleMap = false;
         }
     }
 

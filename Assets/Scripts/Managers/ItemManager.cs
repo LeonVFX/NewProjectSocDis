@@ -13,6 +13,8 @@ public class ItemManager : MonoBehaviour
 
     private Player[] players;
     private List<Item> itemList;
+    private int numberOfItems = 8;
+    public List<Item> itemsInRange;
 
     private void Awake()
     {
@@ -39,6 +41,7 @@ public class ItemManager : MonoBehaviour
                 player.PHUD.OnItemInteraction += item.GetItem;
             }
         }
+        itemsInRange = new List<Item>();
     }
 
     public void GetItem(Item item)

@@ -45,37 +45,47 @@ public class Item : MonoBehaviour
         {
             if (itemBuffer && !isHeld)
             {
-                ItemManager.im.GetItem(this);
+                if (this == ItemManager.im.itemsInRange[0])
+                {
+                    ItemManager.im.GetItem(this);
 
-                // Disable item for everyone
-                itemView.RPC("RPC_DisableItem", RpcTarget.All);
+                    // Disable item for everyone
+                    itemView.RPC("RPC_DisableItem", RpcTarget.All);
+                }
             }
         }
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Creature" || other.tag == "Researcher")
+        if (other.transform.parent.tag == "Creature" || other.transform.parent.tag == "Researcher")
         {
-            PhotonView playerView = other.GetComponent<PhotonView>();
+            GameObject otherParent = other.transform.parent.gameObject;
+
+            PhotonView playerView = otherParent.GetComponent<PhotonView>();
 
             if (!playerView.IsMine)
                 return;
 
             isInRange = true;
+            ItemManager.im.itemsInRange.Add(this);
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.tag == "Creature" || other.tag == "Researcher")
+        if (other.transform.parent.tag == "Creature" || other.transform.parent.tag == "Researcher")
         {
-            PhotonView playerView = other.GetComponent<PhotonView>();
+            GameObject otherParent = other.transform.parent.gameObject;
+
+            PhotonView playerView = otherParent.GetComponent<PhotonView>();
 
             if (!playerView.IsMine)
                 return;
 
             isInRange = false;
+            if (ItemManager.im.itemsInRange.Contains(this))
+                ItemManager.im.itemsInRange.Remove(this);
         }
     }
 
