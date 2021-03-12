@@ -146,7 +146,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6201378316869537633}
   - component: {fileID: 6972541794143277429}
-  - component: {fileID: 3714276955044783312}
   - component: {fileID: 6201378316869537645}
   - component: {fileID: 2029688912425788613}
   - component: {fileID: 6418287246481263992}
@@ -199,20 +198,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
---- !u!136 &3714276955044783312
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6201378316869537634}
-  m_Material: {fileID: 13400000, guid: a23ad9cd3cd652c46892cfef87bc4301, type: 2}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.4
-  m_Height: 0.8
-  m_Direction: 1
-  m_Center: {x: 0.3, y: 0.4, z: 0.3}
 --- !u!210 &6201378316869537645
 SortingGroup:
   m_ObjectHideFlags: 0
@@ -353,7 +338,8 @@ GameObject:
   - component: {fileID: 6201378316881556535}
   - component: {fileID: 7101529444090393175}
   - component: {fileID: 6201378316881556534}
-  m_Layer: 0
+  - component: {fileID: 2178414430646305038}
+  m_Layer: 10
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -444,6 +430,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!136 &2178414430646305038
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6201378316881556520}
+  m_Material: {fileID: 13400000, guid: a23ad9cd3cd652c46892cfef87bc4301, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.15
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.5, z: 0}
 --- !u!1 &7043539794190280781
 GameObject:
   m_ObjectHideFlags: 0

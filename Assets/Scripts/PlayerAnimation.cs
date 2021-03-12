@@ -69,7 +69,8 @@ public class PlayerAnimation : MonoBehaviour
     private void RPC_Idle()
     {
         foreach (Animator anim in animList)
-            anim.SetTrigger("Idle");
+            if (!anim.GetCurrentAnimatorStateInfo(0).IsName("Idle"))
+                anim.SetTrigger("Idle");
     }
 
     private void Move()
@@ -81,7 +82,8 @@ public class PlayerAnimation : MonoBehaviour
     private void RPC_Move()
     {
         foreach (Animator anim in animList)
-            anim.SetTrigger("Run");
+            if (!anim.GetCurrentAnimatorStateInfo(0).IsName("Run"))
+                anim.SetTrigger("Run");
     }
 
     [PunRPC]

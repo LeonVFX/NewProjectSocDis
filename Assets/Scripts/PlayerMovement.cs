@@ -30,8 +30,6 @@ public class PlayerMovement : MonoBehaviour
         set { canMove = value; }
     }
 
-    private bool isMoving = false;
-
     private Rigidbody rb = null;
 
     private float playerSpeed = 0f;
@@ -100,21 +98,16 @@ public class PlayerMovement : MonoBehaviour
             return;
 
         // Movement Animation
-        if (Input.GetMouseButtonDown(0))
+        if (rb.velocity.magnitude > 0.2f)
         {
-            if (!isMoving)
-            {
-                ChangeState(MoveState.Moving);
-            }
+            ChangeState(MoveState.Moving);
         }
-        // Stop Animation
-        if (Input.GetMouseButtonUp(0))
+        else
         {
-            if (isMoving)
-            {
-                ChangeState(MoveState.Idle);
-            }
+            ChangeState(MoveState.Idle);
         }
+
+        Debug.Log(rb.velocity.magnitude);
     }
 
     void ChangeState(MoveState state)
@@ -122,11 +115,9 @@ public class PlayerMovement : MonoBehaviour
         switch (state)
         {
             case MoveState.Idle:
-                isMoving = false;
                 OnStop?.Invoke();
                 break;
             case MoveState.Moving:
-                isMoving = true;
                 OnMove?.Invoke();
                 break;
             default:

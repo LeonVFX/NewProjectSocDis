@@ -6,6 +6,7 @@ using UnityEngine;
 public class ResearcherTasking : MonoBehaviour
 {
     private PhotonView playerView;
+    private Player player;
     private List<Task> taskList;
     private Task targetTask;
     private bool isValidTask;
@@ -14,13 +15,14 @@ public class ResearcherTasking : MonoBehaviour
     private void Start()
     {
         playerView = GetComponent<PhotonView>();
+        player = GetComponent<Player>();
 
         if (!playerView.IsMine)
             return;
 
         taskList = TaskManager.tm.RandomizeTasks();
-        GetComponent<Player>().PHUD.OnInteraction += PressInteract;
-        GetComponent<Player>().PHUD.UpdateTaskList(taskList);
+        player.PHUD.OnInteraction += PressInteract;
+        player.PHUD.UpdateTaskList(taskList);
     }
 
     void Update()
@@ -105,6 +107,7 @@ public class ResearcherTasking : MonoBehaviour
         playerView.RPC("RPC_GroupTaskComplete", RpcTarget.All);
         playerView.RPC("RPC_CompletedAllTasks", RpcTarget.MasterClient);
         targetTask.isComplete = true;
+        player.PHUD.UpdateMessageLog($"Task Complete!", Color.blue);
         taskList.Remove(targetTask);
         GetComponent<Player>().PHUD.UpdateTaskList(taskList);
     }
