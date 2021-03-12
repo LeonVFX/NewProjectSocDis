@@ -10,7 +10,7 @@ public class EscapePod : MonoBehaviour
     [SerializeField] private bool playerInPod;
     [SerializeField] private bool launched;
     [SerializeField] private float spaceleft = 2;
-    [SerializeField] private float countdown = 5;
+    [SerializeField] private float countdown = 30;
     [SerializeField] private float movement = 0;
 
     private void Update()
@@ -29,8 +29,9 @@ public class EscapePod : MonoBehaviour
 
                 if (spaceleft <= 1)
                 {
+                    Debug.Log("Countdown has begun");
                     countdown -= Time.deltaTime;
-                    if (countdown <= 0)
+                    if (countdown <= 0 || spaceleft <= 0)
                     {
                         EndManager.em.Escaped();
                         launched = true;

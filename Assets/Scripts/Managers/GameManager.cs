@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
 {
     public event System.Action OnVoteStage;
     public event System.Action OnStage2;
+    public event System.Action OnEnd;
 
     public static GameManager gm;
 
@@ -14,7 +15,8 @@ public class GameManager : MonoBehaviour
     {
         Stage1,
         Voting,
-        Stage2
+        Stage2,
+        End
     }
 
     private PhotonView gameView;
@@ -37,7 +39,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         gameView = GetComponent<PhotonView>();
-        currentStage = GameStage.Stage1;
+        currentStage = GameStage.Stage2;
     }
 
     private void Update()
@@ -47,6 +49,7 @@ public class GameManager : MonoBehaviour
         //{
         //    gameView.RPC("RPC_NextStage", RpcTarget.All);
         //}
+        Debug.Log(currentStage);
     }
 
     public void NextStage()
@@ -69,8 +72,10 @@ public class GameManager : MonoBehaviour
                 OnStage2?.Invoke();
                 break;
             case GameStage.Stage2:
+                currentStage = GameStage.End;
                 // End game
                 break;
+               
         }
     }
 }

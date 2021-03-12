@@ -22,6 +22,7 @@ public class Timer : MonoBehaviour
 
         GameManager.gm.OnVoteStage += NextStage;
         GameManager.gm.OnStage2 += NextStage;
+        GameManager.gm.OnEnd += NextStage;
     }
 
     private void Update()
