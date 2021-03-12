@@ -34,7 +34,9 @@ public class EscapePod : MonoBehaviour
                     if (countdown <= 0 || spaceleft <= 0)
                     {
                         EndManager.em.Escaped();
+                        //GameManager.gm.NextStage();
                         launched = true;
+                        //escapePod.gameObject.SetActive(false);
                     }
                 }
             }

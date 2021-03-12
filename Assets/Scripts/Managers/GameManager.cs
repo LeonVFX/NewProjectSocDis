@@ -49,7 +49,7 @@ public class GameManager : MonoBehaviour
         //{
         //    gameView.RPC("RPC_NextStage", RpcTarget.All);
         //}
-        Debug.Log(currentStage);
+        // Debug.Log(currentStage);
     }
 
     public void NextStage()
@@ -74,8 +74,15 @@ public class GameManager : MonoBehaviour
             case GameStage.Stage2:
                 currentStage = GameStage.End;
                 // End game
+                OnEnd?.Invoke();
                 break;
-               
+            case GameStage.End:
+                //End screen
+                break;
+                ;
+                // End game
+
+
         }
     }
 }

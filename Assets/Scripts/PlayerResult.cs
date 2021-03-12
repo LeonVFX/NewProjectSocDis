@@ -47,7 +47,8 @@ public class PlayerResult : MonoBehaviour
     private void Update()
     {
         if (!playerView.IsMine)
-            return;  
+            return;
+        EndScreen();
               
     }
 
@@ -57,7 +58,7 @@ public class PlayerResult : MonoBehaviour
         {
             foreach (Photon.Realtime.Player player in PhotonNetwork.PlayerList)
             {
-
+                GameManager.gm.NextStage();
             }
 
         }
