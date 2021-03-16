@@ -37,7 +37,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         gameView = GetComponent<PhotonView>();
-        currentStage = GameStage.Stage1;
+        currentStage = GameStage.Stage2;
     }
 
     private void Update()

@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Photon.Pun;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,6 +9,9 @@ public class EndManager : MonoBehaviour
 
     // Singleton
     public static EndManager em;
+    public List<PlayerResult> playerResults;
+
+    
 
     private void Awake()
     {
@@ -23,6 +27,12 @@ public class EndManager : MonoBehaviour
         }
     }
 
+    public void CheckForMaxPlayers()
+    {
+        if (playerResults.Count == PhotonNetwork.PlayerList.Length)
+            PhotonNetwork.LoadLevel(MultiplayerSettings.multiplayerSettings.endScene);
+            return;
+    }
     public void Escaped()
     {
         OnEscape?.Invoke();

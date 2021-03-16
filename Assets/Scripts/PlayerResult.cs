@@ -12,7 +12,9 @@ public class PlayerResult : MonoBehaviour
     // Win States
     public enum WinState
     {
-        ReseracherEscaped,
+        ResearcherEscaped,
+        CreatureKilledEverybody,
+        CreatureVotedOut
 
     }
 
@@ -36,7 +38,24 @@ public class PlayerResult : MonoBehaviour
     // If Researcher Escaped
     private void ResearcherEscaped()
     {
-        winState = WinState.ReseracherEscaped;
+        winState = WinState.ResearcherEscaped;
+        FinishGame();
         Debug.Log($"Researcher Escaped");
+    }
+    private void CreatureKilledEverybody()
+    {
+        winState = WinState.CreatureKilledEverybody;
+        FinishGame();
+    }
+    private void FinishGame()
+    {
+        EndManager.em.playerResults.Add(this);
+        playerView.RPC("RPC_CheckForEndGame", RpcTarget.All);
+        //CALL IN RPC-- > CheckForEndGame();
+    }
+    [PunRPC]
+    void RPC_CheckForEndGame()
+    {
+        EndManager.em.CheckForMaxPlayers();
     }
 }
