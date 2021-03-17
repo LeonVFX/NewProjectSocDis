@@ -95,12 +95,6 @@ public class PlayerAnimation : MonoBehaviour
     [PunRPC]
     private void RPC_Flip(bool flip)
     {
-        // Regular Flip
-        //if (animList != null)
-        //    foreach (Animator anim in animList)
-        //        if (anim != null)
-        //            anim.GetComponent<SpriteRenderer>().flipX = flip;
-
         // Flip like Paper Mario
         if (flip == true)
         {
@@ -110,7 +104,6 @@ public class PlayerAnimation : MonoBehaviour
                     IEnumerator flipRoutine = FlipRoutine(anim, anim.transform.localScale, new Vector3(-1, 1, 1));
                     StartCoroutine(flipRoutine);
                 }
-                //anim.transform.localScale = new Vector3(-1, 1, 1);
         }
         else
         {
@@ -122,7 +115,6 @@ public class PlayerAnimation : MonoBehaviour
                     StartCoroutine(flipRoutine);
                 }
             }
-            //anim.transform.localScale = new Vector3(1, 1, 1);
         }
     }
 

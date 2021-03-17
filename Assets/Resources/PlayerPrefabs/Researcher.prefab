@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3674347907739510998}
   - component: {fileID: 1908876523448971055}
-  - component: {fileID: 4746153080097946657}
   m_Layer: 9
   m_Name: PersonalLight
   m_TagString: Untagged
@@ -93,20 +92,6 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!114 &4746153080097946657
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3007754651058285649}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b9c926f548cf1614f97d87cab855f321, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  radius: 0.25
-  offset: {x: 0.25, y: 0.25, z: 0.25}
 --- !u!1 &3667140603156657369
 GameObject:
   m_ObjectHideFlags: 0
@@ -155,6 +140,7 @@ GameObject:
   - component: {fileID: 6050696552202589964}
   - component: {fileID: 4715084281729405215}
   - component: {fileID: 8351865290874922664}
+  - component: {fileID: 8322950922835304256}
   - component: {fileID: 3942860345630247940}
   - component: {fileID: 3310738644516331060}
   m_Layer: 10
@@ -290,6 +276,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79d91b933bc38ab4bae979967c80903a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &8322950922835304256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6201378316869537634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9c926f548cf1614f97d87cab855f321, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  light: {fileID: 3007754651058285649}
+  radius: 0.25
+  offset: {x: 0.25, y: 0.25, z: 0.25}
 --- !u!114 &3942860345630247940
 MonoBehaviour:
   m_ObjectHideFlags: 0

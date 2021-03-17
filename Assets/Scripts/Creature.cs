@@ -149,6 +149,9 @@ public class Creature : Player
 
     private void Stage2ToggleUI()
     {
+        if (!playerView.IsMine)
+            return;
+
         PHUD.ToggleKillButtonActive();
     }
 }

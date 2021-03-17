@@ -314,6 +314,7 @@ GameObject:
   - component: {fileID: 8678327172916088230}
   - component: {fileID: 3997691251017626713}
   - component: {fileID: 8097986284833072345}
+  - component: {fileID: 8608094071137183418}
   - component: {fileID: 5411744296099825016}
   - component: {fileID: 3646500280940306664}
   m_Layer: 9
@@ -495,6 +496,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79d91b933bc38ab4bae979967c80903a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &8608094071137183418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4549701790167422974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9c926f548cf1614f97d87cab855f321, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  light: {fileID: 8162086430011961604}
+  radius: 0.25
+  offset: {x: 0.25, y: 0.25, z: 0.25}
 --- !u!114 &5411744296099825016
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -721,7 +737,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3578882968679801103}
   - component: {fileID: 8444448518183179420}
-  - component: {fileID: 2520564707681580150}
   m_Layer: 9
   m_Name: PersonalLight
   m_TagString: Untagged
@@ -804,20 +819,6 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!114 &2520564707681580150
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8162086430011961604}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b9c926f548cf1614f97d87cab855f321, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  radius: 0.25
-  offset: {x: 0.25, y: 0.25, z: 0.25}
 --- !u!1001 &3785506671240354255
 PrefabInstance:
   m_ObjectHideFlags: 0
