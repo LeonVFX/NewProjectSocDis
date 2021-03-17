@@ -1,0 +1,2122 @@
+fileFormatVersion: 2
+guid: 1f1a63e8b6875df46b0a3ccc53718581
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7985835166618546354
+    second: female-death_0
+  - first:
+      213: 4939980769244983356
+    second: female-death_1
+  - first:
+      213: -5071671418239612632
+    second: female-death_2
+  - first:
+      213: -8330708675261220333
+    second: female-death_3
+  - first:
+      213: 6658904285421092202
+    second: female-death_4
+  - first:
+      213: 538586330113899898
+    second: female-death_5
+  - first:
+      213: 3749496885506370366
+    second: female-death_6
+  - first:
+      213: -222363752604313018
+    second: female-death_7
+  - first:
+      213: 283213538921513862
+    second: female-death_8
+  - first:
+      213: -6886441813002732691
+    second: female-death_9
+  - first:
+      213: 3628854452471983248
+    second: female-death_10
+  - first:
+      213: 3527051384658613218
+    second: female-death_11
+  - first:
+      213: 355104130146342219
+    second: female-death_12
+  - first:
+      213: -4470349392298319036
+    second: female-death_13
+  - first:
+      213: -8266253385031169804
+    second: female-death_14
+  - first:
+      213: -4746993615525482734
+    second: female-death_15
+  - first:
+      213: -8874254345540620206
+    second: female-death_16
+  - first:
+      213: 199440713005596257
+    second: female-death_17
+  - first:
+      213: -8566548044612302160
+    second: female-death_18
+  - first:
+      213: -5813244301058632988
+    second: female-death_19
+  - first:
+      213: 238167841981536329
+    second: female-death_20
+  - first:
+      213: 2431821347299491237
+    second: female-death_21
+  - first:
+      213: -2851321327898479697
+    second: female-death_22
+  - first:
+      213: 765768083918715351
+    second: female-death_23
+  - first:
+      213: -2822900905327269712
+    second: female-death_24
+  - first:
+      213: -7773041306577922350
+    second: female-death_25
+  - first:
+      213: -2324529122127072064
+    second: female-death_26
+  - first:
+      213: 2088194661777090886
+    second: female-death_27
+  - first:
+      213: 3911923224941073122
+    second: female-death_28
+  - first:
+      213: -769603085175622950
+    second: female-death_29
+  - first:
+      213: -8129262072543371129
+    second: female-death_30
+  - first:
+      213: -6513888570605362816
+    second: female-death_31
+  - first:
+      213: 7360960258158976786
+    second: female-death_32
+  - first:
+      213: -8599780403058198296
+    second: female-death_33
+  - first:
+      213: 3172530306130453625
+    second: female-death_34
+  - first:
+      213: 5061707562046587971
+    second: female-death_35
+  - first:
+      213: 6561740150685863245
+    second: female-death_36
+  - first:
+      213: 8467861150441803050
+    second: female-death_37
+  - first:
+      213: -1301460302721690559
+    second: female-death_38
+  - first:
+      213: 5259561638750699114
+    second: female-death_39
+  - first:
+      213: 7820923538556680196
+    second: female-death_40
+  - first:
+      213: -8735186639227254801
+    second: female-death_41
+  - first:
+      213: 6417535351088528711
+    second: female-death_42
+  - first:
+      213: -4376010748595941205
+    second: female-death_43
+  - first:
+      213: 8092925616379550549
+    second: female-death_44
+  - first:
+      213: -8438738932071832071
+    second: female-death_45
+  - first:
+      213: -5641248892553553798
+    second: female-death_46
+  - first:
+      213: 9205564357483857440
+    second: female-death_47
+  - first:
+      213: 9183672905836215325
+    second: female-death_48
+  - first:
+      213: 3898542611056764406
+    second: female-death_49
+  - first:
+      213: 9037801219173089406
+    second: female-death_50
+  - first:
+      213: -1697014599344150356
+    second: female-death_51
+  - first:
+      213: -4910337592895685173
+    second: female-death_52
+  - first:
+      213: 4568904175408349706
+    second: female-death_53
+  - first:
+      213: 5589607202254854955
+    second: female-death_54
+  - first:
+      213: 7666736607273701629
+    second: female-death_55
+  - first:
+      213: 8338197307532514352
+    second: female-death_56
+  - first:
+      213: -8841179764684158288
+    second: female-death_57
+  - first:
+      213: -1095827357386607096
+    second: female-death_58
+  - first:
+      213: -993455851975838182
+    second: female-death_59
+  - first:
+      213: -8981608641083061765
+    second: female-death_60
+  - first:
+      213: -2895726721390854943
+    second: female-death_61
+  - first:
+      213: 2460895354420833181
+    second: female-death_62
+  - first:
+      213: -4885013425679574723
+    second: female-death_63
+  - first:
+      213: 6617674309984791695
+    second: female-death_64
+  - first:
+      213: -6092044079712309938
+    second: female-death_65
+  - first:
+      213: 2134939488361738934
+    second: female-death_66
+  - first:
+      213: 8853915988510850881
+    second: female-death_67
+  - first:
+      213: 654789798946416806
+    second: female-death_68
+  - first:
+      213: 2765822590783436214
+    second: female-death_69
+  - first:
+      213: -8297650207803788786
+    second: female-death_70
+  - first:
+      213: -3896277104287644451
+    second: female-death_71
+  - first:
+      213: 5902192177971682958
+    second: female-death_72
+  - first:
+      213: 2088331430658399606
+    second: female-death_73
+  - first:
+      213: 4338255361728912350
+    second: female-death_74
+  - first:
+      213: 2589314819753111599
+    second: female-death_75
+  - first:
+      213: -1180486406672111280
+    second: female-death_76
+  - first:
+      213: -6350801567435305585
+    second: female-death_77
+  - first:
+      213: -1142638479054849573
+    second: female-death_78
+  - first:
+      213: 9052323163904013700
+    second: female-death_79
+  - first:
+      213: -266769495952781190
+    second: female-death_80
+  - first:
+      213: 1956456338997062855
+    second: female-death_81
+  - first:
+      213: -4482019986690719153
+    second: female-death_82
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 500
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: female-death_0
+      rect:
+        serializedVersion: 2
+        x: 373
+        y: 8111
+        width: 156
+        height: 485
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b0fe15f5c263de60800000000000000
+      internalID: 7985835166618546354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-death_1
+      rect:
+        serializedVersion: 2
+        x: 1332
+        y: 8111
+        width: 155
+        height: 485
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c30bb1426565e8440800000000000000
+      internalID: 4939980769244983356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-death_2
+      rect:
+        serializedVersion: 2
+        x: 2293
+        y: 8111
+        width: 155
+        height: 485
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 829835a47bdcd99b0800000000000000
+      internalID: -5071671418239612632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-death_3
+      rect:
+        serializedVersion: 2
+        x: 3254
+        y: 8111
+        width: 152
+        height: 485
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31a3acb0990636c80800000000000000
+      internalID: -8330708675261220333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-death_4
+      rect:
+        serializedVersion: 2
+        x: 4212
+        y: 8111
+        width: 156
+        height: 485
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6db9ddca2e296c50800000000000000
+      internalID: 6658904285421092202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-death_5
+      rect:
+        serializedVersion: 2
+        x: 373
+        y: 7571
+        width: 156
+        height: 485
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7df157e961797700800000000000000
+      internalID: 538586330113899898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-death_6
+      rect:
+        serializedVersion: 2
+        x: 1332
+        y: 7571
+        width: 155
+        height: 485
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3b6a0b3d83e80430800000000000000
+      internalID: 3749496885506370366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-death_7
+      rect:
+        serializedVersion: 2
+        x: 2293
+        y: 7571
+        width: 155
+        height: 485
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64ad81b58510aecf0800000000000000
+      internalID: -222363752604313018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-death_8
+      rect:
+        serializedVersion: 2
+        x: 3254
+        y: 7571
+        width: 152
+        height: 485
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6838ffe863d2ee300800000000000000
+      internalID: 283213538921513862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-death_9
+      rect:
+        serializedVersion: 2
+        x: 4212
+        y: 7571
+        width: 156
+        height: 485
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6b339138a17e60a0800000000000000
+      internalID: -6886441813002732691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-death_10
+      rect:
+        serializedVersion: 2
+        x: 373
+        y: 7031
+        width: 156
+        height: 485
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09cef25e5e74c5230800000000000000
+      internalID: 3628854452471983248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-death_11
+      rect:
+        serializedVersion: 2
+        x: 1306
+        y: 7064
+        width: 214
+        height: 431
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e350271c8a92f030800000000000000
+      internalID: 3527051384658613218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-death_12
+      rect:
+        serializedVersion: 2
+        x: 2280
+        y: 7060
+        width: 215
+        height: 430
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4595af23559de400800000000000000
+      internalID: 355104130146342219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-death_13
+      rect:
+        serializedVersion: 2
+        x: 3229
+        y: 7060
+        width: 215
+        height: 430
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 443ec22a9e026f1c0800000000000000
+      internalID: -4470349392298319036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-death_14
+      rect:
+        serializedVersion: 2
+        x: 4203
+        y: 7060
+        width: 211
+        height: 430
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f8c8d1c75e584d80800000000000000
+      internalID: -8266253385031169804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-death_15
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 6520
+        width: 215
+        height: 430
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21f6e83157a4f1eb0800000000000000
+      internalID: -4746993615525482734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-death_16
+      rect:
+        serializedVersion: 2
+        x: 1322
+        y: 6520
+        width: 211
+        height: 430
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 250b597c0b058d480800000000000000
+      internalID: -8874254345540620206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-death_17
+      rect:
+        serializedVersion: 2
+        x: 2280
+        y: 6520
+        width: 215
+        height: 430
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16ef274954e84c200800000000000000
+      internalID: 199440713005596257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-death_18
+      rect:
+        serializedVersion: 2
+        x: 3242
+        y: 6520
+        width: 213
+        height: 430
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ba0191e0f18d1980800000000000000
+      internalID: -8566548044612302160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-death_19
+      rect:
+        serializedVersion: 2
+        x: 4203
+        y: 6520
+        width: 211
+        height: 430
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e216daab15335fa0800000000000000
+      internalID: -5813244301058632988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-death_20
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 5980
+        width: 215
+        height: 430
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9481b32f3642e4300800000000000000
+      internalID: 238167841981536329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-death_21
+      rect:
+        serializedVersion: 2
+        x: 1322
+        y: 5980
+        width: 211
+        height: 430
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ad7ffa81a09fb120800000000000000
+      internalID: 2431821347299491237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-death_22
+      rect:
+        serializedVersion: 2
+        x: 2280
+        y: 5980
+        width: 215
+        height: 430
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa3bd16fb521e68d0800000000000000
+      internalID: -2851321327898479697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-death_23
+      rect:
+        serializedVersion: 2
+        x: 3242
+        y: 5980
+        width: 213
+        height: 430
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d97e4ed30e80aa00800000000000000
+      internalID: 765768083918715351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-death_24
+      rect:
+        serializedVersion: 2
+        x: 4203
+        y: 5980
+        width: 211
+        height: 430
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b8e6dd359a03d8d0800000000000000
+      internalID: -2822900905327269712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-death_25
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 5432
+        width: 223
+        height: 472
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d61cf07d1c902490800000000000000
+      internalID: -7773041306577922350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-death_26
+      rect:
+        serializedVersion: 2
+        x: 1305
+        y: 5432
+        width: 220
+        height: 472
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c4b09d441d9dbfd0800000000000000
+      internalID: -2324529122127072064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-death_27
+      rect:
+        serializedVersion: 2
+        x: 2263
+        y: 5432
+        width: 223
+        height: 461
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 649271d2bf1cafc10800000000000000
+      internalID: 2088194661777090886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-death_28
+      rect:
+        serializedVersion: 2
+        x: 3225
+        y: 5436
+        width: 219
+        height: 472
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e296336271f94630800000000000000
+      internalID: 3911923224941073122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-death_29
+      rect:
+        serializedVersion: 2
+        x: 4186
+        y: 5436
+        width: 220
+        height: 472
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad2ff025212d155f0800000000000000
+      internalID: -769603085175622950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-death_30
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 4896
+        width: 223
+        height: 472
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7802ff7373f0f2f80800000000000000
+      internalID: -8129262072543371129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-death_31
+      rect:
+        serializedVersion: 2
+        x: 1305
+        y: 4896
+        width: 220
+        height: 472
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 081279a6bd40a95a0800000000000000
+      internalID: -6513888570605362816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-death_32
+      rect:
+        serializedVersion: 2
+        x: 2263
+        y: 4896
+        width: 223
+        height: 472
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21f5551da52672660800000000000000
+      internalID: 7360960258158976786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-death_33
+      rect:
+        serializedVersion: 2
+        x: 3225
+        y: 4896
+        width: 219
+        height: 472
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e8b959794177a880800000000000000
+      internalID: -8599780403058198296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-death_34
+      rect:
+        serializedVersion: 2
+        x: 4186
+        y: 4896
+        width: 220
+        height: 472
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97421103187170c20800000000000000
+      internalID: 3172530306130453625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-death_35
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 4356
+        width: 223
+        height: 472
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34402b8a53cce3640800000000000000
+      internalID: 5061707562046587971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-death_36
+      rect:
+        serializedVersion: 2
+        x: 1305
+        y: 4356
+        width: 220
+        height: 472
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4d8c06c6ebff0b50800000000000000
+      internalID: 6561740150685863245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-death_37
+      rect:
+        serializedVersion: 2
+        x: 2263
+        y: 4356
+        width: 223
+        height: 472
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2d0a670ad2e38570800000000000000
+      internalID: 8467861150441803050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-death_38
+      rect:
+        serializedVersion: 2
+        x: 3225
+        y: 4356
+        width: 219
+        height: 472
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 144500700c840fde0800000000000000
+      internalID: -1301460302721690559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-death_39
+      rect:
+        serializedVersion: 2
+        x: 4186
+        y: 4356
+        width: 220
+        height: 472
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6eb100b177bdf840800000000000000
+      internalID: 5259561638750699114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-death_40
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 3816
+        width: 223
+        height: 472
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40879237580898c60800000000000000
+      internalID: 7820923538556680196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-death_41
+      rect:
+        serializedVersion: 2
+        x: 1305
+        y: 3816
+        width: 220
+        height: 472
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe70f1a580266c680800000000000000
+      internalID: -8735186639227254801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-death_42
+      rect:
+        serializedVersion: 2
+        x: 2326
+        y: 3808
+        width: 177
+        height: 510
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74db427766aaf0950800000000000000
+      internalID: 6417535351088528711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-death_43
+      rect:
+        serializedVersion: 2
+        x: 2527
+        y: 4197
+        width: 10
+        height: 11
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba0d5a4c8694543c0800000000000000
+      internalID: -4376010748595941205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-death_44
+      rect:
+        serializedVersion: 2
+        x: 3284
+        y: 3808
+        width: 181
+        height: 510
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55b56fd48f8df4070800000000000000
+      internalID: 8092925616379550549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-death_45
+      rect:
+        serializedVersion: 2
+        x: 3487
+        y: 4198
+        width: 11
+        height: 10
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f56991d6a393ea80800000000000000
+      internalID: -8438738932071832071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-death_46
+      rect:
+        serializedVersion: 2
+        x: 4245
+        y: 3808
+        width: 179
+        height: 510
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7897c5550246b1b0800000000000000
+      internalID: -5641248892553553798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-death_47
+      rect:
+        serializedVersion: 2
+        x: 4448
+        y: 4197
+        width: 11
+        height: 11
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02682dc820cb0cf70800000000000000
+      internalID: 9205564357483857440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-death_48
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 3268
+        width: 177
+        height: 510
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1c3fb5c9d5f27f70800000000000000
+      internalID: 9183672905836215325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-death_49
+      rect:
+        serializedVersion: 2
+        x: 606
+        y: 3658
+        width: 12
+        height: 10
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f523c179d76a1630800000000000000
+      internalID: 3898542611056764406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-death_50
+      rect:
+        serializedVersion: 2
+        x: 1365
+        y: 3268
+        width: 181
+        height: 510
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7087631358bc6d70800000000000000
+      internalID: 9037801219173089406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-death_51
+      rect:
+        serializedVersion: 2
+        x: 1567
+        y: 3658
+        width: 12
+        height: 10
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca8a07b863ef278e0800000000000000
+      internalID: -1697014599344150356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-death_52
+      rect:
+        serializedVersion: 2
+        x: 2326
+        y: 3268
+        width: 177
+        height: 510
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcdb430b9f9fadbb0800000000000000
+      internalID: -4910337592895685173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-death_53
+      rect:
+        serializedVersion: 2
+        x: 2527
+        y: 3657
+        width: 10
+        height: 11
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a028304f322086f30800000000000000
+      internalID: 4568904175408349706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-death_54
+      rect:
+        serializedVersion: 2
+        x: 3284
+        y: 3268
+        width: 181
+        height: 510
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2b9d5ca226429d40800000000000000
+      internalID: 5589607202254854955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-death_55
+      rect:
+        serializedVersion: 2
+        x: 3487
+        y: 3658
+        width: 11
+        height: 10
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df0580ff258b56a60800000000000000
+      internalID: 7666736607273701629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-death_56
+      rect:
+        serializedVersion: 2
+        x: 4220
+        y: 3276
+        width: 190
+        height: 430
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0341896064a37b370800000000000000
+      internalID: 8338197307532514352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-death_57
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 2732
+        width: 187
+        height: 421
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ba01aab8d1dd4580800000000000000
+      internalID: -8841179764684158288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-death_58
+      rect:
+        serializedVersion: 2
+        x: 1335
+        y: 2732
+        width: 190
+        height: 421
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 806f0db03d6dac0f0800000000000000
+      internalID: -1095827357386607096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-death_59
+      rect:
+        serializedVersion: 2
+        x: 2297
+        y: 2736
+        width: 185
+        height: 430
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1672fa8a298632f0800000000000000
+      internalID: -993455851975838182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-death_60
+      rect:
+        serializedVersion: 2
+        x: 3254
+        y: 2736
+        width: 190
+        height: 430
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf94aac078aea5380800000000000000
+      internalID: -8981608641083061765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-death_61
+      rect:
+        serializedVersion: 2
+        x: 4216
+        y: 2736
+        width: 188
+        height: 430
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ec34ec93ef40d7d0800000000000000
+      internalID: -2895726721390854943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-death_62
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 2196
+        width: 187
+        height: 430
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9ba9a5594bd62220800000000000000
+      internalID: 2460895354420833181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-death_63
+      rect:
+        serializedVersion: 2
+        x: 1133
+        y: 2171
+        width: 455
+        height: 126
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d39da57db22f43cb0800000000000000
+      internalID: -4885013425679574723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-death_64
+      rect:
+        serializedVersion: 2
+        x: 2098
+        y: 2166
+        width: 452
+        height: 123
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8c2fd519b3b6db50800000000000000
+      internalID: 6617674309984791695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-death_65
+      rect:
+        serializedVersion: 2
+        x: 3060
+        y: 2171
+        width: 451
+        height: 130
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4de9b0cf26b47ba0800000000000000
+      internalID: -6092044079712309938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-death_66
+      rect:
+        serializedVersion: 2
+        x: 4022
+        y: 2171
+        width: 451
+        height: 130
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b271cc3724d0ad10800000000000000
+      internalID: 2134939488361738934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-death_67
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 1631
+        width: 455
+        height: 130
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14f37567ead6fda70800000000000000
+      internalID: 8853915988510850881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-death_68
+      rect:
+        serializedVersion: 2
+        x: 1141
+        y: 1631
+        width: 451
+        height: 130
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a820c85ad7461900800000000000000
+      internalID: 654789798946416806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-death_69
+      rect:
+        serializedVersion: 2
+        x: 2103
+        y: 1631
+        width: 451
+        height: 130
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b5b56b0efc226620800000000000000
+      internalID: 2765822590783436214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-death_70
+      rect:
+        serializedVersion: 2
+        x: 3060
+        y: 1631
+        width: 451
+        height: 130
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e02b86d4913d8dc80800000000000000
+      internalID: -8297650207803788786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-death_71
+      rect:
+        serializedVersion: 2
+        x: 4022
+        y: 1631
+        width: 451
+        height: 130
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd48274fd94ade9c0800000000000000
+      internalID: -3896277104287644451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-death_72
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 1091
+        width: 455
+        height: 130
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8e5714c38cc8e150800000000000000
+      internalID: 5902192177971682958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-death_73
+      rect:
+        serializedVersion: 2
+        x: 1141
+        y: 1091
+        width: 451
+        height: 130
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67d5da92f5e3bfc10800000000000000
+      internalID: 2088331430658399606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-death_74
+      rect:
+        serializedVersion: 2
+        x: 2103
+        y: 1091
+        width: 451
+        height: 130
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edb19c43444943c30800000000000000
+      internalID: 4338255361728912350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-death_75
+      rect:
+        serializedVersion: 2
+        x: 3060
+        y: 1091
+        width: 451
+        height: 130
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f20f90b1c181fe320800000000000000
+      internalID: 2589314819753111599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-death_76
+      rect:
+        serializedVersion: 2
+        x: 4022
+        y: 1091
+        width: 451
+        height: 130
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 059a12c1ed11e9fe0800000000000000
+      internalID: -1180486406672111280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-death_77
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 551
+        width: 455
+        height: 130
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8d46065f9b6dd7a0800000000000000
+      internalID: -6350801567435305585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-death_78
+      rect:
+        serializedVersion: 2
+        x: 1141
+        y: 551
+        width: 451
+        height: 130
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd93e357b588420f0800000000000000
+      internalID: -1142638479054849573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-death_79
+      rect:
+        serializedVersion: 2
+        x: 2103
+        y: 551
+        width: 451
+        height: 130
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 485f980d4ff40ad70800000000000000
+      internalID: 9052323163904013700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-death_80
+      rect:
+        serializedVersion: 2
+        x: 3060
+        y: 551
+        width: 451
+        height: 130
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7013dc8e8e3c4cf0800000000000000
+      internalID: -266769495952781190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-death_81
+      rect:
+        serializedVersion: 2
+        x: 4022
+        y: 551
+        width: 451
+        height: 130
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cc2b70bcaab62b10800000000000000
+      internalID: 1956456338997062855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: female-death_82
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 11
+        width: 455
+        height: 130
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f424911a19aacc1c0800000000000000
+      internalID: -4482019986690719153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: bce63dbdcdefd184689434a6e0d72b31
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

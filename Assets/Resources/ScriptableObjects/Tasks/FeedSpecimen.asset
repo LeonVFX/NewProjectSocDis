@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df63916350ee3bc42846cb947dcfed80, type: 3}
   m_Name: FeedSpecimen
   m_EditorClassIdentifier: 
-  taskName: Feed Specimen
+  taskName: ' Specimen tubes'
   taskDescription: Feed the specimen
   taskRequiredItemType: 7

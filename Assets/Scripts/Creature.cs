@@ -74,9 +74,11 @@ public class Creature : Player
             if (!playerView.IsMine)
                 return;
 
-        if (other.tag == "Researcher")
+        if (other.transform.parent.tag == "Researcher")
         {
-            Player target = other.GetComponent<Player>();
+
+            GameObject otherParent = other.transform.parent.gameObject;
+            Player target = otherParent.GetComponent<Player>();
 
             if (targetPlayers == null)
                 return;
@@ -101,9 +103,12 @@ public class Creature : Player
             if (!playerView.IsMine)
                 return;
 
-        if (other.tag == "Researcher")
+        if (other.transform.parent.tag == "Researcher")
         {
-            Player target = other.GetComponent<Player>();
+
+            GameObject otherParent = other.transform.parent.gameObject;
+            Player target = otherParent.GetComponent<Player>();
+
             if (target.isAlive || targetPlayers.Contains(target))
             {
                 targetPlayers.Remove(target);

@@ -68,9 +68,12 @@ public class PlayerAnimation : MonoBehaviour
     [PunRPC]
     private void RPC_Idle()
     {
-        foreach (Animator anim in animList)
-            if (!anim.GetCurrentAnimatorStateInfo(0).IsName("Idle"))
-                anim.SetTrigger("Idle");
+        if (animList != null)
+        {
+            foreach (Animator anim in animList)
+                if (!anim.GetCurrentAnimatorStateInfo(0).IsName("Idle"))
+                    anim.SetTrigger("Idle");
+        }
     }
 
     private void Move()
@@ -81,9 +84,12 @@ public class PlayerAnimation : MonoBehaviour
     [PunRPC]
     private void RPC_Move()
     {
-        foreach (Animator anim in animList)
-            if (!anim.GetCurrentAnimatorStateInfo(0).IsName("Run"))
-                anim.SetTrigger("Run");
+        if (animList != null)
+        {
+            foreach (Animator anim in animList)
+                if (!anim.GetCurrentAnimatorStateInfo(0).IsName("Run"))
+                    anim.SetTrigger("Run");
+        }
     }
 
     [PunRPC]
@@ -142,7 +148,10 @@ public class PlayerAnimation : MonoBehaviour
     [PunRPC]
     private void RPC_Death()
     {
-        foreach (Animator anim in animList)
-            anim.SetTrigger("Death");
+        if (animList != null)
+        {
+            foreach (Animator anim in animList)
+                anim.SetTrigger("Death");
+        }
     }
 }

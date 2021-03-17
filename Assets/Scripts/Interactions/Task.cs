@@ -18,6 +18,10 @@ public class Task : MonoBehaviour
     [Header("Task Details")]
     public bool isComplete = false;
     private string taskName;
+    public string TaskName
+    {
+        get { return taskName; }
+    }
     private string taskDescription;
     public string TaskDescription
     {

@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df63916350ee3bc42846cb947dcfed80, type: 3}
   m_Name: ExperimentMaterial
   m_EditorClassIdentifier: 
-  taskName: Experiment Material
+  taskName: Lab equipment
   taskDescription: Experiment with the creature material at the lab
   taskRequiredItemType: 4

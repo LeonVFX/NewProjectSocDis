@@ -33,9 +33,13 @@ public class VoteButton : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.transform.parent.tag == "Creature" || other.transform.parent.tag == "Researcher")
+        GameObject otherParent = (other.transform.parent != null) ? other.transform.parent.gameObject : null;
+
+        if (otherParent == null)
+            return;
+
+        if (otherParent.tag == "Creature" || otherParent.tag == "Researcher")
         {
-            GameObject otherParent = other.transform.parent.gameObject;
             PhotonView playerView = otherParent.GetComponent<PhotonView>();
 
             if (!playerView.IsMine)
@@ -47,9 +51,13 @@ public class VoteButton : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.transform.parent.tag == "Creature" || other.transform.parent.tag == "Researcher")
+        GameObject otherParent = (other.transform.parent != null) ? other.transform.parent.gameObject : null;
+
+        if (otherParent == null)
+            return;
+
+        if (otherParent.tag == "Creature" || otherParent.tag == "Researcher")
         {
-            GameObject otherParent = other.transform.parent.gameObject;
             PhotonView playerView = otherParent.GetComponent<PhotonView>();
 
             if (!playerView.IsMine)

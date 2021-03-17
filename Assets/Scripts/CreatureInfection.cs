@@ -6,6 +6,7 @@ using UnityEngine;
 public class CreatureInfection : MonoBehaviour
 {
     private PhotonView playerView;
+    private Player player;
     
     private bool canInfect = false;
     private Task targetTask;
@@ -14,7 +15,8 @@ public class CreatureInfection : MonoBehaviour
     private void Start()
     {
         playerView = GetComponent<PhotonView>();
-        GetComponent<Player>().PHUD.OnInteraction += PressInteract;
+        player = GetComponent<Player>();
+        player.PHUD.OnInteraction += PressInteract;
     }
 
     void Update()
@@ -27,6 +29,7 @@ public class CreatureInfection : MonoBehaviour
             if (isInteract)
             {
                 playerView.RPC("RPC_InfectTask", RpcTarget.All);
+                player.PHUD.UpdateMessageLog($"{targetTask.TaskName} Infected!", Color.red);
                 TaskManager.tm.tasksInfected = TaskManager.tm.tasksInfected + 1;
                 Debug.Log("Task Infected");
             }

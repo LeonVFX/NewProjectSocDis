@@ -98,7 +98,7 @@ public class PlayerMovement : MonoBehaviour
             return;
 
         // Movement Animation
-        if (rb.velocity.magnitude > 0.2f)
+        if (rb.velocity.magnitude > 1f)
         {
             ChangeState(MoveState.Moving);
         }

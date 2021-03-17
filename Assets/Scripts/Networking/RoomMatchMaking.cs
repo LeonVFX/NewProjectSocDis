@@ -212,7 +212,7 @@ public class RoomMatchMaking : MonoBehaviourPunCallbacks, IInRoomCallbacks
             return;
         if (MultiplayerSettings.multiplayerSettings.delayStart)
             PhotonNetwork.CurrentRoom.IsOpen = false;
-        PhotonNetwork.LoadLevel(MultiplayerSettings.multiplayerSettings.multiplayerScene);
+        PhotonNetwork.LoadLevel(MultiplayerSettings.multiplayerSettings.loadingScene);
 
         // Randomize player settings
         playerSettings.RandomizePlayers(playersInRoom);
