@@ -151,7 +151,8 @@ public class PlayerAnimation : MonoBehaviour
         if (animList != null)
         {
             foreach (Animator anim in animList)
-                anim.SetTrigger("Death");
+                if (!anim.GetCurrentAnimatorStateInfo(0).IsName("Death"))
+                    anim.SetTrigger("Death");
         }
     }
 }

@@ -23,9 +23,15 @@ public class PersonalLight : MonoBehaviour
     private void Update()
     {
         // Do not move light if it is mine and I am dead
-        if (playerView.IsMine && !player.isAlive)
+        if (!playerView.IsMine || !player.isAlive)
             return;
 
+        playerView.RPC("RPC_RotateLight", RpcTarget.All);
+    }
+
+    [PunRPC]
+    private void RPC_RotateLight()
+    {
         pivot = transform.parent.position + offset;
 
         Vector2 positionOnScreen = Camera.main.WorldToViewportPoint(pivot);

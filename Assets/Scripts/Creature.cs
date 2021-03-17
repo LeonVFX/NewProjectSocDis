@@ -27,10 +27,13 @@ public class Creature : Player
         canKill = true;
         isKill = false;
 
+        GameManager.gm.OnStage2 += Stage2ToggleUI;
         PHUD.OnKill += PressKill;
 
         // Deactivate Task List
         PHUD.ToggleTaskListActive();
+        // Deactivate Kill For Stage 1
+        PHUD.ToggleKillButtonActive();
     }
 
     protected override void Update()
@@ -142,5 +145,10 @@ public class Creature : Player
     {
         yield return new WaitForEndOfFrame();
         isKill = false;
+    }
+
+    private void Stage2ToggleUI()
+    {
+        PHUD.ToggleKillButtonActive();
     }
 }
