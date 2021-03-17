@@ -22,7 +22,8 @@ public class PersonalLight : MonoBehaviour
 
     private void Update()
     {
-        if (!player.isAlive)
+        // Do not move light if it is mine and I am dead
+        if (playerView.IsMine && !player.isAlive)
             return;
 
         pivot = transform.parent.position + offset;

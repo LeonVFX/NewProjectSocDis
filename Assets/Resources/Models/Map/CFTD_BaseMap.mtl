@@ -1,0 +1,92 @@
+# Created by Kenney (www.kenney.nl)
+
+newmtl custom9(Clone)
+Kd 0.31 0.357 0.4
+map_Kd Textures/custom9(Clone).png
+
+newmtl custom7(Clone)
+Kd 0 0.361 0.302
+map_Kd Textures/custom7(Clone).png
+
+newmtl custom31(Clone)
+Kd 0.396 0.451 0.494
+map_Kd Textures/custom31(Clone).png
+
+newmtl grass(Clone)
+Kd 0.2 0.353 0.502
+
+newmtl custom11(Clone)
+Kd 0 0.259 0.173
+
+newmtl custom27(Clone)
+Kd 0.565 0.643 0.682
+map_Kd Textures/custom27(Clone).png
+
+newmtl custom8(Clone)
+Kd 0.059 0.6 0.545
+
+newmtl custom16(Clone)
+Kd 0 0.259 0.173
+
+newmtl custom10(Clone)
+Kd 0.098 0.459 0.18
+map_Kd Textures/custom10(Clone).png
+
+newmtl custom13(Clone)
+Kd 0.902 0.537 0
+
+newmtl Material.008(Clone)
+Kd 0.528 0.528 0.528
+
+newmtl VaultDoorMain(Clone)
+Kd 0.424 0.473 0.524
+map_Kd Textures/VaultDoorMain(Clone).png
+
+newmtl custom33(Clone)
+Kd 0 0.361 0.302
+
+newmtl stoneDark(Clone)
+Kd 0.403 0.39 0.594
+
+newmtl glass(Clone)
+Kd 0.883 0.871 0.871
+
+newmtl metal(Clone)
+Kd 0.471 0.565 0.612
+
+newmtl VaultDoorCog(Clone)
+Kd 0.092 0.092 0.092
+
+newmtl custom12(Clone)
+Kd 0.722 0.071 0
+map_Kd Textures/custom12(Clone).png
+
+newmtl Material(Clone)
+Kd 0.216 0.278 0.31
+map_Kd Textures/Material(Clone).png
+
+newmtl custom29(Clone)
+Kd 0.376 0.49 0.545
+map_Kd Textures/custom29(Clone).png
+
+newmtl custom14(Clone)
+Kd 0.834 0.544 0.118
+
+newmtl custom28(Clone)
+Kd 0.149 0.196 0.22
+map_Kd Textures/custom28(Clone).png
+
+newmtl initialShadingGroup(Clone)
+Kd 0 0.416 0.459
+
+newmtl custom37(Clone)
+Kd 0.722 0.071 0
+
+newmtl custom93(Clone)
+Kd 0.443 0.471 0.545
+map_Kd Textures/custom93(Clone).png
+
+newmtl custom94(Clone)
+Kd 0.655 0.655 0.655
+map_Kd Textures/custom94(Clone).png
+
