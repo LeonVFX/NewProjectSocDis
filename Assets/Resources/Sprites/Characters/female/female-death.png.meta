@@ -194,63 +194,6 @@ TextureImporter:
   - first:
       213: -4885013425679574723
     second: female-death_63
-  - first:
-      213: 6617674309984791695
-    second: female-death_64
-  - first:
-      213: -6092044079712309938
-    second: female-death_65
-  - first:
-      213: 2134939488361738934
-    second: female-death_66
-  - first:
-      213: 8853915988510850881
-    second: female-death_67
-  - first:
-      213: 654789798946416806
-    second: female-death_68
-  - first:
-      213: 2765822590783436214
-    second: female-death_69
-  - first:
-      213: -8297650207803788786
-    second: female-death_70
-  - first:
-      213: -3896277104287644451
-    second: female-death_71
-  - first:
-      213: 5902192177971682958
-    second: female-death_72
-  - first:
-      213: 2088331430658399606
-    second: female-death_73
-  - first:
-      213: 4338255361728912350
-    second: female-death_74
-  - first:
-      213: 2589314819753111599
-    second: female-death_75
-  - first:
-      213: -1180486406672111280
-    second: female-death_76
-  - first:
-      213: -6350801567435305585
-    second: female-death_77
-  - first:
-      213: -1142638479054849573
-    second: female-death_78
-  - first:
-      213: 9052323163904013700
-    second: female-death_79
-  - first:
-      213: -266769495952781190
-    second: female-death_80
-  - first:
-      213: 1956456338997062855
-    second: female-death_81
-  - first:
-      213: -4482019986690719153
-    second: female-death_82
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -365,10 +308,10 @@ TextureImporter:
       name: female-death_0
       rect:
         serializedVersion: 2
-        x: 373
-        y: 8111
-        width: 156
-        height: 485
+        x: 375
+        y: 5953
+        width: 152
+        height: 481
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -386,10 +329,10 @@ TextureImporter:
       name: female-death_1
       rect:
         serializedVersion: 2
-        x: 1332
-        y: 8111
-        width: 155
-        height: 485
+        x: 1334
+        y: 5953
+        width: 152
+        height: 481
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -407,10 +350,10 @@ TextureImporter:
       name: female-death_2
       rect:
         serializedVersion: 2
-        x: 2293
-        y: 8111
-        width: 155
-        height: 485
+        x: 2294
+        y: 5953
+        width: 153
+        height: 481
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -429,9 +372,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 3254
-        y: 8111
+        y: 5953
         width: 152
-        height: 485
+        height: 481
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -449,10 +392,10 @@ TextureImporter:
       name: female-death_4
       rect:
         serializedVersion: 2
-        x: 4212
-        y: 8111
-        width: 156
-        height: 485
+        x: 4213
+        y: 5953
+        width: 152
+        height: 481
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -470,10 +413,10 @@ TextureImporter:
       name: female-death_5
       rect:
         serializedVersion: 2
-        x: 373
-        y: 7571
-        width: 156
-        height: 485
+        x: 347
+        y: 5447
+        width: 211
+        height: 427
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -491,10 +434,10 @@ TextureImporter:
       name: female-death_6
       rect:
         serializedVersion: 2
-        x: 1332
-        y: 7571
-        width: 155
-        height: 485
+        x: 1324
+        y: 5441
+        width: 209
+        height: 427
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -512,10 +455,10 @@ TextureImporter:
       name: female-death_7
       rect:
         serializedVersion: 2
-        x: 2293
-        y: 7571
-        width: 155
-        height: 485
+        x: 2272
+        y: 5441
+        width: 210
+        height: 427
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -533,10 +476,10 @@ TextureImporter:
       name: female-death_8
       rect:
         serializedVersion: 2
-        x: 3254
-        y: 7571
-        width: 152
-        height: 485
+        x: 3242
+        y: 5441
+        width: 212
+        height: 427
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -554,10 +497,10 @@ TextureImporter:
       name: female-death_9
       rect:
         serializedVersion: 2
-        x: 4212
-        y: 7571
-        width: 156
-        height: 485
+        x: 4204
+        y: 5441
+        width: 208
+        height: 427
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -575,10 +518,10 @@ TextureImporter:
       name: female-death_10
       rect:
         serializedVersion: 2
-        x: 373
-        y: 7031
-        width: 156
-        height: 485
+        x: 362
+        y: 4900
+        width: 212
+        height: 427
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -596,10 +539,10 @@ TextureImporter:
       name: female-death_11
       rect:
         serializedVersion: 2
-        x: 1306
-        y: 7064
-        width: 214
-        height: 431
+        x: 1324
+        y: 4900
+        width: 209
+        height: 427
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -617,10 +560,10 @@ TextureImporter:
       name: female-death_12
       rect:
         serializedVersion: 2
-        x: 2280
-        y: 7060
-        width: 215
-        height: 430
+        x: 2283
+        y: 4900
+        width: 209
+        height: 427
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -638,10 +581,10 @@ TextureImporter:
       name: female-death_13
       rect:
         serializedVersion: 2
-        x: 3229
-        y: 7060
-        width: 215
-        height: 430
+        x: 3242
+        y: 4900
+        width: 212
+        height: 427
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -659,10 +602,10 @@ TextureImporter:
       name: female-death_14
       rect:
         serializedVersion: 2
-        x: 4203
-        y: 7060
-        width: 211
-        height: 430
+        x: 4204
+        y: 4900
+        width: 208
+        height: 427
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -680,9 +623,9 @@ TextureImporter:
       name: female-death_15
       rect:
         serializedVersion: 2
-        x: 361
-        y: 6520
-        width: 215
+        x: 362
+        y: 4359
+        width: 212
         height: 430
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -701,9 +644,9 @@ TextureImporter:
       name: female-death_16
       rect:
         serializedVersion: 2
-        x: 1322
-        y: 6520
-        width: 211
+        x: 1324
+        y: 4359
+        width: 209
         height: 430
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -722,9 +665,9 @@ TextureImporter:
       name: female-death_17
       rect:
         serializedVersion: 2
-        x: 2280
-        y: 6520
-        width: 215
+        x: 2283
+        y: 4359
+        width: 209
         height: 430
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -744,8 +687,8 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 3242
-        y: 6520
-        width: 213
+        y: 4359
+        width: 212
         height: 430
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -764,10 +707,10 @@ TextureImporter:
       name: female-death_19
       rect:
         serializedVersion: 2
-        x: 4203
-        y: 6520
-        width: 211
-        height: 430
+        x: 4185
+        y: 4355
+        width: 218
+        height: 469
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -785,10 +728,10 @@ TextureImporter:
       name: female-death_20
       rect:
         serializedVersion: 2
-        x: 361
-        y: 5980
-        width: 215
-        height: 430
+        x: 346
+        y: 3814
+        width: 219
+        height: 469
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -806,10 +749,10 @@ TextureImporter:
       name: female-death_21
       rect:
         serializedVersion: 2
-        x: 1322
-        y: 5980
-        width: 211
-        height: 430
+        x: 1305
+        y: 3811
+        width: 219
+        height: 462
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -827,10 +770,10 @@ TextureImporter:
       name: female-death_22
       rect:
         serializedVersion: 2
-        x: 2280
-        y: 5980
-        width: 215
-        height: 430
+        x: 2267
+        y: 3817
+        width: 218
+        height: 472
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -848,10 +791,10 @@ TextureImporter:
       name: female-death_23
       rect:
         serializedVersion: 2
-        x: 3242
-        y: 5980
-        width: 213
-        height: 430
+        x: 3226
+        y: 3817
+        width: 218
+        height: 472
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -869,10 +812,10 @@ TextureImporter:
       name: female-death_24
       rect:
         serializedVersion: 2
-        x: 4203
-        y: 5980
-        width: 211
-        height: 430
+        x: 4185
+        y: 3817
+        width: 219
+        height: 472
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -890,9 +833,9 @@ TextureImporter:
       name: female-death_25
       rect:
         serializedVersion: 2
-        x: 344
-        y: 5432
-        width: 223
+        x: 346
+        y: 3276
+        width: 219
         height: 472
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -912,8 +855,8 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1305
-        y: 5432
-        width: 220
+        y: 3276
+        width: 219
         height: 472
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -932,10 +875,10 @@ TextureImporter:
       name: female-death_27
       rect:
         serializedVersion: 2
-        x: 2263
-        y: 5432
-        width: 223
-        height: 461
+        x: 2267
+        y: 3276
+        width: 218
+        height: 472
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -953,9 +896,9 @@ TextureImporter:
       name: female-death_28
       rect:
         serializedVersion: 2
-        x: 3225
-        y: 5436
-        width: 219
+        x: 3226
+        y: 3276
+        width: 218
         height: 472
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -974,8 +917,8 @@ TextureImporter:
       name: female-death_29
       rect:
         serializedVersion: 2
-        x: 4186
-        y: 5436
+        x: 4185
+        y: 3276
         width: 220
         height: 472
       alignment: 7
@@ -995,10 +938,10 @@ TextureImporter:
       name: female-death_30
       rect:
         serializedVersion: 2
-        x: 344
-        y: 4896
-        width: 223
-        height: 472
+        x: 346
+        y: 2736
+        width: 219
+        height: 471
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1017,9 +960,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1305
-        y: 4896
-        width: 220
-        height: 472
+        y: 2736
+        width: 219
+        height: 471
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1037,10 +980,10 @@ TextureImporter:
       name: female-death_32
       rect:
         serializedVersion: 2
-        x: 2263
-        y: 4896
-        width: 223
-        height: 472
+        x: 2267
+        y: 2736
+        width: 218
+        height: 471
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1058,10 +1001,10 @@ TextureImporter:
       name: female-death_33
       rect:
         serializedVersion: 2
-        x: 3225
-        y: 4896
-        width: 219
-        height: 472
+        x: 3226
+        y: 2736
+        width: 218
+        height: 471
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1079,10 +1022,10 @@ TextureImporter:
       name: female-death_34
       rect:
         serializedVersion: 2
-        x: 4186
-        y: 4896
+        x: 4185
+        y: 2736
         width: 220
-        height: 472
+        height: 471
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1100,9 +1043,9 @@ TextureImporter:
       name: female-death_35
       rect:
         serializedVersion: 2
-        x: 344
-        y: 4356
-        width: 223
+        x: 346
+        y: 2197
+        width: 219
         height: 472
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -1121,10 +1064,10 @@ TextureImporter:
       name: female-death_36
       rect:
         serializedVersion: 2
-        x: 1305
-        y: 4356
-        width: 220
-        height: 472
+        x: 1366
+        y: 2191
+        width: 177
+        height: 506
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1142,10 +1085,10 @@ TextureImporter:
       name: female-death_37
       rect:
         serializedVersion: 2
-        x: 2263
-        y: 4356
-        width: 223
-        height: 472
+        x: 1568
+        y: 2579
+        width: 9
+        height: 9
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1163,10 +1106,10 @@ TextureImporter:
       name: female-death_38
       rect:
         serializedVersion: 2
-        x: 3225
-        y: 4356
-        width: 219
-        height: 472
+        x: 2327
+        y: 2191
+        width: 177
+        height: 506
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1184,10 +1127,10 @@ TextureImporter:
       name: female-death_39
       rect:
         serializedVersion: 2
-        x: 4186
-        y: 4356
-        width: 220
-        height: 472
+        x: 2527
+        y: 2579
+        width: 9
+        height: 9
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1205,10 +1148,10 @@ TextureImporter:
       name: female-death_40
       rect:
         serializedVersion: 2
-        x: 344
-        y: 3816
-        width: 223
-        height: 472
+        x: 3286
+        y: 2191
+        width: 177
+        height: 506
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1226,10 +1169,10 @@ TextureImporter:
       name: female-death_41
       rect:
         serializedVersion: 2
-        x: 1305
-        y: 3816
-        width: 220
-        height: 472
+        x: 3489
+        y: 2579
+        width: 9
+        height: 9
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1247,10 +1190,10 @@ TextureImporter:
       name: female-death_42
       rect:
         serializedVersion: 2
-        x: 2326
-        y: 3808
-        width: 177
-        height: 510
+        x: 4248
+        y: 2191
+        width: 174
+        height: 506
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1268,10 +1211,10 @@ TextureImporter:
       name: female-death_43
       rect:
         serializedVersion: 2
-        x: 2527
-        y: 4197
+        x: 4447
+        y: 2579
         width: 10
-        height: 11
+        height: 9
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1289,10 +1232,10 @@ TextureImporter:
       name: female-death_44
       rect:
         serializedVersion: 2
-        x: 3284
-        y: 3808
-        width: 181
-        height: 510
+        x: 407
+        y: 1650
+        width: 177
+        height: 509
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1310,9 +1253,9 @@ TextureImporter:
       name: female-death_45
       rect:
         serializedVersion: 2
-        x: 3487
-        y: 4198
-        width: 11
+        x: 609
+        y: 2039
+        width: 9
         height: 10
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -1331,10 +1274,10 @@ TextureImporter:
       name: female-death_46
       rect:
         serializedVersion: 2
-        x: 4245
-        y: 3808
-        width: 179
-        height: 510
+        x: 1366
+        y: 1650
+        width: 177
+        height: 509
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1352,10 +1295,10 @@ TextureImporter:
       name: female-death_47
       rect:
         serializedVersion: 2
-        x: 4448
-        y: 4197
-        width: 11
-        height: 11
+        x: 1568
+        y: 2039
+        width: 9
+        height: 9
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1373,10 +1316,10 @@ TextureImporter:
       name: female-death_48
       rect:
         serializedVersion: 2
-        x: 407
-        y: 3268
+        x: 2327
+        y: 1650
         width: 177
-        height: 510
+        height: 509
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1394,10 +1337,10 @@ TextureImporter:
       name: female-death_49
       rect:
         serializedVersion: 2
-        x: 606
-        y: 3658
-        width: 12
-        height: 10
+        x: 2527
+        y: 2039
+        width: 9
+        height: 9
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1415,10 +1358,10 @@ TextureImporter:
       name: female-death_50
       rect:
         serializedVersion: 2
-        x: 1365
-        y: 3268
-        width: 181
-        height: 510
+        x: 3264
+        y: 1656
+        width: 183
+        height: 427
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1436,10 +1379,10 @@ TextureImporter:
       name: female-death_51
       rect:
         serializedVersion: 2
-        x: 1567
-        y: 3658
-        width: 12
-        height: 10
+        x: 4216
+        y: 1653
+        width: 187
+        height: 418
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1457,10 +1400,10 @@ TextureImporter:
       name: female-death_52
       rect:
         serializedVersion: 2
-        x: 2326
-        y: 3268
-        width: 177
-        height: 510
+        x: 378
+        y: 1115
+        width: 184
+        height: 415
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1478,10 +1421,10 @@ TextureImporter:
       name: female-death_53
       rect:
         serializedVersion: 2
-        x: 2527
-        y: 3657
-        width: 10
-        height: 11
+        x: 1337
+        y: 1115
+        width: 186
+        height: 427
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1499,10 +1442,10 @@ TextureImporter:
       name: female-death_54
       rect:
         serializedVersion: 2
-        x: 3284
-        y: 3268
-        width: 181
-        height: 510
+        x: 2296
+        y: 1115
+        width: 186
+        height: 427
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1520,10 +1463,10 @@ TextureImporter:
       name: female-death_55
       rect:
         serializedVersion: 2
-        x: 3487
-        y: 3658
-        width: 11
-        height: 10
+        x: 3258
+        y: 1115
+        width: 183
+        height: 427
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1541,10 +1484,10 @@ TextureImporter:
       name: female-death_56
       rect:
         serializedVersion: 2
-        x: 4220
-        y: 3276
-        width: 190
-        height: 430
+        x: 4216
+        y: 1115
+        width: 187
+        height: 427
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1562,10 +1505,10 @@ TextureImporter:
       name: female-death_57
       rect:
         serializedVersion: 2
-        x: 376
-        y: 2732
-        width: 187
-        height: 421
+        x: 176
+        y: 552
+        width: 449
+        height: 124
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1583,10 +1526,10 @@ TextureImporter:
       name: female-death_58
       rect:
         serializedVersion: 2
-        x: 1335
-        y: 2732
-        width: 190
-        height: 421
+        x: 1138
+        y: 546
+        width: 449
+        height: 123
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1604,10 +1547,10 @@ TextureImporter:
       name: female-death_59
       rect:
         serializedVersion: 2
-        x: 2297
-        y: 2736
-        width: 185
-        height: 430
+        x: 2103
+        y: 552
+        width: 449
+        height: 127
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1625,10 +1568,10 @@ TextureImporter:
       name: female-death_60
       rect:
         serializedVersion: 2
-        x: 3254
-        y: 2736
-        width: 190
-        height: 430
+        x: 3061
+        y: 552
+        width: 450
+        height: 127
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1646,10 +1589,10 @@ TextureImporter:
       name: female-death_61
       rect:
         serializedVersion: 2
-        x: 4216
-        y: 2736
-        width: 188
-        height: 430
+        x: 4023
+        y: 552
+        width: 449
+        height: 127
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1667,10 +1610,10 @@ TextureImporter:
       name: female-death_62
       rect:
         serializedVersion: 2
-        x: 376
-        y: 2196
-        width: 187
-        height: 430
+        x: 182
+        y: 14
+        width: 449
+        height: 124
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1688,10 +1631,10 @@ TextureImporter:
       name: female-death_63
       rect:
         serializedVersion: 2
-        x: 1133
-        y: 2171
-        width: 455
-        height: 126
+        x: 1141
+        y: 14
+        width: 452
+        height: 124
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1705,409 +1648,10 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: female-death_64
-      rect:
-        serializedVersion: 2
-        x: 2098
-        y: 2166
-        width: 452
-        height: 123
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f8c2fd519b3b6db50800000000000000
-      internalID: 6617674309984791695
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: female-death_65
-      rect:
-        serializedVersion: 2
-        x: 3060
-        y: 2171
-        width: 451
-        height: 130
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e4de9b0cf26b47ba0800000000000000
-      internalID: -6092044079712309938
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: female-death_66
-      rect:
-        serializedVersion: 2
-        x: 4022
-        y: 2171
-        width: 451
-        height: 130
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6b271cc3724d0ad10800000000000000
-      internalID: 2134939488361738934
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: female-death_67
-      rect:
-        serializedVersion: 2
-        x: 179
-        y: 1631
-        width: 455
-        height: 130
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 14f37567ead6fda70800000000000000
-      internalID: 8853915988510850881
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: female-death_68
-      rect:
-        serializedVersion: 2
-        x: 1141
-        y: 1631
-        width: 451
-        height: 130
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6a820c85ad7461900800000000000000
-      internalID: 654789798946416806
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: female-death_69
-      rect:
-        serializedVersion: 2
-        x: 2103
-        y: 1631
-        width: 451
-        height: 130
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6b5b56b0efc226620800000000000000
-      internalID: 2765822590783436214
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: female-death_70
-      rect:
-        serializedVersion: 2
-        x: 3060
-        y: 1631
-        width: 451
-        height: 130
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e02b86d4913d8dc80800000000000000
-      internalID: -8297650207803788786
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: female-death_71
-      rect:
-        serializedVersion: 2
-        x: 4022
-        y: 1631
-        width: 451
-        height: 130
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: dd48274fd94ade9c0800000000000000
-      internalID: -3896277104287644451
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: female-death_72
-      rect:
-        serializedVersion: 2
-        x: 179
-        y: 1091
-        width: 455
-        height: 130
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e8e5714c38cc8e150800000000000000
-      internalID: 5902192177971682958
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: female-death_73
-      rect:
-        serializedVersion: 2
-        x: 1141
-        y: 1091
-        width: 451
-        height: 130
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 67d5da92f5e3bfc10800000000000000
-      internalID: 2088331430658399606
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: female-death_74
-      rect:
-        serializedVersion: 2
-        x: 2103
-        y: 1091
-        width: 451
-        height: 130
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: edb19c43444943c30800000000000000
-      internalID: 4338255361728912350
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: female-death_75
-      rect:
-        serializedVersion: 2
-        x: 3060
-        y: 1091
-        width: 451
-        height: 130
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f20f90b1c181fe320800000000000000
-      internalID: 2589314819753111599
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: female-death_76
-      rect:
-        serializedVersion: 2
-        x: 4022
-        y: 1091
-        width: 451
-        height: 130
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 059a12c1ed11e9fe0800000000000000
-      internalID: -1180486406672111280
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: female-death_77
-      rect:
-        serializedVersion: 2
-        x: 179
-        y: 551
-        width: 455
-        height: 130
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f8d46065f9b6dd7a0800000000000000
-      internalID: -6350801567435305585
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: female-death_78
-      rect:
-        serializedVersion: 2
-        x: 1141
-        y: 551
-        width: 451
-        height: 130
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bd93e357b588420f0800000000000000
-      internalID: -1142638479054849573
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: female-death_79
-      rect:
-        serializedVersion: 2
-        x: 2103
-        y: 551
-        width: 451
-        height: 130
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 485f980d4ff40ad70800000000000000
-      internalID: 9052323163904013700
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: female-death_80
-      rect:
-        serializedVersion: 2
-        x: 3060
-        y: 551
-        width: 451
-        height: 130
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a7013dc8e8e3c4cf0800000000000000
-      internalID: -266769495952781190
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: female-death_81
-      rect:
-        serializedVersion: 2
-        x: 4022
-        y: 551
-        width: 451
-        height: 130
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7cc2b70bcaab62b10800000000000000
-      internalID: 1956456338997062855
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: female-death_82
-      rect:
-        serializedVersion: 2
-        x: 179
-        y: 11
-        width: 455
-        height: 130
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f424911a19aacc1c0800000000000000
-      internalID: -4482019986690719153
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: bce63dbdcdefd184689434a6e0d72b31
+    spriteID: f5e73bc41bf26ee46aa4b74082ed1b7e
     internalID: 0
     vertices: []
     indices: 
