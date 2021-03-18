@@ -6,6 +6,9 @@ using UnityEngine;
 public class EndManager : MonoBehaviour
 {
     public event System.Action OnEscape;
+    public event System.Action AllEliminated;
+    public event System.Action CreatureOut;
+    //public event System.Action GameEnded;
 
     // Singleton
     public static EndManager em;
@@ -37,4 +40,16 @@ public class EndManager : MonoBehaviour
     {
         OnEscape?.Invoke();
     }
+    public void ResearchElim()
+    {
+        AllEliminated.Invoke();
+    }
+    public void CreatureVoted()
+    {
+        CreatureOut.Invoke();
+    }
+   /* public void GameOver()
+    {
+        GameEnded.Invoke();
+    }*/
 }

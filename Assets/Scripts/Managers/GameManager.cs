@@ -14,7 +14,8 @@ public class GameManager : MonoBehaviour
     {
         Stage1,
         Voting,
-        Stage2
+        Stage2,
+        End
     }
 
     private PhotonView gameView;
@@ -69,7 +70,11 @@ public class GameManager : MonoBehaviour
                 OnStage2?.Invoke();
                 break;
             case GameStage.Stage2:
+                currentStage = GameStage.End;
                 // End game
+                break;
+            case GameStage.End:
+                // EndScreen
                 break;
         }
     }

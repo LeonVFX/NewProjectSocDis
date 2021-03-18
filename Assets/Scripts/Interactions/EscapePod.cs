@@ -30,7 +30,8 @@ public class EscapePod : MonoBehaviour
                 if (spaceleft <= 1)
                 {
                     countdown -= Time.deltaTime;
-                    if (countdown <= 0)
+                    Debug.Log("Countdown Begun");
+                    if (countdown <= 0||spaceleft<=0)
                     {
                         EndManager.em.Escaped();
                         launched = true;
@@ -42,12 +43,12 @@ public class EscapePod : MonoBehaviour
 
     private void OnTriggerEnter(Collider player)
     {
-        if (player.tag == "Researcher" || player.tag == "Creature")
+        if (player.transform.parent.tag == "Researcher" || player.transform.parent.tag == "Creature")
         {
             PhotonView playerView = player.GetComponent<PhotonView>();
 
-            if (!playerView.IsMine)
-                return;
+            /*if (!playerView.IsMine)
+                return;*/
 
             Debug.Log($"Player {player} in reach of escape pod");
             inRange = true;
@@ -56,12 +57,12 @@ public class EscapePod : MonoBehaviour
 
     private void OnTriggerExit(Collider player)
     {
-        if (player.tag == "Researcher" || player.tag == "Creature")
+        if (player.transform.parent.tag == "Researcher" || player.transform.parent.tag == "Creature")
         {
             PhotonView playerView = player.GetComponent<PhotonView>();
 
-            if (!playerView.IsMine)
-                return;
+            /*if (!playerView.IsMine)
+                return;*/
 
             Debug.Log($"Player {player} out of range");
             inRange = false;
