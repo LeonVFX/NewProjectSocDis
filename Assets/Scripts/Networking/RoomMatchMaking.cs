@@ -253,6 +253,7 @@ public class RoomMatchMaking : MonoBehaviourPunCallbacks, IInRoomCallbacks
             phoView.RPC("RPC_CreateGameManager", RpcTarget.MasterClient);
             phoView.RPC("RPC_CreateLevel", RpcTarget.MasterClient);
             phoView.RPC("RPC_CreatePlayer", RpcTarget.All);
+            
         }
     }
 
@@ -285,6 +286,12 @@ public class RoomMatchMaking : MonoBehaviourPunCallbacks, IInRoomCallbacks
             researcher.GetComponent<Researcher>().PlayerNumber = myNumberInRoom;
         }
         // TODO: Properly set player's numbers for everybody
+    }
+
+    [PunRPC]
+    private void RPC_CreateItems()
+    {
+        PhotonNetwork.InstantiateRoomObject(System.IO.Path.Combine("LevelPrefabs", "Items"), Vector3.zero, Quaternion.identity);
     }
 
     public override void OnPlayerLeftRoom(Photon.Realtime.Player otherPlayer)

@@ -7,6 +7,7 @@ public class CreatureSprint : MonoBehaviour
 {
     private PhotonView playerView;
     private PlayerMovement pMovement;
+    private Rigidbody rb;
 
     [SerializeField] int trackInterval = 2;
     [SerializeField] float speedDifference = 10f;
@@ -18,22 +19,21 @@ public class CreatureSprint : MonoBehaviour
     {
         playerView = GetComponent<PhotonView>();
         pMovement = GetComponent<PlayerMovement>();
+        rb = GetComponent<Rigidbody>();
     }
 
     private void Update()
     {
         if (Input.GetButtonDown("Run"))
-        {
             pMovement.PlayerSpeed += speedDifference;
-        }
-        if (Input.GetButton("Run"))
-        {
-            LeaveTrack();
-        }
         if (Input.GetButtonUp("Run"))
-        {
             pMovement.PlayerSpeed -= speedDifference;
-        }
+    }
+
+    private void LateUpdate()
+    {
+        if (rb.velocity.magnitude > 4f)
+            LeaveTrack();
     }
 
     private void LeaveTrack()
