@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3142892435841102374}
   - component: {fileID: 7262228950303188586}
   - component: {fileID: 7663053001672762708}
+  - component: {fileID: 7541637735238691234}
   - component: {fileID: 4252821702624364792}
   - component: {fileID: 6407089488816424924}
   m_Layer: 0
@@ -102,6 +103,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 373fd75f1485f694e8394a6ec0c61b73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7541637735238691234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1073308893292314367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0134f4b0dba2534f813e32cf9f94e9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Stage1Near:
+  - {fileID: 2800000, guid: c84f2045da8934542b5e8082d1b19825, type: 3}
+  - {fileID: 2800000, guid: 7e91c335316b51b45a53c21f7e77c6e1, type: 3}
+  - {fileID: 2800000, guid: e6a71895d06df6640ac751f45b9e05c5, type: 3}
+  - {fileID: 2800000, guid: 222aedde9a2970e458d463195d37f1a8, type: 3}
+  - {fileID: 2800000, guid: 851fdaeaf8679f742984392570f609aa, type: 3}
+  - {fileID: 2800000, guid: 4e8060f9cef7d9d418c5e28933931ed5, type: 3}
+  - {fileID: 2800000, guid: 14e9d594a18ec1949a5bd592a0723228, type: 3}
+  - {fileID: 2800000, guid: ccd2e874e1310a84d9241a9114c23647, type: 3}
+  - {fileID: 2800000, guid: 6af484967cdd6f94faba083fd89d4c7c, type: 3}
+  - {fileID: 2800000, guid: 82325f9595d5c7149a8fe5ed86c5439a, type: 3}
+  Stage1Far: []
+  Stage2Near:
+  - {fileID: 2800000, guid: 079db1d56c139c4419d2f115d9343371, type: 3}
+  - {fileID: 2800000, guid: 7d3964061779daa4bb1f3bbc577b3b26, type: 3}
+  - {fileID: 2800000, guid: 4caa3d039d3aac74b998abd1bba4ec30, type: 3}
+  - {fileID: 2800000, guid: 3b0561b5d8afc814bb4c275451830157, type: 3}
+  - {fileID: 2800000, guid: 61315d7f282474848804894add834992, type: 3}
+  - {fileID: 2800000, guid: 6d57ca87964ea2d4ab4cd74aab4d59fa, type: 3}
+  - {fileID: 2800000, guid: 9b418b29542e49e44b9445a29935ef50, type: 3}
+  - {fileID: 2800000, guid: 3f4dd96cdf83ad145affb1caec0a5e69, type: 3}
+  - {fileID: 2800000, guid: bfd33ea99ab400644a49b71811c1ad02, type: 3}
+  - {fileID: 2800000, guid: 743d4a5dd2da40047bbe7e7f2e8df906, type: 3}
+  Stage2Far: []
 --- !u!114 &4252821702624364792
 MonoBehaviour:
   m_ObjectHideFlags: 0
