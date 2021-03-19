@@ -14,6 +14,7 @@ public class LightMapSwitcher : MonoBehaviour
 
     void Start()
     {
+        GameManager.gm.OnStage1 += SetToStage1;
         GameManager.gm.OnStage2 += SetToStage2;
 
         if ((Stage1Near.Length != Stage1Far.Length) || (Stage2Near.Length != Stage2Far.Length))

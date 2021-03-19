@@ -11,19 +11,26 @@ public class EndResult : MonoBehaviour
         get { return resultString; }
         set { resultString = value; }
     }
-    [SerializeField] private Text resultText;
+    [SerializeField] private GameObject resultPrefab;
 
 
     private void Start()
     {
         GameManager.gm.OnEnd += DisplayResult;
-        resultText.gameObject.SetActive(false);
+        
         DontDestroyOnLoad(this);
     }
 
     private void DisplayResult()
     {
-        resultText.gameObject.SetActive(true);
-        resultText.text = resultString;
+        IEnumerator wait = WaitForDisplayResult();
+        StartCoroutine(wait);
+    }
+
+    private IEnumerator WaitForDisplayResult()
+    {
+        yield return new WaitForSeconds(1);
+        GameObject resultScreen = Instantiate(resultPrefab, GameObject.Find("Canvas").transform);
+        resultScreen.GetComponent<Text>().text = resultString;
     }
 }

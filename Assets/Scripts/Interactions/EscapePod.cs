@@ -19,31 +19,24 @@ public class EscapePod : MonoBehaviour
     private void Start()
     {
         PlayerManager.pm.OnSpawn += RegisterPlayer;
-
-        // Debugging purposed
-        GameManager.gm.NextStage();
-        GameManager.gm.NextStage();
     }
 
     private void Update()
     {
-        if (GameManager.gm.currentStage == GameManager.GameStage.Stage2)
+        if (inRange && isResearcher && !launched)
         {
-            if (inRange == true && isResearcher)
+            if (GameManager.gm.currentStage == GameManager.GameStage.Stage2)
             {
                 if (isButtonPressed)
                 {
-                    // GameManager.gm.InEscapePod();
-                    Debug.Log("Player has entered escape pod");
                     playerInPod = true;
-                    spaceleft--;
+                    --spaceleft;
                 }
 
                 if (spaceleft <= 1)
                 {
                     countdown -= Time.deltaTime;
-                    Debug.Log("Countdown Begun");
-                    if (countdown <= 0||spaceleft<=0)
+                    if (countdown <= 0 || spaceleft <= 0)
                     {
                         EndManager.em.Escaped();
                         launched = true;
@@ -80,7 +73,7 @@ public class EscapePod : MonoBehaviour
         if (otherParent == null)
             return;
 
-        if (otherParent.transform.parent.tag == "Researcher" || otherParent.transform.parent.tag == "Creature")
+        if (otherParent.tag == "Researcher" || otherParent.tag == "Creature")
         {
             PhotonView playerView = otherParent.GetComponent<PhotonView>();
 

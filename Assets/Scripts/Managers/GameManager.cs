@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    public event System.Action OnStage1;
     public event System.Action OnVoteStage;
     public event System.Action OnStage2;
     public event System.Action OnEnd;
@@ -13,6 +14,7 @@ public class GameManager : MonoBehaviour
 
     public enum GameStage
     {
+        Setup,
         Stage1,
         Voting,
         Stage2,
@@ -39,16 +41,16 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         gameView = GetComponent<PhotonView>();
-        currentStage = GameStage.Stage1;
+        currentStage = GameStage.Setup;
     }
 
     private void Update()
     {
         // TODO: Check for certain things to switch stages.
-        //if (Input.GetKeyDown(KeyCode.Alpha2))
-        //{
-        //    gameView.RPC("RPC_NextStage", RpcTarget.All);
-        //}
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            gameView.RPC("RPC_NextStage", RpcTarget.All);
+        }
     }
 
     public void NextStage()
@@ -61,6 +63,10 @@ public class GameManager : MonoBehaviour
     {
         switch (currentStage)
         {
+            case GameStage.Setup:
+                currentStage = GameStage.Stage1;
+                OnStage1?.Invoke();
+                break;
             case GameStage.Stage1:
                 currentStage = GameStage.Voting;
                 OnVoteStage?.Invoke();
@@ -71,6 +77,8 @@ public class GameManager : MonoBehaviour
                 break;
             case GameStage.Stage2:
                 OnEnd?.Invoke();
+                break;
+            case GameStage.End:
                 break;
         }
     }

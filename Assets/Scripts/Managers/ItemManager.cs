@@ -32,6 +32,11 @@ public class ItemManager : MonoBehaviour
 
     private void Start()
     {
+        GameManager.gm.OnStage1 += SetupPlayers;
+    }
+
+    private void SetupPlayers()
+    {
         itemList = new List<Item>(FindObjectsOfType<Item>());
         players = FindObjectsOfType<Player>();
         foreach (Player player in players)

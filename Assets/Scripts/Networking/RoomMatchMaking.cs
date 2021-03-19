@@ -212,6 +212,8 @@ public class RoomMatchMaking : MonoBehaviourPunCallbacks, IInRoomCallbacks
             return;
         if (MultiplayerSettings.multiplayerSettings.delayStart)
             PhotonNetwork.CurrentRoom.IsOpen = false;
+
+        phoView.RPC("RPC_CreateGameManager", RpcTarget.MasterClient);
         PhotonNetwork.LoadLevel(MultiplayerSettings.multiplayerSettings.loadingScene);
 
         // Randomize player settings
@@ -254,6 +256,7 @@ public class RoomMatchMaking : MonoBehaviourPunCallbacks, IInRoomCallbacks
             //phoView.RPC("RPC_CreateLevel", RpcTarget.MasterClient);
             phoView.RPC("RPC_CreatePlayer", RpcTarget.All);
             phoView.RPC("RPC_CreateItems", RpcTarget.MasterClient);
+            GameManager.gm.NextStage();
         }
     }
 

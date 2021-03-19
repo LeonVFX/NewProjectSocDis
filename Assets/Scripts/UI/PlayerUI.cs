@@ -30,7 +30,7 @@ public class PlayerUI : MonoBehaviourPunCallbacks
         if (!playerView.IsMine)
             return;
 
-        this.transform.SetParent(GameObject.Find("Canvas").GetComponent<Transform>(), false);
+        this.transform.SetParent(GameObject.Find("Canvas").transform, false);
 
         GameManager.gm.OnVoteStage += EnableVotingUI;
         GameManager.gm.OnStage2 += DisableVotingUI;

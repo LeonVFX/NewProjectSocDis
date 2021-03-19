@@ -19,7 +19,6 @@ public class PlayerResult : MonoBehaviour
         InfectedEscaped,
         CreatureKilledEverybody,
         CreatureVotedOut
-
     }
 
     private WinState winState;
@@ -44,6 +43,9 @@ public class PlayerResult : MonoBehaviour
     // If Researcher Escaped
     private void ResearcherEscaped()
     {
+        if (!playerView.IsMine)
+            return;
+
         Researcher researcher = player as Researcher;
         Debug.Log($"Researcher Escaped");
         if (researcher.isInfected == true)
@@ -53,7 +55,6 @@ public class PlayerResult : MonoBehaviour
         }
 
         endResult.ResultString = "Escaped Successfully!";
-        Debug.Log("ResultString Modified!");
 
         winState = WinState.ResearcherEscaped;
         FinishGame();
@@ -73,14 +74,30 @@ public class PlayerResult : MonoBehaviour
 
     private void FinishGame()
     {
-        EndManager.em.playerResults.Add(this);
-        playerView.RPC("RPC_CheckForEndGame", RpcTarget.All);
-        //CALL IN RPC-- > CheckForEndGame();
+        if (!playerView.IsMine)
+            return;
+
+        playerView.RPC("RPC_AddToEndList", RpcTarget.All);
+        //playerView.RPC("RPC_DeleteInstance", RpcTarget.All);
+        playerView.RPC("RPC_CheckForEndGame", RpcTarget.MasterClient);
     }
 
     [PunRPC]
-    void RPC_CheckForEndGame()
+    private void RPC_AddToEndList()
+    {
+        EndManager.em.playerResults.Add(this);
+    }
+
+    [PunRPC]
+    private void RPC_CheckForEndGame()
     {
         EndManager.em.CheckForMaxPlayers();
+    }
+
+    [PunRPC]
+    private void DeleteInstance()
+    {
+        if (gameObject)
+            Destroy(gameObject);
     }
 }
