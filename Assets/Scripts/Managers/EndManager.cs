@@ -33,8 +33,8 @@ public class EndManager : MonoBehaviour
     public void CheckForMaxPlayers()
     {
         if (playerResults.Count == PhotonNetwork.PlayerList.Length)
-            PhotonNetwork.LoadLevel(MultiplayerSettings.multiplayerSettings.endScene);
-            return;
+            PhotonNetwork.LoadLevel(MultiplayerSettings.multiplayerSettings.endScene);       
+            return;        
     }
     public void Escaped()
     {

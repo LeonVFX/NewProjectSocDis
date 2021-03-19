@@ -49,6 +49,7 @@ public class PlayerResult : MonoBehaviour
             winState = WinState.InfectedEscaped;
             Debug.Log("Infected Escaped");
         }
+        //playerView = GameManager.gm.GetComponent<gameView>();
 
     }
     private void CreatureKilledEverybody()

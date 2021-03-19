@@ -53,6 +53,7 @@ public class Player : MonoBehaviour
 
     protected virtual void Start()
     {
+        DontDestroyOnLoad(this);
         isAlive = true;
 
         GameManager.gm.OnVoteStage += PreventMovement;
