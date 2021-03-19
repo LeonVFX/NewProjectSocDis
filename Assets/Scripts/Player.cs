@@ -48,7 +48,6 @@ public class Player : MonoBehaviour
         pHUD = GetComponentInChildren<PlayerHUD>();
         playerView = GetComponent<PhotonView>();
         pHUD.playerView = playerView;
-
     }
 
     protected virtual void Start()
@@ -62,7 +61,8 @@ public class Player : MonoBehaviour
         ItemManager.im.OnDropItem += DropItem;
 
         PlayerManager.pm.playerViews.Add(playerView);
-        
+        PlayerManager.pm.SpawnPlayer(this);
+
         pMovement.PlayerSpeed = baseSpeed;
         
         cam = Camera.main.GetComponent<Camera>();

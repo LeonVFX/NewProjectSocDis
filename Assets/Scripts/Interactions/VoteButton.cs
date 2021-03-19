@@ -5,30 +5,30 @@ using UnityEngine;
 
 public class VoteButton : MonoBehaviour
 {
-    private Player[] players;
     private bool isInRange = false;
     private bool isButtonPressed = false;
     private bool votePassed = false;
 
     private void Start()
     {
-        players = FindObjectsOfType<Player>();
-        foreach (Player player in players)
-        {
-            player.PHUD.OnInteraction += PressButton;
-        }
+        PlayerManager.pm.OnSpawn += RegisterPlayer;
     }
 
     private void Update()
     {
         if (isInRange && !votePassed)
         {
-            if (Input.GetButtonDown("Interact") || isButtonPressed)
+            if (isButtonPressed)
             {
                 votePassed = true;
                 GameManager.gm.NextStage();
             }
         }
+    }
+
+    private void RegisterPlayer(Player player)
+    {
+        player.PHUD.OnInteraction += PressButton;
     }
 
     private void OnTriggerEnter(Collider other)

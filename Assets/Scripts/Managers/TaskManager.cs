@@ -22,7 +22,7 @@ public class TaskManager : MonoBehaviour
         if (tm == null)
         {
             tm = this;
-            DontDestroyOnLoad(gameObject);
+            //DontDestroyOnLoad(gameObject);
         }
         else
         {

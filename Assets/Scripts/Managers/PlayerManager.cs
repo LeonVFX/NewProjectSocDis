@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class PlayerManager : MonoBehaviour
 {
+    public event System.Action<Player> OnSpawn;
+
     public static PlayerManager pm;
     public List<PhotonView> playerViews;
 
@@ -20,6 +22,11 @@ public class PlayerManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+
+    public void SpawnPlayer(Player player)
+    {
+        OnSpawn?.Invoke(player);
     }
 
     public void KillPlayer(int playerID)

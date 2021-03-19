@@ -71,7 +71,8 @@ public class Item : MonoBehaviour
                 return;
 
             isInRange = true;
-            ItemManager.im.itemsInRange.Add(this);
+            if (!ItemManager.im.itemsInRange.Contains(this))
+                ItemManager.im.itemsInRange.Add(this);
         }
     }
 
