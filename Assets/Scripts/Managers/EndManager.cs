@@ -12,6 +12,7 @@ public class EndManager : MonoBehaviour
 
     // Singleton
     public static EndManager em;
+    public EndResult endResult;
     public List<PlayerResult> playerResults;
 
     private void Awake()
@@ -23,16 +24,17 @@ public class EndManager : MonoBehaviour
             DontDestroyOnLoad(gameObject);
         }
         else
-        {
             Destroy(gameObject);
-        }
     }
 
     public void CheckForMaxPlayers()
     {
         if (playerResults.Count == PhotonNetwork.PlayerList.Length)
+        {
             PhotonNetwork.LoadLevel(MultiplayerSettings.multiplayerSettings.endScene);
+            GameManager.gm.NextStage();
             return;
+        }
     }
 
     public void Escaped()
@@ -49,6 +51,7 @@ public class EndManager : MonoBehaviour
     {
         CreatureOut.Invoke();
     }
+
    /* public void GameOver()
     {
         GameEnded.Invoke();

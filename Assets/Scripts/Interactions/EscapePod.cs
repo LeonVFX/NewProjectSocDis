@@ -13,13 +13,25 @@ public class EscapePod : MonoBehaviour
     [SerializeField] private float countdown = 5;
     [SerializeField] private float movement = 0;
 
+    private bool isButtonPressed = false;
+    private bool isResearcher = false;
+
+    private void Start()
+    {
+        PlayerManager.pm.OnSpawn += RegisterPlayer;
+
+        // Debugging purposed
+        GameManager.gm.NextStage();
+        GameManager.gm.NextStage();
+    }
+
     private void Update()
     {
         if (GameManager.gm.currentStage == GameManager.GameStage.Stage2)
         {
-            if (inRange == true)
+            if (inRange == true && isResearcher)
             {
-                if (Input.GetButtonDown("Interact"))
+                if (isButtonPressed)
                 {
                     // GameManager.gm.InEscapePod();
                     Debug.Log("Player has entered escape pod");
@@ -41,31 +53,59 @@ public class EscapePod : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider player)
+    private void OnTriggerEnter(Collider other)
     {
-        if (player.transform.parent.tag == "Researcher" || player.transform.parent.tag == "Creature")
+        GameObject otherParent = (other.transform.parent != null) ? other.transform.parent.gameObject : null;
+
+        if (otherParent == null)
+            return;
+
+        if (otherParent.tag == "Researcher" || otherParent.tag == "Creature")
         {
-            PhotonView playerView = player.GetComponent<PhotonView>();
+            PhotonView playerView = otherParent.GetComponent<PhotonView>();
 
-            /*if (!playerView.IsMine)
-                return;*/
+            if (!playerView.IsMine)
+                return;
 
-            Debug.Log($"Player {player} in reach of escape pod");
             inRange = true;
+            if (playerView.GetComponent<Researcher>())
+                isResearcher = true;
         }
     }
 
-    private void OnTriggerExit(Collider player)
+    private void OnTriggerExit(Collider other)
     {
-        if (player.transform.parent.tag == "Researcher" || player.transform.parent.tag == "Creature")
+        GameObject otherParent = (other.transform.parent != null) ? other.transform.parent.gameObject : null;
+
+        if (otherParent == null)
+            return;
+
+        if (otherParent.transform.parent.tag == "Researcher" || otherParent.transform.parent.tag == "Creature")
         {
-            PhotonView playerView = player.GetComponent<PhotonView>();
+            PhotonView playerView = otherParent.GetComponent<PhotonView>();
 
-            /*if (!playerView.IsMine)
-                return;*/
+            if (!playerView.IsMine)
+                return;
 
-            Debug.Log($"Player {player} out of range");
             inRange = false;
         }
+    }
+
+    private void RegisterPlayer(Player player)
+    {
+        player.PHUD.OnInteraction += PressButton;
+    }
+
+    private void PressButton(PhotonView playerView)
+    {
+        IEnumerator pressedButton = ButtonPressed();
+        isButtonPressed = true;
+        StartCoroutine(pressedButton);
+    }
+
+    private IEnumerator ButtonPressed()
+    {
+        yield return new WaitForEndOfFrame();
+        isButtonPressed = false;
     }
 }

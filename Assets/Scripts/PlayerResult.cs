@@ -2,13 +2,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerResult : MonoBehaviour
 {
-    PhotonView playerView;
+    private PhotonView playerView;
+    private Player player;
+    private EndResult endResult;
 
     private bool isInPod = false;
-    public bool isinfected = false;
 
     // Win States
     public enum WinState
@@ -25,6 +27,8 @@ public class PlayerResult : MonoBehaviour
     private void Start()
     {
         playerView = GetComponent<PhotonView>();
+        player = GetComponent<Player>();
+        endResult = FindObjectOfType<EndResult>();
 
         EndManager.em.OnEscape += ResearcherEscaped;
         EndManager.em.AllEliminated += CreatureKilledEverybody;
@@ -35,39 +39,45 @@ public class PlayerResult : MonoBehaviour
     {
         if (!playerView.IsMine)
             return; 
-
     }
 
     // If Researcher Escaped
     private void ResearcherEscaped()
     {
-        winState = WinState.ResearcherEscaped;
-        FinishGame();
+        Researcher researcher = player as Researcher;
         Debug.Log($"Researcher Escaped");
-        if (isinfected == true)
+        if (researcher.isInfected == true)
         {
             winState = WinState.InfectedEscaped;
             Debug.Log("Infected Escaped");
         }
-        //playerView = GameManager.gm.GetComponent<gameView>();
 
+        endResult.ResultString = "Escaped Successfully!";
+        Debug.Log("ResultString Modified!");
+
+        winState = WinState.ResearcherEscaped;
+        FinishGame();
     }
+
     private void CreatureKilledEverybody()
     {
         winState = WinState.CreatureKilledEverybody;
         FinishGame();
     }
+
     private void CreatureVotedOut()
     {
         winState = WinState.CreatureVotedOut;
         FinishGame();
     }
+
     private void FinishGame()
     {
         EndManager.em.playerResults.Add(this);
         playerView.RPC("RPC_CheckForEndGame", RpcTarget.All);
         //CALL IN RPC-- > CheckForEndGame();
     }
+
     [PunRPC]
     void RPC_CheckForEndGame()
     {
