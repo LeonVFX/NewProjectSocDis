@@ -12,7 +12,7 @@ public class MultiplayerSettings : MonoBehaviour
     public int menuScene;
     public int loadingScene;
     public int multiplayerScene;
-    public int endSecene;
+    public int endScene;
 
     private void Awake()
     {
