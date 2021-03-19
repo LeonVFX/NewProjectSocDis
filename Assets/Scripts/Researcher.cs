@@ -6,6 +6,7 @@ using UnityEngine;
 public class Researcher : Player
 {
     public bool isInfected = false;
+    public bool inPod = false;
 
     protected override void Start()
     {
@@ -29,5 +30,9 @@ public class Researcher : Player
     public void SetInfected(bool isInfected)
     {
         this.isInfected = isInfected;
+    }
+    public void EnterPod(bool inPod)
+    {
+        this.inPod = inPod;
     }
 }

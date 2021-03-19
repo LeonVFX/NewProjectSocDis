@@ -61,6 +61,11 @@ public class VoteManager : MonoBehaviour
                 PlayerManager.pm.KillPlayer(mostVotedPlayer);
             voteFinished = true;
             GameManager.gm.NextStage();
+
+            /*if(PlayerStgs.PlayerRole.Creature.Equals.mostVotedPlayer)
+            {
+                EndManager.em.CreatureVoted();
+            }*/
         }
     }
 
