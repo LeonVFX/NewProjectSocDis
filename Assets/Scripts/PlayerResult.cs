@@ -80,9 +80,9 @@ public class PlayerResult : MonoBehaviour
 
         playerView.RPC("RPC_AddToEndList", RpcTarget.All);
         playerView.RPC("RPC_CheckForEndGame", RpcTarget.MasterClient);
+
         // Destroys player on Network when finished
-        if (player)
-            PlayerManager.pm.DestroyPlayer(player);
+        PlayerManager.pm.DestroyPlayer(playerView.OwnerActorNr);
     }
 
     [PunRPC]

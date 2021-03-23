@@ -240,9 +240,7 @@ public class RoomMatchMaking : MonoBehaviourPunCallbacks, IInRoomCallbacks
             isGameLoaded = true;
             // for delay start game
             if (MultiplayerSettings.multiplayerSettings.delayStart)
-            {
                 phoView.RPC("RPC_LoadedGameScene", RpcTarget.MasterClient);
-            }
         }
     }
 

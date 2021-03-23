@@ -11,8 +11,20 @@ public class PlayerManager : MonoBehaviour
 
     public static PlayerManager pm;
     public List<PhotonView> playerViews;
-
-    private GameObject targetPlayer = null;
+    public List<Player> playerList;
+    public int playersAlive
+    {
+        get
+        {
+            int result = 0;
+            foreach (Player player in playerList)
+            {
+                if (player.isAlive)
+                    ++result;
+            }
+            return result;
+        }
+    }
 
     private void Awake()
     {
@@ -52,16 +64,21 @@ public class PlayerManager : MonoBehaviour
         }
     }
 
-    public void DestroyPlayer(Player player)
+    public void DestroyPlayer(int playerID)
     {
-        targetPlayer = player.gameObject;
-        managerView.RPC("RPC_DestroyPlayer", RpcTarget.MasterClient);
+        managerView.RPC("RPC_DestroyPlayer", RpcTarget.All, new object[] { playerID });
     }
 
     [PunRPC]
-    public void RPC_DestroyPlayer()
+    private void RPC_DestroyPlayer(int playerID)
     {
-        if (targetPlayer)
-            PhotonNetwork.Destroy(targetPlayer);
+        foreach (PhotonView playerView in playerViews)
+        {
+            if (playerView != null)
+                if (playerView.OwnerActorNr == playerID)
+                {
+                    Destroy(playerView.gameObject);
+                }
+        }
     }
 }

@@ -61,6 +61,7 @@ public class Player : MonoBehaviour
         ItemManager.im.OnDropItem += DropItem;
 
         PlayerManager.pm.playerViews.Add(playerView);
+        PlayerManager.pm.playerList.Add(this);
         PlayerManager.pm.SpawnPlayer(this);
 
         pMovement.PlayerSpeed = baseSpeed;
