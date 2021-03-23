@@ -255,7 +255,7 @@ public class RoomMatchMaking : MonoBehaviourPunCallbacks, IInRoomCallbacks
             //phoView.RPC("RPC_CreateGameManager", RpcTarget.MasterClient);
             //phoView.RPC("RPC_CreateLevel", RpcTarget.MasterClient);
             phoView.RPC("RPC_CreatePlayer", RpcTarget.All);
-            phoView.RPC("RPC_CreateItems", RpcTarget.MasterClient);
+            phoView.RPC("RPC_CreateInteractions", RpcTarget.MasterClient);
             GameManager.gm.NextStage();
         }
     }
@@ -295,9 +295,11 @@ public class RoomMatchMaking : MonoBehaviourPunCallbacks, IInRoomCallbacks
     }
 
     [PunRPC]
-    private void RPC_CreateItems()
+    private void RPC_CreateInteractions()
     {
         PhotonNetwork.InstantiateRoomObject(System.IO.Path.Combine("LevelPrefabs", "Items"), Vector3.zero, Quaternion.Euler(0f, 225f, 0f));
+        PhotonNetwork.InstantiateRoomObject(System.IO.Path.Combine("LevelPrefabs", "EscapePods"), Vector3.zero, Quaternion.Euler(0f, 225f, 0f));
+        PhotonNetwork.InstantiateRoomObject(System.IO.Path.Combine("LevelPrefabs", "VoteButton"), Vector3.zero, Quaternion.Euler(0f, 225f, 0f));
     }
 
     public override void OnPlayerLeftRoom(Photon.Realtime.Player otherPlayer)

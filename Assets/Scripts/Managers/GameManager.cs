@@ -21,7 +21,7 @@ public class GameManager : MonoBehaviour
         End
     }
 
-    private PhotonView gameView;
+    private PhotonView managerView;
     public GameStage currentStage;
 
     private void Awake()
@@ -40,7 +40,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        gameView = GetComponent<PhotonView>();
+        managerView = GetComponent<PhotonView>();
         currentStage = GameStage.Setup;
     }
 
@@ -49,13 +49,13 @@ public class GameManager : MonoBehaviour
         // TODO: Check for certain things to switch stages.
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
-            gameView.RPC("RPC_NextStage", RpcTarget.All);
+            managerView.RPC("RPC_NextStage", RpcTarget.All);
         }
     }
 
     public void NextStage()
     {
-        gameView.RPC("RPC_NextStage", RpcTarget.All);
+        managerView.RPC("RPC_NextStage", RpcTarget.All);
     }
 
     [PunRPC]

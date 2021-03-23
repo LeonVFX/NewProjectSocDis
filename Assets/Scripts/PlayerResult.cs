@@ -55,6 +55,7 @@ public class PlayerResult : MonoBehaviour
         }
 
         endResult.ResultString = "Escaped Successfully!";
+        player.PHUD.UpdateMessageLog($"Escaped Successfully!", Color.blue);
 
         winState = WinState.ResearcherEscaped;
         FinishGame();
@@ -78,8 +79,10 @@ public class PlayerResult : MonoBehaviour
             return;
 
         playerView.RPC("RPC_AddToEndList", RpcTarget.All);
-        //playerView.RPC("RPC_DeleteInstance", RpcTarget.All);
         playerView.RPC("RPC_CheckForEndGame", RpcTarget.MasterClient);
+        // Destroys player on Network when finished
+        if (player)
+            PlayerManager.pm.DestroyPlayer(player);
     }
 
     [PunRPC]
@@ -92,12 +95,5 @@ public class PlayerResult : MonoBehaviour
     private void RPC_CheckForEndGame()
     {
         EndManager.em.CheckForMaxPlayers();
-    }
-
-    [PunRPC]
-    private void DeleteInstance()
-    {
-        if (gameObject)
-            Destroy(gameObject);
     }
 }

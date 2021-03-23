@@ -7,7 +7,8 @@ public class PersonalLight : MonoBehaviour
 {
     private PhotonView playerView;
     private Player player;
-    [SerializeField] private new GameObject light;
+    [SerializeField] private GameObject lightStage1;
+    [SerializeField] private GameObject lightStage2;
     [SerializeField] private float radius = 0f;
     [SerializeField] private Vector3 offset;
     private Vector3 pivot;
@@ -17,7 +18,7 @@ public class PersonalLight : MonoBehaviour
         playerView = GetComponent<PhotonView>();
         player = GetComponent<Player>();
 
-        light.SetActive(false);
+        lightStage2.SetActive(false);
         GameManager.gm.OnStage2 += ToggleFlashLights;
     }
 
@@ -40,10 +41,10 @@ public class PersonalLight : MonoBehaviour
 
         // Light angle
         float angle = AngleBetweenTwoPoints(positionOnScreen, mouseOnScreen);
-        light.transform.rotation = Quaternion.Euler(new Vector3(0f, -angle - 45, 0f));
+        lightStage2.transform.rotation = Quaternion.Euler(new Vector3(0f, -angle - 45, 0f));
 
         // Orbit
-        light.transform.position = pivot + (radius * light.transform.forward);
+        lightStage2.transform.position = pivot + (radius * lightStage2.transform.forward);
     }
 
     private float AngleBetweenTwoPoints(Vector3 a, Vector3 b)
@@ -53,6 +54,7 @@ public class PersonalLight : MonoBehaviour
 
     private void ToggleFlashLights()
     {
-        light.SetActive(true);
+        lightStage1.SetActive(false);
+        lightStage2.SetActive(true);
     }
 }

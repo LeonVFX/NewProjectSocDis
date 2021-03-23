@@ -118,25 +118,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Stage1Near:
-  - {fileID: 2800000, guid: a4dc83b28be0e0948bdcff3d18bc56a6, type: 3}
-  - {fileID: 2800000, guid: 920c65fd0eeb9f04e8e560384fbd75aa, type: 3}
-  - {fileID: 2800000, guid: fc201e7e9490b524090966e05e214a24, type: 3}
-  - {fileID: 2800000, guid: d1fc1978bb42ba84584540b67276b8d0, type: 3}
+  - {fileID: 2800000, guid: c9f90f966876ace4ab1a4f373e0e26f5, type: 3}
+  - {fileID: 2800000, guid: 1d9a3e3225875964d8ea77463da49dc4, type: 3}
+  - {fileID: 2800000, guid: 8513d9d7baff86547b193b0365ce6439, type: 3}
+  - {fileID: 2800000, guid: 7208a9518066c4641a6e80ec1ac79152, type: 3}
   Stage1Far:
-  - {fileID: 2800000, guid: a4dc83b28be0e0948bdcff3d18bc56a6, type: 3}
-  - {fileID: 2800000, guid: 920c65fd0eeb9f04e8e560384fbd75aa, type: 3}
-  - {fileID: 2800000, guid: fc201e7e9490b524090966e05e214a24, type: 3}
-  - {fileID: 2800000, guid: d1fc1978bb42ba84584540b67276b8d0, type: 3}
+  - {fileID: 2800000, guid: c9f90f966876ace4ab1a4f373e0e26f5, type: 3}
+  - {fileID: 2800000, guid: 1d9a3e3225875964d8ea77463da49dc4, type: 3}
+  - {fileID: 2800000, guid: 8513d9d7baff86547b193b0365ce6439, type: 3}
+  - {fileID: 2800000, guid: 7208a9518066c4641a6e80ec1ac79152, type: 3}
   Stage2Near:
-  - {fileID: 2800000, guid: c4c2f20f36932ef49a32c33bdf6020ef, type: 3}
-  - {fileID: 2800000, guid: d76d8868341019644811a5151c8777e9, type: 3}
-  - {fileID: 2800000, guid: c68c4017c3fe6144a866ea8013c58cd4, type: 3}
-  - {fileID: 2800000, guid: e59fa27bafeab6d49b7790d676ffd669, type: 3}
+  - {fileID: 2800000, guid: fb7c2b3c614a6ce42b5ff693a741148f, type: 3}
+  - {fileID: 2800000, guid: 06a5278db8ac19642a324b69a4277c18, type: 3}
+  - {fileID: 2800000, guid: 895a4e3913fc72b4087ca2509ae463f2, type: 3}
+  - {fileID: 2800000, guid: 652c305ec57b1134ab90a770cbf7163c, type: 3}
   Stage2Far:
-  - {fileID: 2800000, guid: c4c2f20f36932ef49a32c33bdf6020ef, type: 3}
-  - {fileID: 2800000, guid: d76d8868341019644811a5151c8777e9, type: 3}
-  - {fileID: 2800000, guid: c68c4017c3fe6144a866ea8013c58cd4, type: 3}
-  - {fileID: 2800000, guid: e59fa27bafeab6d49b7790d676ffd669, type: 3}
+  - {fileID: 2800000, guid: fb7c2b3c614a6ce42b5ff693a741148f, type: 3}
+  - {fileID: 2800000, guid: 06a5278db8ac19642a324b69a4277c18, type: 3}
+  - {fileID: 2800000, guid: 895a4e3913fc72b4087ca2509ae463f2, type: 3}
+  - {fileID: 2800000, guid: 652c305ec57b1134ab90a770cbf7163c, type: 3}
 --- !u!114 &4252821702624364792
 MonoBehaviour:
   m_ObjectHideFlags: 0

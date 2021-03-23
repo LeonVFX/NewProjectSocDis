@@ -7,8 +7,12 @@ public class PlayerManager : MonoBehaviour
 {
     public event System.Action<Player> OnSpawn;
 
+    private PhotonView managerView;
+
     public static PlayerManager pm;
     public List<PhotonView> playerViews;
+
+    private GameObject targetPlayer = null;
 
     private void Awake()
     {
@@ -22,6 +26,11 @@ public class PlayerManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+
+    private void Start()
+    {
+        managerView = GetComponent<PhotonView>();
     }
 
     public void SpawnPlayer(Player player)
@@ -41,5 +50,18 @@ public class PlayerManager : MonoBehaviour
                     break;
                 }
         }
+    }
+
+    public void DestroyPlayer(Player player)
+    {
+        targetPlayer = player.gameObject;
+        managerView.RPC("RPC_DestroyPlayer", RpcTarget.MasterClient);
+    }
+
+    [PunRPC]
+    public void RPC_DestroyPlayer()
+    {
+        if (targetPlayer)
+            PhotonNetwork.Destroy(targetPlayer);
     }
 }

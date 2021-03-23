@@ -18,7 +18,11 @@ public class EscapePod : MonoBehaviour
 
     private void Start()
     {
-        PlayerManager.pm.OnSpawn += RegisterPlayer;
+        Player[] players = FindObjectsOfType<Player>();
+        foreach (Player player in players)
+        {
+            RegisterPlayer(player);
+        }
     }
 
     private void Update()
