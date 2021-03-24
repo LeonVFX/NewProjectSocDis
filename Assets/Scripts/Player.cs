@@ -92,28 +92,16 @@ public class Player : MonoBehaviour
         pMovement.CanMove = true;
     }
 
-    //public void Die()
-    //{
-    //    Debug.Log($"Player { this.name } Died");
-    //    OnDeath?.Invoke();
-    //    isAlive = false;
-    //}
-
-    public void Die()
-    {
-        if (!playerView.IsMine)
-            return;
-
-        playerView.RPC("RPC_Die", RpcTarget.All);
-        EndManager.em.Die();
-    }
-
     [PunRPC]
     public void RPC_Die()
     {
         Debug.Log($"Player { this.name } Died");
+
         OnDeath?.Invoke();
         isAlive = false;
+
+        if (playerView.IsMine)
+            EndManager.em.Die();
     }
 
     //When Touching UI

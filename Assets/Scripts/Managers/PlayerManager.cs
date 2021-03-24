@@ -50,15 +50,31 @@ public class PlayerManager : MonoBehaviour
         OnSpawn?.Invoke(player);
     }
 
+    public bool IsCreature(int playerID)
+    {
+        foreach (PhotonView playerView in playerViews)
+        {
+            if (playerView)
+                if (playerView.OwnerActorNr == playerID)
+                {
+                    if (playerView.GetComponent<Creature>())
+                        return true;
+                    else
+                        return false;
+                }
+        }
+        return false;
+    }
+
     public void KillPlayer(int playerID)
     {
         foreach (PhotonView playerView in playerViews)
         {
-            if (playerView != null)
+            if (playerView)
                 if (playerView.OwnerActorNr == playerID)
                 {
-                    playerView.GetComponent<Player>().Die();
-                    //playerView.RPC("RPC_Die", RpcTarget.All);
+                    //playerView.GetComponent<Player>().Die();
+                    playerView.RPC("RPC_Die", RpcTarget.All);
                     break;
                 }
         }

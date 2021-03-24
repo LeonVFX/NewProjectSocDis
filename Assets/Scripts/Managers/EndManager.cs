@@ -7,14 +7,16 @@ public class EndManager : MonoBehaviour
 {
     public event System.Action OnDie;
     public event System.Action OnEscape;
-    public event System.Action AllEliminated;
-    public event System.Action CreatureOut;
+    public event System.Action OnCreatureVoted;
+    public event System.Action OnAllResearchersEliminated;
     //public event System.Action GameEnded;
 
     // Singleton
     public static EndManager em;
+
+    private PhotonView managerView;
     public EndResult endResult;
-    public List<PlayerResult> playerResults;
+    public int playerResults;
 
     private void Awake()
     {
@@ -28,9 +30,14 @@ public class EndManager : MonoBehaviour
             Destroy(gameObject);
     }
 
+    private void Start()
+    {
+        managerView = GetComponent<PhotonView>();
+    }
+
     public void CheckForMaxPlayers()
     {
-        if (playerResults.Count == PhotonNetwork.PlayerList.Length)
+        if (playerResults == PhotonNetwork.PlayerList.Length)
         {
             PhotonNetwork.LoadLevel(MultiplayerSettings.multiplayerSettings.endScene);
             GameManager.gm.NextStage();
@@ -48,18 +55,25 @@ public class EndManager : MonoBehaviour
         OnEscape?.Invoke();
     }
 
-    public void ResearchElim()
-    {
-        AllEliminated.Invoke();
-    }
-
     public void CreatureVoted()
     {
-        CreatureOut.Invoke();
+        managerView.RPC("RPC_CreatureVoted", RpcTarget.All);
     }
 
-   /* public void GameOver()
+    [PunRPC]
+    private void RPC_CreatureVoted()
     {
-        GameEnded.Invoke();
-    }*/
+        OnCreatureVoted?.Invoke();
+    }
+
+    public void AllResearchersEliminated()
+    {
+        managerView.RPC("RPC_AllResearchersEliminated", RpcTarget.All);
+    }
+
+    [PunRPC]
+    private void RPC_AllResearchersEliminated()
+    {
+        OnAllResearchersEliminated?.Invoke();
+    }
 }

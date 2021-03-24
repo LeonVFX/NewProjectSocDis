@@ -105,7 +105,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   endResult: {fileID: 3088685404423486156, guid: 8e9b99b621a6dce4a9cf6a7b3968a8a7, type: 3}
-  playerResults: []
+  playerResults: 0
 --- !u!114 &7541637735238691234
 MonoBehaviour:
   m_ObjectHideFlags: 0

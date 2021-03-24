@@ -70,7 +70,7 @@ public class Creature : Player
     private void RPC_KillPlayer(int targetObjPhotonViewId)
     {
         GameObject targetPlayer = PhotonView.Find(targetObjPhotonViewId).gameObject;
-        targetPlayer.GetComponent<Player>().Die();
+        targetPlayer.GetComponent<PhotonView>().RPC("RPC_Die", RpcTarget.All);
     }
 
     private void OnTriggerEnter(Collider other)

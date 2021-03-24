@@ -18,7 +18,7 @@ public class PlayerResult : MonoBehaviour
         Died,
         ResearcherEscaped,
         InfectedEscaped,
-        CreatureKilledEverybody,
+        AllResearchersEliminated,
         CreatureVotedOut
     }
 
@@ -32,8 +32,8 @@ public class PlayerResult : MonoBehaviour
 
         EndManager.em.OnDie += Died;
         EndManager.em.OnEscape += ResearcherEscaped;
-        EndManager.em.AllEliminated += CreatureKilledEverybody;
-        EndManager.em.CreatureOut += CreatureVotedOut;
+        EndManager.em.OnCreatureVoted += CreatureVotedOut;
+        EndManager.em.OnAllResearchersEliminated += CreatureKilledEverybody;
     }
 
     private void Update()
@@ -53,6 +53,13 @@ public class PlayerResult : MonoBehaviour
 
         winState = WinState.Died;
         FinishGame();
+
+        // If only creature is alive
+        Debug.Log($"Number of players alive: { PlayerManager.pm.playersAlive }");
+        if (PlayerManager.pm.playersAlive == 1)
+            EndManager.em.AllResearchersEliminated();
+
+        
     }
 
     // If Researcher Escaped
@@ -75,16 +82,41 @@ public class PlayerResult : MonoBehaviour
         FinishGameAndDestroy();
     }
 
+    // If creature killed all researchers
     private void CreatureKilledEverybody()
     {
-        winState = WinState.CreatureKilledEverybody;
-        FinishGameAndDestroy();
+        if (!playerView.IsMine)
+            return;
+
+        if (GetComponent<Creature>())
+        {
+            endResult.ResultString = "You Eliminated All Researchers!";
+            player.PHUD.UpdateMessageLog($"You Eliminated All Researchers!", Color.red);
+            winState = WinState.AllResearchersEliminated;
+            FinishGame();
+        }
     }
 
+    // If creature was voted out
     private void CreatureVotedOut()
     {
+        if (!playerView.IsMine)
+            return;
+
+        if (GetComponent<Creature>())
+        {
+            endResult.ResultString = "You Were Discovered!";
+            player.PHUD.UpdateMessageLog($"You Were Discovered!", Color.red);
+        }
+
+        if (GetComponent<Researcher>())
+        {
+            endResult.ResultString = "You Kicked The Creature!";
+            player.PHUD.UpdateMessageLog($"You Kicked The Creature!", Color.blue);
+        }
+
         winState = WinState.CreatureVotedOut;
-        FinishGameAndDestroy();
+        FinishGame();
     }
 
     private void FinishGame()
@@ -111,7 +143,7 @@ public class PlayerResult : MonoBehaviour
     [PunRPC]
     private void RPC_AddToEndList()
     {
-        EndManager.em.playerResults.Add(this);
+        ++EndManager.em.playerResults;
     }
 
     [PunRPC]
