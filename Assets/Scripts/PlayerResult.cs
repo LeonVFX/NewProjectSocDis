@@ -15,6 +15,7 @@ public class PlayerResult : MonoBehaviour
     // Win States
     public enum WinState
     {
+        Died,
         ResearcherEscaped,
         InfectedEscaped,
         CreatureKilledEverybody,
@@ -29,6 +30,7 @@ public class PlayerResult : MonoBehaviour
         player = GetComponent<Player>();
         endResult = FindObjectOfType<EndResult>();
 
+        EndManager.em.OnDie += Died;
         EndManager.em.OnEscape += ResearcherEscaped;
         EndManager.em.AllEliminated += CreatureKilledEverybody;
         EndManager.em.CreatureOut += CreatureVotedOut;
@@ -40,6 +42,19 @@ public class PlayerResult : MonoBehaviour
             return; 
     }
 
+    // If Died
+    private void Died()
+    {
+        if (!playerView.IsMine)
+            return;
+
+        endResult.ResultString = "You Died!";
+        player.PHUD.UpdateMessageLog($"You Died!", Color.red);
+
+        winState = WinState.Died;
+        FinishGame();
+    }
+
     // If Researcher Escaped
     private void ResearcherEscaped()
     {
@@ -47,7 +62,6 @@ public class PlayerResult : MonoBehaviour
             return;
 
         Researcher researcher = player as Researcher;
-        Debug.Log($"Researcher Escaped");
         if (researcher.isInfected == true)
         {
             winState = WinState.InfectedEscaped;
@@ -58,22 +72,31 @@ public class PlayerResult : MonoBehaviour
         player.PHUD.UpdateMessageLog($"Escaped Successfully!", Color.blue);
 
         winState = WinState.ResearcherEscaped;
-        FinishGame();
+        FinishGameAndDestroy();
     }
 
     private void CreatureKilledEverybody()
     {
         winState = WinState.CreatureKilledEverybody;
-        FinishGame();
+        FinishGameAndDestroy();
     }
 
     private void CreatureVotedOut()
     {
         winState = WinState.CreatureVotedOut;
-        FinishGame();
+        FinishGameAndDestroy();
     }
 
     private void FinishGame()
+    {
+        if (!playerView.IsMine)
+            return;
+
+        playerView.RPC("RPC_AddToEndList", RpcTarget.All);
+        playerView.RPC("RPC_CheckForEndGame", RpcTarget.MasterClient);
+    }
+
+    private void FinishGameAndDestroy()
     {
         if (!playerView.IsMine)
             return;

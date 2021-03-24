@@ -57,8 +57,8 @@ public class PlayerManager : MonoBehaviour
             if (playerView != null)
                 if (playerView.OwnerActorNr == playerID)
                 {
-                    //playerView.GetComponent<Player>().Die();
-                    playerView.RPC("RPC_Die", RpcTarget.All);
+                    playerView.GetComponent<Player>().Die();
+                    //playerView.RPC("RPC_Die", RpcTarget.All);
                     break;
                 }
         }

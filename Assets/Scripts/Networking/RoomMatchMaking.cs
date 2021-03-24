@@ -279,10 +279,10 @@ public class RoomMatchMaking : MonoBehaviourPunCallbacks, IInRoomCallbacks
         if (playerSettings.roleList.ElementAt(myNumberInRoom - 1) == PlayerStgs.PlayerRole.Creature)
         {
             // DEBUG PURPOSES CHANGED CREATURE TO RESEARCHER
-            GameObject researcher = PhotonNetwork.Instantiate(System.IO.Path.Combine("PlayerPrefabs", "Researcher"), spawnPoints.GetPosition(myNumberInRoom), Quaternion.identity);
-            researcher.GetComponent<Researcher>().PlayerNumber = myNumberInRoom;
-            //GameObject creature = PhotonNetwork.Instantiate(System.IO.Path.Combine("PlayerPrefabs", "Creature"), spawnPoints.GetPosition(myNumberInRoom), Quaternion.identity);
-            //creature.GetComponent<Creature>().PlayerNumber = myNumberInRoom;
+            // GameObject researcher = PhotonNetwork.Instantiate(System.IO.Path.Combine("PlayerPrefabs", "Researcher"), spawnPoints.GetPosition(myNumberInRoom), Quaternion.identity);
+            // researcher.GetComponent<Researcher>().PlayerNumber = myNumberInRoom;
+            GameObject creature = PhotonNetwork.Instantiate(System.IO.Path.Combine("PlayerPrefabs", "Creature"), spawnPoints.GetPosition(myNumberInRoom), Quaternion.identity);
+            creature.GetComponent<Creature>().PlayerNumber = myNumberInRoom;
         }
         else
         {

@@ -64,6 +64,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerViews: []
+  playerList: []
 --- !u!114 &3142892435841102374
 MonoBehaviour:
   m_ObjectHideFlags: 0

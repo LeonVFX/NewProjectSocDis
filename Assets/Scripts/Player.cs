@@ -101,7 +101,11 @@ public class Player : MonoBehaviour
 
     public void Die()
     {
+        if (!playerView.IsMine)
+            return;
+
         playerView.RPC("RPC_Die", RpcTarget.All);
+        EndManager.em.Die();
     }
 
     [PunRPC]

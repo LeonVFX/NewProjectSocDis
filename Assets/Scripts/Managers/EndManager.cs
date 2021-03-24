@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class EndManager : MonoBehaviour
 {
+    public event System.Action OnDie;
     public event System.Action OnEscape;
     public event System.Action AllEliminated;
     public event System.Action CreatureOut;
@@ -35,6 +36,11 @@ public class EndManager : MonoBehaviour
             GameManager.gm.NextStage();
             return;
         }
+    }
+
+    public void Die()
+    {
+        OnDie?.Invoke();
     }
 
     public void Escaped()

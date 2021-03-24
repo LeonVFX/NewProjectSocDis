@@ -1,4 +1,6 @@
-﻿using Photon.Pun;
+﻿/// Kill Function is here
+
+using Photon.Pun;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
