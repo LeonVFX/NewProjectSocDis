@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 112000000, guid: 88e6ee4635ca91d449034b63489aee43, type: 2}
+  m_LightingDataAsset: {fileID: 112000000, guid: 3b3e2eea0db110b46827f4047bba6cfc, type: 2}
   m_LightingSettings: {fileID: 4890085278179872738, guid: 444507a1c54ab7c49b50a675f0a6fbdf, type: 2}
 --- !u!196 &4
 NavMeshSettings:
@@ -222,6 +222,14 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 2236373268475616825, guid: 4af668272f9febd44b4fe59a8af6f2c3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 3.8800018
+      objectReference: {fileID: 0}
+    - target: {fileID: 2301095630852166994, guid: 4af668272f9febd44b4fe59a8af6f2c3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 3.7900019
+      objectReference: {fileID: 0}
     - target: {fileID: 2529304821308827847, guid: 4af668272f9febd44b4fe59a8af6f2c3, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
@@ -276,7 +284,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2898385972509097948, guid: 4af668272f9febd44b4fe59a8af6f2c3, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2898385972509097948, guid: 4af668272f9febd44b4fe59a8af6f2c3, type: 3}
       propertyPath: m_Name
@@ -358,9 +366,17 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5228686501316619189, guid: 4af668272f9febd44b4fe59a8af6f2c3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 3.79
+      objectReference: {fileID: 0}
     - target: {fileID: 5393307424636912577, guid: 4af668272f9febd44b4fe59a8af6f2c3, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5584490733124186274, guid: 4af668272f9febd44b4fe59a8af6f2c3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 3.880001
       objectReference: {fileID: 0}
     - target: {fileID: 5585797338057773411, guid: 4af668272f9febd44b4fe59a8af6f2c3, type: 3}
       propertyPath: m_StaticEditorFlags
