@@ -54,12 +54,9 @@ public class PlayerResult : MonoBehaviour
         winState = WinState.Died;
         FinishGame();
 
-        // If only creature is alive
-        Debug.Log($"Number of players alive: { PlayerManager.pm.playersAlive }");
+        // If only the creature is alive
         if (PlayerManager.pm.playersAlive == 1)
             EndManager.em.AllResearchersEliminated();
-
-        
     }
 
     // If Researcher Escaped
@@ -88,12 +85,15 @@ public class PlayerResult : MonoBehaviour
         if (!playerView.IsMine)
             return;
 
-        if (GetComponent<Creature>())
+        if (this != null)
         {
-            endResult.ResultString = "You Eliminated All Researchers!";
-            player.PHUD.UpdateMessageLog($"You Eliminated All Researchers!", Color.red);
-            winState = WinState.AllResearchersEliminated;
-            FinishGame();
+            if (GetComponent<Creature>())
+            {
+                endResult.ResultString = "You Eliminated All Researchers!";
+                player.PHUD.UpdateMessageLog($"You Eliminated All Researchers!", Color.red);
+                winState = WinState.AllResearchersEliminated;
+                FinishGame();
+            }
         }
     }
 
@@ -103,20 +103,23 @@ public class PlayerResult : MonoBehaviour
         if (!playerView.IsMine)
             return;
 
-        if (GetComponent<Creature>())
+        if (this != null)
         {
-            endResult.ResultString = "You Were Discovered!";
-            player.PHUD.UpdateMessageLog($"You Were Discovered!", Color.red);
-        }
+            if (GetComponent<Creature>())
+            {
+                endResult.ResultString = "You Were Discovered!";
+                player.PHUD.UpdateMessageLog($"You Were Discovered!", Color.red);
+            }
 
-        if (GetComponent<Researcher>())
-        {
-            endResult.ResultString = "You Kicked The Creature!";
-            player.PHUD.UpdateMessageLog($"You Kicked The Creature!", Color.blue);
-        }
+            if (GetComponent<Researcher>())
+            {
+                endResult.ResultString = "You Kicked The Creature!";
+                player.PHUD.UpdateMessageLog($"You Kicked The Creature!", Color.blue);
+            }
 
-        winState = WinState.CreatureVotedOut;
-        FinishGame();
+            winState = WinState.CreatureVotedOut;
+            FinishGame();
+        }
     }
 
     private void FinishGame()
