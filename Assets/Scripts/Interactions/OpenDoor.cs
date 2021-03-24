@@ -10,16 +10,26 @@ public class OpenDoor : MonoBehaviour
     bool broke = false;
     bool change = true;
     float timer = 0.0f;
+    private bool isButtonPressed = false;
 
     //the door
     [SerializeField] GameObject Door;
+
+    private void Start()
+    {
+        Player[] players = FindObjectsOfType<Player>();
+        foreach (Player player in players)
+        {
+            RegisterPlayer(player);
+        }
+    }
     void Update()
     {
         //once true the door will move
         if (open == true)
         {
             //After Interact used moves door away
-            if (Input.GetButtonDown("Interact"))
+            if (isButtonPressed)
             {                               
                     change = !change;
                    Door.SetActive(change);                                  
@@ -28,7 +38,7 @@ public class OpenDoor : MonoBehaviour
 
         if (broke == true)
         {
-            if (Input.GetButtonDown("Interact"))
+            if (isButtonPressed)
             {
                 GameObject.Destroy(Door);
             }
@@ -81,6 +91,23 @@ public class OpenDoor : MonoBehaviour
             open = false;
             broke = false;
         }
-    }   
+    }
+
+    private void RegisterPlayer(Player player)
+    {
+        player.PHUD.OnInteraction += PressButton;
+    }
+    private void PressButton(PhotonView playerView)
+    {
+        IEnumerator pressedButton = ButtonPressed();
+        isButtonPressed = true;
+        StartCoroutine(pressedButton);
+    }
+
+    private IEnumerator ButtonPressed()
+    {
+        yield return new WaitForEndOfFrame();
+        isButtonPressed = false;
+    }
 }
   
