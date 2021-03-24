@@ -2653,7 +2653,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c74c4efd1170374783b83b29f9c25ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DoorOpen: {fileID: 6298331988679397930}
 --- !u!64 &4432923001454509880
 MeshCollider:
   m_ObjectHideFlags: 0

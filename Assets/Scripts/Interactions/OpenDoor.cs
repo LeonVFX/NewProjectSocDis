@@ -8,11 +8,11 @@ public class OpenDoor : MonoBehaviour
     //   float distancetoTarget;
     bool open = false;
     bool broke = false;
-    bool change = false;
+    bool change = true;
     float timer = 0.0f;
 
     //the door
-
+    [SerializeField] GameObject Door;
     void Update()
     {
         //once true the door will move
@@ -22,7 +22,7 @@ public class OpenDoor : MonoBehaviour
             if (Input.GetButtonDown("Interact"))
             {                               
                     change = !change;
-                   gameObject.SetActive(change);                                  
+                   Door.SetActive(change);                                  
             }
         }
 
@@ -30,7 +30,7 @@ public class OpenDoor : MonoBehaviour
         {
             if (Input.GetButtonDown("Interact"))
             {
-                GameObject.Destroy(gameObject);
+                GameObject.Destroy(Door);
             }
         }
     }
