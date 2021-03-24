@@ -1,111 +1,86 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
 public class OpenDoor : MonoBehaviour
 {
- //   float distancetoTarget;
-    GameObject Door;
-    GameObject Door2;
+    //   float distancetoTarget;
     bool open = false;
-    //bool broke = false;
-    int change = 0;
-    float currentposx = 4.39f;
-    float currentposy = 0.92f;
-    float closedposx =  1000f;
-    float closedposy = 1000f;
+    bool broke = false;
+    bool change = false;
     float timer = 0.0f;
 
     //the door
-    [SerializeField] GameObject DoorOpen = null;
 
     void Update()
     {
-        timer += Time.deltaTime;
         //once true the door will move
         if (open == true)
         {
             //After Interact used moves door away
             if (Input.GetButtonDown("Interact"))
-            {
-                timer = 0f;
-               // Debug.Log("Move");
-                DoorOpen.transform.position = new Vector2(closedposx, closedposy);
-                change = change + 1;
-                //timer += Time.deltaTime;
+            {                               
+                    change = !change;
+                   gameObject.SetActive(change);                                  
             }
-         
         }
-        //resets door
-        if (timer >= 5f)
+
+        if (broke == true)
         {
-            DoorOpen.transform.position = new Vector2(currentposx, currentposy);
-            timer = 0f;
-            //   timer = 0;
-            //    Debug.Log("has changed");
-            // timer += Time.deltaTime;
+            if (Input.GetButtonDown("Interact"))
+            {
+                GameObject.Destroy(gameObject);
+            }
         }
-        // else
-        // {
-        //     open = false;
-        // }
     }
 
-    /*    if(broke == true)
-        {
-            GameObject.Destroy(Dooropen);
-        }*/
-    
+   
+
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Researcher")
+        GameObject otherParent = (other.transform.parent != null) ? other.transform.parent.gameObject : null;
+
+        if (otherParent == null)
+            return;
+
+        if (otherParent.tag == "Researcher" || otherParent.tag == "Creature")
         {
+            Debug.Log("Near door");
+            PhotonView playerView = otherParent.GetComponent<PhotonView>();
+
+            if (!playerView.IsMine)
+                return;
             open = true;
+        }
+
+        if (otherParent.tag == "Creature" && GameManager.gm.currentStage == GameManager.GameStage.Stage2)
+        {
+            open = false;
+            broke = true;
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.tag == "Researcher")
+        GameObject otherParent = (other.transform.parent != null) ? other.transform.parent.gameObject : null;
+
+        if (otherParent == null)
+            return;
+
+        if (otherParent.tag == "Researcher" || otherParent.tag == "Creature")
         {
+            PhotonView playerView = otherParent.GetComponent<PhotonView>();
+
+            if (!playerView.IsMine)
+                return;
             open = false;
         }
-    }
-
-    /*  private void OnTriggerEnter2D(Collider2D other)
-      {
-          if (other.tag == "Creature")
-          {
-              broke = true;
-          }
-      }
-
-      private void OnTriggerExit2D(Collider2D other)
-      {
-          if (other.tag == "Creature")
-          {
-              broke = false;
-          }
-      }*/
-
-    //DONT USE CODE
-
-    /*  if (timer >= 5)
-           {
-               Dooropen.transform.position = new Vector2(currentposx, currentposy);
-               //   timer = 0;
-               //    Debug.Log("has changed");
-               // timer += Time.deltaTime;
-           }*/
-
-    // if(timer >= 5)
-    //  {
-    /*  if ((change % 2) == 0)
-      {
-          Debug.Log("Just Work");
-          //change = 0;
-          Dooropen.transform.position = new Vector2(currentposx, currentposy);
-      }*/
-
-    //   }
+        if (other.tag == "Creature" && GameManager.gm.currentStage == GameManager.GameStage.Stage2)
+        {
+            open = false;
+            broke = false;
+        }
+    }   
 }
+  
