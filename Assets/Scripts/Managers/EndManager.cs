@@ -39,6 +39,7 @@ public class EndManager : MonoBehaviour
     {
         if (playerResults == PhotonNetwork.PlayerList.Length)
         {
+            Debug.Log($"{playerResults} out of {PhotonNetwork.PlayerList.Length}");
             PhotonNetwork.LoadLevel(MultiplayerSettings.multiplayerSettings.endScene);
             GameManager.gm.NextStage();
             return;

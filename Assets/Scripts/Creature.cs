@@ -49,14 +49,14 @@ public class Creature : Player
         if (isKill && canKill)
         {
             if (targetPlayers.Count > 0)
-                KillObject(targetPlayers[0].GetComponent<PhotonView>().ViewID);
+                KillObject(targetPlayers[0].GetComponent<PhotonView>().OwnerActorNr);
         }
     }
 
-    public void KillObject(int objPhotonViewId)
+    public void KillObject(int playerNumber)
     {
         // Basic Kill Effects
-        playerView.RPC("RPC_KillPlayer", RpcTarget.All, new object[] { objPhotonViewId });
+        PlayerManager.pm.KillPlayer(playerNumber);
         OnKill?.Invoke();
 
         // Kill Timer
@@ -64,13 +64,6 @@ public class Creature : Player
 
         if (playerView.IsMine)
             StartCoroutine(KillTimer());
-    }
-
-    [PunRPC]
-    private void RPC_KillPlayer(int targetObjPhotonViewId)
-    {
-        GameObject targetPlayer = PhotonView.Find(targetObjPhotonViewId).gameObject;
-        targetPlayer.GetComponent<PhotonView>().RPC("RPC_Die", RpcTarget.All);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -95,7 +88,7 @@ public class Creature : Player
                 // TODO: TOGGLE KILL
                 if (targetPlayers.Count > 0)
                 {
-                    Debug.Log(targetPlayers.Count);
+                    //Debug.Log(targetPlayers.Count);
                     pHUD.ToggleKillButtonInteractableActive();
                 }
             }

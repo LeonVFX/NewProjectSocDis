@@ -127,7 +127,7 @@ public class PlayerResult : MonoBehaviour
         if (!playerView.IsMine)
             return;
 
-        playerView.RPC("RPC_AddToEndList", RpcTarget.All);
+        playerView.RPC("RPC_AddToEndList", RpcTarget.MasterClient);
         playerView.RPC("RPC_CheckForEndGame", RpcTarget.MasterClient);
     }
 
@@ -136,7 +136,7 @@ public class PlayerResult : MonoBehaviour
         if (!playerView.IsMine)
             return;
 
-        playerView.RPC("RPC_AddToEndList", RpcTarget.All);
+        playerView.RPC("RPC_AddToEndList", RpcTarget.MasterClient);
         playerView.RPC("RPC_CheckForEndGame", RpcTarget.MasterClient);
 
         // Destroys player on Network when finished

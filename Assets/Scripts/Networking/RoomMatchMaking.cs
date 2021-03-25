@@ -111,6 +111,19 @@ public class RoomMatchMaking : MonoBehaviourPunCallbacks, IInRoomCallbacks
                 }
             }
         }
+
+        // Set Stage 1
+        if (!PhotonNetwork.IsMasterClient)
+            return;
+
+        if (GameManager.gm)
+        {
+            if (PlayerManager.pm.playerList.Count == playersInRoom &&
+                GameManager.gm.currentStage == GameManager.GameStage.Setup)
+            {
+                GameManager.gm.NextStage();
+            }
+        }
     }
 
     public override void OnJoinedRoom()
@@ -254,7 +267,6 @@ public class RoomMatchMaking : MonoBehaviourPunCallbacks, IInRoomCallbacks
             //phoView.RPC("RPC_CreateLevel", RpcTarget.MasterClient);
             phoView.RPC("RPC_CreatePlayer", RpcTarget.All);
             phoView.RPC("RPC_CreateInteractions", RpcTarget.MasterClient);
-            GameManager.gm.NextStage();
         }
     }
 
