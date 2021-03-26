@@ -10,6 +10,7 @@ public class ItemManager : MonoBehaviour
     public event System.Action OnDropItem;
 
     public static ItemManager im;
+    private PhotonView managerView;
 
     private Player[] players;
     private List<Item> itemList;
@@ -30,16 +31,28 @@ public class ItemManager : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        managerView = GetComponent<PhotonView>();
+    }
+
     public void SetupItemsToPlayers()
     {
+        managerView.RPC("RPC_SetupItemsToPlayers", RpcTarget.All);
+    }
+
+    [PunRPC]
+    private void RPC_SetupItemsToPlayers()
+    {
         itemList = new List<Item>(FindObjectsOfType<Item>());
-        Debug.Log($"{itemList.Count} / {PlayerManager.pm.playerList.Count}");
         foreach (Player player in PlayerManager.pm.playerList)
         {
+            if (!player.playerView.IsMine)
+                continue;
+
             foreach (Item item in itemList)
             {
                 player.PHUD.OnItemInteraction += item.GetItem;
-                Debug.Log($"{item} setup to {player}");
             }
         }
         itemsInRange = new List<Item>();
