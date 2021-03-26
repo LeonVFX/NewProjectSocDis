@@ -28,6 +28,12 @@ public class PlayerResult : MonoBehaviour
     {
         playerView = GetComponent<PhotonView>();
         player = GetComponent<Player>();
+
+        GameManager.gm.OnStage1 += OnGameStart;
+    }
+
+    private void OnGameStart()
+    {
         endResult = FindObjectOfType<EndResult>();
 
         EndManager.em.OnDie += Died;

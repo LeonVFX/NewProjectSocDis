@@ -302,6 +302,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 132926187b036a443af25596255a2f83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnLocation: {fileID: 1037390675816425816, guid: 9c6a695222886bc40a49d4142f819d4b, type: 3}
   playerView: {fileID: 0}
   playerNumber: 0
   baseSpeed: 20

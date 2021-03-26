@@ -48,15 +48,28 @@ public class PlayerHUD : MonoBehaviour
 
     private void Start()
     {
+        GameManager.gm.OnStage1 += OnGameStart;
+
         background.SetActive(false);
+        map.SetActive(false);
+        messagePrefab.SetActive(false);
+        gameObject.SetActive(false);
+    }
+
+    private void OnGameStart()
+    {
+        if (!playerView.IsMine)
+            return;
+
+        gameObject.SetActive(true);
+
         level = FindObjectOfType<Level>();
 
         mapCam.transform.position = level.transform.position + offset;
-        map.SetActive(false);
+        
         GameManager.gm.OnVoteStage += CloseMap;
 
         messageLog = messagePrefab.GetComponentInChildren<Text>();
-        messagePrefab.SetActive(false);
 
         taskCompletionSlider.maxValue = TaskManager.tm.maxNumberOfTasks;
 
@@ -72,7 +85,8 @@ public class PlayerHUD : MonoBehaviour
 
     private void Update()
     {
-        taskCompletionSlider.value = TaskManager.tm.numberOfCompletedTasks;
+        if (GameManager.gm.currentStage == GameManager.GameStage.Stage1)
+            taskCompletionSlider.value = TaskManager.tm.numberOfCompletedTasks;
     }
 
     public void UpdateMessageLog(string messageText, Color messageColor)

@@ -12,6 +12,7 @@ public class PlayerManager : MonoBehaviour
     public static PlayerManager pm;
     public List<PhotonView> playerViews;
     public List<Player> playerList;
+    public int playerLoaded = 0;
     public int playersAlive
     {
         get
@@ -96,5 +97,16 @@ public class PlayerManager : MonoBehaviour
                     Destroy(playerView.gameObject);
                 }
         }
+    }
+
+    public void IncreasePlayerCount()
+    {
+        managerView.RPC("RPC_IncreasePlayerCount", RpcTarget.MasterClient);
+    }
+
+    [PunRPC]
+    private void RPC_IncreasePlayerCount()
+    {
+        ++playerLoaded;
     }
 }

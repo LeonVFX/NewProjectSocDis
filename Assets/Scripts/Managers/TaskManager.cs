@@ -15,6 +15,10 @@ public class TaskManager : MonoBehaviour
     public int maxNumberOfTasks = 0;
 
     private Task[] taskList;
+    public Task[] TaskList
+    {
+        get { return taskList; }
+    }
 
     private void Awake()
     {
@@ -22,7 +26,6 @@ public class TaskManager : MonoBehaviour
         if (tm == null)
         {
             tm = this;
-            //DontDestroyOnLoad(gameObject);
         }
         else
         {
@@ -33,6 +36,7 @@ public class TaskManager : MonoBehaviour
     private void Start()
     {
         taskList = GetComponentsInChildren<Task>();
+        Debug.Log(taskList);
         int id = 1;
         foreach (Task task in taskList)
         {
@@ -54,6 +58,7 @@ public class TaskManager : MonoBehaviour
 
     public List<Task> RandomizeTasks()
     {
+        Debug.Log(taskList);
         List<Task> newTaskList = new List<Task>(taskList);
 
         while (newTaskList.Count > maxNumberOfTasksPerPlayer)

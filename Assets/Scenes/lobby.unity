@@ -310,7 +310,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Alpha v0.08
+  m_Text: Alpha v0.09
 --- !u!222 &141889683
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -519,15 +519,12 @@ MonoBehaviour:
   currentScene: 0
   playersInRoom: 0
   myNumberInRoom: 0
-  playersInGame: 0
-  startingTime: 0
   lobbyGO: {fileID: 790328020}
   roomGO: {fileID: 407665391}
   playersPanel: {fileID: 2081108474}
   playerListingPrefab: {fileID: 6990555211428358379, guid: dca26b63885b27b4f80f1b6f979bf51e, type: 3}
-  startButton: {fileID: 529940790}
+  startGamePrefab: {fileID: 1796585073843730205, guid: 93502bccb5784e74aa022b4c5b8772ce, type: 3}
   spawnPoints: {fileID: 1037390675816425816, guid: 9c6a695222886bc40a49d4142f819d4b, type: 3}
-  creatureSpawnPoint: {fileID: 5720665890459640680, guid: a3e4760b9d2f4df45973ae925e807ce2, type: 3}
 --- !u!4 &206643844
 Transform:
   m_ObjectHideFlags: 0
@@ -2340,9 +2337,10 @@ MonoBehaviour:
   delayStart: 1
   maxPlayers: 0
   menuScene: 0
-  loadingScene: 1
-  multiplayerScene: 2
-  endScene: 3
+  waitingRoom: 1
+  loadingScene: 2
+  multiplayerScene: 3
+  endScene: 4
 --- !u!4 &1407713493
 Transform:
   m_ObjectHideFlags: 0

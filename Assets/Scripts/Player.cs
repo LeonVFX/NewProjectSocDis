@@ -11,6 +11,8 @@ public class Player : MonoBehaviour
     // Events
     public event System.Action OnDeath;
 
+    [SerializeField] private SpawnPoints spawnLocation;
+
     // Basic Player Components
     public PhotonView playerView = null;
     protected PlayerMovement pMovement;
@@ -48,12 +50,15 @@ public class Player : MonoBehaviour
         pHUD = GetComponentInChildren<PlayerHUD>();
         playerView = GetComponent<PhotonView>();
         pHUD.playerView = playerView;
+
+        DontDestroyOnLoad(this);
     }
 
     protected virtual void Start()
     {
         isAlive = true;
 
+        GameManager.gm.OnStage1 += OnGameStart;
         GameManager.gm.OnVoteStage += PreventMovement;
         GameManager.gm.OnStage2 += AllowMovement;
 
@@ -65,11 +70,23 @@ public class Player : MonoBehaviour
         PlayerManager.pm.SpawnPlayer(this);
 
         pMovement.PlayerSpeed = baseSpeed;
-        
-        cam = Camera.main.GetComponent<Camera>();
 
         if (playerView.IsMine)
+        {
+            cam = Camera.main.GetComponent<Camera>();
             cam.GetComponent<CameraFollow>().setTarget(gameObject.transform);
+        }
+    }
+
+    protected virtual void OnGameStart()
+    {
+        if (playerView.IsMine)
+        {
+            cam = Camera.main.GetComponent<Camera>();
+            cam.GetComponent<CameraFollow>().setTarget(gameObject.transform);
+
+            transform.position = spawnLocation.GetPosition(playerView.OwnerActorNr);
+        }
     }
 
     protected virtual void Update()

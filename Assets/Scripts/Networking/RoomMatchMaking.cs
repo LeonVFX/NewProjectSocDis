@@ -21,25 +21,14 @@ public class RoomMatchMaking : MonoBehaviourPunCallbacks, IInRoomCallbacks
     public int playersInRoom;
     public int myNumberInRoom;
 
-    public int playersInGame;
-
-    // Delayed start
-    private bool readyToCount;
-    private bool readyToStart;
-    public float startingTime;
-    private float lessThanMaxPlayers;
-    private float atMaxPlayers;
-    private float timeToStart;
-
     public GameObject lobbyGO;
     public GameObject roomGO;
     public Transform playersPanel;
     public GameObject playerListingPrefab;
-    public GameObject startButton;
+    public GameObject startGamePrefab;
 
     private PlayerStgs playerSettings;
     [SerializeField] private SpawnPoints spawnPoints = null;
-    [SerializeField] private Transform creatureSpawnPoint = null;
 
     private void Awake()
     {
@@ -75,54 +64,20 @@ public class RoomMatchMaking : MonoBehaviourPunCallbacks, IInRoomCallbacks
         // set private variables
         phoView = GetComponent<PhotonView>();
         playerSettings = GetComponent<PlayerStgs>();
-        readyToCount = false;
-        readyToStart = false;
-        lessThanMaxPlayers = startingTime;
-        atMaxPlayers = 6;
-        timeToStart = startingTime;
     }
 
     private void Update()
     {
-        // for delay start onlt, count down to start
-        if (MultiplayerSettings.multiplayerSettings.delayStart)
-        {
-            if (playersInRoom == 1)
-            {
-                RestartTimer();
-            }
-            if (!isGameLoaded)
-            {
-                if (readyToStart)
-                {
-                    atMaxPlayers -= Time.deltaTime;
-                    lessThanMaxPlayers = atMaxPlayers;
-                    timeToStart = atMaxPlayers;
-                }
-                else if (readyToCount)
-                {
-                    lessThanMaxPlayers -= Time.deltaTime;
-                    timeToStart = lessThanMaxPlayers;
-                }
-                Debug.Log("Display time to start to the players " + timeToStart);
-                if (timeToStart <= 0)
-                {
-                    StartGame();
-                }
-            }
-        }
-
         // Set Stage 1
+        // If every player is loaded, proceed to the creation of items and go to Next Stage
         if (!PhotonNetwork.IsMasterClient)
             return;
 
         if (GameManager.gm)
         {
-            if (PlayerManager.pm.playerList.Count == playersInRoom &&
+            if (PlayerManager.pm.playerLoaded == playersInRoom &&
                 GameManager.gm.currentStage == GameManager.GameStage.Setup)
-            {
-                GameManager.gm.NextStage();
-            }
+            phoView.RPC("RPC_CreateInteractions", RpcTarget.MasterClient);
         }
     }
 
@@ -132,60 +87,38 @@ public class RoomMatchMaking : MonoBehaviourPunCallbacks, IInRoomCallbacks
         base.OnJoinedRoom();
         Debug.Log("We are now in a room");
 
-        lobbyGO.SetActive(false);
-        roomGO.SetActive(true);
-        if (PhotonNetwork.IsMasterClient)
-            startButton.SetActive(true);
-
-        ClearPlayerListing();
-        ListPlayers();
-
         players = PhotonNetwork.PlayerList;
         playersInRoom = players.Length;
         myNumberInRoom = playersInRoom;
-        
-        // for delay start only
-        if (MultiplayerSettings.multiplayerSettings.delayStart)
-        {
-            Debug.Log("Displayer players in room out of max players possible (" + playersInRoom);
-            if (playersInRoom > 1)
-            {
-                readyToCount = true;
-            }
-            if (playersInRoom == MultiplayerSettings.multiplayerSettings.maxPlayers)
-            {
-                readyToStart = true;
-                if (!PhotonNetwork.IsMasterClient)
-                    return;
-                PhotonNetwork.CurrentRoom.IsOpen = false;
-            }
-        }
+
+        if (PhotonNetwork.IsMasterClient)
+            PhotonNetwork.InstantiateRoomObject(System.IO.Path.Combine("GamePrefabs", "GameManager"), Vector3.zero, Quaternion.identity);
+
+        PhotonNetwork.LoadLevel(MultiplayerSettings.multiplayerSettings.waitingRoom);
+
+        IEnumerator loadPlayerContent = LoadPlayerContents();
+        StartCoroutine(loadPlayerContent);
     }
 
-    private void ClearPlayerListing()
+    private IEnumerator LoadPlayerContents()
     {
-        // only if in Menu
-        if (SceneManager.GetActiveScene().buildIndex == MultiplayerSettings.multiplayerSettings.menuScene)
-        {
-            for (int i = playersPanel.childCount - 1; i >= 0; --i)
-            {
-                if (playersPanel.GetChild(i).gameObject != null)
-                    Destroy(playersPanel.GetChild(i).gameObject);
-            }
-        }
-    }
+        while (currentScene != MultiplayerSettings.multiplayerSettings.waitingRoom)
+            yield return null;
 
-    private void ListPlayers()
-    {
-        if (PhotonNetwork.InRoom)
+        while (!GameManager.gm)
+            yield return null;
+
+        if (PhotonNetwork.IsMasterClient)
         {
-            foreach (Photon.Realtime.Player player in PhotonNetwork.PlayerList)
-            {
-                GameObject tempListing = Instantiate(playerListingPrefab, playersPanel);
-                Text tempText = tempListing.transform.GetChild(0).GetComponent<Text>();
-                tempText.text = player.NickName;
-            }
+            GameObject startGame = Instantiate(startGamePrefab);
+            startGame.transform.SetParent(GameObject.Find("Canvas").transform, false);
+            startGame.GetComponent<Button>().onClick.AddListener(StartGameOnClick);
+            Debug.Log($"Instantiate {startGame}");
         }
+
+        GameObject playerActor = PhotonNetwork.Instantiate(System.IO.Path.Combine("PlayerPrefabs", "Researcher"), Vector3.zero, Quaternion.identity);
+        playerActor.GetComponent<Researcher>().PlayerNumber = myNumberInRoom;
+        yield return null;
     }
 
     public override void OnPlayerEnteredRoom(Photon.Realtime.Player newPlayer)
@@ -194,30 +127,11 @@ public class RoomMatchMaking : MonoBehaviourPunCallbacks, IInRoomCallbacks
         base.OnPlayerEnteredRoom(newPlayer);
         Debug.Log("A new player has joined the room");
 
-        ClearPlayerListing();
-        ListPlayers();
-
         players = PhotonNetwork.PlayerList;
         playersInRoom++;
-        // delay start only
-        if (MultiplayerSettings.multiplayerSettings.delayStart)
-        {
-            Debug.Log("Displayer players in room out of max players possible (" + playersInRoom);
-            if (playersInRoom > 1)
-            {
-                readyToCount = true;
-            }
-            if (playersInRoom == MultiplayerSettings.multiplayerSettings.maxPlayers)
-            {
-                readyToStart = true;
-                if (!PhotonNetwork.IsMasterClient)
-                    return;
-                PhotonNetwork.CurrentRoom.IsOpen = false;
-            }
-        }
     }
 
-    public void StartGame()
+    public void StartGameOnClick()
     {
         // loads the multiplayer scene for all players
         isGameLoaded = true;
@@ -226,21 +140,10 @@ public class RoomMatchMaking : MonoBehaviourPunCallbacks, IInRoomCallbacks
         if (MultiplayerSettings.multiplayerSettings.delayStart)
             PhotonNetwork.CurrentRoom.IsOpen = false;
 
-        phoView.RPC("RPC_CreateGameManager", RpcTarget.MasterClient);
         PhotonNetwork.LoadLevel(MultiplayerSettings.multiplayerSettings.loadingScene);
 
         // Randomize player settings
         playerSettings.RandomizePlayers(playersInRoom);
-    }
-
-    private void RestartTimer()
-    {
-        // restarts the time for when players leave the room (DelayStart)
-        lessThanMaxPlayers = startingTime;
-        timeToStart = startingTime;
-        atMaxPlayers = 6;
-        readyToCount = false;
-        readyToStart = false;
     }
 
     #region Game Scene Creation
@@ -250,58 +153,12 @@ public class RoomMatchMaking : MonoBehaviourPunCallbacks, IInRoomCallbacks
         currentScene = scene.buildIndex;
         if (currentScene == MultiplayerSettings.multiplayerSettings.multiplayerScene)
         {
-            isGameLoaded = true;
-            // for delay start game
-            if (MultiplayerSettings.multiplayerSettings.delayStart)
-                phoView.RPC("RPC_LoadedGameScene", RpcTarget.MasterClient);
-        }
-    }
+            if (!PhotonNetwork.IsMasterClient)
+                return;
 
-    [PunRPC]
-    private void RPC_LoadedGameScene()
-    {
-        playersInGame++;
-        if (playersInGame == PhotonNetwork.PlayerList.Length)
-        {
-            //phoView.RPC("RPC_CreateGameManager", RpcTarget.MasterClient);
-            //phoView.RPC("RPC_CreateLevel", RpcTarget.MasterClient);
-            phoView.RPC("RPC_CreatePlayer", RpcTarget.All);
+            isGameLoaded = true;
             phoView.RPC("RPC_CreateInteractions", RpcTarget.MasterClient);
         }
-    }
-
-    [PunRPC]
-    private void RPC_CreateGameManager()
-    {
-        // creates a Game Manager at the host
-        PhotonNetwork.InstantiateRoomObject(System.IO.Path.Combine("GamePrefabs", "GameManager"), Vector3.zero, Quaternion.identity);
-    }
-
-    [PunRPC]
-    private void RPC_CreateLevel()
-    {
-        // creates level network controller but not player character
-        PhotonNetwork.InstantiateRoomObject(System.IO.Path.Combine("LevelPrefabs", "Level"), Vector3.zero, Quaternion.Euler(0f, 225f, 0f));
-    }
-
-    [PunRPC]
-    private void RPC_CreatePlayer()
-    {
-        // creates player network controller but not player character
-        if (playerSettings.roleList.ElementAt(myNumberInRoom - 1) == PlayerStgs.PlayerRole.Creature)
-        {
-            // DEBUG PURPOSES CHANGED CREATURE TO RESEARCHER
-            // GameObject researcher = PhotonNetwork.Instantiate(System.IO.Path.Combine("PlayerPrefabs", "Researcher"), spawnPoints.GetPosition(myNumberInRoom), Quaternion.identity);
-            // researcher.GetComponent<Researcher>().PlayerNumber = myNumberInRoom;
-            GameObject creature = PhotonNetwork.Instantiate(System.IO.Path.Combine("PlayerPrefabs", "Creature"), spawnPoints.GetPosition(myNumberInRoom), Quaternion.identity);
-            creature.GetComponent<Creature>().PlayerNumber = myNumberInRoom;
-        }
-        else
-        {
-            GameObject researcher = PhotonNetwork.Instantiate(System.IO.Path.Combine("PlayerPrefabs", "Researcher"), spawnPoints.GetPosition(myNumberInRoom), Quaternion.identity);
-            researcher.GetComponent<Researcher>().PlayerNumber = myNumberInRoom;
-        }
-        // TODO: Properly set player's numbers for everybody
     }
 
     [PunRPC]
@@ -317,9 +174,6 @@ public class RoomMatchMaking : MonoBehaviourPunCallbacks, IInRoomCallbacks
         base.OnPlayerLeftRoom(otherPlayer);
         Debug.Log(otherPlayer.NickName + " has left the game");
         playersInRoom--;
-
-        ClearPlayerListing();
-        ListPlayers();
     }
     #endregion
 }

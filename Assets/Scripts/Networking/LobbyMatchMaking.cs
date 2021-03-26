@@ -71,8 +71,6 @@ public class LobbyMatchMaking : MonoBehaviourPunCallbacks, ILobbyCallbacks
     public override void OnCreateRoomFailed(short returnCode, string message)
     {
         Debug.Log("Create room failed... trying again.");
-        // CreateRoom(); // retrying with a different name
-        // TODO: Create alert: Name taken
     }
 
     public void OnRoomNameChanged(string nameIn)
@@ -88,9 +86,7 @@ public class LobbyMatchMaking : MonoBehaviourPunCallbacks, ILobbyCallbacks
     public void JoinLobbyOnClick()
     {
         if (!PhotonNetwork.InLobby)
-        {
             PhotonNetwork.JoinLobby();
-        }
     }
 
     // Disconnect button

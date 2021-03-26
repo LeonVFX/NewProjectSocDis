@@ -30,13 +30,20 @@ public class PlayerUI : MonoBehaviourPunCallbacks
         if (!playerView.IsMine)
             return;
 
-        this.transform.SetParent(GameObject.Find("Canvas").transform, false);
-
+        GameManager.gm.OnStage1 += OnGameStart;
         GameManager.gm.OnVoteStage += EnableVotingUI;
         GameManager.gm.OnStage2 += DisableVotingUI;
 
         votingUI.gameObject.SetActive(false);
         votingGridChild = votingUI.GetComponentInChildren<GridLayoutGroup>().gameObject;
+    }
+
+    private void OnGameStart()
+    {
+        if (!playerView.IsMine)
+            return;
+
+        transform.SetParent(GameObject.Find("Canvas").transform, false);
     }
 
     private void Update()
