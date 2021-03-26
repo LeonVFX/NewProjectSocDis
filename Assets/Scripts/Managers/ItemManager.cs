@@ -30,20 +30,16 @@ public class ItemManager : MonoBehaviour
         }
     }
 
-    private void Start()
-    {
-        GameManager.gm.OnStage1 += SetupPlayers;
-    }
-
-    private void SetupPlayers()
+    public void SetupItemsToPlayers()
     {
         itemList = new List<Item>(FindObjectsOfType<Item>());
-        players = FindObjectsOfType<Player>();
-        foreach (Player player in players)
+        Debug.Log($"{itemList.Count} / {PlayerManager.pm.playerList.Count}");
+        foreach (Player player in PlayerManager.pm.playerList)
         {
             foreach (Item item in itemList)
             {
                 player.PHUD.OnItemInteraction += item.GetItem;
+                Debug.Log($"{item} setup to {player}");
             }
         }
         itemsInRange = new List<Item>();

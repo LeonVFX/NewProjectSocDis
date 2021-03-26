@@ -58,6 +58,7 @@ public class Player : MonoBehaviour
     {
         isAlive = true;
 
+        GameManager.gm.OnSetup += OnGameSetup;
         GameManager.gm.OnStage1 += OnGameStart;
         GameManager.gm.OnVoteStage += PreventMovement;
         GameManager.gm.OnStage2 += AllowMovement;
@@ -71,22 +72,28 @@ public class Player : MonoBehaviour
 
         pMovement.PlayerSpeed = baseSpeed;
 
-        if (playerView.IsMine)
-        {
-            cam = Camera.main.GetComponent<Camera>();
-            cam.GetComponent<CameraFollow>().setTarget(gameObject.transform);
-        }
+        if (!playerView.IsMine)
+            return;
+
+        cam = Camera.main.GetComponent<Camera>();
+        cam.GetComponent<CameraFollow>().setTarget(gameObject.transform);
+    }
+
+    protected virtual void OnGameSetup()
+    {
+        if (!playerView.IsMine)
+            return;
+
+        transform.position = spawnLocation.GetPosition(playerView.OwnerActorNr);
     }
 
     protected virtual void OnGameStart()
     {
-        if (playerView.IsMine)
-        {
-            cam = Camera.main.GetComponent<Camera>();
-            cam.GetComponent<CameraFollow>().setTarget(gameObject.transform);
+        if (!playerView.IsMine)
+            return;
 
-            transform.position = spawnLocation.GetPosition(playerView.OwnerActorNr);
-        }
+        cam = Camera.main.GetComponent<Camera>();
+        cam.GetComponent<CameraFollow>().setTarget(gameObject.transform);
     }
 
     protected virtual void Update()

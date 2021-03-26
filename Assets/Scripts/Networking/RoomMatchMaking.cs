@@ -113,7 +113,6 @@ public class RoomMatchMaking : MonoBehaviourPunCallbacks, IInRoomCallbacks
             GameObject startGame = Instantiate(startGamePrefab);
             startGame.transform.SetParent(GameObject.Find("Canvas").transform, false);
             startGame.GetComponent<Button>().onClick.AddListener(StartGameOnClick);
-            Debug.Log($"Instantiate {startGame}");
         }
 
         GameObject playerActor = PhotonNetwork.Instantiate(System.IO.Path.Combine("PlayerPrefabs", "Researcher"), Vector3.zero, Quaternion.identity);
@@ -153,12 +152,22 @@ public class RoomMatchMaking : MonoBehaviourPunCallbacks, IInRoomCallbacks
         currentScene = scene.buildIndex;
         if (currentScene == MultiplayerSettings.multiplayerSettings.multiplayerScene)
         {
+            isGameLoaded = true;
+
             if (!PhotonNetwork.IsMasterClient)
                 return;
 
-            isGameLoaded = true;
-            phoView.RPC("RPC_CreateInteractions", RpcTarget.MasterClient);
+            StartCoroutine(CreateInteractions());
         }
+    }
+
+    private IEnumerator CreateInteractions()
+    {
+        while (GameManager.gm.currentStage != GameManager.GameStage.Stage1)
+            yield return null;
+        
+        phoView.RPC("RPC_CreateInteractions", RpcTarget.MasterClient);
+        yield return null;
     }
 
     [PunRPC]
@@ -167,6 +176,7 @@ public class RoomMatchMaking : MonoBehaviourPunCallbacks, IInRoomCallbacks
         PhotonNetwork.InstantiateRoomObject(System.IO.Path.Combine("LevelPrefabs", "Items"), Vector3.zero, Quaternion.Euler(0f, 225f, 0f));
         PhotonNetwork.InstantiateRoomObject(System.IO.Path.Combine("LevelPrefabs", "EscapePods"), Vector3.zero, Quaternion.Euler(0f, 225f, 0f));
         PhotonNetwork.InstantiateRoomObject(System.IO.Path.Combine("LevelPrefabs", "VoteButton"), Vector3.zero, Quaternion.Euler(0f, 225f, 0f));
+        ItemManager.im.SetupItemsToPlayers();
     }
 
     public override void OnPlayerLeftRoom(Photon.Realtime.Player otherPlayer)
