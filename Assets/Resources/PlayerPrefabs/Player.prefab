@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7154919146236622417}
   - component: {fileID: 934536410}
   - component: {fileID: 7529159963755287586}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -171,7 +171,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3232743238111743456}
   - component: {fileID: 8572038236324444316}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: PersonalLightStage1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -397,11 +397,7 @@ GameObject:
   - component: {fileID: 4930686201121795566}
   - component: {fileID: 7080401779751773212}
   - component: {fileID: 3084323916096303373}
-  - component: {fileID: 7444288150573823315}
-  - component: {fileID: 7318705552166132760}
-  - component: {fileID: 2010858727885822308}
-  - component: {fileID: 7442127186423124864}
-  - component: {fileID: 1894138374154240685}
+  - component: {fileID: 3873143431910472273}
   - component: {fileID: 1368967992125497992}
   - component: {fileID: 8678327172916088230}
   - component: {fileID: 3997691251017626713}
@@ -409,9 +405,9 @@ GameObject:
   - component: {fileID: 8608094071137183418}
   - component: {fileID: 5411744296099825016}
   - component: {fileID: 3646500280940306664}
-  m_Layer: 9
-  m_Name: Creature
-  m_TagString: Creature
+  m_Layer: 0
+  m_Name: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -465,7 +461,7 @@ SortingGroup:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &7444288150573823315
+--- !u!114 &3873143431910472273
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -474,66 +470,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 4549701790167422974}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb558628cf380b841af52e9c9db44d68, type: 3}
+  m_Script: {fileID: 11500000, guid: 7dcabb463582ee14daa0235af0483c1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  creatureObject: {fileID: 0}
-  killStunTime: 3
---- !u!114 &7318705552166132760
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4549701790167422974}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5ed27b0866e71f4b8d289988b819bd6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &2010858727885822308
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4549701790167422974}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a3b74943f6312494a9472a036a8d1a26, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &7442127186423124864
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4549701790167422974}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc320fd91a3b83a49a69e778c098c7b0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  trackInterval: 2
-  speedDifference: 10
-  footprintPrefab: {fileID: 9104673859528969927, guid: 6dd4033c6f17ea147924d5224a865e7c, type: 3}
---- !u!114 &1894138374154240685
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4549701790167422974}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77bbc82022708a34b87af99ca982f868, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  goopInterval: 1
-  goopParticle: {fileID: 0}
-  goopStartTime: 5
-  goopBufferTime: 3
+  spawnLocation: {fileID: 1037390675816425816, guid: 9c6a695222886bc40a49d4142f819d4b, type: 3}
+  playerView: {fileID: 0}
+  baseSpeed: 20
+  speedMultiplier: 1
+  isAlive: 0
 --- !u!114 &1368967992125497992
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -805,7 +749,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 39942e3e95cdad842b3ff522f26ca659, type: 3}
-  m_Color: {r: 0.39215687, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 1, b: 0.08161616, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -825,7 +769,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3578882968679801103}
   - component: {fileID: 8444448518183179420}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: PersonalLightStage2
   m_TagString: Untagged
   m_Icon: {fileID: 0}

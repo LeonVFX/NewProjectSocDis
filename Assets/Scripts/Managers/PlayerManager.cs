@@ -12,6 +12,7 @@ public class PlayerManager : MonoBehaviour
     public static PlayerManager pm;
     public List<PhotonView> playerViews;
     public List<Player> playerList;
+
     public int playerLoaded = 0;
     public int playersAlive
     {
@@ -108,5 +109,36 @@ public class PlayerManager : MonoBehaviour
     private void RPC_IncreasePlayerCount()
     {
         ++playerLoaded;
+    }
+
+    public void PickRole(int isCreature, int playerNumber)
+    {
+        GameObject playerObject = playerList[playerNumber - 1].gameObject;
+
+        // if Creature
+        if (isCreature == playerNumber)
+        {
+            playerObject.tag = "Creature";
+            playerObject.layer = LayerMask.NameToLayer("Creature");
+            CreatureObject creatureObject = Resources.Load<CreatureObject>("ScriptableObjects/BaseCreature");
+            playerObject.AddComponent<Creature>();
+            playerObject.GetComponent<Creature>().creatureObject = creatureObject;
+            playerObject.AddComponent<CreatureInfection>();
+            playerObject.AddComponent<CreatureSabotage>();
+            playerObject.AddComponent<CreatureSprint>();
+            playerObject.AddComponent<CreatureHinting>();
+            playerObject.GetComponentInChildren<CapsuleCollider>().gameObject.layer = LayerMask.NameToLayer("Creature");
+        }
+        // if Researcher
+        else
+        {
+            playerObject.tag = "Researcher";
+            playerObject.layer = LayerMask.NameToLayer("Researcher");
+            ResearcherObject researcherObject = Resources.Load<ResearcherObject>("ScriptableObjects/BaseResearcher");
+            playerObject.AddComponent<Researcher>();
+            playerObject.GetComponent<Researcher>().researcherObject = researcherObject;
+            playerObject.AddComponent<ResearcherTasking>();
+            playerObject.GetComponentInChildren<CapsuleCollider>().gameObject.layer = LayerMask.NameToLayer("Researcher");
+        }
     }
 }

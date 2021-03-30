@@ -6,8 +6,13 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public class Creature : Player
+public class Creature : MonoBehaviour
 {
+    private PhotonView playerView;
+    private Player player;
+    private PlayerMovement pMovement;
+    public CreatureObject creatureObject;
+
     // Event activated when killing
     public event System.Action OnKill;
 
@@ -19,30 +24,34 @@ public class Creature : Player
 
     private List<Player> targetPlayers;
 
-    protected override void Start()
+    private void Awake()
     {
-        base.Start();
+        playerView = GetComponent<PhotonView>();
+        player = GetComponent<Player>();
+        pMovement = GetComponent<PlayerMovement>();
+    }
 
-        pMovement.PlayerSpeed *= speedMultiplier;
+    private void Start()
+    {
+        pMovement.PlayerSpeed *= player.speedMultiplier;
+        killStunTime = creatureObject.killStunTime;
 
         targetPlayers = new List<Player>();
         canKill = true;
         isKill = false;
 
         GameManager.gm.OnStage2 += Stage2ToggleUI;
-        PHUD.OnKill += PressKill;
+        player.PHUD.OnKill += PressKill;
 
         // Deactivate Task List
-        PHUD.ToggleTaskListActive();
+        player.PHUD.ToggleTaskListActive();
         // Deactivate Kill For Stage 1
-        PHUD.ToggleKillButtonActive();
+        player.PHUD.ToggleKillButtonActive();
     }
 
-    protected override void Update()
+    private void Update()
     {
-        base.Update();
-
-        if (!playerView.IsMine || !isAlive)
+        if (!playerView.IsMine || !player.isAlive)
             return;
 
         // Call Killing
@@ -60,7 +69,7 @@ public class Creature : Player
         OnKill?.Invoke();
 
         // Kill Timer
-        PreventMovement();
+        player.PreventMovement();
 
         if (playerView.IsMine)
             StartCoroutine(KillTimer());
@@ -89,7 +98,7 @@ public class Creature : Player
                 if (targetPlayers.Count > 0)
                 {
                     //Debug.Log(targetPlayers.Count);
-                    pHUD.ToggleKillButtonInteractableActive();
+                    player.PHUD.ToggleKillButtonInteractableActive();
                 }
             }
         }
@@ -115,7 +124,7 @@ public class Creature : Player
                 if (targetPlayers.Count == 0)
                 {
                     Debug.Log(targetPlayers.Count);
-                    pHUD.ToggleKillButtonInteractableInactive();
+                    player.PHUD.ToggleKillButtonInteractableInactive();
                 }
             }
         }
@@ -125,7 +134,7 @@ public class Creature : Player
     {
         canKill = false;
         yield return new WaitForSeconds(killStunTime);
-        AllowMovement();
+        player.AllowMovement();
         canKill = true;
     }
 
@@ -147,6 +156,6 @@ public class Creature : Player
         if (!playerView.IsMine)
             return;
 
-        PHUD.ToggleKillButtonActive();
+        player.PHUD.ToggleKillButtonActive();
     }
 }

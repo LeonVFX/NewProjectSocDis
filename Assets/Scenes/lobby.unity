@@ -310,7 +310,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Alpha v0.09b
+  m_Text: Alpha v0.10
 --- !u!222 &141889683
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -524,6 +524,8 @@ MonoBehaviour:
   playersPanel: {fileID: 2081108474}
   playerListingPrefab: {fileID: 6990555211428358379, guid: dca26b63885b27b4f80f1b6f979bf51e, type: 3}
   startGamePrefab: {fileID: 1796585073843730205, guid: 93502bccb5784e74aa022b4c5b8772ce, type: 3}
+  countdownGameStart: 5
+  countdownPrefab: {fileID: 4787209999754566665, guid: 288fb54b5d625aa4ba91241a2a42592b, type: 3}
   spawnPoints: {fileID: 1037390675816425816, guid: 9c6a695222886bc40a49d4142f819d4b, type: 3}
 --- !u!4 &206643844
 Transform:

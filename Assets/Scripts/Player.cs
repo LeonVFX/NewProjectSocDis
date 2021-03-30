@@ -24,12 +24,12 @@ public class Player : MonoBehaviour
     }
 
     // Player Stats
-    [SerializeField] protected int playerNumber;
-    public int PlayerNumber
-    {
-        get { return playerNumber; }
-        set { playerNumber = value; }
-    }
+    //[SerializeField] protected int playerNumber;
+    //public int PlayerNumber
+    //{
+    //    get { return playerNumber; }
+    //    set { playerNumber = value; }
+    //}
     [SerializeField] protected float baseSpeed = 30.0f;
     public float speedMultiplier = 1.0f;
     public bool isAlive;
@@ -106,12 +106,12 @@ public class Player : MonoBehaviour
             return;
     }
 
-    protected void PreventMovement()
+    public void PreventMovement()
     {
         pMovement.CanMove = false;
     }
 
-    protected void AllowMovement()
+    public void AllowMovement()
     {
         pMovement.CanMove = true;
     }

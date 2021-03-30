@@ -71,7 +71,10 @@ public class PlayerResult : MonoBehaviour
         if (!playerView.IsMine)
             return;
 
-        Researcher researcher = player as Researcher;
+        Researcher researcher = GetComponent<Researcher>();
+        if (!researcher)
+            return;
+
         if (researcher.isInfected == true)
         {
             winState = WinState.InfectedEscaped;

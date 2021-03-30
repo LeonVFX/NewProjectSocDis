@@ -26,6 +26,9 @@ public class RoomMatchMaking : MonoBehaviourPunCallbacks, IInRoomCallbacks
     public Transform playersPanel;
     public GameObject playerListingPrefab;
     public GameObject startGamePrefab;
+    private GameObject startGameButton;
+    public float countdownGameStart;
+    public GameObject countdownPrefab;
 
     private PlayerStgs playerSettings;
     [SerializeField] private SpawnPoints spawnPoints = null;
@@ -110,13 +113,12 @@ public class RoomMatchMaking : MonoBehaviourPunCallbacks, IInRoomCallbacks
 
         if (PhotonNetwork.IsMasterClient)
         {
-            GameObject startGame = Instantiate(startGamePrefab);
-            startGame.transform.SetParent(GameObject.Find("Canvas").transform, false);
-            startGame.GetComponent<Button>().onClick.AddListener(StartGameOnClick);
+            startGameButton = Instantiate(startGamePrefab);
+            startGameButton.transform.SetParent(GameObject.Find("Canvas").transform, false);
+            startGameButton.GetComponent<Button>().onClick.AddListener(StartGameOnClick);
         }
 
-        GameObject playerActor = PhotonNetwork.Instantiate(System.IO.Path.Combine("PlayerPrefabs", "Researcher"), Vector3.zero, Quaternion.identity);
-        playerActor.GetComponent<Researcher>().PlayerNumber = myNumberInRoom;
+        GameObject playerActor = PhotonNetwork.Instantiate(System.IO.Path.Combine("PlayerPrefabs", "Player"), Vector3.zero, Quaternion.identity);
         yield return null;
     }
 
@@ -139,10 +141,24 @@ public class RoomMatchMaking : MonoBehaviourPunCallbacks, IInRoomCallbacks
         if (MultiplayerSettings.multiplayerSettings.delayStart)
             PhotonNetwork.CurrentRoom.IsOpen = false;
 
-        PhotonNetwork.LoadLevel(MultiplayerSettings.multiplayerSettings.loadingScene);
+        startGameButton.GetComponent<Button>().interactable = false;
 
+        // Randomize Roles
+        int isCreature = Random.Range(1, playersInRoom);
+        phoView.RPC("RPC_RandomizeRole", RpcTarget.All, isCreature);
+        IEnumerator startGame = StartGame();
+        StartCoroutine(startGame);
+    }
+
+    private IEnumerator StartGame()
+    {
+        yield return new WaitForSeconds(countdownGameStart);
+
+        PhotonNetwork.LoadLevel(MultiplayerSettings.multiplayerSettings.loadingScene);
         // Randomize player settings
         playerSettings.RandomizePlayers(playersInRoom);
+
+        yield return null;
     }
 
     #region Game Scene Creation
@@ -177,6 +193,38 @@ public class RoomMatchMaking : MonoBehaviourPunCallbacks, IInRoomCallbacks
         PhotonNetwork.InstantiateRoomObject(System.IO.Path.Combine("LevelPrefabs", "EscapePods"), Vector3.zero, Quaternion.Euler(0f, 225f, 0f));
         PhotonNetwork.InstantiateRoomObject(System.IO.Path.Combine("LevelPrefabs", "VoteButton"), Vector3.zero, Quaternion.Euler(0f, 225f, 0f));
         ItemManager.im.SetupItemsToPlayers();
+    }
+
+    [PunRPC]
+    private void RPC_RandomizeRole(int isCreature)
+    {
+        // Initiate Timer
+        GameObject countdownTimer = Instantiate(countdownPrefab);
+        countdownTimer.transform.SetParent(GameObject.Find("Canvas").transform, false);
+        IEnumerator countdown = Countdown(countdownTimer);
+        StartCoroutine(countdown);
+
+        // Check if creature
+        PlayerManager.pm.PickRole(isCreature, myNumberInRoom);
+    }
+
+    private IEnumerator Countdown(GameObject cd)
+    {
+        Text cdText = cd.GetComponent<Text>();
+
+        int totalTime;
+        int.TryParse(cdText.text, out totalTime);
+        float elapsedTime = (float)totalTime;
+
+        while (totalTime > 0)
+        {
+            elapsedTime -= Time.deltaTime;
+            totalTime = (int)elapsedTime;
+            cdText.text = totalTime.ToString();
+
+            yield return null;
+        }
+        yield return null;
     }
 
     public override void OnPlayerLeftRoom(Photon.Realtime.Player otherPlayer)

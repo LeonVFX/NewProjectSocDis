@@ -6,6 +6,7 @@ using UnityEngine;
 public class CreatureSprint : MonoBehaviour
 {
     private PhotonView playerView;
+    private Creature creature;
     private PlayerMovement pMovement;
     private Rigidbody rb;
 
@@ -18,8 +19,14 @@ public class CreatureSprint : MonoBehaviour
     private void Start()
     {
         playerView = GetComponent<PhotonView>();
+        creature = GetComponent<Creature>();
         pMovement = GetComponent<PlayerMovement>();
         rb = GetComponent<Rigidbody>();
+
+        CreatureObject creatureObject = creature.creatureObject;
+        trackInterval = creatureObject.trackInterval;
+        speedDifference = creatureObject.speedDifference;
+        footprintPrefab = creatureObject.footprintPrefab;
     }
 
     private void Update()
