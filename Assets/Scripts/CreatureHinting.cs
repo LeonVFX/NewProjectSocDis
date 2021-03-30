@@ -25,6 +25,7 @@ public class CreatureHinting : MonoBehaviour
     private void Start()
     {
         playerView = GetComponent<PhotonView>();
+
         creature = GetComponent<Creature>();
         player = GetComponent<Player>();
 
@@ -44,7 +45,7 @@ public class CreatureHinting : MonoBehaviour
 
     private void Update()
     {
-        if (!playerView.IsMine)
+        if (!playerView.IsMine || GameManager.gm.currentStage == GameManager.GameStage.End)
             return;
 
         if (player.HeldItem != null)

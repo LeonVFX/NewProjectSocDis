@@ -21,6 +21,9 @@ public class Researcher : MonoBehaviour
 
     private void Start()
     {
+        if (!playerView.IsMine)
+            return;
+
         pMovement.PlayerSpeed *= player.speedMultiplier;
 
         // Deactivate Creature UI

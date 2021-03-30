@@ -113,6 +113,12 @@ public class PlayerManager : MonoBehaviour
 
     public void PickRole(int isCreature, int playerNumber)
     {
+        managerView.RPC("RPC_PickRole", RpcTarget.All, isCreature, playerNumber);
+    }
+
+    [PunRPC]
+    private void RPC_PickRole(int isCreature, int playerNumber)
+    {
         GameObject playerObject = playerList[playerNumber - 1].gameObject;
 
         // if Creature

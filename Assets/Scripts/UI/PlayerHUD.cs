@@ -85,8 +85,7 @@ public class PlayerHUD : MonoBehaviour
 
     private void Update()
     {
-        if (GameManager.gm.currentStage == GameManager.GameStage.Stage1)
-            taskCompletionSlider.value = TaskManager.tm.numberOfCompletedTasks;
+        taskCompletionSlider.value = TaskManager.tm.numberOfCompletedTasks;
     }
 
     public void UpdateMessageLog(string messageText, Color messageColor)

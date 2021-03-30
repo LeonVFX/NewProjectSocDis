@@ -144,7 +144,8 @@ public class RoomMatchMaking : MonoBehaviourPunCallbacks, IInRoomCallbacks
         startGameButton.GetComponent<Button>().interactable = false;
 
         // Randomize Roles
-        int isCreature = Random.Range(1, playersInRoom);
+        int isCreature = Random.Range(1, playersInRoom + 1);
+        Debug.Log($"{isCreature} from a Range of 1 to {playersInRoom}");
         phoView.RPC("RPC_RandomizeRole", RpcTarget.All, isCreature);
         IEnumerator startGame = StartGame();
         StartCoroutine(startGame);
@@ -156,7 +157,7 @@ public class RoomMatchMaking : MonoBehaviourPunCallbacks, IInRoomCallbacks
 
         PhotonNetwork.LoadLevel(MultiplayerSettings.multiplayerSettings.loadingScene);
         // Randomize player settings
-        playerSettings.RandomizePlayers(playersInRoom);
+        //playerSettings.RandomizePlayers(playersInRoom);
 
         yield return null;
     }

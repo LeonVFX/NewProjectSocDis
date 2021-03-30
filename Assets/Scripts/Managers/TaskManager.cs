@@ -46,7 +46,7 @@ public class TaskManager : MonoBehaviour
 
     public void CompleteTask()
     {
-        numberOfCompletedTasks++;
+        ++numberOfCompletedTasks;
     }
 
     public void AllTasksCompleted()

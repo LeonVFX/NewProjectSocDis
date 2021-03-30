@@ -82,6 +82,7 @@ public class GameManager : MonoBehaviour
                 OnStage2?.Invoke();
                 break;
             case GameStage.Stage2:
+                currentStage = GameStage.End;
                 OnEnd?.Invoke();
                 break;
             case GameStage.End:

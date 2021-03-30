@@ -19,6 +19,10 @@ public class CreatureSprint : MonoBehaviour
     private void Start()
     {
         playerView = GetComponent<PhotonView>();
+
+        if (!playerView.IsMine)
+            return;
+
         creature = GetComponent<Creature>();
         pMovement = GetComponent<PlayerMovement>();
         rb = GetComponent<Rigidbody>();
@@ -31,6 +35,9 @@ public class CreatureSprint : MonoBehaviour
 
     private void Update()
     {
+        if (!playerView.IsMine)
+            return;
+
         if (Input.GetButtonDown("Run"))
             pMovement.PlayerSpeed += speedDifference;
         if (Input.GetButtonUp("Run"))
@@ -39,6 +46,9 @@ public class CreatureSprint : MonoBehaviour
 
     private void LateUpdate()
     {
+        if (!playerView.IsMine)
+            return;
+
         if (rb.velocity.magnitude > 4f)
             LeaveTrack();
     }
@@ -47,7 +57,8 @@ public class CreatureSprint : MonoBehaviour
     {
         if (!trackTimeout)
         {
-            playerView.RPC("RPC_Track", RpcTarget.All);
+            // playerView.RPC("RPC_Track", RpcTarget.All);
+            PhotonNetwork.InstantiateRoomObject(System.IO.Path.Combine("GamePrefabs", "Track"), transform.position + new Vector3(0f, 0.01f, 0f), Quaternion.Euler(90f, transform.rotation.y, transform.rotation.z));
             trackTimeout = true;
             IEnumerator trackLifespan = TrackLifespan();
             StartCoroutine(trackLifespan);

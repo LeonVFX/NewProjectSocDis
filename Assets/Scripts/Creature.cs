@@ -33,6 +33,9 @@ public class Creature : MonoBehaviour
 
     private void Start()
     {
+        if (!playerView.IsMine)
+            return;
+
         pMovement.PlayerSpeed *= player.speedMultiplier;
         killStunTime = creatureObject.killStunTime;
 
@@ -123,7 +126,6 @@ public class Creature : MonoBehaviour
                 // TODO: TOGGLE KILL
                 if (targetPlayers.Count == 0)
                 {
-                    Debug.Log(targetPlayers.Count);
                     player.PHUD.ToggleKillButtonInteractableInactive();
                 }
             }
