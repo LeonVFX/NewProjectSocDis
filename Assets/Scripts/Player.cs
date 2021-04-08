@@ -85,6 +85,8 @@ public class Player : MonoBehaviour
             return;
 
         transform.position = spawnLocation.GetPosition(playerView.OwnerActorNr);
+
+        PlayerManager.pm.ReadyPlayer();
     }
 
     protected virtual void OnGameStart()

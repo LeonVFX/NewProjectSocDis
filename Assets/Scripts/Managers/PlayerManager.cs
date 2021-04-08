@@ -12,8 +12,9 @@ public class PlayerManager : MonoBehaviour
     public static PlayerManager pm;
     public List<PhotonView> playerViews;
     public List<Player> playerList;
+    
+    public int playersReady = 0;
 
-    public int playerLoaded = 0;
     public int playersAlive
     {
         get
@@ -100,17 +101,6 @@ public class PlayerManager : MonoBehaviour
         }
     }
 
-    public void IncreasePlayerCount()
-    {
-        managerView.RPC("RPC_IncreasePlayerCount", RpcTarget.MasterClient);
-    }
-
-    [PunRPC]
-    private void RPC_IncreasePlayerCount()
-    {
-        ++playerLoaded;
-    }
-
     public void PickRole(int isCreature, int playerNumber)
     {
         managerView.RPC("RPC_PickRole", RpcTarget.All, isCreature, playerNumber);
@@ -146,5 +136,16 @@ public class PlayerManager : MonoBehaviour
             playerObject.AddComponent<ResearcherTasking>();
             playerObject.GetComponentInChildren<CapsuleCollider>().gameObject.layer = LayerMask.NameToLayer("Researcher");
         }
+    }
+
+    public void ReadyPlayer()
+    {
+        managerView.RPC("RPC_ReadyPlayer", RpcTarget.MasterClient);
+    }
+
+    [PunRPC]
+    private void RPC_ReadyPlayer()
+    {
+        ++playersReady;
     }
 }

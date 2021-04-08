@@ -69,21 +69,6 @@ public class RoomMatchMaking : MonoBehaviourPunCallbacks, IInRoomCallbacks
         playerSettings = GetComponent<PlayerStgs>();
     }
 
-    private void Update()
-    {
-        // Set Stage 1
-        // If every player is loaded, proceed to the creation of items and go to Next Stage
-        if (!PhotonNetwork.IsMasterClient)
-            return;
-
-        if (GameManager.gm)
-        {
-            if (PlayerManager.pm.playerLoaded == playersInRoom &&
-                GameManager.gm.currentStage == GameManager.GameStage.Setup)
-            phoView.RPC("RPC_CreateInteractions", RpcTarget.MasterClient);
-        }
-    }
-
     public override void OnJoinedRoom()
     {
         // sets player data when we join the room

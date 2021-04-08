@@ -8,16 +8,22 @@ public class Level : MonoBehaviour
     void Start()
     {
         if (PhotonNetwork.IsMasterClient)
+        {
             GameManager.gm.NextStage();
-
-        StartCoroutine(WaitForStart());
+            StartCoroutine(WaitForStart());
+        }
     }
 
     private IEnumerator WaitForStart()
     {
-        yield return new WaitForSeconds(1);
-        if (PhotonNetwork.IsMasterClient)
-            GameManager.gm.NextStage();
+        int playerCount = PlayerManager.pm.playerList.Count;
+
+        while (PlayerManager.pm.playersReady < playerCount)
+            yield return null;
+
+
+
+        GameManager.gm.NextStage();
         yield return null;
     }
 }
