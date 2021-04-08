@@ -42,7 +42,7 @@ public class Player : MonoBehaviour
     }
 
 
-    protected virtual void Awake()
+    private void Awake()
     {
         pMovement = GetComponent<PlayerMovement>();
 
@@ -54,7 +54,7 @@ public class Player : MonoBehaviour
         DontDestroyOnLoad(this);
     }
 
-    protected virtual void Start()
+    private void Start()
     {
         isAlive = true;
 
@@ -76,10 +76,10 @@ public class Player : MonoBehaviour
             return;
 
         cam = Camera.main.GetComponent<Camera>();
-        cam.GetComponent<CameraFollow>().setTarget(gameObject.transform);
+        cam.GetComponent<CameraFollow>().SetTarget(gameObject.transform);
     }
 
-    protected virtual void OnGameSetup()
+    private void OnGameSetup()
     {
         if (!playerView.IsMine)
             return;
@@ -89,16 +89,16 @@ public class Player : MonoBehaviour
         PlayerManager.pm.ReadyPlayer();
     }
 
-    protected virtual void OnGameStart()
+    private void OnGameStart()
     {
         if (!playerView.IsMine)
             return;
 
         cam = Camera.main.GetComponent<Camera>();
-        cam.GetComponent<CameraFollow>().setTarget(gameObject.transform);
+        cam.GetComponent<CameraFollow>().SetTarget(gameObject.transform);
     }
 
-    protected virtual void Update()
+    private void Update()
     {
         if (!playerView.IsMine || !isAlive)
             return;

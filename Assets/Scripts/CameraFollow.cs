@@ -20,7 +20,7 @@ public class CameraFollow : MonoBehaviour
         }
     }
 
-    public void setTarget(Transform target)
+    public void SetTarget(Transform target)
     {
         playerTransform = target;
     }

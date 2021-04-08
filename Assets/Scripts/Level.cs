@@ -21,7 +21,8 @@ public class Level : MonoBehaviour
         while (PlayerManager.pm.playersReady < playerCount)
             yield return null;
 
-
+        // 1 second Buffer
+        yield return new WaitForSeconds(1);
 
         GameManager.gm.NextStage();
         yield return null;
