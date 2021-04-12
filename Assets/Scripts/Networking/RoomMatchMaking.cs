@@ -22,6 +22,7 @@ public class RoomMatchMaking : MonoBehaviourPunCallbacks, IInRoomCallbacks
     public int myNumberInRoom;
 
     public int playersInGame;
+    public int doorNumber;
 
     // Delayed start
     private bool readyToCount;
@@ -254,6 +255,7 @@ public class RoomMatchMaking : MonoBehaviourPunCallbacks, IInRoomCallbacks
             //phoView.RPC("RPC_CreateLevel", RpcTarget.MasterClient);
             phoView.RPC("RPC_CreatePlayer", RpcTarget.All);
             phoView.RPC("RPC_CreateInteractions", RpcTarget.MasterClient);
+            phoView.RPC("RPC_CreateDoors", RpcTarget.All);
             GameManager.gm.NextStage();
         }
     }
@@ -298,6 +300,13 @@ public class RoomMatchMaking : MonoBehaviourPunCallbacks, IInRoomCallbacks
         PhotonNetwork.InstantiateRoomObject(System.IO.Path.Combine("LevelPrefabs", "Items"), Vector3.zero, Quaternion.Euler(0f, 225f, 0f));
         PhotonNetwork.InstantiateRoomObject(System.IO.Path.Combine("LevelPrefabs", "EscapePods"), Vector3.zero, Quaternion.Euler(0f, 225f, 0f));
         PhotonNetwork.InstantiateRoomObject(System.IO.Path.Combine("LevelPrefabs", "VoteButton"), Vector3.zero, Quaternion.Euler(0f, 225f, 0f));
+        //PhotonNetwork.InstantiateRoomObject(System.IO.Path.Combine("LevelPrefabs", "Doors"), Vector3.zero, Quaternion.Euler(0f, 225f, 0f));
+    }
+
+    [PunRPC]
+    private void RPC_CreateDoors()
+    {
+        PhotonNetwork.InstantiateRoomObject(System.IO.Path.Combine("LevelPrefabs", "Doors"), Vector3.zero, Quaternion.Euler(0f, 225f, 0f));
     }
 
     public override void OnPlayerLeftRoom(Photon.Realtime.Player otherPlayer)
