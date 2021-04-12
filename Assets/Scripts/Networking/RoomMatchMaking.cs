@@ -178,6 +178,9 @@ public class RoomMatchMaking : MonoBehaviourPunCallbacks, IInRoomCallbacks
         PhotonNetwork.InstantiateRoomObject(System.IO.Path.Combine("LevelPrefabs", "Items"), Vector3.zero, Quaternion.Euler(0f, 225f, 0f));
         PhotonNetwork.InstantiateRoomObject(System.IO.Path.Combine("LevelPrefabs", "EscapePods"), Vector3.zero, Quaternion.Euler(0f, 225f, 0f));
         PhotonNetwork.InstantiateRoomObject(System.IO.Path.Combine("LevelPrefabs", "VoteButton"), Vector3.zero, Quaternion.Euler(0f, 225f, 0f));
+        PhotonNetwork.InstantiateRoomObject(System.IO.Path.Combine("LevelPrefabs", "Doors"), Vector3.zero, Quaternion.Euler(0f, 225f, 0f));
+        // PhotonNetwork.InstantiateRoomObject(System.IO.Path.Combine("LevelPrefabs", "SmallDoors"), Vector3.zero, Quaternion.Euler(0f, 225f, 0f));
+        // PhotonNetwork.InstantiateRoomObject(System.IO.Path.Combine("LevelPrefabs", "BigDoors"), Vector3.zero, Quaternion.Euler(0f, 225f, 0f));
         ItemManager.im.SetupItemsToPlayers();
     }
 

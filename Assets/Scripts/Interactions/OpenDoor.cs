@@ -16,6 +16,10 @@ public class OpenDoor : MonoBehaviour
     //float timer = 0.0f;
     private bool isButtonPressed = false;
 
+   // private List<OpenDoor> doorList;
+   // private int numberOfDoors = 13;
+   // public List<OpenDoor> DoorRange;
+
     //the door
     [SerializeField] GameObject Door;
 
@@ -41,8 +45,8 @@ public class OpenDoor : MonoBehaviour
             if (isButtonPressed)
             {                         
                     //Debug.Log("Door state changing");                
-                     //change = !change;
-                     //Door.SetActive(change);
+                     change = !change;
+                     Door.SetActive(change);
                     // Changed();                     
                      doorView.RPC("RPC_DoorChange", RpcTarget.All);
             }
@@ -135,6 +139,21 @@ public class OpenDoor : MonoBehaviour
         change = !change;
         Door.SetActive(change);
     }
+
+/*    private void RPC_SetUpDoors()
+    {
+        doorList = new List<OpenDoor>(FindObjectsOfType<OpenDoor>());
+        foreach (Player player in PlayerManager.pm.playerList)
+        {
+            if (!player.playerView.IsMine)
+                continue;
+
+            foreach (OpenDoor door in doorList)
+            {
+               
+            }
+        }
+    }*/
     /*public void Destroyed()
     {
         DoorDestroyed?.Invoke();
