@@ -5,15 +5,10 @@ using Photon.Pun;
 
 public class OpenDoor : MonoBehaviour
 {
-   // public event System.Action DoorChange;
-   // public event System.Action DoorDestroyed;
     private PhotonView doorView;
-    public static OpenDoor od;
-    //   float distancetoTarget;
     bool open = false;
     bool broke = false;
     bool change = true;
-    //float timer = 0.0f;
     private bool isButtonPressed = false;
 
    // private List<OpenDoor> doorList;
@@ -38,16 +33,19 @@ public class OpenDoor : MonoBehaviour
     }
     private void Update()
     {
+        if (!PhotonNetwork.IsMasterClient)
+            return;
+
         //once true the door will move
         if (open == true)
         {
             //After Interact used moves door away
             if (isButtonPressed)
-            {                         
-                    //Debug.Log("Door state changing");                
-                     change = !change;
-                     Door.SetActive(change);
-                    // Changed();                     
+            {
+                    // Debug.Log("Door state changing");                
+                    // change = !change;
+                    // Door.SetActive(change);
+                    // Changed();
                      doorView.RPC("RPC_DoorChange", RpcTarget.All);
             }
         }
@@ -61,8 +59,6 @@ public class OpenDoor : MonoBehaviour
             }
         }
     }
-
-   
 
     private void OnTriggerEnter(Collider other)
     {
@@ -78,6 +74,7 @@ public class OpenDoor : MonoBehaviour
 
             if (!playerView.IsMine)
                 return;
+            
             open = true;
         }
 
