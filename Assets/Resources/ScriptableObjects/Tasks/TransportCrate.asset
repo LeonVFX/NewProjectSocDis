@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df63916350ee3bc42846cb947dcfed80, type: 3}
   m_Name: TransportCrate
   m_EditorClassIdentifier: 
-  taskName: Transport Crate
-  taskDescription: Transport the material crate to the lab
+  taskName: Storage Box
+  taskDescription: Retrieve storage box from garden
   taskRequiredItemType: 3

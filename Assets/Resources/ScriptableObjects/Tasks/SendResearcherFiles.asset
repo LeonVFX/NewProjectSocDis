@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df63916350ee3bc42846cb947dcfed80, type: 3}
   m_Name: SendResearcherFiles
   m_EditorClassIdentifier: 
-  taskName: Send Researcher Filed
-  taskDescription: Send the Head Researcher crucial files
+  taskName: Documents
+  taskDescription: Take the research up to the office
   taskRequiredItemType: 6

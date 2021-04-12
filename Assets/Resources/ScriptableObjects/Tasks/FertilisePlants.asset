@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: df63916350ee3bc42846cb947dcfed80, type: 3}
-  m_Name: FertilizePlants
+  m_Name: FertilisePlants
   m_EditorClassIdentifier: 
-  taskName: Plants
-  taskDescription: Take care of the aquatic plants with the fertilizer
+  taskName: Plant Laboratory
+  taskDescription: Find fertiliser to feed the garden
   taskRequiredItemType: 5

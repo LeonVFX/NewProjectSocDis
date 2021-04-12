@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df63916350ee3bc42846cb947dcfed80, type: 3}
   m_Name: RefillTank
   m_EditorClassIdentifier: 
-  taskName: Engine
-  taskDescription: Take the Gas Can to refill the Fuel Engine
+  taskName: Gas Canister
+  taskDescription: Fuel engine with petrol
   taskRequiredItemType: 1
