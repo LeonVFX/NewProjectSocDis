@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    public event System.Action OnSetup;
     public event System.Action OnStage1;
     public event System.Action OnVoteStage;
     public event System.Action OnStage2;
@@ -14,6 +15,7 @@ public class GameManager : MonoBehaviour
 
     public enum GameStage
     {
+        Lobby,
         Setup,
         Stage1,
         Voting,
@@ -41,7 +43,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         managerView = GetComponent<PhotonView>();
-        currentStage = GameStage.Setup;
+        currentStage = GameStage.Lobby;
     }
 
     private void Update()
@@ -63,6 +65,10 @@ public class GameManager : MonoBehaviour
     {
         switch (currentStage)
         {
+            case GameStage.Lobby:
+                currentStage = GameStage.Setup;
+                OnSetup?.Invoke();
+                break;
             case GameStage.Setup:
                 currentStage = GameStage.Stage1;
                 OnStage1?.Invoke();
@@ -76,6 +82,7 @@ public class GameManager : MonoBehaviour
                 OnStage2?.Invoke();
                 break;
             case GameStage.Stage2:
+                currentStage = GameStage.End;
                 OnEnd?.Invoke();
                 break;
             case GameStage.End:

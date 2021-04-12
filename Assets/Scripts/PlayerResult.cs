@@ -18,7 +18,7 @@ public class PlayerResult : MonoBehaviour
         Died,
         ResearcherEscaped,
         InfectedEscaped,
-        CreatureKilledEverybody,
+        AllResearchersEliminated,
         CreatureVotedOut
     }
 
@@ -28,12 +28,18 @@ public class PlayerResult : MonoBehaviour
     {
         playerView = GetComponent<PhotonView>();
         player = GetComponent<Player>();
+
+        GameManager.gm.OnStage1 += OnGameStart;
+    }
+
+    private void OnGameStart()
+    {
         endResult = FindObjectOfType<EndResult>();
 
         EndManager.em.OnDie += Died;
         EndManager.em.OnEscape += ResearcherEscaped;
-        EndManager.em.AllEliminated += CreatureKilledEverybody;
-        EndManager.em.CreatureOut += CreatureVotedOut;
+        EndManager.em.OnCreatureVoted += CreatureVotedOut;
+        EndManager.em.OnAllResearchersEliminated += CreatureKilledEverybody;
     }
 
     private void Update()
@@ -53,6 +59,10 @@ public class PlayerResult : MonoBehaviour
 
         winState = WinState.Died;
         FinishGame();
+
+        // If only the creature is alive
+        if (PlayerManager.pm.playersAlive == 1)
+            EndManager.em.AllResearchersEliminated();
     }
 
     // If Researcher Escaped
@@ -61,7 +71,10 @@ public class PlayerResult : MonoBehaviour
         if (!playerView.IsMine)
             return;
 
-        Researcher researcher = player as Researcher;
+        Researcher researcher = GetComponent<Researcher>();
+        if (!researcher)
+            return;
+
         if (researcher.isInfected == true)
         {
             winState = WinState.InfectedEscaped;
@@ -75,16 +88,47 @@ public class PlayerResult : MonoBehaviour
         FinishGameAndDestroy();
     }
 
+    // If creature killed all researchers
     private void CreatureKilledEverybody()
     {
-        winState = WinState.CreatureKilledEverybody;
-        FinishGameAndDestroy();
+        if (!playerView.IsMine)
+            return;
+
+        if (this != null)
+        {
+            if (GetComponent<Creature>())
+            {
+                endResult.ResultString = "You Eliminated All Researchers!";
+                player.PHUD.UpdateMessageLog($"You Eliminated All Researchers!", Color.red);
+                winState = WinState.AllResearchersEliminated;
+                FinishGame();
+            }
+        }
     }
 
+    // If creature was voted out
     private void CreatureVotedOut()
     {
-        winState = WinState.CreatureVotedOut;
-        FinishGameAndDestroy();
+        if (!playerView.IsMine)
+            return;
+
+        if (this != null)
+        {
+            if (GetComponent<Creature>())
+            {
+                endResult.ResultString = "You Were Discovered!";
+                player.PHUD.UpdateMessageLog($"You Were Discovered!", Color.red);
+            }
+
+            if (GetComponent<Researcher>())
+            {
+                endResult.ResultString = "You Kicked The Creature!";
+                player.PHUD.UpdateMessageLog($"You Kicked The Creature!", Color.blue);
+            }
+
+            winState = WinState.CreatureVotedOut;
+            FinishGame();
+        }
     }
 
     private void FinishGame()
@@ -92,7 +136,7 @@ public class PlayerResult : MonoBehaviour
         if (!playerView.IsMine)
             return;
 
-        playerView.RPC("RPC_AddToEndList", RpcTarget.All);
+        playerView.RPC("RPC_AddToEndList", RpcTarget.MasterClient);
         playerView.RPC("RPC_CheckForEndGame", RpcTarget.MasterClient);
     }
 
@@ -101,7 +145,7 @@ public class PlayerResult : MonoBehaviour
         if (!playerView.IsMine)
             return;
 
-        playerView.RPC("RPC_AddToEndList", RpcTarget.All);
+        playerView.RPC("RPC_AddToEndList", RpcTarget.MasterClient);
         playerView.RPC("RPC_CheckForEndGame", RpcTarget.MasterClient);
 
         // Destroys player on Network when finished
@@ -111,7 +155,7 @@ public class PlayerResult : MonoBehaviour
     [PunRPC]
     private void RPC_AddToEndList()
     {
-        EndManager.em.playerResults.Add(this);
+        ++EndManager.em.playerResults;
     }
 
     [PunRPC]

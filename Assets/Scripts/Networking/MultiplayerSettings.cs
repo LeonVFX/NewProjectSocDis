@@ -10,6 +10,7 @@ public class MultiplayerSettings : MonoBehaviour
     public int maxPlayers;
 
     public int menuScene;
+    public int waitingRoom;
     public int loadingScene;
     public int multiplayerScene;
     public int endScene;

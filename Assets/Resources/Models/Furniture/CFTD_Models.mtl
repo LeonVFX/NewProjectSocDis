@@ -94,9 +94,6 @@ Kd 0 0.439 0.875
 newmtl custom40(Clone)
 Kd 0.087 0.246 0.4
 
-newmtl Material.000(Clone)
-Kd 0.162 0.138 0.118
-
 newmtl custom11(Clone)
 Kd 0 0.259 0.173
 
@@ -125,64 +122,58 @@ Kd 0.528 0.528 0.528
 newmtl metalLight(Clone)
 Kd 0.698 0.686 0.867
 
-newmtl custom82(Clone)
-Kd 0.366 0.311 0.297
-map_Kd Textures/custom82(Clone).png
-
-newmtl aiStandardSurface1SG(Clone)
-Kd 0 0 0
-
-newmtl brownLight(Clone)
-Kd 0.976 0.773 0.549
-
 newmtl white(Clone)
 Kd 0.945 0.949 0.965
-
-newmtl red(Clone)
-Kd 0.91 0.333 0.325
-
-newmtl green(Clone)
-Kd 0.341 0.737 0.592
-
-newmtl brown(Clone)
-Kd 0.827 0.565 0.404
-
-newmtl custom33(Clone)
-Kd 0 0.361 0.302
-
-newmtl greyLight(Clone)
-Kd 0.843 0.902 0.953
-
-newmtl brownDark(Clone)
-Kd 0.639 0.388 0.278
 
 newmtl metal(Clone)
 Kd 0.471 0.565 0.612
 
-newmtl VaultDoorCog(Clone)
-Kd 0.092 0.092 0.092
+newmtl brownDark(Clone)
+Kd 0.639 0.388 0.278
+
+newmtl brownLight(Clone)
+Kd 0.976 0.773 0.549
+
+newmtl brown(Clone)
+Kd 0.827 0.565 0.404
 
 newmtl yellow(Clone)
 Kd 0.961 0.725 0.259
 
-newmtl greyDark(Clone)
-Kd 0.529 0.6 0.667
-
-newmtl orange(Clone)
-Kd 1 0.451 0.227
+newmtl red(Clone)
+Kd 0.91 0.333 0.325
 
 newmtl redLight(Clone)
 Kd 0.969 0.494 0.408
 
-newmtl purpleLight(Clone)
-Kd 0.91 0.604 0.816
+newmtl greyDark(Clone)
+Kd 0.529 0.6 0.667
+
+newmtl custom82(Clone)
+Kd 0.366 0.311 0.297
+map_Kd Textures/custom82(Clone).png
+
+newmtl green(Clone)
+Kd 0.341 0.737 0.592
+
+newmtl greyLight(Clone)
+Kd 0.843 0.902 0.953
 
 newmtl purple(Clone)
 Kd 0.624 0.557 0.91
 
+newmtl purpleLight(Clone)
+Kd 0.91 0.604 0.816
+
 newmtl custom80(Clone)
 Kd 0.476 0.427 0.396
 map_Kd Textures/custom80(Clone).png
+
+newmtl aiStandardSurface1SG(Clone)
+Kd 0 0 0
+
+newmtl orange(Clone)
+Kd 1 0.451 0.227
 
 newmtl custom84(Clone)
 Kd 0.204 0.239 0.275
@@ -205,29 +196,23 @@ Kd 0.883 0.871 0.871
 newmtl metalDark(Clone)
 Kd 0.306 0.388 0.388
 
-newmtl aiStandardSurface7SG(Clone)
-Kd 0 0 0
+newmtl custom8(Clone)
+Kd 0.059 0.6 0.545
+
+newmtl Material.001(Clone)
+Kd 0.162 0.138 0.118
 
 newmtl metalMedium(Clone)
 Kd 0.369 0.467 0.467
 
-newmtl custom8(Clone)
-Kd 0.059 0.6 0.545
-
-newmtl woodDark(Clone)
-Kd 0.678 0.456 0.299
+newmtl foliageDark(Clone)
+Kd 0 0.528 0.478
 
 newmtl carpetDarker(Clone)
 Kd 0.608 0.298 0.285
 
 newmtl plant(Clone)
 Kd 0.182 0.821 0.576
-
-newmtl Material.001(Clone)
-Kd 0.162 0.138 0.118
-
-newmtl foliageDark(Clone)
-Kd 0 0.528 0.478
 
 newmtl Material(Clone)
 Kd 0.216 0.278 0.31
@@ -239,11 +224,14 @@ Kd 0.162 0.138 0.118
 newmtl Material.003(Clone)
 Kd 0.106 0.106 0.106
 
-newmtl custom37(Clone)
-Kd 0.722 0.071 0
+newmtl VaultDoorCog(Clone)
+Kd 0.092 0.092 0.092
 
 newmtl Rose(Clone)
 Kd 0.577 0.035 0.035
+
+newmtl woodDark(Clone)
+Kd 0.678 0.456 0.299
 
 newmtl stoneDark(Clone)
 Kd 0.403 0.39 0.594
@@ -274,6 +262,18 @@ Kd 0.502 0.502 0.502
 newmtl custom93(Clone)
 Kd 0.443 0.471 0.545
 map_Kd Textures/custom93(Clone).png
+
+newmtl custom37(Clone)
+Kd 0.722 0.071 0
+
+newmtl Material.000(Clone)
+Kd 0.162 0.138 0.118
+
+newmtl custom33(Clone)
+Kd 0 0.361 0.302
+
+newmtl aiStandardSurface7SG(Clone)
+Kd 0 0 0
 
 newmtl woodBarkDark(Clone)
 Kd 0.8 0.463 0.369

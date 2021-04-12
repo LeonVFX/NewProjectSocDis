@@ -15,6 +15,10 @@ public class TaskManager : MonoBehaviour
     public int maxNumberOfTasks = 0;
 
     private Task[] taskList;
+    public Task[] TaskList
+    {
+        get { return taskList; }
+    }
 
     private void Awake()
     {
@@ -22,7 +26,6 @@ public class TaskManager : MonoBehaviour
         if (tm == null)
         {
             tm = this;
-            //DontDestroyOnLoad(gameObject);
         }
         else
         {
@@ -43,7 +46,7 @@ public class TaskManager : MonoBehaviour
 
     public void CompleteTask()
     {
-        numberOfCompletedTasks++;
+        ++numberOfCompletedTasks;
     }
 
     public void AllTasksCompleted()

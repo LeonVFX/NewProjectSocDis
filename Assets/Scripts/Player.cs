@@ -11,6 +11,8 @@ public class Player : MonoBehaviour
     // Events
     public event System.Action OnDeath;
 
+    [SerializeField] private SpawnPoints spawnLocation;
+
     // Basic Player Components
     public PhotonView playerView = null;
     protected PlayerMovement pMovement;
@@ -22,12 +24,12 @@ public class Player : MonoBehaviour
     }
 
     // Player Stats
-    [SerializeField] protected int playerNumber;
-    public int PlayerNumber
-    {
-        get { return playerNumber; }
-        set { playerNumber = value; }
-    }
+    //[SerializeField] protected int playerNumber;
+    //public int PlayerNumber
+    //{
+    //    get { return playerNumber; }
+    //    set { playerNumber = value; }
+    //}
     [SerializeField] protected float baseSpeed = 30.0f;
     public float speedMultiplier = 1.0f;
     public bool isAlive;
@@ -40,7 +42,7 @@ public class Player : MonoBehaviour
     }
 
 
-    protected virtual void Awake()
+    private void Awake()
     {
         pMovement = GetComponent<PlayerMovement>();
 
@@ -48,12 +50,16 @@ public class Player : MonoBehaviour
         pHUD = GetComponentInChildren<PlayerHUD>();
         playerView = GetComponent<PhotonView>();
         pHUD.playerView = playerView;
+
+        DontDestroyOnLoad(this);
     }
 
-    protected virtual void Start()
+    private void Start()
     {
         isAlive = true;
 
+        GameManager.gm.OnSetup += OnGameSetup;
+        GameManager.gm.OnStage1 += OnGameStart;
         GameManager.gm.OnVoteStage += PreventMovement;
         GameManager.gm.OnStage2 += AllowMovement;
 
@@ -65,14 +71,34 @@ public class Player : MonoBehaviour
         PlayerManager.pm.SpawnPlayer(this);
 
         pMovement.PlayerSpeed = baseSpeed;
-        
-        cam = Camera.main.GetComponent<Camera>();
 
-        if (playerView.IsMine)
-            cam.GetComponent<CameraFollow>().setTarget(gameObject.transform);
+        if (!playerView.IsMine)
+            return;
+
+        cam = Camera.main.GetComponent<Camera>();
+        cam.GetComponent<CameraFollow>().SetTarget(gameObject.transform);
     }
 
-    protected virtual void Update()
+    private void OnGameSetup()
+    {
+        if (!playerView.IsMine)
+            return;
+
+        transform.position = spawnLocation.GetPosition(playerView.OwnerActorNr);
+
+        PlayerManager.pm.ReadyPlayer();
+    }
+
+    private void OnGameStart()
+    {
+        if (!playerView.IsMine)
+            return;
+
+        cam = Camera.main.GetComponent<Camera>();
+        cam.GetComponent<CameraFollow>().SetTarget(gameObject.transform);
+    }
+
+    private void Update()
     {
         if (!playerView.IsMine || !isAlive)
             return;
@@ -82,38 +108,26 @@ public class Player : MonoBehaviour
             return;
     }
 
-    protected void PreventMovement()
+    public void PreventMovement()
     {
         pMovement.CanMove = false;
     }
 
-    protected void AllowMovement()
+    public void AllowMovement()
     {
         pMovement.CanMove = true;
-    }
-
-    //public void Die()
-    //{
-    //    Debug.Log($"Player { this.name } Died");
-    //    OnDeath?.Invoke();
-    //    isAlive = false;
-    //}
-
-    public void Die()
-    {
-        if (!playerView.IsMine)
-            return;
-
-        playerView.RPC("RPC_Die", RpcTarget.All);
-        EndManager.em.Die();
     }
 
     [PunRPC]
     public void RPC_Die()
     {
         Debug.Log($"Player { this.name } Died");
+
         OnDeath?.Invoke();
         isAlive = false;
+
+        if (playerView.IsMine)
+            EndManager.em.Die();
     }
 
     //When Touching UI

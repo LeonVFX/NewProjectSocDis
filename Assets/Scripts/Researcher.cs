@@ -3,26 +3,37 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Researcher : Player
+public class Researcher : MonoBehaviour
 {
+    PhotonView playerView;
+    Player player;
+    PlayerMovement pMovement;
+    public ResearcherObject researcherObject;
+
     public bool isInfected = false;
 
-    protected override void Start()
+    private void Awake()
     {
-        base.Start();
-
-        pMovement.PlayerSpeed *= speedMultiplier;
-
-        // Deactivate Creature UI
-        PHUD.ToggleKillButtonActive();
-        pHUD.ToggleGoopAmountActive();
+        playerView = GetComponent<PhotonView>();
+        player = GetComponent<Player>();
+        pMovement = GetComponent<PlayerMovement>();
     }
 
-    protected override void Update()
+    private void Start()
     {
-        base.Update();
+        if (!playerView.IsMine)
+            return;
 
-        if (!playerView.IsMine || !isAlive)
+        pMovement.PlayerSpeed *= player.speedMultiplier;
+
+        // Deactivate Creature UI
+        player.PHUD.ToggleKillButtonActive();
+        player.PHUD.ToggleGoopAmountActive();
+    }
+
+    private void Update()
+    {
+        if (!playerView.IsMine || !player.isAlive)
             return;
     }
 

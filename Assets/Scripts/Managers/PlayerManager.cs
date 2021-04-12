@@ -12,6 +12,9 @@ public class PlayerManager : MonoBehaviour
     public static PlayerManager pm;
     public List<PhotonView> playerViews;
     public List<Player> playerList;
+    
+    public int playersReady = 0;
+
     public int playersAlive
     {
         get
@@ -50,15 +53,31 @@ public class PlayerManager : MonoBehaviour
         OnSpawn?.Invoke(player);
     }
 
+    public bool IsCreature(int playerID)
+    {
+        foreach (PhotonView playerView in playerViews)
+        {
+            if (playerView)
+                if (playerView.OwnerActorNr == playerID)
+                {
+                    if (playerView.GetComponent<Creature>())
+                        return true;
+                    else
+                        return false;
+                }
+        }
+        return false;
+    }
+
     public void KillPlayer(int playerID)
     {
         foreach (PhotonView playerView in playerViews)
         {
-            if (playerView != null)
+            if (playerView)
                 if (playerView.OwnerActorNr == playerID)
                 {
-                    playerView.GetComponent<Player>().Die();
-                    //playerView.RPC("RPC_Die", RpcTarget.All);
+                    //playerView.GetComponent<Player>().Die();
+                    playerView.RPC("RPC_Die", RpcTarget.All);
                     break;
                 }
         }
@@ -80,5 +99,53 @@ public class PlayerManager : MonoBehaviour
                     Destroy(playerView.gameObject);
                 }
         }
+    }
+
+    public void PickRole(int isCreature, int playerNumber)
+    {
+        managerView.RPC("RPC_PickRole", RpcTarget.All, isCreature, playerNumber);
+    }
+
+    [PunRPC]
+    private void RPC_PickRole(int isCreature, int playerNumber)
+    {
+        GameObject playerObject = playerList[playerNumber - 1].gameObject;
+
+        // if Creature
+        if (isCreature == playerNumber)
+        {
+            playerObject.tag = "Creature";
+            playerObject.layer = LayerMask.NameToLayer("Creature");
+            CreatureObject creatureObject = Resources.Load<CreatureObject>("ScriptableObjects/BaseCreature");
+            playerObject.AddComponent<Creature>();
+            playerObject.GetComponent<Creature>().creatureObject = creatureObject;
+            playerObject.AddComponent<CreatureInfection>();
+            playerObject.AddComponent<CreatureSabotage>();
+            playerObject.AddComponent<CreatureSprint>();
+            playerObject.AddComponent<CreatureHinting>();
+            playerObject.GetComponentInChildren<CapsuleCollider>().gameObject.layer = LayerMask.NameToLayer("Creature");
+        }
+        // if Researcher
+        else
+        {
+            playerObject.tag = "Researcher";
+            playerObject.layer = LayerMask.NameToLayer("Researcher");
+            ResearcherObject researcherObject = Resources.Load<ResearcherObject>("ScriptableObjects/BaseResearcher");
+            playerObject.AddComponent<Researcher>();
+            playerObject.GetComponent<Researcher>().researcherObject = researcherObject;
+            playerObject.AddComponent<ResearcherTasking>();
+            playerObject.GetComponentInChildren<CapsuleCollider>().gameObject.layer = LayerMask.NameToLayer("Researcher");
+        }
+    }
+
+    public void ReadyPlayer()
+    {
+        managerView.RPC("RPC_ReadyPlayer", RpcTarget.MasterClient);
+    }
+
+    [PunRPC]
+    private void RPC_ReadyPlayer()
+    {
+        ++playersReady;
     }
 }

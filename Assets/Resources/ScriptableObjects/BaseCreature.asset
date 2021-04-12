@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f07024bc631a6546bf4c22492d8d358, type: 3}
+  m_Name: BaseCreature
+  m_EditorClassIdentifier: 
+  killStunTime: 3
+  trackInterval: 2
+  speedDifference: 10
+  footprintPrefab: {fileID: 9104673859528969927, guid: 6dd4033c6f17ea147924d5224a865e7c, type: 3}
+  goopInterval: 1
+  goopParticlePrefab: {fileID: 1000012909287652, guid: abb9f519b142e304d9c45b56afa768bc, type: 3}
+  goopStartTime: 5
+  goopBufferTime: 3

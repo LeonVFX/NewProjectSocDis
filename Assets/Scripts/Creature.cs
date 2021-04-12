@@ -6,8 +6,13 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public class Creature : Player
+public class Creature : MonoBehaviour
 {
+    private PhotonView playerView;
+    private Player player;
+    private PlayerMovement pMovement;
+    public CreatureObject creatureObject;
+
     // Event activated when killing
     public event System.Action OnKill;
 
@@ -19,58 +24,58 @@ public class Creature : Player
 
     private List<Player> targetPlayers;
 
-    protected override void Start()
+    private void Awake()
     {
-        base.Start();
+        playerView = GetComponent<PhotonView>();
+        player = GetComponent<Player>();
+        pMovement = GetComponent<PlayerMovement>();
+    }
 
-        pMovement.PlayerSpeed *= speedMultiplier;
+    private void Start()
+    {
+        if (!playerView.IsMine)
+            return;
+
+        pMovement.PlayerSpeed *= player.speedMultiplier;
+        killStunTime = creatureObject.killStunTime;
 
         targetPlayers = new List<Player>();
         canKill = true;
         isKill = false;
 
         GameManager.gm.OnStage2 += Stage2ToggleUI;
-        PHUD.OnKill += PressKill;
+        player.PHUD.OnKill += PressKill;
 
         // Deactivate Task List
-        PHUD.ToggleTaskListActive();
+        player.PHUD.ToggleTaskListActive();
         // Deactivate Kill For Stage 1
-        PHUD.ToggleKillButtonActive();
+        player.PHUD.ToggleKillButtonActive();
     }
 
-    protected override void Update()
+    private void Update()
     {
-        base.Update();
-
-        if (!playerView.IsMine || !isAlive)
+        if (!playerView.IsMine || !player.isAlive)
             return;
 
         // Call Killing
         if (isKill && canKill)
         {
             if (targetPlayers.Count > 0)
-                KillObject(targetPlayers[0].GetComponent<PhotonView>().ViewID);
+                KillObject(targetPlayers[0].GetComponent<PhotonView>().OwnerActorNr);
         }
     }
 
-    public void KillObject(int objPhotonViewId)
+    public void KillObject(int playerNumber)
     {
         // Basic Kill Effects
-        playerView.RPC("RPC_KillPlayer", RpcTarget.All, new object[] { objPhotonViewId });
+        PlayerManager.pm.KillPlayer(playerNumber);
         OnKill?.Invoke();
 
         // Kill Timer
-        PreventMovement();
+        player.PreventMovement();
 
         if (playerView.IsMine)
             StartCoroutine(KillTimer());
-    }
-
-    [PunRPC]
-    private void RPC_KillPlayer(int targetObjPhotonViewId)
-    {
-        GameObject targetPlayer = PhotonView.Find(targetObjPhotonViewId).gameObject;
-        targetPlayer.GetComponent<Player>().Die();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -95,8 +100,8 @@ public class Creature : Player
                 // TODO: TOGGLE KILL
                 if (targetPlayers.Count > 0)
                 {
-                    Debug.Log(targetPlayers.Count);
-                    pHUD.ToggleKillButtonInteractableActive();
+                    //Debug.Log(targetPlayers.Count);
+                    player.PHUD.ToggleKillButtonInteractableActive();
                 }
             }
         }
@@ -121,8 +126,7 @@ public class Creature : Player
                 // TODO: TOGGLE KILL
                 if (targetPlayers.Count == 0)
                 {
-                    Debug.Log(targetPlayers.Count);
-                    pHUD.ToggleKillButtonInteractableInactive();
+                    player.PHUD.ToggleKillButtonInteractableInactive();
                 }
             }
         }
@@ -132,7 +136,7 @@ public class Creature : Player
     {
         canKill = false;
         yield return new WaitForSeconds(killStunTime);
-        AllowMovement();
+        player.AllowMovement();
         canKill = true;
     }
 
@@ -154,6 +158,6 @@ public class Creature : Player
         if (!playerView.IsMine)
             return;
 
-        PHUD.ToggleKillButtonActive();
+        player.PHUD.ToggleKillButtonActive();
     }
 }

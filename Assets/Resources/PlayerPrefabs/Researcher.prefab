@@ -302,6 +302,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 132926187b036a443af25596255a2f83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnLocation: {fileID: 1037390675816425816, guid: 9c6a695222886bc40a49d4142f819d4b, type: 3}
   playerView: {fileID: 0}
   playerNumber: 0
   baseSpeed: 20
@@ -400,12 +401,12 @@ MonoBehaviour:
   ObservedComponentsFoldoutOpen: 1
   Group: 0
   prefixField: -1
-  observableSearch: 2
   Synchronization: 1
   OwnershipTransfer: 0
+  observableSearch: 2
   ObservedComponents:
   - {fileID: 3310738644516331060}
-  viewIdField: 0
+  sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
 --- !u!114 &3310738644516331060

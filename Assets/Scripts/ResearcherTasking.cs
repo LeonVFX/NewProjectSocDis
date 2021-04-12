@@ -14,9 +14,14 @@ public class ResearcherTasking : MonoBehaviour
 
     private void Start()
     {
+        GameManager.gm.OnStage1 += OnGameStart;
+
         playerView = GetComponent<PhotonView>();
         player = GetComponent<Player>();
+    }
 
+    private void OnGameStart()
+    {
         if (!playerView.IsMine)
             return;
 

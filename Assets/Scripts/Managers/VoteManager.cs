@@ -58,7 +58,13 @@ public class VoteManager : MonoBehaviour
         {
             int mostVotedPlayer = EndVoting();
             if (!resultDraw)
-                PlayerManager.pm.KillPlayer(mostVotedPlayer);
+            {
+                // END GAME IF CREATURE IS VOTED OUT
+                if (PlayerManager.pm.IsCreature(mostVotedPlayer))
+                    EndManager.em.CreatureVoted();
+                else
+                    PlayerManager.pm.KillPlayer(mostVotedPlayer);
+            }
             voteFinished = true;
             GameManager.gm.NextStage();
         }

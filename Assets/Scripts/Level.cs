@@ -1,18 +1,30 @@
-﻿using System.Collections;
+﻿using Photon.Pun;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Level : MonoBehaviour
 {
-    // Start is called before the first frame update
     void Start()
     {
-        
+        if (PhotonNetwork.IsMasterClient)
+        {
+            GameManager.gm.NextStage();
+            StartCoroutine(WaitForStart());
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    private IEnumerator WaitForStart()
     {
-        
+        int playerCount = PlayerManager.pm.playerList.Count;
+
+        while (PlayerManager.pm.playersReady < playerCount)
+            yield return null;
+
+        // 1 second Buffer
+        yield return new WaitForSeconds(1);
+
+        GameManager.gm.NextStage();
+        yield return null;
     }
 }
