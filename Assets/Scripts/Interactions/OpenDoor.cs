@@ -10,18 +10,12 @@ public class OpenDoor : MonoBehaviour
     bool broke = false;
     bool change = true;
     private bool isButtonPressed = false;
-
-   // private List<OpenDoor> doorList;
-   // private int numberOfDoors = 13;
-   // public List<OpenDoor> DoorRange;
-
+   
     //the door
     [SerializeField] GameObject Door;
 
     private void Start()
     {
-       // DoorChange += Changed;
-       // DoorDestroyed += Destroyed;
         doorView = GetComponent<PhotonView>();
 
         Player[] players = FindObjectsOfType<Player>();
@@ -42,10 +36,6 @@ public class OpenDoor : MonoBehaviour
             //After Interact used moves door away
             if (isButtonPressed)
             {
-                    // Debug.Log("Door state changing");                
-                    // change = !change;
-                    // Door.SetActive(change);
-                    // Changed();
                      doorView.RPC("RPC_DoorChange", RpcTarget.All);
             }
         }
@@ -54,8 +44,8 @@ public class OpenDoor : MonoBehaviour
         {
             if (isButtonPressed)
             {
-                GameObject.Destroy(Door);
-                //doorView.RPC("RPC_DoorDestroy", RpcTarget.All);
+                //GameObject.Destroy(Door);
+                doorView.RPC("RPC_DoorDestroy", RpcTarget.All);
             }
         }
     }
@@ -80,7 +70,7 @@ public class OpenDoor : MonoBehaviour
 
         if (otherParent.tag == "Creature" && GameManager.gm.currentStage == GameManager.GameStage.Stage2)
         {
-            Debug.Log("Not near door");
+            Debug.Log("Breakable Door");
             open = false;
             broke = true;
         }
@@ -124,10 +114,6 @@ public class OpenDoor : MonoBehaviour
         yield return new WaitForEndOfFrame();
         isButtonPressed = false;
     }
-   /* public void Changed()
-    {
-        DoorChange?.Invoke();       
-    }*/
 
     [PunRPC]
     private void RPC_DoorChange()
@@ -137,31 +123,14 @@ public class OpenDoor : MonoBehaviour
         Door.SetActive(change);
     }
 
-/*    private void RPC_SetUpDoors()
-    {
-        doorList = new List<OpenDoor>(FindObjectsOfType<OpenDoor>());
-        foreach (Player player in PlayerManager.pm.playerList)
-        {
-            if (!player.playerView.IsMine)
-                continue;
-
-            foreach (OpenDoor door in doorList)
-            {
-               
-            }
-        }
-    }*/
-    /*public void Destroyed()
-    {
-        DoorDestroyed?.Invoke();
-    }
-
     [PunRPC]
     private void RPC_DoorDestroy()
     {
         Debug.Log("Door destroyed");
         GameObject.Destroy(Door);
-    }*/
+        //Door.SetActive(false);
+        
+    }
 
 
 
