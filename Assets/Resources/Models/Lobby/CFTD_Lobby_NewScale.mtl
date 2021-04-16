@@ -1,0 +1,200 @@
+# Created by Kenney (www.kenney.nl)
+
+newmtl custom9(Clone)
+Kd 0.31 0.357 0.4
+map_Kd Textures/custom9(Clone).png
+
+newmtl custom40(Clone)
+Kd 0.087 0.246 0.4
+
+newmtl metal(Clone)
+Kd 0.471 0.565 0.612
+
+newmtl _defaultMat(Clone)
+Kd 0.939 0.953 1
+
+newmtl custom31(Clone)
+Kd 0.396 0.451 0.494
+map_Kd Textures/custom31(Clone).png
+
+newmtl VaultDoorMain(Clone)
+Kd 0.424 0.473 0.524
+map_Kd Textures/VaultDoorMain(Clone).png
+
+newmtl custom16(Clone)
+Kd 0 0.259 0.173
+
+newmtl grass(Clone)
+Kd 0.234 0.453 0.572
+
+newmtl initialShadingGroup(Clone)
+Kd 0 0.416 0.459
+
+newmtl custom7(Clone)
+Kd 0 0.361 0.302
+map_Kd Textures/custom7(Clone).png
+
+newmtl glass(Clone)
+Kd 0.883 0.871 0.871
+
+newmtl shield(Clone)
+Kd 0.18 0.196 0.259
+
+newmtl Pine_Leaves(Clone)
+Kd 0.126 0.404 0.204
+
+newmtl carpetWhite(Clone)
+Kd 0.973 1 1
+
+newmtl plant(Clone)
+Kd 0.182 0.821 0.576
+
+newmtl custom81(Clone)
+Kd 0.648 0.632 0.622
+map_Kd Textures/custom81(Clone).png
+
+newmtl dark(Clone)
+Kd 0.224 0.235 0.275
+
+newmtl brown(Clone)
+Kd 0.827 0.565 0.404
+
+newmtl brownDark(Clone)
+Kd 0.639 0.388 0.278
+
+newmtl green(Clone)
+Kd 0.341 0.737 0.592
+
+newmtl purpleLight(Clone)
+Kd 0.91 0.604 0.816
+
+newmtl red(Clone)
+Kd 0.91 0.333 0.325
+
+newmtl colorPurple(Clone)
+Kd 0.624 0.537 1
+
+newmtl colorWhite(Clone)
+Kd 1 1 1
+
+newmtl wood(Clone)
+Kd 1 0.491 0.327
+map_Kd Textures/wood(Clone).png
+
+newmtl brownDarkest(Clone)
+Kd 0.259 0.161 0.137
+
+newmtl custom82(Clone)
+Kd 0.366 0.311 0.297
+map_Kd Textures/custom82(Clone).png
+
+newmtl custom71(Clone)
+Kd 0.2 0.353 0.502
+map_Kd Textures/custom71(Clone).png
+
+newmtl brownLight(Clone)
+Kd 0.976 0.773 0.549
+
+newmtl metalDark(Clone)
+Kd 0.306 0.388 0.388
+
+newmtl metalMedium(Clone)
+Kd 0.369 0.467 0.467
+
+newmtl Material(Clone)
+Kd 0.216 0.278 0.31
+map_Kd Textures/Material(Clone).png
+
+newmtl custom56(Clone)
+Kd 0 0.259 0.173
+map_Kd Textures/custom56(Clone).png
+
+newmtl custom84(Clone)
+Kd 0.204 0.239 0.275
+map_Kd Textures/custom84(Clone).png
+
+newmtl Sunflower(Clone)
+Kd 0.984 0.941 0.177
+
+newmtl Grey_-_20(Clone)
+Kd 0.2 0.2 0.2
+
+newmtl woodBarkDark(Clone)
+Kd 0.8 0.463 0.369
+
+newmtl custom11(Clone)
+Kd 0 0.259 0.173
+
+newmtl woodDark(Clone)
+Kd 0.678 0.456 0.299
+
+newmtl Material.009(Clone)
+Kd 0.079 0.079 0.079
+
+newmtl Material.010(Clone)
+Kd 0.137 0.365 0.357
+
+newmtl Material.011(Clone)
+Kd 0.025 0.025 0.025
+
+newmtl Translucent_Glass_Gray(Clone)
+Kd 0.502 0.502 0.502
+
+newmtl Lily_Blue(Clone)
+Kd 0 0.439 0.875
+
+newmtl foliageDark(Clone)
+Kd 0 0.528 0.478
+
+newmtl custom69(Clone)
+Kd 1 1 1
+map_Kd Textures/custom69(Clone).png
+
+newmtl Rose(Clone)
+Kd 0.577 0.035 0.035
+
+newmtl custom10(Clone)
+Kd 0.098 0.459 0.18
+map_Kd Textures/custom10(Clone).png
+
+newmtl colorRed(Clone)
+Kd 0.878 0.29 0.314
+
+newmtl colorYellow(Clone)
+Kd 0.996 0.694 0.278
+
+newmtl Tulip(Clone)
+Kd 0.878 0.361 0.478
+
+newmtl Pollen(Clone)
+Kd 0.992 0.902 0.459
+
+newmtl Lily(Clone)
+Kd 0.953 0.604 0.761
+
+newmtl custom68(Clone)
+Kd 1 1 1
+map_Kd Textures/custom68(Clone).png
+
+newmtl custom80(Clone)
+Kd 0.476 0.427 0.396
+map_Kd Textures/custom80(Clone).png
+
+newmtl Material.008(Clone)
+Kd 0.528 0.528 0.528
+
+newmtl Material.001(Clone)
+Kd 0.162 0.138 0.118
+
+newmtl carpetDarker(Clone)
+Kd 0.608 0.298 0.285
+
+newmtl yellow(Clone)
+Kd 0.961 0.725 0.259
+
+newmtl custom37(Clone)
+Kd 0.722 0.071 0
+
+newmtl custom13(Clone)
+Kd 0.835 0.545 0.118
+

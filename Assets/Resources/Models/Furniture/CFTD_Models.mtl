@@ -107,9 +107,6 @@ Kd 1 0.949 0.871
 newmtl leafsFall(Clone)
 Kd 1 0.573 0.255
 
-newmtl colorTan(Clone)
-Kd 1 0.682 0.435
-
 newmtl colorRed(Clone)
 Kd 0.878 0.29 0.314
 
@@ -233,9 +230,6 @@ Kd 0.577 0.035 0.035
 newmtl woodDark(Clone)
 Kd 0.678 0.456 0.299
 
-newmtl stoneDark(Clone)
-Kd 0.403 0.39 0.594
-
 newmtl woodBark(Clone)
 Kd 0.886 0.514 0.341
 
@@ -280,4 +274,67 @@ Kd 0.8 0.463 0.369
 
 newmtl White(Clone)
 Kd 1 1 1
+
+newmtl stoneDark(Clone)
+Kd 0.403 0.39 0.594
+
+newmtl custom104(Clone)
+Kd 0.726 0.766 0.567
+map_Kd Textures/custom104(Clone).png
+
+newmtl custom100(Clone)
+Kd 0.828 0.391 1
+map_Kd Textures/custom100(Clone).png
+
+newmtl custom106(Clone)
+Kd 0.376 0.583 0.683
+map_Kd Textures/custom106(Clone).png
+
+newmtl custom101(Clone)
+Kd 0.977 1 0.341
+map_Kd Textures/custom101(Clone).png
+
+newmtl custom102(Clone)
+Kd 0.364 0.724 0.046
+map_Kd Textures/custom102(Clone).png
+
+newmtl custom103(Clone)
+Kd 0.607 1 0.259
+map_Kd Textures/custom103(Clone).png
+
+newmtl custom109(Clone)
+Kd 0.979 0.418 0.79
+map_Kd Textures/custom109(Clone).png
+
+newmtl lambert4SG(Clone)
+Kd 0 0.3 1
+
+newmtl custom110(Clone)
+Kd 0.883 0.663 0.233
+map_Kd Textures/custom110(Clone).png
+
+newmtl Rock(Clone)
+Kd 0.631 0.624 0.612
+map_Kd Textures/Rock(Clone).png
+
+newmtl custom108(Clone)
+Kd 0.924 0.851 0.727
+map_Kd Textures/custom108(Clone).png
+
+newmtl colorTan(Clone)
+Kd 1 0.682 0.435
+
+newmtl custom112(Clone)
+Kd 0.754 0.536 1
+map_Kd Textures/custom112(Clone).png
+
+newmtl custom111(Clone)
+Kd 0.366 0.327 0.327
+map_Kd Textures/custom111(Clone).png
+
+newmtl lambert2SG(Clone)
+Kd 0 0.3 0.3
+
+newmtl stoneLight(Clone)
+Kd 0.71 0.701 0.84
 
