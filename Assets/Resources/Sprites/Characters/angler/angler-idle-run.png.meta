@@ -1,0 +1,1450 @@
+fileFormatVersion: 2
+guid: db98d100bb267c540bc166101f827e46
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7053603729549086641
+    second: angler-idle-run_0
+  - first:
+      213: -4659607336151862408
+    second: angler-idle-run_1
+  - first:
+      213: -8884629841352006404
+    second: angler-idle-run_2
+  - first:
+      213: 77572828119398390
+    second: angler-idle-run_3
+  - first:
+      213: 8088082291314525944
+    second: angler-idle-run_4
+  - first:
+      213: 5260280556013160164
+    second: angler-idle-run_5
+  - first:
+      213: -1977168472006698587
+    second: angler-idle-run_6
+  - first:
+      213: -2584702484899021957
+    second: angler-idle-run_7
+  - first:
+      213: -2020910735371253429
+    second: angler-idle-run_8
+  - first:
+      213: -2576695661275756552
+    second: angler-idle-run_9
+  - first:
+      213: 6918818771648257526
+    second: angler-idle-run_10
+  - first:
+      213: 5923108256960393743
+    second: angler-idle-run_11
+  - first:
+      213: -1525620231572187148
+    second: angler-idle-run_12
+  - first:
+      213: 5146073197146132652
+    second: angler-idle-run_13
+  - first:
+      213: 2103745167437379067
+    second: angler-idle-run_14
+  - first:
+      213: 8890690003139672234
+    second: angler-idle-run_15
+  - first:
+      213: -1123819398840368143
+    second: angler-idle-run_16
+  - first:
+      213: 1299547554533839710
+    second: angler-idle-run_17
+  - first:
+      213: -1176469454298579263
+    second: angler-idle-run_18
+  - first:
+      213: 8112837595910632103
+    second: angler-idle-run_19
+  - first:
+      213: 1458919794857484306
+    second: angler-idle-run_20
+  - first:
+      213: 1919966896811189349
+    second: angler-idle-run_21
+  - first:
+      213: -5341312315667614532
+    second: angler-idle-run_22
+  - first:
+      213: -8962879324200127182
+    second: angler-idle-run_23
+  - first:
+      213: 8259353547579196586
+    second: angler-idle-run_24
+  - first:
+      213: -7681718358402798496
+    second: angler-idle-run_25
+  - first:
+      213: -7849629122636580745
+    second: angler-idle-run_26
+  - first:
+      213: -366743524919142891
+    second: angler-idle-run_27
+  - first:
+      213: -101032624701920341
+    second: angler-idle-run_28
+  - first:
+      213: 5961816456562252231
+    second: angler-idle-run_29
+  - first:
+      213: 2382276048255986633
+    second: angler-idle-run_30
+  - first:
+      213: -915949273343106379
+    second: angler-idle-run_31
+  - first:
+      213: 2271416930231096000
+    second: angler-idle-run_32
+  - first:
+      213: -6102870678117111372
+    second: angler-idle-run_33
+  - first:
+      213: 3972319790832668967
+    second: angler-idle-run_34
+  - first:
+      213: 1306382004799886111
+    second: angler-idle-run_35
+  - first:
+      213: 6797282887457047689
+    second: angler-idle-run_36
+  - first:
+      213: -9010841920708588112
+    second: angler-idle-run_37
+  - first:
+      213: 66672069022965304
+    second: angler-idle-run_38
+  - first:
+      213: 9141082506191675762
+    second: angler-idle-run_39
+  - first:
+      213: 8492386108176031164
+    second: angler-idle-run_40
+  - first:
+      213: 2989414534310374551
+    second: angler-idle-run_41
+  - first:
+      213: -7632721811263572114
+    second: angler-idle-run_42
+  - first:
+      213: 1013892935056920703
+    second: angler-idle-run_43
+  - first:
+      213: -7031420360848435363
+    second: angler-idle-run_44
+  - first:
+      213: -4228201266806833454
+    second: angler-idle-run_45
+  - first:
+      213: 3474451645748866587
+    second: angler-idle-run_46
+  - first:
+      213: 7184419741943036522
+    second: angler-idle-run_47
+  - first:
+      213: -1474270564680184681
+    second: angler-idle-run_48
+  - first:
+      213: -8252896660036711970
+    second: angler-idle-run_49
+  - first:
+      213: 9175824504675292143
+    second: angler-idle-run_50
+  - first:
+      213: -8563911417894480811
+    second: angler-idle-run_51
+  - first:
+      213: 9007419334978600605
+    second: angler-idle-run_52
+  - first:
+      213: -7115960677963886477
+    second: angler-idle-run_53
+  - first:
+      213: 3695168428816691668
+    second: angler-idle-run_54
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 480
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: angler-idle-run_0
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 5466
+        width: 278
+        height: 429
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bfc42e683f63e160800000000000000
+      internalID: 7053603729549086641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: angler-idle-run_1
+      rect:
+        serializedVersion: 2
+        x: 1313
+        y: 5466
+        width: 278
+        height: 429
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8733ddfb0dfb55fb0800000000000000
+      internalID: -4659607336151862408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: angler-idle-run_2
+      rect:
+        serializedVersion: 2
+        x: 2273
+        y: 5466
+        width: 278
+        height: 429
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf4e0696b3473b480800000000000000
+      internalID: -8884629841352006404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: angler-idle-run_3
+      rect:
+        serializedVersion: 2
+        x: 3001
+        y: 5466
+        width: 487
+        height: 452
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f777408318931100800000000000000
+      internalID: 77572828119398390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: angler-idle-run_4
+      rect:
+        serializedVersion: 2
+        x: 3961
+        y: 5466
+        width: 487
+        height: 446
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f60eefcdf3ae3070800000000000000
+      internalID: 8088082291314525944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: angler-idle-run_5
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 4926
+        width: 487
+        height: 445
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e60f08ab45400940800000000000000
+      internalID: 5260280556013160164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: angler-idle-run_6
+      rect:
+        serializedVersion: 2
+        x: 1081
+        y: 4926
+        width: 487
+        height: 445
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a950fc00cfaf84e0800000000000000
+      internalID: -1977168472006698587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: angler-idle-run_7
+      rect:
+        serializedVersion: 2
+        x: 2041
+        y: 4926
+        width: 487
+        height: 445
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7b3689c8ca412cd0800000000000000
+      internalID: -2584702484899021957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: angler-idle-run_8
+      rect:
+        serializedVersion: 2
+        x: 3001
+        y: 4926
+        width: 487
+        height: 445
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b494c67b46844f3e0800000000000000
+      internalID: -2020910735371253429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: angler-idle-run_9
+      rect:
+        serializedVersion: 2
+        x: 4132
+        y: 4918
+        width: 307
+        height: 429
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f74e5fa2fcbd3cd0800000000000000
+      internalID: -2576695661275756552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: angler-idle-run_10
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 4375
+        width: 299
+        height: 429
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fd166de305940060800000000000000
+      internalID: 6918818771648257526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: angler-idle-run_11
+      rect:
+        serializedVersion: 2
+        x: 1263
+        y: 4375
+        width: 299
+        height: 421
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f02be46e39b133250800000000000000
+      internalID: 5923108256960393743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: angler-idle-run_12
+      rect:
+        serializedVersion: 2
+        x: 2223
+        y: 4375
+        width: 299
+        height: 421
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f79df28b78e3dae0800000000000000
+      internalID: -1525620231572187148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: angler-idle-run_13
+      rect:
+        serializedVersion: 2
+        x: 3183
+        y: 4375
+        width: 299
+        height: 421
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca0dd08ce468a6740800000000000000
+      internalID: 5146073197146132652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: angler-idle-run_14
+      rect:
+        serializedVersion: 2
+        x: 4143
+        y: 4375
+        width: 299
+        height: 421
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf5bc0b6511023d10800000000000000
+      internalID: 2103745167437379067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: angler-idle-run_15
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 3835
+        width: 299
+        height: 421
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa8b145f373126b70800000000000000
+      internalID: 8890690003139672234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: angler-idle-run_16
+      rect:
+        serializedVersion: 2
+        x: 1086
+        y: 3842
+        width: 484
+        height: 452
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f34d6406346760f0800000000000000
+      internalID: -1123819398840368143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: angler-idle-run_17
+      rect:
+        serializedVersion: 2
+        x: 2053
+        y: 3842
+        width: 480
+        height: 452
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5397b49d9be80210800000000000000
+      internalID: 1299547554533839710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: angler-idle-run_18
+      rect:
+        serializedVersion: 2
+        x: 3013
+        y: 3842
+        width: 480
+        height: 452
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ce7f67b3475cafe0800000000000000
+      internalID: -1176469454298579263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: angler-idle-run_19
+      rect:
+        serializedVersion: 2
+        x: 3973
+        y: 3842
+        width: 480
+        height: 452
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a2ffa05fc6969070800000000000000
+      internalID: 8112837595910632103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: angler-idle-run_20
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 3302
+        width: 480
+        height: 453
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2102440e2df1f3410800000000000000
+      internalID: 1458919794857484306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: angler-idle-run_21
+      rect:
+        serializedVersion: 2
+        x: 1093
+        y: 3302
+        width: 480
+        height: 453
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 564a0f068b715aa10800000000000000
+      internalID: 1919966896811189349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: angler-idle-run_22
+      rect:
+        serializedVersion: 2
+        x: 2151
+        y: 3299
+        width: 385
+        height: 429
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb476369fb8dfd5b0800000000000000
+      internalID: -5341312315667614532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: angler-idle-run_23
+      rect:
+        serializedVersion: 2
+        x: 3119
+        y: 3299
+        width: 379
+        height: 429
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 235bb54fdb47d9380800000000000000
+      internalID: -8962879324200127182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: angler-idle-run_24
+      rect:
+        serializedVersion: 2
+        x: 4079
+        y: 3296
+        width: 378
+        height: 427
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa402d5aa4e1f9270800000000000000
+      internalID: 8259353547579196586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: angler-idle-run_25
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 2757
+        width: 378
+        height: 424
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06cedce3add056590800000000000000
+      internalID: -7681718358402798496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: angler-idle-run_26
+      rect:
+        serializedVersion: 2
+        x: 1199
+        y: 2757
+        width: 378
+        height: 424
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7787faee6e3801390800000000000000
+      internalID: -7849629122636580745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: angler-idle-run_27
+      rect:
+        serializedVersion: 2
+        x: 2159
+        y: 2757
+        width: 378
+        height: 424
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 516158905b019eaf0800000000000000
+      internalID: -366743524919142891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: angler-idle-run_28
+      rect:
+        serializedVersion: 2
+        x: 3119
+        y: 2757
+        width: 378
+        height: 424
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: babaae5fc5f099ef0800000000000000
+      internalID: -101032624701920341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: angler-idle-run_29
+      rect:
+        serializedVersion: 2
+        x: 3961
+        y: 2766
+        width: 489
+        height: 455
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c9987dea70acb250800000000000000
+      internalID: 5961816456562252231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: angler-idle-run_30
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 2226
+        width: 489
+        height: 450
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cb283da17b8f0120800000000000000
+      internalID: 2382276048255986633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: angler-idle-run_31
+      rect:
+        serializedVersion: 2
+        x: 1081
+        y: 2226
+        width: 489
+        height: 450
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b26b122df4e943f0800000000000000
+      internalID: -915949273343106379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: angler-idle-run_32
+      rect:
+        serializedVersion: 2
+        x: 2041
+        y: 2226
+        width: 489
+        height: 450
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c29b3fd9a1b58f10800000000000000
+      internalID: 2271416930231096000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: angler-idle-run_33
+      rect:
+        serializedVersion: 2
+        x: 3001
+        y: 2226
+        width: 489
+        height: 450
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b9aea0e37f3e4ba0800000000000000
+      internalID: -6102870678117111372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: angler-idle-run_34
+      rect:
+        serializedVersion: 2
+        x: 3961
+        y: 2226
+        width: 489
+        height: 450
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 721d5d2bdc3802730800000000000000
+      internalID: 3972319790832668967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: angler-idle-run_35
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 1676
+        width: 310
+        height: 437
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f135f090383312210800000000000000
+      internalID: 1306382004799886111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: angler-idle-run_36
+      rect:
+        serializedVersion: 2
+        x: 1254
+        y: 1675
+        width: 302
+        height: 438
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98408b8c5ccc45e50800000000000000
+      internalID: 6797282887457047689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: angler-idle-run_37
+      rect:
+        serializedVersion: 2
+        x: 2214
+        y: 1675
+        width: 302
+        height: 426
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bd47fcb30f03f280800000000000000
+      internalID: -9010841920708588112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: angler-idle-run_38
+      rect:
+        serializedVersion: 2
+        x: 3174
+        y: 1675
+        width: 302
+        height: 426
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83edd8eb4eddce000800000000000000
+      internalID: 66672069022965304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: angler-idle-run_39
+      rect:
+        serializedVersion: 2
+        x: 4134
+        y: 1675
+        width: 302
+        height: 426
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 271a71c9b16abde70800000000000000
+      internalID: 9141082506191675762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: angler-idle-run_40
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 1136
+        width: 302
+        height: 426
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbd5b49bb240bd570800000000000000
+      internalID: 8492386108176031164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: angler-idle-run_41
+      rect:
+        serializedVersion: 2
+        x: 1254
+        y: 1136
+        width: 302
+        height: 426
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79ca5fb2ea88c7920800000000000000
+      internalID: 2989414534310374551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: angler-idle-run_42
+      rect:
+        serializedVersion: 2
+        x: 2035
+        y: 1144
+        width: 484
+        height: 453
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e67324ad3ff131690800000000000000
+      internalID: -7632721811263572114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: angler-idle-run_43
+      rect:
+        serializedVersion: 2
+        x: 3003
+        y: 1142
+        width: 479
+        height: 452
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f70985aa042121e00800000000000000
+      internalID: 1013892935056920703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: angler-idle-run_44
+      rect:
+        serializedVersion: 2
+        x: 3963
+        y: 1142
+        width: 479
+        height: 452
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d571e259f606b6e90800000000000000
+      internalID: -7031420360848435363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: angler-idle-run_45
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 602
+        width: 479
+        height: 452
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2de3f1d89596255c0800000000000000
+      internalID: -4228201266806833454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: angler-idle-run_46
+      rect:
+        serializedVersion: 2
+        x: 1083
+        y: 602
+        width: 479
+        height: 452
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1ee1260d5bb73030800000000000000
+      internalID: 3474451645748866587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: angler-idle-run_47
+      rect:
+        serializedVersion: 2
+        x: 2043
+        y: 602
+        width: 479
+        height: 452
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6a71dbc0bf24b360800000000000000
+      internalID: 7184419741943036522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: angler-idle-run_48
+      rect:
+        serializedVersion: 2
+        x: 3096
+        y: 596
+        width: 383
+        height: 429
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79c4c618bb65a8be0800000000000000
+      internalID: -1474270564680184681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: angler-idle-run_49
+      rect:
+        serializedVersion: 2
+        x: 4062
+        y: 596
+        width: 377
+        height: 429
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed90182a632d77d80800000000000000
+      internalID: -8252896660036711970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: angler-idle-run_50
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 57
+        width: 377
+        height: 429
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe3de7a75c3175f70800000000000000
+      internalID: 9175824504675292143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: angler-idle-run_51
+      rect:
+        serializedVersion: 2
+        x: 1182
+        y: 57
+        width: 377
+        height: 420
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 554dc7060ffd62980800000000000000
+      internalID: -8563911417894480811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: angler-idle-run_52
+      rect:
+        serializedVersion: 2
+        x: 2142
+        y: 57
+        width: 377
+        height: 420
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9e726c6928c00d70800000000000000
+      internalID: 9007419334978600605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: angler-idle-run_53
+      rect:
+        serializedVersion: 2
+        x: 3102
+        y: 57
+        width: 377
+        height: 420
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 370905227770f3d90800000000000000
+      internalID: -7115960677963886477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: angler-idle-run_54
+      rect:
+        serializedVersion: 2
+        x: 4062
+        y: 57
+        width: 377
+        height: 420
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d17bd0bb10e74330800000000000000
+      internalID: 3695168428816691668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 9540923330060f8439d23595f1098d38
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

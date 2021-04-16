@@ -41,6 +41,8 @@ public class PlayerAnimation : MonoBehaviour
         animList = GetComponentsInChildren<Animator>();
         foreach (Animator anim in animList)
             anim.speed *= GetComponent<Player>().speedMultiplier;
+
+        GameManager.gm.OnStage2 += CreatureMorph;
     }
 
     private void LateUpdate()
@@ -145,6 +147,18 @@ public class PlayerAnimation : MonoBehaviour
             foreach (Animator anim in animList)
                 if (!anim.GetCurrentAnimatorStateInfo(0).IsName("Death"))
                     anim.SetTrigger("Death");
+        }
+    }
+
+    private void CreatureMorph()
+    {
+        if (!player.isCreature)
+            return;
+
+        if (animList != null)
+        {
+            foreach (Animator anim in animList)
+                anim.runtimeAnimatorController = Resources.Load("Animations/Creature") as RuntimeAnimatorController;
         }
     }
 }

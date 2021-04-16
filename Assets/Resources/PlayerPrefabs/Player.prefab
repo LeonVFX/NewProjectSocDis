@@ -477,6 +477,7 @@ MonoBehaviour:
   playerView: {fileID: 0}
   baseSpeed: 20
   speedMultiplier: 1
+  isCreature: 0
   isAlive: 0
 --- !u!114 &1368967992125497992
 MonoBehaviour:

@@ -114,6 +114,7 @@ public class PlayerManager : MonoBehaviour
         // if Creature
         if (isCreature == playerNumber)
         {
+            playerObject.GetComponent<Player>().isCreature = true;
             playerObject.tag = "Creature";
             playerObject.layer = LayerMask.NameToLayer("Creature");
             CreatureObject creatureObject = Resources.Load<CreatureObject>("ScriptableObjects/BaseCreature");
