@@ -157,6 +157,7 @@ public class PlayerAnimation : MonoBehaviour
 
         if (animList != null)
         {
+            // TODO: Not have hardcoded creature Animation Controller
             foreach (Animator anim in animList)
                 anim.runtimeAnimatorController = Resources.Load("Animations/Creature") as RuntimeAnimatorController;
         }
