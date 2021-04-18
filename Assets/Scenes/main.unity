@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 112000000, guid: 4f1e62e0ee8dff041bf478af9d19bf5f, type: 2}
+  m_LightingDataAsset: {fileID: 112000000, guid: 8099435c8afadf247bc6569e80a88e61, type: 2}
   m_LightingSettings: {fileID: 4890085278179872738, guid: 444507a1c54ab7c49b50a675f0a6fbdf, type: 2}
 --- !u!196 &4
 NavMeshSettings:
@@ -568,7 +568,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4210651550326476161, guid: 4af668272f9febd44b4fe59a8af6f2c3, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4276190699339394753, guid: 4af668272f9febd44b4fe59a8af6f2c3, type: 3}
       propertyPath: m_SpotAngle
@@ -700,7 +700,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5052655077573475517, guid: 4af668272f9febd44b4fe59a8af6f2c3, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5052655077573475517, guid: 4af668272f9febd44b4fe59a8af6f2c3, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -2372,10 +2372,6 @@ PrefabInstance:
       propertyPath: m_Shadows.m_Type
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2516002496009377163, guid: e8e441322ea45be4689d74802e8877a3, type: 3}
-      propertyPath: m_Lightmapping
-      value: 4
-      objectReference: {fileID: 0}
     - target: {fileID: 5029198482120550845, guid: e8e441322ea45be4689d74802e8877a3, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
@@ -2431,10 +2427,6 @@ PrefabInstance:
     - target: {fileID: 7774783295552001074, guid: e8e441322ea45be4689d74802e8877a3, type: 3}
       propertyPath: m_Shadows.m_Type
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7774783295552001074, guid: e8e441322ea45be4689d74802e8877a3, type: 3}
-      propertyPath: m_Lightmapping
-      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8636922064165975842, guid: e8e441322ea45be4689d74802e8877a3, type: 3}
       propertyPath: m_Name

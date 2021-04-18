@@ -32,6 +32,7 @@ public class Player : MonoBehaviour
     //}
     [SerializeField] protected float baseSpeed = 30.0f;
     public float speedMultiplier = 1.0f;
+    public bool isCreature = false;
     public bool isAlive;
 
     // Other

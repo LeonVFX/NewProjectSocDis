@@ -47,7 +47,7 @@ public class LightMapSwitcher : MonoBehaviour
         }
 
         // Set Stage 1
-        SetToStage1();
+        // SetToStage1();
     }
 
     #region Publics
