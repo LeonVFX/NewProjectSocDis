@@ -1,111 +1,171 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
 public class OpenDoor : MonoBehaviour
 {
- //   float distancetoTarget;
-    GameObject Door;
-    GameObject Door2;
+    private PhotonView doorView;
     bool open = false;
-    //bool broke = false;
-    int change = 0;
-    float currentposx = 4.39f;
-    float currentposy = 0.92f;
-    float closedposx =  1000f;
-    float closedposy = 1000f;
-    float timer = 0.0f;
-
+    bool broke = false;
+    bool change = true;
+    private bool isButtonPressed = false;
+   
     //the door
-    [SerializeField] GameObject DoorOpen = null;
+    [SerializeField] GameObject Door;
 
-    void Update()
+    private void Start()
     {
-        timer += Time.deltaTime;
+        doorView = GetComponent<PhotonView>();
+
+        Player[] players = FindObjectsOfType<Player>();
+        foreach (Player player in players)
+        {
+            RegisterPlayer(player);
+        }
+        
+    }
+    private void Update()
+    {
+        if (!PhotonNetwork.IsMasterClient)
+            return;
+
         //once true the door will move
         if (open == true)
         {
             //After Interact used moves door away
-            if (Input.GetButtonDown("Interact"))
+            if (isButtonPressed)
             {
-                timer = 0f;
-               // Debug.Log("Move");
-                DoorOpen.transform.position = new Vector2(closedposx, closedposy);
-                change = change + 1;
-                //timer += Time.deltaTime;
+                     doorView.RPC("RPC_DoorChange", RpcTarget.All);
             }
-         
         }
-        //resets door
-        if (timer >= 5f)
+
+        if (broke == true)
         {
-            DoorOpen.transform.position = new Vector2(currentposx, currentposy);
-            timer = 0f;
-            //   timer = 0;
-            //    Debug.Log("has changed");
-            // timer += Time.deltaTime;
+            if (isButtonPressed)
+            {
+                //GameObject.Destroy(Door);
+                doorView.RPC("RPC_DoorDestroy", RpcTarget.All);
+            }
         }
-        // else
-        // {
-        //     open = false;
-        // }
     }
 
-    /*    if(broke == true)
-        {
-            GameObject.Destroy(Dooropen);
-        }*/
-    
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Researcher")
+        GameObject otherParent = (other.transform.parent != null) ? other.transform.parent.gameObject : null;
+
+        if (otherParent == null)
+            return;
+
+        if (otherParent.tag == "Researcher" || otherParent.tag == "Creature")
         {
+            Debug.Log("Near door");
+            PhotonView playerView = otherParent.GetComponent<PhotonView>();
+
+            if (!playerView.IsMine)
+                return;
+            
             open = true;
+        }
+
+        if (otherParent.tag == "Creature" && GameManager.gm.currentStage == GameManager.GameStage.Stage2)
+        {
+            Debug.Log("Breakable Door");
+            open = false;
+            broke = true;
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.tag == "Researcher")
+        GameObject otherParent = (other.transform.parent != null) ? other.transform.parent.gameObject : null;
+
+        if (otherParent == null)
+            return;
+
+        if (otherParent.tag == "Researcher" || otherParent.tag == "Creature")
+        {
+            PhotonView playerView = otherParent.GetComponent<PhotonView>();
+
+            if (!playerView.IsMine)
+                return;
+            open = false;
+        }
+        if (other.tag == "Creature" && GameManager.gm.currentStage == GameManager.GameStage.Stage2)
         {
             open = false;
+            broke = false;
         }
     }
 
-    /*  private void OnTriggerEnter2D(Collider2D other)
-      {
-          if (other.tag == "Creature")
-          {
-              broke = true;
-          }
-      }
+    private void RegisterPlayer(Player player)
+    {
+        player.PHUD.OnInteraction += PressButton;
+    }
+    private void PressButton(PhotonView playerView)
+    {
+        IEnumerator pressedButton = ButtonPressed();
+        isButtonPressed = true;
+        StartCoroutine(pressedButton);
+    }
 
-      private void OnTriggerExit2D(Collider2D other)
-      {
-          if (other.tag == "Creature")
-          {
-              broke = false;
-          }
-      }*/
+    private IEnumerator ButtonPressed()
+    {
+        yield return new WaitForEndOfFrame();
+        isButtonPressed = false;
+    }
 
-    //DONT USE CODE
+    [PunRPC]
+    private void RPC_DoorChange()
+    {
+        Debug.Log("Door changed");
+        change = !change;
+        Door.SetActive(change);
+    }
 
-    /*  if (timer >= 5)
-           {
-               Dooropen.transform.position = new Vector2(currentposx, currentposy);
-               //   timer = 0;
-               //    Debug.Log("has changed");
-               // timer += Time.deltaTime;
-           }*/
+    [PunRPC]
+    private void RPC_DoorDestroy()
+    {
+        Debug.Log("Door destroyed");
+        GameObject.Destroy(Door);
+        //Door.SetActive(false);
+        
+    }
 
-    // if(timer >= 5)
-    //  {
-    /*  if ((change % 2) == 0)
-      {
-          Debug.Log("Just Work");
-          //change = 0;
-          Dooropen.transform.position = new Vector2(currentposx, currentposy);
-      }*/
 
-    //   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* public void Changed()
+     {
+         DoorChange?.Invoke();
+     }
+     private void DoorHasChanged()
+     {
+         change = !change;
+         Door.SetActive(change);
+     }
+
+     public void Destroyed()
+     {
+         DoorDestroyed?.Invoke();
+     }
+     private void DoorIsDestroyed()
+     {
+
+     }*/
 }
