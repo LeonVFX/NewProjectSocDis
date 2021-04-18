@@ -40,7 +40,11 @@ public class PlayerAnimation : MonoBehaviour
 
         animList = GetComponentsInChildren<Animator>();
         foreach (Animator anim in animList)
+        {
             anim.speed *= GetComponent<Player>().speedMultiplier;
+            anim.GetComponent<SpriteRenderer>().lightProbeUsage = UnityEngine.Rendering.LightProbeUsage.BlendProbes;
+        }
+            
 
         GameManager.gm.OnStage2 += CreatureMorph;
     }
