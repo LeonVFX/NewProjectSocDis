@@ -375,7 +375,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Alpha v0.15a
+  m_Text: Alpha v0.15b
 --- !u!222 &141889683
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1830,7 +1830,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: ba73a6d2c0796694d986b1cb9d8d33e2, type: 3}
+  m_Texture: {fileID: 2800000, guid: f3bca075b25ec7647a35a7552e427cb6, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -2221,7 +2221,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 01187a45bc11b3b4ba6eb809b39ecca5, type: 3}
+  m_Texture: {fileID: 2800000, guid: 62736be823794f14bb7618d5ce5e9f2d, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -2787,7 +2787,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 1faa7e3a578a7404c9a07f332a23be20, type: 3}
+  m_Texture: {fileID: 2800000, guid: c8ac5d57edb959349b9989a9e0c0dd39, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -3340,7 +3340,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: f80c71fc4b6688845a0f3a13211891fd, type: 3}
+  m_Texture: {fileID: 2800000, guid: ce60a5d46009f6d42828e6cc74654968, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
