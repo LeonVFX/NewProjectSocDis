@@ -23,21 +23,16 @@ public class OpenDoor : MonoBehaviour
         {
             RegisterPlayer(player);
         }
-        
     }
+
     private void Update()
     {
-        if (!PhotonNetwork.IsMasterClient)
-            return;
-
         //once true the door will move
         if (open == true)
         {
             //After Interact used moves door away
             if (isButtonPressed)
-            {
-                     doorView.RPC("RPC_DoorChange", RpcTarget.All);
-            }
+                doorView.RPC("RPC_DoorChange", RpcTarget.All);
         }
 
         if (broke == true)
@@ -89,8 +84,10 @@ public class OpenDoor : MonoBehaviour
 
             if (!playerView.IsMine)
                 return;
+
             open = false;
         }
+
         if (other.tag == "Creature" && GameManager.gm.currentStage == GameManager.GameStage.Stage2)
         {
             open = false;
@@ -102,6 +99,7 @@ public class OpenDoor : MonoBehaviour
     {
         player.PHUD.OnInteraction += PressButton;
     }
+
     private void PressButton(PhotonView playerView)
     {
         IEnumerator pressedButton = ButtonPressed();
@@ -129,43 +127,5 @@ public class OpenDoor : MonoBehaviour
         Debug.Log("Door destroyed");
         GameObject.Destroy(Door);
         //Door.SetActive(false);
-        
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    /* public void Changed()
-     {
-         DoorChange?.Invoke();
-     }
-     private void DoorHasChanged()
-     {
-         change = !change;
-         Door.SetActive(change);
-     }
-
-     public void Destroyed()
-     {
-         DoorDestroyed?.Invoke();
-     }
-     private void DoorIsDestroyed()
-     {
-
-     }*/
 }

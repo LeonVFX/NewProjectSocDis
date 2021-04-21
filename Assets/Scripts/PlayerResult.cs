@@ -56,6 +56,7 @@ public class PlayerResult : MonoBehaviour
 
         endResult.ResultString = "You Died!";
         player.PHUD.UpdateMessageLog($"You Died!", Color.red);
+        endResult.ResultBackground = EndManager.em.creatureWinImage;
 
         winState = WinState.Died;
         FinishGame();
@@ -83,6 +84,7 @@ public class PlayerResult : MonoBehaviour
 
         endResult.ResultString = "Escaped Successfully!";
         player.PHUD.UpdateMessageLog($"Escaped Successfully!", Color.blue);
+        endResult.ResultBackground = EndManager.em.researcherWinImage;
 
         winState = WinState.ResearcherEscaped;
         FinishGameAndDestroy();
@@ -100,6 +102,7 @@ public class PlayerResult : MonoBehaviour
             {
                 endResult.ResultString = "You Eliminated All Researchers!";
                 player.PHUD.UpdateMessageLog($"You Eliminated All Researchers!", Color.red);
+                endResult.ResultBackground = EndManager.em.creatureWinImage;
                 winState = WinState.AllResearchersEliminated;
                 FinishGame();
             }
@@ -118,12 +121,14 @@ public class PlayerResult : MonoBehaviour
             {
                 endResult.ResultString = "You Were Discovered!";
                 player.PHUD.UpdateMessageLog($"You Were Discovered!", Color.red);
+                endResult.ResultBackground = EndManager.em.researcherWinImage;
             }
 
             if (GetComponent<Researcher>())
             {
                 endResult.ResultString = "You Kicked The Creature!";
                 player.PHUD.UpdateMessageLog($"You Kicked The Creature!", Color.blue);
+                endResult.ResultBackground = EndManager.em.researcherWinImage;
             }
 
             winState = WinState.CreatureVotedOut;

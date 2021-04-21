@@ -3085,7 +3085,7 @@ MeshCollider:
   m_GameObject: {fileID: 5796264698769469961}
   m_Material: {fileID: 13400000, guid: 4a577544b9cdbd741a0f1041a08c7ff9, type: 2}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30
@@ -3141,7 +3141,7 @@ MeshCollider:
   m_GameObject: {fileID: 5871524266669802765}
   m_Material: {fileID: 13400000, guid: 4a577544b9cdbd741a0f1041a08c7ff9, type: 2}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30

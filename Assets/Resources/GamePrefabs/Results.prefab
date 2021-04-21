@@ -44,3 +44,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   resultPrefab: {fileID: 7741773512932892961, guid: 808e60179b83c7a47b5d175f5c8f44d5, type: 3}
+  researcherWinImage: {fileID: 3325169478936523960, guid: 1700e090af3c938408b6de1c7ec680d5, type: 3}
+  creatureWinImage: {fileID: 8487765875009282398, guid: 854ee5c54dc62b54db3d061704c8b556, type: 3}

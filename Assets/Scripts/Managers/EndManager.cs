@@ -18,6 +18,9 @@ public class EndManager : MonoBehaviour
     public EndResult endResult;
     public int playerResults;
 
+    public Texture researcherWinImage;
+    public Texture creatureWinImage;
+
     private void Awake()
     {
         // Singleton
@@ -40,10 +43,19 @@ public class EndManager : MonoBehaviour
         if (playerResults == PhotonNetwork.PlayerList.Length)
         {
             Debug.Log($"{playerResults} out of {PhotonNetwork.PlayerList.Length}");
-            GameManager.gm.NextStage();
-            PhotonNetwork.LoadLevel(MultiplayerSettings.multiplayerSettings.endScene);
+            IEnumerator check = WaitForCheck();
+            StartCoroutine(check);
             return;
         }
+    }
+
+    private IEnumerator WaitForCheck()
+    {
+        yield return new WaitForSeconds(2);
+        PhotonNetwork.LoadLevel(MultiplayerSettings.multiplayerSettings.endScene);
+        yield return new WaitForSeconds(1);
+        GameManager.gm.NextStage();
+        yield return null;
     }
 
     public void Die()

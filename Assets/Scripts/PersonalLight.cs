@@ -54,9 +54,7 @@ public class PersonalLight : MonoBehaviour
 
     private void ToggleFlashLights()
     {
-        if (!playerView.IsMine)
-            lightStage1.SetActive(false);
-
+        lightStage1.SetActive(false);
         lightStage2.SetActive(true);
     }
 }

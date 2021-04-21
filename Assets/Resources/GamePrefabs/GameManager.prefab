@@ -107,6 +107,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   endResult: {fileID: 3088685404423486156, guid: 8e9b99b621a6dce4a9cf6a7b3968a8a7, type: 3}
   playerResults: 0
+  researcherWinImage: {fileID: 2800000, guid: 868debe1e0a7ed04794bccfd87e3ae4a, type: 3}
+  creatureWinImage: {fileID: 2800000, guid: 69c27a35ced46ea4a9715a18b1730e06, type: 3}
 --- !u!114 &7541637735238691234
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -142,27 +144,27 @@ MonoBehaviour:
   - {fileID: 2800000, guid: 8087916222f6bf9498f3ba218e6bf48c, type: 3}
   - {fileID: 2800000, guid: 1d80b5a76f99ccf489402157d2c719d9, type: 3}
   Stage2Near:
-  - {fileID: 2800000, guid: 9e5d026a093ad814b8e0a386adf9e227, type: 3}
-  - {fileID: 2800000, guid: 9be38b6f604ee0e4db475f35fcf8fc21, type: 3}
-  - {fileID: 2800000, guid: 4c2bb96c04ce79e4fa9288dd15512919, type: 3}
-  - {fileID: 2800000, guid: 960461d4aa7a0dd4392a67f543ef797d, type: 3}
-  - {fileID: 2800000, guid: 37d1fafb03050e840a487f6c94c5d5bb, type: 3}
-  - {fileID: 2800000, guid: aa3f2789f1f56ab43bf14beb3d0ad698, type: 3}
-  - {fileID: 2800000, guid: 40b4c44d8cce93343b6466123b2c0427, type: 3}
-  - {fileID: 2800000, guid: e434256335e907f419755ff71348dc9a, type: 3}
-  - {fileID: 2800000, guid: 3c696273d10d33840b0869b3648131c5, type: 3}
-  - {fileID: 2800000, guid: b7f2afa46e5a7fd478f602b03e9224a5, type: 3}
+  - {fileID: 2800000, guid: 8a57a4d0a5de1c7489bd05d6d9cdfa46, type: 3}
+  - {fileID: 2800000, guid: 2d5ce751adfa0314d874f19e54470188, type: 3}
+  - {fileID: 2800000, guid: bb897803068424c4db3a3225b84037a0, type: 3}
+  - {fileID: 2800000, guid: 4d5e1cd9b9f2fb04f88be88e3fb8154a, type: 3}
+  - {fileID: 2800000, guid: 1ca49774a330cc34eb32816fa84a5a47, type: 3}
+  - {fileID: 2800000, guid: e070599ef86a709449198a2a4211294f, type: 3}
+  - {fileID: 2800000, guid: 66261bd83c17910498c5577c577cda40, type: 3}
+  - {fileID: 2800000, guid: 9f85e91c196c9844581c314c86f49967, type: 3}
+  - {fileID: 2800000, guid: e70bf0a36efcdbc47a8cdfd846dea709, type: 3}
+  - {fileID: 2800000, guid: 05f0698695354c041a67717cb2e35d03, type: 3}
   Stage2Far:
-  - {fileID: 2800000, guid: 9e5d026a093ad814b8e0a386adf9e227, type: 3}
-  - {fileID: 2800000, guid: 9be38b6f604ee0e4db475f35fcf8fc21, type: 3}
-  - {fileID: 2800000, guid: 4c2bb96c04ce79e4fa9288dd15512919, type: 3}
-  - {fileID: 2800000, guid: 960461d4aa7a0dd4392a67f543ef797d, type: 3}
-  - {fileID: 2800000, guid: 37d1fafb03050e840a487f6c94c5d5bb, type: 3}
-  - {fileID: 2800000, guid: aa3f2789f1f56ab43bf14beb3d0ad698, type: 3}
-  - {fileID: 2800000, guid: 40b4c44d8cce93343b6466123b2c0427, type: 3}
-  - {fileID: 2800000, guid: e434256335e907f419755ff71348dc9a, type: 3}
-  - {fileID: 2800000, guid: 3c696273d10d33840b0869b3648131c5, type: 3}
-  - {fileID: 2800000, guid: b7f2afa46e5a7fd478f602b03e9224a5, type: 3}
+  - {fileID: 2800000, guid: 8a57a4d0a5de1c7489bd05d6d9cdfa46, type: 3}
+  - {fileID: 2800000, guid: 2d5ce751adfa0314d874f19e54470188, type: 3}
+  - {fileID: 2800000, guid: bb897803068424c4db3a3225b84037a0, type: 3}
+  - {fileID: 2800000, guid: 4d5e1cd9b9f2fb04f88be88e3fb8154a, type: 3}
+  - {fileID: 2800000, guid: 1ca49774a330cc34eb32816fa84a5a47, type: 3}
+  - {fileID: 2800000, guid: e070599ef86a709449198a2a4211294f, type: 3}
+  - {fileID: 2800000, guid: 66261bd83c17910498c5577c577cda40, type: 3}
+  - {fileID: 2800000, guid: 9f85e91c196c9844581c314c86f49967, type: 3}
+  - {fileID: 2800000, guid: e70bf0a36efcdbc47a8cdfd846dea709, type: 3}
+  - {fileID: 2800000, guid: 05f0698695354c041a67717cb2e35d03, type: 3}
 --- !u!114 &4252821702624364792
 MonoBehaviour:
   m_ObjectHideFlags: 0

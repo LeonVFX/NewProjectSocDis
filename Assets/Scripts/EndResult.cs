@@ -11,8 +11,15 @@ public class EndResult : MonoBehaviour
         get { return resultString; }
         set { resultString = value; }
     }
-    [SerializeField] private GameObject resultPrefab;
 
+    private Texture resultBackground;
+    public Texture ResultBackground
+    {
+        get { return resultBackground; }
+        set { resultBackground = value; }
+    }
+
+    [SerializeField] private GameObject resultPrefab;
 
     private void Start()
     {
@@ -31,6 +38,10 @@ public class EndResult : MonoBehaviour
     {
         yield return new WaitForSeconds(1);
         GameObject resultScreen = Instantiate(resultPrefab, GameObject.Find("Canvas").transform);
-        resultScreen.GetComponent<Text>().text = resultString;
+
+        resultScreen.GetComponentInChildren<RawImage>().texture = resultBackground;
+        resultScreen.GetComponentInChildren<Text>().text = resultString;
+
+        yield return null;
     }
 }

@@ -13,6 +13,8 @@ public class Creature : MonoBehaviour
     private PlayerMovement pMovement;
     public CreatureObject creatureObject;
 
+    public bool hasMorphed = false;
+
     // Event activated when killing
     public event System.Action OnKill;
 
@@ -43,7 +45,7 @@ public class Creature : MonoBehaviour
         canKill = true;
         isKill = false;
 
-        GameManager.gm.OnStage2 += Stage2ToggleUI;
+        GameManager.gm.OnStage2 += CreatureMorph;
         player.PHUD.OnKill += PressKill;
 
         // Deactivate Task List
@@ -153,11 +155,12 @@ public class Creature : MonoBehaviour
         isKill = false;
     }
 
-    private void Stage2ToggleUI()
+    private void CreatureMorph()
     {
         if (!playerView.IsMine)
             return;
 
         player.PHUD.ToggleKillButtonActive();
+        hasMorphed = true;
     }
 }

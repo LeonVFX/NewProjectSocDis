@@ -45,7 +45,7 @@ public class CreatureHinting : MonoBehaviour
 
     private void Update()
     {
-        if (!playerView.IsMine || GameManager.gm.currentStage == GameManager.GameStage.End)
+        if (!playerView.IsMine || creature.hasMorphed)
             return;
 
         if (player.HeldItem != null)
@@ -54,9 +54,7 @@ public class CreatureHinting : MonoBehaviour
             goopElapsedBufferTime = goopBufferTime;
 
             if (goopElapsedTime >= goopStartTime)
-            {
                 Goop();
-            }
 
             player.PHUD.GoopValue = goopElapsedTime / goopStartTime;
         }
@@ -65,9 +63,7 @@ public class CreatureHinting : MonoBehaviour
             goopElapsedBufferTime -= Time.deltaTime;
 
             if (goopElapsedBufferTime <= 0f)
-            {
                 goopElapsedTime = 0f;
-            }
 
             player.PHUD.GoopValue = goopElapsedBufferTime / goopBufferTime;
         }
