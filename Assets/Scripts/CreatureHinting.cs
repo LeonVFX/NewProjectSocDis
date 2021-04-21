@@ -25,31 +25,22 @@ public class CreatureHinting : MonoBehaviour
     private void Start()
     {
         playerView = GetComponent<PhotonView>();
-
         creature = GetComponent<Creature>();
         player = GetComponent<Player>();
 
-        GameManager.gm.OnStage1 += OnGameStart;
-
+        // Get Creature Scriptable Object details
         CreatureObject creatureObject = creature.creatureObject;
         goopInterval = creatureObject.goopInterval;
         goopParticlePrefab = creatureObject.goopParticlePrefab;
         goopStartTime = creatureObject.goopStartTime;
         goopBufferTime = creatureObject.goopBufferTime;
 
-        goopParticle = goopParticlePrefab.GetComponent<ParticleSystem>();
+        GameObject goop = Instantiate(goopParticlePrefab, new Vector3(0.4f, 0.4f, 0.4f), Quaternion.Euler(45, 45, 0), player.transform);
+        goopParticle = goop.GetComponent<ParticleSystem>();
+        
         ParticleSystem.MainModule main = goopParticle.main;
         main.playOnAwake = false;
         main.loop = false;
-    }
-
-    private void OnGameStart()
-    {
-        if (!playerView.IsMine)
-            return;
-
-        GameObject goop = Instantiate(goopParticlePrefab, new Vector3(0.4f, 0.4f, 0.4f), Quaternion.Euler(45, 45, 0), player.transform);
-        goopParticle = goop.GetComponent<ParticleSystem>();
     }
 
     private void Update()
