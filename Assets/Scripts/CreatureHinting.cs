@@ -29,6 +29,8 @@ public class CreatureHinting : MonoBehaviour
         creature = GetComponent<Creature>();
         player = GetComponent<Player>();
 
+        GameManager.gm.OnStage1 += OnGameStart;
+
         CreatureObject creatureObject = creature.creatureObject;
         goopInterval = creatureObject.goopInterval;
         goopParticlePrefab = creatureObject.goopParticlePrefab;
@@ -39,6 +41,13 @@ public class CreatureHinting : MonoBehaviour
         ParticleSystem.MainModule main = goopParticle.main;
         main.playOnAwake = false;
         main.loop = false;
+    }
+
+    private void OnGameStart()
+    {
+        if (!playerView.IsMine)
+            return;
+
         GameObject goop = Instantiate(goopParticlePrefab, new Vector3(0.4f, 0.4f, 0.4f), Quaternion.Euler(45, 45, 0), player.transform);
         goopParticle = goop.GetComponent<ParticleSystem>();
     }
