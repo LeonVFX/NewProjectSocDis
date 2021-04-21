@@ -18,9 +18,6 @@ public class EndManager : MonoBehaviour
     public EndResult endResult;
     public int playerResults;
 
-    public Texture researcherWinImage;
-    public Texture creatureWinImage;
-
     private void Awake()
     {
         // Singleton
@@ -40,12 +37,14 @@ public class EndManager : MonoBehaviour
 
     public void CheckForMaxPlayers()
     {
+        // TODO: Right now it does not work if somebody drops the game
         if (playerResults == PhotonNetwork.PlayerList.Length)
         {
             Debug.Log($"{playerResults} out of {PhotonNetwork.PlayerList.Length}");
+
+            // Make sure everyone is set
             IEnumerator check = WaitForCheck();
             StartCoroutine(check);
-            return;
         }
     }
 

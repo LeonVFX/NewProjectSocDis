@@ -54,6 +54,9 @@ public class VoteManager : MonoBehaviour
 
     private void Update()
     {
+        if (!PhotonNetwork.IsMasterClient)
+            return;
+
         if ((everyOneVoted && !voteFinished) || (timer.timeOver))
         {
             int mostVotedPlayer = EndVoting();

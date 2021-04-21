@@ -107,8 +107,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   endResult: {fileID: 3088685404423486156, guid: 8e9b99b621a6dce4a9cf6a7b3968a8a7, type: 3}
   playerResults: 0
-  researcherWinImage: {fileID: 2800000, guid: 868debe1e0a7ed04794bccfd87e3ae4a, type: 3}
-  creatureWinImage: {fileID: 2800000, guid: 69c27a35ced46ea4a9715a18b1730e06, type: 3}
 --- !u!114 &7541637735238691234
 MonoBehaviour:
   m_ObjectHideFlags: 0

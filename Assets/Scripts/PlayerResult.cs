@@ -55,11 +55,13 @@ public class PlayerResult : MonoBehaviour
             return;
 
         endResult.ResultString = "You Died!";
+        endResult.ResultBackground = Resources.Load<Texture2D>("Images/creatureWinScreen");
         player.PHUD.UpdateMessageLog($"You Died!", Color.red);
-        endResult.ResultBackground = EndManager.em.creatureWinImage;
 
         winState = WinState.Died;
-        FinishGame();
+
+        IEnumerator waitForFinish = WaitForFinish();
+        StartCoroutine(waitForFinish);
 
         // If only the creature is alive
         if (PlayerManager.pm.playersAlive == 1)
@@ -83,8 +85,8 @@ public class PlayerResult : MonoBehaviour
         }
 
         endResult.ResultString = "Escaped Successfully!";
+        endResult.ResultBackground = Resources.Load<Texture2D>("Images/researchersWinScreen");
         player.PHUD.UpdateMessageLog($"Escaped Successfully!", Color.blue);
-        endResult.ResultBackground = EndManager.em.researcherWinImage;
 
         winState = WinState.ResearcherEscaped;
         FinishGameAndDestroy();
@@ -101,10 +103,12 @@ public class PlayerResult : MonoBehaviour
             if (GetComponent<Creature>())
             {
                 endResult.ResultString = "You Eliminated All Researchers!";
+                endResult.ResultBackground = Resources.Load<Texture2D>("Images/creatureWinScreen");
                 player.PHUD.UpdateMessageLog($"You Eliminated All Researchers!", Color.red);
-                endResult.ResultBackground = EndManager.em.creatureWinImage;
                 winState = WinState.AllResearchersEliminated;
-                FinishGame();
+
+                IEnumerator waitForFinish = WaitForFinish();
+                StartCoroutine(waitForFinish);
             }
         }
     }
@@ -120,20 +124,31 @@ public class PlayerResult : MonoBehaviour
             if (GetComponent<Creature>())
             {
                 endResult.ResultString = "You Were Discovered!";
+                endResult.ResultBackground = Resources.Load<Texture2D>("Images/researchersWinScreen");
                 player.PHUD.UpdateMessageLog($"You Were Discovered!", Color.red);
-                endResult.ResultBackground = EndManager.em.researcherWinImage;
             }
 
             if (GetComponent<Researcher>())
             {
                 endResult.ResultString = "You Kicked The Creature!";
+                endResult.ResultBackground = Resources.Load<Texture2D>("Images/researchersWinScreen");
                 player.PHUD.UpdateMessageLog($"You Kicked The Creature!", Color.blue);
-                endResult.ResultBackground = EndManager.em.researcherWinImage;
             }
 
             winState = WinState.CreatureVotedOut;
-            FinishGame();
+
+            IEnumerator waitForFinish = WaitForFinish();
+            StartCoroutine(waitForFinish);
         }
+    }
+
+    private IEnumerator WaitForFinish()
+    {
+        while (endResult.ResultBackground == null)
+            yield return null;
+
+        FinishGame();
+        yield return null;
     }
 
     private void FinishGame()

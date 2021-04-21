@@ -24,7 +24,6 @@ public class EndResult : MonoBehaviour
     private void Start()
     {
         GameManager.gm.OnEnd += DisplayResult;
-        
         DontDestroyOnLoad(this);
     }
 
