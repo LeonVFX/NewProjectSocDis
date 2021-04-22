@@ -124,16 +124,16 @@ public class PlayerResult : MonoBehaviour
             if (GetComponent<Creature>())
             {
                 endResult.ResultString = "You Were Discovered!";
-                endResult.ResultBackground = Resources.Load<Texture2D>("Images/researchersWinScreen");
                 player.PHUD.UpdateMessageLog($"You Were Discovered!", Color.red);
             }
 
             if (GetComponent<Researcher>())
             {
                 endResult.ResultString = "You Kicked The Creature!";
-                endResult.ResultBackground = Resources.Load<Texture2D>("Images/researchersWinScreen");
                 player.PHUD.UpdateMessageLog($"You Kicked The Creature!", Color.blue);
             }
+
+            endResult.ResultBackground = Resources.Load<Texture2D>("Images/researchersWinScreen");
 
             winState = WinState.CreatureVotedOut;
 
